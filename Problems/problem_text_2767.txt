@@ -1,0 +1,27 @@
+Flood fill (also known as seed fill) is an algorithm that determines the area connected to a given node in a multi-dimensional array.
+
+Example: 
+
+
+BFS (starting-pixel, replacement-color):
+
+Create an empty queue.
+Enqueue starting pixel and mark it as processed.
+
+Loop till queue is empty
+
+Dequeue the front node and process it.
+Replace the color of the current pixel (popped node) with that of the replacement.
+Process all eight adjacent pixels of the current pixel and enqueue each valid pixel that has the same color as that of the current pixel.
+
+
+
+
+
+Approach-1: 
+
+Approach 1: (Using BFS)A queue-based implementation using Breadthfirst search (BFS) is shown below in pseudocode.
+
+Approach 2
+
+Approach 2: (Using DFS)

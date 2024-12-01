@@ -1,0 +1,14 @@
+Given an integer array, find the largest subarray formed by consecutive integers. The subarray should contain all distinct values.
+
+Example: 
+
+
+Input: { 2, 0, 2, 1, 4, 3, 1, 0 }
+
+Output: The largest subarray is { 0, 2, 1, 4, 3 }
+
+
+Approach-1: 
+
+The problem differs from the problem of finding the longest subsequence formed by consecutive integers. Unlike subsequences, subarrays are required to occupy consecutive positions within the original array.
+The idea is to consider every subarray and keep track of the largest subarray found so far, formed by consecutive integers. For a subarray to contain consecutive integers,

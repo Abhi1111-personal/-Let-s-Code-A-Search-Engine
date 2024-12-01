@@ -1,0 +1,19 @@
+2177. Find Three Consecutive Integers That Sum to a Given NumberMedium24970Add to ListShareGiven an integer num, return three consecutive integers (as a sorted array) that sum to num. If num cannot be expressed as the sum of three consecutive integers, return an empty array.
+
+Example 1:
+Input: num = 33
+Output: [10,11,12]
+Explanation: 33 can be expressed as 10 + 11 + 12 = 33.
+10, 11, 12 are 3 consecutive integers, so we return [10, 11, 12].
+
+Example 2:
+Input: num = 4
+Output: []
+Explanation: There is no way to express 4 as the sum of 3 consecutive integers.
+
+
+Constraints:
+
+0 <= num <= 1015
+
+Accepted19,555Submissions32,140Seen this question in a real interview before?YesNoCompaniesRelated TopicsMathSimulationSimilar QuestionsLongest Consecutive SequenceMediumNumber of Ways to Buy Pens and PencilsMediumShow Hint 1Notice that if a solution exists, we can represent them as x-1, x, x+1. What does this tell us about the number?Show Hint 2Notice the sum of the numbers will be 3x. Can you solve for x?

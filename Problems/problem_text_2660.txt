@@ -1,0 +1,1 @@
+Given a connected undirected graph and a vertex in the graph, construct a directed graph such that any path in the directed graph leads to that particular vertex.

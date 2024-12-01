@@ -1,0 +1,23 @@
+Given two lists sorted in increasing order, return a new list representing their intersection. The new list should be made with its own memory  the original lists should not be changed.
+
+Example: 
+
+
+Input:
+
+First List: 1 > 4 > 7 > 10 > null
+Second List: 2 > 4 > 6 > 8 > 10 > null
+
+Output: 4 > 10 > null
+
+
+Approach-1: 
+
+The strategy is to advance up both lists and build the result list as we go. When the current point in both lists is the same, add a node to the result. Otherwise, advance whichever list is smaller. By exploiting the fact that both lists are sorted, we only traverse each list once.The algorithm can be implemented as follows in C, Java, and Python:
+
+Approach 2
+
+1. Using Dummy Node
+
+Approach 3
+

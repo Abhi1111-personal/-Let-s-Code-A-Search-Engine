@@ -1,0 +1,17 @@
+Given an array of pairs of integers, find all symmetric pairs, i.e., pairs that mirror each other. For instance, pairs (x, y) and (y, x) are mirrors of each other.
+
+Example: 
+
+
+Input: {3, 4}, {1, 2}, {5, 2}, {7, 10}, {4, 3}, {2, 5}
+
+Output:
+
+{4, 3} | {3, 4}
+{2, 5} | {5, 2}
+
+
+Approach-1: 
+
+A naive solution would be to consider every pair and check if they are a mirror of each other or not. The time complexity of this solution is O(n2), where n is the size of the input.
+We can solve this problem in linear time using hashing. The idea is to consider every pair and insert the pair into a set. We also construct the mirror pair for every pair, and if the mirror pair is seen before (i.e., the mirror pair found in the set), print both pairs.

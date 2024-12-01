@@ -1,0 +1,9 @@
+Given a directed graph, check if it is strongly connected or not. A directed graph is said to be strongly connected if every vertex is reachable from every other vertex.
+
+Approach-1: 
+
+A simple solution is to perform Depthfirst search (DFS) or Breadthfirst search (BFS) starting from every vertex in the graph. If each DFS/BFS call visits every other vertex in the graph, then the graph is strongly connected.The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+Can we do better?

@@ -1,0 +1,9 @@
+Write an efficient algorithm to compute the binary trees height. The height or depth of a binary tree is the total number of edges or nodes on the longest path from the root node to the leaf node.
+
+Approach-1: 
+
+Recursive SolutionThe idea is to traverse the tree in a postorder fashion and calculate the height of the left and right subtree. The height of a subtree rooted at any node will be one more than the maximum height of its left and right subtree. Recursively apply this property to all tree nodes in a bottom-up manner (postorder fashion) and return the subtrees maximum height rooted at that node.
+
+Approach 2
+
+Iterative Solution

@@ -1,0 +1,18 @@
+Given a string, check if a repeated subsequence is present in it or not. The repeated subsequence should have a length of 2 or more.
+
+Example: 
+
+
+String XYBAXB has XB(XBXB) as a repeated subsequence
+
+String XBXAXB has XX(XXX) as a repeated subsequence
+
+String ABCA doesnt have any repeated subsequence
+
+String XYBYAXBY has XB(XBXB), XY(XYXY), YY(YYY), YB(YBYB), and YBY(YBYBY) as repeated subsequences.
+
+
+Approach-1: 
+
+
+The idea is simple. If we discard all non-repeating elements from the string (having frequency of 1), and the resulting string is non-palindrome, then the string contains a repeated subsequence. If the resulting string is a palindrome and doesnt have any character with frequency three or more, the string cannot have a repeated subsequence.Following is the C++, Java, and Python implementation of the idea:

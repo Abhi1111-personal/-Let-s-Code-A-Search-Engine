@@ -1,0 +1,17 @@
+Given a string, find all palindromic permutations of it.
+
+Example: 
+
+
+Input:
+
+str = xyxzwxxyz
+
+Output:
+
+[xxyzwzyxx, xxzywyzxx, xyxzwzxyx, xyzxwxzyx, xzxywyxzx, xzyxwxyzx, yxxzwzxxy, yxzxwxzxy, yzxxwxxzy, zxxywyxxz, zxyxwxyxz, zyxxwxxyz]
+
+
+Approach-1: 
+
+We know that the left and right-half of a palindrome contains the same set of characters, so any palindromic permutations of a string are only possible if each characters frequency in the string is even. Also, for the odd-length palindromic permutations, only a single occurrence of the odd occurring character is allowed. The odd character will form the middle character of all such palindromic permutations.We can use the above observation to solve the given problem. The idea is to find the characters involved in the left-half of any palindromic permutation and construct a string containing all such characters. All characters involved in the left-half have even frequencies. Half of the characters will go in the left-half of the palindrome for any character with even frequency, and the other half will go in its right-half. After constructing the string, sort it to generate permutations in lexicographical order using std::next_permutation or std::prev_permutation depending upon the string is sorted in ascending or descending order. We can easily construct the right-half by reversing the left-half for each permutation of the string (which will form the left-half of the palindrome). If the string contains one odd occurring element, all palindromic permutations will be of odd length with the middle element as the odd occurring character. As mentioned earlier, no solution is possible if the string contains more than one odd occurring element.

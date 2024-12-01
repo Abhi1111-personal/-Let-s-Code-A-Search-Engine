@@ -1,0 +1,14 @@
+Given a string, find all lexicographically previous permutations of it.
+
+Approach-1: 
+
+
+
+
+Approach 2
+
+
+Find the largest index i such that str[i] is less than str[i-1].
+Return false if i is the first index of the string, meaning that we are already at the lowest possible permutation, i.e., the string is sorted in ascending order. If i is not the first index of the string, the substring str[in) is sorted in ascending order, i.e. str[i-1] > str[i] <= str[i+1] <= str[i+2] <=  <= str[n-1].
+Find the lowest index j to the right of index i such that str[j] is greater than str[i-1] and swap the character at index i-1 with index j-1.
+Reverse substring str[in) and return true.

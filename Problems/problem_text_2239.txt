@@ -1,0 +1,19 @@
+Given a circular integer array, find a subarray with the largest sum in it.
+
+Example: 
+
+
+Input: {2, 1, -5, 4, -3, 1, -3, 4, -1}
+
+Output: Subarray with the largest sum is {4, -1, 2, 1} with sum 6.
+
+
+Input: {-3, 1, -3, 4, -1, 2, 1, -5, 4}
+
+Output: Subarray with the largest sum is {4, -1, 2, 1} with sum 6.
+
+
+Approach-1: 
+
+The problem differs from the problem of finding the maximum sum circular subsequence. Unlike subsequences, subarrays are required to occupy consecutive positions within the original array.
+The idea is to find the sequence which will have a maximum negative value. If we remove that minimum sum sequence from the input sequence, we will be left with the maximum sum circular sequence. Finally, return the maximum of the maximum-sum circular sequence (includes corner elements) and maximum-sum non-circular sequence.

@@ -1,0 +1,20 @@
+Given a Directed Acyclic Graph (DAG), print all its topological orderings.
+
+Example: 
+
+
+75314206
+75123406
+57310264
+35701264
+57301462
+75134062
+57123064
+37051426
+
+ and many more
+
+
+Approach-1: 
+
+The idea remains similar to Kahns topological sort, where we find vertices with no incoming edges and removing all outgoing edges from these vertices. We build all possible orderings from left to right, where the vertices with in-degree zero become candidates for the next vertex. We can do this using backtracking, where the graph state is restored after processing the selected vertex.The algorithm can be implemented as follows in C++, Java, and Python:

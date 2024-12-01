@@ -1,0 +1,8 @@
+This post will discuss how to reverse a string using the stack data structure in C/C++, Java, and Python.
+
+Approach 2
+
+2. Using implicit stack
+
+Approach 3
+

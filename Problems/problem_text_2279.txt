@@ -1,0 +1,17 @@
+Write an algorithm to generate any one of the given n numbers according to given probabilities.
+
+Example: 
+
+
+nums[] = { 1, 2, 3, 4, 5 };
+probability[] = { 30, 10, 20, 15, 25 };// total probability should sum to 100%
+
+
+Approach-1: 
+
+Algorithm:
+
+Construct a sum array S[] from the given probability array P[], where S[i] holds the sum of all P[j] for 0 <= j <= i.
+Generate a random integer from 1 to 100 and check where it lies in S[].
+Based on the comparison result, return the corresponding element from the input array.
+

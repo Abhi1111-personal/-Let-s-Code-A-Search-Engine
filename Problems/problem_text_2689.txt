@@ -1,0 +1,8 @@
+Huffman coding (also known as Huffman Encoding) is an algorithm for doing data compression, and it forms the basic idea behind file compression. This post talks about the fixed-length and variable-length encoding, uniquely decodable codes, prefix rules, and Huffman Tree construction.
+
+Example: 
+
+a	0
+b	11
+c	100
+d	011

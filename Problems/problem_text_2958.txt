@@ -1,0 +1,13 @@
+This post will discuss how to find permutations of a string using iteration.
+
+Approach-1: 
+
+The recursive implementation doesnt handle strings containing duplicate characters and prints the duplicate permutations. For example, for the string ABA, the permutations BAA, ABA, and AAB gets printed twice. The following iterative implementation using std::next_permutation can handle strings with duplicate characters and dont repeat the permutations.1. Using std::next_permutation
+
+Approach 2
+
+2. Using Controller Array
+
+Approach 3
+
+The following implementation uses the list to store the partially constructed permutations and then use those partial permutations to build the final permutations in later iterations:

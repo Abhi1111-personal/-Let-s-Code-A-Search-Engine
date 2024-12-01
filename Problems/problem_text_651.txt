@@ -1,0 +1,32 @@
+b"1775. Equal Sum Arrays With Minimum Number of OperationsMedium50816Add to ListShareYou are given two arrays of integers nums1 and nums2, possibly of different lengths. The values in the arrays are between 1 and 6, inclusive.
+In one operation, you can change any integer's value in any of the arrays to any value between 1 and 6, inclusive.
+Return the minimum number of operations required to make the sum of values in nums1 equal to the sum of values in nums2. Return -1\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b if it is not possible to make the sum of the two arrays equal.
+\xc2\xa0
+Example 1:
+Input: nums1 = [1,2,3,4,5,6], nums2 = [1,1,2,2,2,2]
+Output: 3
+Explanation: You can make the sums of nums1 and nums2 equal with 3 operations. All indices are 0-indexed.
+- Change nums2[0] to 6. nums1 = [1,2,3,4,5,6], nums2 = [6,1,2,2,2,2].
+- Change nums1[5] to 1. nums1 = [1,2,3,4,5,1], nums2 = [6,1,2,2,2,2].
+- Change nums1[2] to 2. nums1 = [1,2,2,4,5,1], nums2 = [6,1,2,2,2,2].
+
+Example 2:
+Input: nums1 = [1,1,1,1,1,1,1], nums2 = [6]
+Output: -1
+Explanation: There is no way to decrease the sum of nums1 or to increase the sum of nums2 to make them equal.
+
+Example 3:
+Input: nums1 = [6,6], nums2 = [1]
+Output: 3
+Explanation: You can make the sums of nums1 and nums2 equal with 3 operations. All indices are 0-indexed. 
+- Change nums1[0] to 2. nums1 = [2,6], nums2 = [1].
+- Change nums1[1] to 2. nums1 = [2,2], nums2 = [1].
+- Change nums2[0] to 4. nums1 = [2,2], nums2 = [4].
+
+\xc2\xa0
+Constraints:
+
+1 <= nums1.length, nums2.length <= 105
+1 <= nums1[i], nums2[i] <= 6
+
+Accepted15.1KSubmissions29.3KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArrayHash TableGreedyCountingSimilar QuestionsNumber of Dice Rolls With Target SumMediumShow Hint 1Let's note that we want to either decrease the sum of the array with a larger sum or increase the array's sum with the smaller sum.Show Hint 2You can maintain the largest increase or decrease you can make in a binary search tree and each time get the maximum one."

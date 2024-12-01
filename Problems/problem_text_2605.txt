@@ -1,0 +1,29 @@
+Given three strings, return true if the third string is interleaving the first and second strings, i.e., it is formed from all characters of the first and second string, and the order of characters is preserved.
+
+Example: 
+
+
+ACDB is interleaving of AB and CD
+
+ADEBCF is interleaving of ABC and DEF
+
+ACBCD is interleaving of ABC and CD
+
+ACDABC is interleaving of ABC and ACD
+
+
+Approach-1: 
+
+We can easily solve this problem by using recursion, as demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+
+The problem with the above solution is that it doesnt handle duplicates. Suppose X = "ABC" and Y = "ACD", then the above solution will return false for string S = "ACDABC". The reason is that if the current character of S matches the current character of both X and Y, the solution will always pair S with X and do not check if the solution can be formed by pairing S with Y or not.
+
+Approach 3
+
+The DP solution is discussed below in C++, Java, and Python:
+
+Approach 4
+

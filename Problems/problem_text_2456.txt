@@ -1,0 +1,9 @@
+Given a binary tree, write an efficient algorithm to compute the maximum number of nodes in any level in the binary tree.
+
+Approach-1: 
+
+1. Iterative ApproachIn an iterative version, perform a level order traversal on the tree. We can easily modify level order traversal to maintain the maximum number of nodes at the current level. Then the result is equal to the maximum number of nodes at any level in the tree.
+
+Approach 2
+
+2. Recursive Approach

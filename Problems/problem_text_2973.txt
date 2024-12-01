@@ -1,0 +1,10 @@
+Given a positive integer n, find all ndigit binary numbers having more 1's than 0's for any prefix of the number.
+
+Approach-1: 
+
+
+A simple solution would be to generate all ndigit numbers and print only those numbers that satisfy the given constraints. The time complexity of this solution would be exponential.
+A better solution is to recursively generate only those ndigit numbers that satisfy the given constraints. The idea is to append 0 and 1 to the partially formed number and recur with one less digit at each point in the recursion. We also maintain a count of the total number of zeroes and the number of ones in the partially formed number. Here, the optimization is to return if the total number of ones is less than the total number of zeroes at any point in the recursion.
+
+Approach 2
+

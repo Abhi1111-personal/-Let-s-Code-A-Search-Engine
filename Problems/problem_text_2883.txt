@@ -1,0 +1,5 @@
+Implement the Quicksort algorithm using Hoares Partitioning scheme.
+
+Approach-1: 
+
+The algorithm can be implemented as follows in C++, Java, and Python:

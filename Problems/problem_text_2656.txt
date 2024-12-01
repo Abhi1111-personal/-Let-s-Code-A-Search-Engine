@@ -1,0 +1,9 @@
+Given a directed graph and two vertices (say source and destination vertex), determine if the destination vertex is reachable from the source vertex or not. If a path exists from the source vertex to the destination vertex, print it.
+
+Approach-1: 
+
+We can use the Breadthfirst search (BFS) algorithm to check the connectivity between any two vertices in the graph efficiently. The idea is to start the BFS routine from the source vertex and check if the destination vertex is reached during the traversal. If the destination vertex is not encountered at any point, we can say that its not reachable from the source vertex.This approach is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+The idea is to store the complete path between the source and destination vertex in an array using recursion. We can easily achieve this if using Depthfirst search (DFS) to determine the path between the vertices. This is demonstrated below in C++, Java, and Python:

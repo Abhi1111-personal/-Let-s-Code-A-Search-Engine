@@ -1,0 +1,5 @@
+Given a binary tree that is only one swap away from becoming a BST, convert it into a BST in a single traversal.
+
+Approach-1: 
+
+We know that an inorder traversal of a binary search tree returns the nodes in sorted order. The idea is to perform inorder traversal on a given binary tree and keep track of the last visited node while traversing the tree. Check whether its key is smaller compared to the current key or not and mark the nodes where this property is violated and later swap them.The algorithm can be implemented as follows in C++, Java, and Python:

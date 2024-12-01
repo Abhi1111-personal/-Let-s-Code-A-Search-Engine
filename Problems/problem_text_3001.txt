@@ -1,0 +1,17 @@
+The longest common substring problem is the problem of finding the longest string (or strings) that is a substring (or are substrings) of two strings.
+
+Example: 
+
+
+LCSuffix[i][j] = | LCSuffix[i-1][j-1] + 1(if X[i-1] = Y[j-1])
+| 0(otherwise)
+
+where,
+
+0 <= i  1 < m,where m is the length of string X
+0 <= j  1 < n,where n is the length of string Y
+
+
+Approach-1: 
+
+A naive solution would be to consider all substrings of the second string and find the longest substring that is also a substring of the first string. The time complexity of this solution would be O((m + n)  m2), where m and n are the length of the strings X and Y, as it takes (m+n) time for substring search, and there are m2 substrings of the second string. We can optimize this method by considering substrings in order of their decreasing lengths and return as soon as any substring matches the first string. But the worst-case time complexity remains the same when no common characters are present.Can we do better?

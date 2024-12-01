@@ -1,0 +1,10 @@
+Implement Quicksort efficiently for inputs containing many repeated elements.
+
+Approach-1: 
+
+We can use an alternative linear-time partition routine to solve this problem that separates the values into three groups:
+
+The values less than the pivot,
+The values equal to the pivot, and
+The values greater than the pivot.
+

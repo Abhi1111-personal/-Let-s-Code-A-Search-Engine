@@ -1,0 +1,10 @@
+Given a binary search tree, find a triplet with a given sum present in it.
+
+Approach-1: 
+
+A simple solution is to traverse the BST in an inorder fashion and store all encountered nodes in an auxiliary array. This array would be already sorted since inorder traversal visits the nodes in increasing order of their values. Then for each element A[i] in the array A, check if the triplet is formed by A[i] and a pair from subarray A[i+1n-1].The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+
+We can avoid the extra space used for storing BST keys if we are allowed to modify the BST. The idea is to convert the given BST into a sorted doubly linked list and follow a similar routine to find a triplet as seen in the previous approach.

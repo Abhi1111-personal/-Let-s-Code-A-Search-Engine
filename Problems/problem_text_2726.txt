@@ -1,0 +1,9 @@
+This post will discuss the XOR linked list, which is used to reduce memory requirements of doubly-linked lists using a bitwise XOR operator.
+
+Example: 
+
+
+link(A) = NULL ^ addr(B)// bitwise XOR of NULL with address of node B
+link(B) = addr(A) ^ addr(C)// bitwise XOR between the address of node A and C
+link(C) = addr(B) ^ addr(D)// bitwise XOR between the address of node B and D
+link(D) = addr(C) ^ NULL// bitwise XOR of the address of node A with NULL

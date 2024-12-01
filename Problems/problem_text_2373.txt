@@ -1,0 +1,27 @@
+Given a string and a pattern, determine whether a string matches with a given pattern. The solution should not use any regex.
+
+Example: 
+
+
+Input:
+
+string: codesleepcode
+pattern: XYX
+
+Output:
+X: code
+Y: sleep
+
+
+Input:
+
+string: codecodecode
+pattern: XXX
+
+Output:
+X: code
+
+
+Approach-1: 
+
+We can use backtracking to solve this problem. The idea is to maintain a map that stores a substring mapped to each character in the pattern. Now, if any character is not seen before, consider all possible substrings and recur to see if it leads to the solution or not. If a solution is found, print the string mapped to each distinct character in the pattern using the map.Following is the C++, Java, and Python implementation of the idea:

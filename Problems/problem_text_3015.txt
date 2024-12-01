@@ -1,0 +1,6 @@
+Trie is a tree-based data structure, which is used for efficient retrieval of a key in a large dataset of strings. In this post, we will cover memory-efficient implementation of Trie data structure in C++ using the map data structure.
+
+Approach-1: 
+
+
+References: https://en.wikipedia.org/wiki/Trie

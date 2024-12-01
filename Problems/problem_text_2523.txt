@@ -1,0 +1,20 @@
+Given a sorted integer array containing duplicates, count occurrences of a given number. If the element is not found in the array, report that as well.
+
+Example: 
+
+
+Input: nums[] = [2, 5, 5, 5, 6, 6, 8, 9, 9, 9]
+target = 5
+
+Output: Target 5 occurs 3 times
+
+
+Input: nums[] = [2, 5, 5, 5, 6, 6, 8, 9, 9, 9]
+target = 6
+
+Output: Target 6 occurs 2 times
+
+
+Approach-1: 
+
+A simple solution would be to run a linear search on the array and count the number of occurrences of the given element. The problem with this approach is that its worst-case time complexity is O(n), where n is the size of the input. This solution also does not take advantage of the fact that the input is sorted.Another solution would be to run a binary search on the given sorted array and find the index of any occurrence of the given number target. Since the array is sorted, all occurrences of target will be adjacent. So, run a linear scan to find all instances of target to the left of the found index, and its right. The worst-case time complexity of this solution remains O(n). The worst case happens when all the array elements are the same as the given number.

@@ -1,0 +1,27 @@
+1408. String Matching in an ArrayEasy52472Add to ListShareGiven an array of string words. Return all strings in words which is substring of another word in any order.
+String words[i] is substring of words[j],ifcan be obtained removing some characters to left and/or right side of words[j].
+
+Example 1:
+Input: words = ["mass","as","hero","superhero"]
+Output: ["as","hero"]
+Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
+["hero","as"] is also a valid answer.
+
+Example 2:
+Input: words = ["leetcode","et","code"]
+Output: ["et","code"]
+Explanation: "et", "code" are substring of "leetcode".
+
+Example 3:
+Input: words = ["blue","green","bu"]
+Output: []
+
+
+Constraints:
+
+1 <= words.length <= 100
+1 <= words[i].length <= 30
+words[i] contains only lowercase English letters.
+It's guaranteedthat words[i]will be unique.
+
+Accepted54.8KSubmissions85.8KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringString MatchingShow Hint 1Bruteforce to find if one string is substring of another or use KMP algorithm.

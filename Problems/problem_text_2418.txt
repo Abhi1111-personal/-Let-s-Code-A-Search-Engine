@@ -1,0 +1,20 @@
+Given a binary tree, write an iterative and recursive solution to traverse the tree using inorder traversal in C++, Java, and Python.
+
+Approach-1: 
+
+Recursive ImplementationAs we can see, before processing any node, the left subtree is processed first, followed by the node, and the right subtree is processed at last. These operations can be defined recursively for each node. The recursive implementation is referred to as a Depthfirst search (DFS), as the search tree is deepened as much as possible on each child before going to the next sibling.
+
+Approach 2
+
+
+iterativeInorder(node)
+
+s > empty stack
+while (not s.isEmpty() or node != null)
+if (node != null)
+s.push(node)
+node > node.left
+else
+node > s.pop()
+visit(node)
+node > node.right

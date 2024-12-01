@@ -1,0 +1,5 @@
+Given an array containing positive and negative elements, find a subarray with alternating positive and negative elements, and in which the subarray is as long as possible.
+
+Approach-1: 
+
+We can easily solve this problem in linear time using similar logic as Kadanes algorithm. The idea is to maintain the longest alternating subarray ending at each given array index. This subarray can be a single element (if the previous element has the same sign) or consists of one more element than the longest alternating subarray ending at the previous index (if the previous element has an opposite sign).The algorithm can be implemented as below in C++, Java, and Python:

@@ -1,0 +1,5 @@
+A stack is a linear data structure that follows the LIFO (LastIn, FirstOut) order, i.e., items can be inserted or removed only at one end of it.
+
+Approach-1: 
+
+Stack Implementation using a ListThe stack can easily be implemented as a list. Following is the custom stack implementation in Python, which uses a list:

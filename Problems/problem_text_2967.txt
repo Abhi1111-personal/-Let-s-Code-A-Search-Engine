@@ -1,0 +1,36 @@
+Given n lists of words, print all combinations of phrases that can be formed by picking one word from each list.
+
+Example: 
+
+
+Input:
+
+list 1 > [John, Emma]
+list 2 > [Plays, Hates, Watches]
+list 3 > [Cricket, Soccer, Chess]
+
+Output:
+
+John Plays Cricket
+John Plays Soccer
+John Plays Chess
+John Hates Cricket
+John Hates Soccer
+John Hates Chess
+John Watches Cricket
+John Watches Soccer
+John Watches Chess
+Emma Plays Cricket
+Emma Plays Soccer
+Emma Plays Chess
+Emma Hates Cricket
+Emma Hates Soccer
+Emma Hates Chess
+Emma Watches Cricket
+Emma Watches Soccer
+Emma Watches Chess
+
+
+Approach-1: 
+
+The idea is to use recursion. At each point in the recursion, consider each word in the current list, append the word to output one by one, and recur for the next list. Finally, when no list is left to recur (i.e., all lists are considered), print the output phase.Following is the C++, Java, and Python implementation of the idea:

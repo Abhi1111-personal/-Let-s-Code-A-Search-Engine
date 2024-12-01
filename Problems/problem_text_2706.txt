@@ -1,0 +1,13 @@
+Write a function that takes two lists, each of which is sorted in increasing order, and merges the two into a single list in increasing order, and returns it.
+
+Approach-1: 
+
+The problem can be solved either iteratively or recursively. There are many cases to deal with  either a or b may be empty during processing, either a or b can run out first, and finally, theres the problem of starting the result list empty, and building it up while going through a and b.1. Using Dummy Nodes
+
+Approach 2
+
+This solution is structurally very similar to the above, but it avoids using a dummy node. Instead, it maintains a struct node** pointer, lastPtrRef, which always points to the last pointer of the result list. This solves the same case that the dummy node did  dealing with the result list when it is empty. When trying to build up a list at its tail, use either the dummy node or the struct node** reference strategy.
+
+Approach 3
+
+This is a nice problem where the recursive solution code is much cleaner than the iterative code. The recursive implementation can be seen below in C, Java, and Python:

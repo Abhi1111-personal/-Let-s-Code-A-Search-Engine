@@ -1,0 +1,24 @@
+Given a binary array, find the maximum sequence of continuous 1s that can be formed by replacing at most k zeroes by ones.
+
+Example: 
+
+
+Input: A[] = { 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0 }
+
+
+For k = 0,
+The length of the longest sequence is 4 (from index 6 to 9)
+
+For k = 1,
+The length of the longest sequence is 7 (from index 3 to 9)
+
+For k = 2,
+The length of the longest sequence is 10 (from index 0 to 9)
+
+For k = 3,
+The length of the longest sequence is 11 (from index 0 to 10)
+
+
+Approach-1: 
+
+We can solve this problem by using the sliding window technique. The idea is to maintain a window containing at most k zeroes at any point. Add elements to the window from the right until it becomes unstable. The window becomes unstable if the total number of zeros in it becomes more than k. If the window becomes unstable, remove elements from its left till it becomes stable again (by removing leftmost zero). If the window is stable and the current window length is more than the maximum window found so far, set the maximum window size to the current window size.The algorithm can be implemented as follows in C, Java, and Python:

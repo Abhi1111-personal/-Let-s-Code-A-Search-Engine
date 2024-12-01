@@ -1,0 +1,9 @@
+Given a BST, find the inorder predecessor of a given key in it. If the key does not lie in the BST, return the previous greater node (if any) present in the BST.
+
+Approach-1: 
+
+A nodes inorder predecessor is a node with maximum value in its left subtree, i.e., its left subtrees right-most child. If the left subtree of the node doesnt exist, then the inorder predecessor is one of its ancestors. To find which ancestors are the predecessor, move up the tree towards the root until we encounter a node that is the right child of its parent. If any such node is found, then the inorder predecessor is its parent; otherwise, the inorder predecessor does not exist for the node.Recursive Version
+
+Approach 2
+
+Iterative Version

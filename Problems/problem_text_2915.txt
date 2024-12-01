@@ -1,0 +1,12 @@
+Given an unsorted integer array, print all greater elements than all elements present to their right.
+
+Approach-1: 
+
+
+A naive solution would be to use two loops. For each element, check if any greater element exists to their right or not. If all elements to their right are less than it, print the element. The time complexity of this solution is O(n2), where n is the size of the input.
+A better solution is to use a stack. For each element, pop all the elements present in the stack that are less than it and then push it into the stack. Finally, the stack is left with the elements which are greater than all elements present to their right. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+
+We can easily solve this problem in linear time using constant space. The idea is to traverse the array from right to left and maintain a variable that stores the maximum element encountered so far. So if the current element is greater than the maximum so far, print the current element and update the maximum so far. This approach is demonstrated below in C, Java, and Python:

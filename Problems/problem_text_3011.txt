@@ -1,0 +1,5 @@
+Implement insert, search, and delete operations on Trie data structure. Assume that the input consists of only lowercase letters az.
+
+Approach-1: 
+
+Applications of TrieNumerous Trie data structure applications take advantage of a Tries ability to quickly search, insert, and delete entries.

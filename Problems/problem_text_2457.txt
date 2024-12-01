@@ -1,0 +1,7 @@
+Given a normal binary tree, convert it into a Leftchild rightsibling (LCRS) binary tree.
+
+Approach-1: 
+
+The idea is to traverse the tree in a postorder fashion and for every node,
+If its left child is empty, then make its right child as lefts and set right to null.
+If the left child already exists, then make the right child of its left child point to its right child and set the right child to null.

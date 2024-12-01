@@ -1,0 +1,5 @@
+Given a binary tree, write an efficient algorithm to convert the binary tree into its mirror.
+
+Approach-1: 
+
+The idea is simple  traverse the tree in a postorder fashion, and for every node, swap its left and right child pointer after recursively converting its left and right subtree to mirror first. Following is the C++, Java, and Python implementation of the idea:

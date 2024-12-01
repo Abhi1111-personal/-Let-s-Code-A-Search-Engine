@@ -1,0 +1,21 @@
+1232. Check If It Is a Straight LineEasy894138Add to ListShareYou are given an arraycoordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. Check if these pointsmake a straight line in the XY plane.
+
+
+Example 1:
+
+Input: coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+Output: true
+
+Example 2:
+
+Input: coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]
+Output: false
+
+
+Constraints:
+
+2 <=coordinates.length <= 1000
+coordinates[i].length == 2
+-10^4 <=coordinates[i][0],coordinates[i][1] <= 10^4
+coordinatescontains no duplicate point.
+Accepted114.9KSubmissions274.3KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArrayMathGeometryShow Hint 1If there're only 2 points, return true.Show Hint 2Check if all other points lie on the line defined by the first 2 points.Show Hint 3Use cross product to check collinearity.

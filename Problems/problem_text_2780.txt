@@ -1,0 +1,20 @@
+Given a positive number N, print an N  N spiral matrix containing numbers from 1 to N  N in a counterclockwise direction and without extra space.
+
+Example: 
+
+
+Input: N = 5
+
+Output:
+
+2524232221
+1098720
+1121619
+1234518
+1314151617
+
+
+Approach-1: 
+
+If we are allowed to use extra space, allocate storage for an N  N matrix, and start filling out the matrix in spiral order for each element starting from N  N till 1. To maintain the spiral order, use four loops, each for the top, right, bottom, and left corner of the matrix.
+Heres how we can do it with constant space:

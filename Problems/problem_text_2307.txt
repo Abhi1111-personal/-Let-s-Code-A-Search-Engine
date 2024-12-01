@@ -1,0 +1,20 @@
+Given an integer array, determine the index of an element before which all elements are smaller and after which all are greater.
+
+Example: 
+
+
+Input: nums[] = {4, 2, 3, 5, 1, 6, 9, 7}
+
+Output: Index 5
+
+All elements before index 5 are smaller, and all elements after index 5 are greater.
+
+
+Approach-1: 
+
+A naive solution would be to traverse the array and find an index with all smaller elements to its left and all greater elements to its right. The time complexity of this solution is O(n2) for an input containing n elements since, for each array element, we end up traversing the whole array again.
+We can easily solve this problem in linear time using some extra space. The idea is to create two auxiliary arrays where each index of the first array stores the maximum element to the left, and that of the second array stores the minimum element to the right. We find an index whose value is greater than the maximum value to its left but smaller than the minimum value to its right after filling up both arrays.
+
+Approach 2
+
+The idea is to keep track of the minimum element found so far while traversing the array from right to left and then use it to find the required index. This approach is demonstrated below in C, Java, and Python:

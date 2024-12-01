@@ -1,0 +1,5 @@
+Consider a directed graph where the weight of its edges can be one of x, 2x, or 3x (x is a positive integer), efficiently compute the least-cost path from source to destination.
+
+Approach-1: 
+
+We know that Breadthfirst search (BFS) can be used to find the shortest path in an unweighted graph or a weighted graph having the same cost of all its edges. BFS runs in O(E + V) time, where E is the total number of the edges and V is the total number of vertices in the graph. But if the edges in the graph are weighted with different costs, then the recommended algorithm is Dijkstras Algorithm, which takes O(E.log(V)) time.Can we use BFS?

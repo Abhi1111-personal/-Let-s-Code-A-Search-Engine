@@ -1,0 +1,18 @@
+Given an integer array, find the peak element in it. A peak element is an element that is greater than its neighbors. There might be multiple peak elements in an array, and the solution should report any peak element.
+
+Example: 
+
+
+A[i-1] <= A[i] >= A[i+1] for 0 < i < n-1
+A[i-1] <= A[i] if i = n  1
+A[i] >= A[i+1] if i = 0
+
+
+Approach-1: 
+
+A naive solution would be to test all elements for peak by running a linear search on the array and return the greater element than its neighbors. Two special cases needs to be handled. If the array is sorted in descending order, its peak element is the first element. If the array is sorted in ascending order, the peak element is the last. The problem with this approach is that its worst-case time complexity is O(n), where n is the size of the input.
+We can easily solve this problem in O(log(n)) time by using an idea similar to the binary search algorithm. The idea is to calculate the mid-index, and if the middle element is greater than both of its neighbors, return the element as it is a peak. If the right neighbor of mid-index is greater than the middle element, recursively find the peak on the arrays right side. If the left neighbor of mid-index is greater than the middle element, recursively find the peak in the arrays left side.
+
+Approach 2
+
+STLs implementation using std::adjacent_find:

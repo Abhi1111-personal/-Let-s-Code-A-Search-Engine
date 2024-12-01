@@ -1,0 +1,5 @@
+This article covers queue implementation in Python. A queue is a linear data structure that follows the FIFO (FirstIn, FirstOut) order, i.e., the item inserted first will be the first one out.
+
+Approach-1: 
+
+Queue Implementation using a List:The queue can easily be implemented as a list. Following is the custom queue implementation in Python, which uses a list:

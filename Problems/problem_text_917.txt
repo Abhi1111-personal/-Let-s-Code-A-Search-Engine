@@ -1,0 +1,32 @@
+b'2096. Step-By-Step Directions From a Binary Tree Node to AnotherMedium90160Add to ListShareYou are given the root of a binary tree with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue representing the value of the start node s, and a different integer destValue representing the value of the destination node t.
+Find the shortest path starting from node s and ending at node t. Generate step-by-step directions of such path as a string consisting of only the uppercase letters \'L\', \'R\', and \'U\'. Each letter indicates a specific direction:
+
+\'L\' means to go from a node to its left child node.
+\'R\' means to go from a node to its right child node.
+\'U\' means to go from a node to its parent node.
+
+Return the step-by-step directions of the shortest path from node s to node t.
+\xc2\xa0
+Example 1:
+
+Input: root = [5,1,2,3,null,6,4], startValue = 3, destValue = 6
+Output: "UURL"
+Explanation: The shortest path is: 3 \xe2\x86\x92 1 \xe2\x86\x92 5 \xe2\x86\x92 2 \xe2\x86\x92 6.
+
+Example 2:
+
+Input: root = [2,1], startValue = 2, destValue = 1
+Output: "L"
+Explanation: The shortest path is: 2 \xe2\x86\x92 1.
+
+\xc2\xa0
+Constraints:
+
+The number of nodes in the tree is n.
+2 <= n <= 105
+1 <= Node.val <= n
+All the values in the tree are unique.
+1 <= startValue, destValue <= n
+startValue != destValue
+
+Accepted35,231Submissions72,446Seen this question in a real interview before?YesNoCompaniesRelated TopicsStringTreeDepth-First SearchBinary TreeSimilar QuestionsPath Sum IIMediumLowest Common Ancestor of a Binary TreeMediumBinary Tree PathsEasyFind Distance in a Binary TreeMediumShow Hint 1The shortest path between any two nodes in a tree must pass through their Lowest Common Ancestor (LCA). The path will travel upwards from node s to the LCA and then downwards from the LCA to node t.Show Hint 2Find the path strings from root \xe2\x86\x92 s, and root \xe2\x86\x92 t. Can you use these two strings to prepare the final answer?Show Hint 3Remove the longest common prefix of the two path strings to get the path LCA \xe2\x86\x92 s, and LCA \xe2\x86\x92 t. Each step in the path of LCA \xe2\x86\x92 s should be reversed as \'U\'.'

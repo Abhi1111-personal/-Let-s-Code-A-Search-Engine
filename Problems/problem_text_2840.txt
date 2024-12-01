@@ -1,0 +1,12 @@
+This post will implement a stack using the queue data structure. In other words, design a stack that supports push and pop operations using standard enqueue and dequeue operations of the queue.
+
+Approach 2
+
+
+To push an item into the stack, enqueue the item to the first queue.
+To pop an item from the stack, move all elements from the first queue to the second queue except the last element, and then return the last element after moving all elements back to the first queue.
+
+
+Approach 3
+
+We can also use an implicit stack (call stack) along with a queue to construct a stack, as shown below in C++, Java, and Python:

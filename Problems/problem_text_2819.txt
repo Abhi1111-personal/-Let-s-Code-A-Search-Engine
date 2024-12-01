@@ -1,0 +1,1 @@
+Write a program to print Hello World with an empty main function, i.e., without writing anything inside the main() function.

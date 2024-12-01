@@ -1,0 +1,20 @@
+Given a square matrix of integers, find the maximum value of M[c][d] - M[a][b] over every choice of indexes such that c > a and d > b in a single traversal of the matrix.
+
+Example: 
+
+
+Input Matrix:
+
+{1,2,-1,-4,-20}
+{-8,-3,4,2,1}
+{3,8,6,1,3}
+{-4,-1,1,7,-6}
+{0,-4,10,-5,1}
+
+Output: The maximum value is 18 as M[4][2]  M[1][0] has maximum difference.
+
+
+Approach-1: 
+
+A naive solution would be to find M[c][d] for all values M[a][b] in the matrix, having the maximum value and satisfies c > a and d > b. We keep track of the maximum value found so far in a variable and finally return the maximum value. The implementation can be seen here and runs in O(N4) time for an N  N matrix.
+The efficient solution is to use an auxiliary matrix whose index (i, j) will store the value of the maximum element in the input matrix from coordinates (i, j) to (N-1, N-1). We keep track of the maximum value found so far in a variable and finally return the maximum value.

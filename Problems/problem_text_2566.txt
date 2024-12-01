@@ -1,0 +1,29 @@
+Given a set of positive integers and an integer k, check if there is any non-empty subset that sums to k.
+
+Example: 
+
+
+Input:
+
+A = { 7, 3, 2, 5, 8 }
+k = 14
+
+Output: Subset with the given sum exists
+
+Subset { 7, 2, 5 } sums to 14
+
+
+Approach-1: 
+
+A naive solution would be to cycle through all subsets of n numbers and, for every one of them, check if the subset sums to the right number. The running time is of order O(2n.n) since there are 2n subsets, and to check each subset, we need to sum at most n elements.
+A better exponential-time algorithm uses recursion. Subset sum can also be thought of as a special case of the 01 Knapsack problem. For each item, there are two possibilities:
+
+Approach 2
+
+
+The problem has an optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. The above solution also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are getting computed repeatedly.
+
+Approach 3
+
+
+We can also solve this problem in a bottom-up manner. In the bottom-up approach, we solve smaller subproblems first, then solve larger subproblems from them. The following bottom-up approach computes T[i][j], for each 1 <= i <= n and 1 <= j <= sum, which is true if subset with sum j can be found using items up to first i items. It uses the value of smaller values i and j already computed. It has the same asymptotic runtime as Memoization but no recursion overhead.

@@ -1,0 +1,9 @@
+Given a binary tree, write an efficient algorithm to find the maximum sum root-to-leaf path, i.e., the maximum sum path from the root node to any leaf node in it.
+
+Approach-1: 
+
+The problem can be divided further into two subproblems:
+
+Calculate the maximum sum from the root node to any leaf node in a binary tree.
+Print root-to-leaf path having maximum sum in a binary tree.
+

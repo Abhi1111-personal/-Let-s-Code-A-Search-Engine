@@ -1,0 +1,17 @@
+Given a line of text, reverse the text without reversing the individual words.
+
+Example: 
+
+
+Input: Technical Interview Preparation
+
+Output: Preparation Interview Technical
+
+
+Approach-1: 
+
+A simple solution is to push the individual words from the beginning of the text into a stack. Then, pop all the words from the stack and store them back into the text in LIFO order. The time complexity of the above solution is O(n) and requires O(n) extra space for the stack, where n is the length of the given text.Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+The idea is to in-place reverse each word present in the input text and finally reverse the whole text to get the desired output. For instance,

@@ -1,0 +1,9 @@
+Given a BST, find the inorder successor of a given key in it. If the given key does not lie in the BST, then return the next greater node (if any) present in the BST.
+
+Approach-1: 
+
+A nodes inorder successor is the node with the least value in its right subtree, i.e., its right subtrees leftmost child. If the right subtree of the node doesnt exist, then the inorder successor is one of its ancestors. To find which ancestors are the successor, we can move up the tree towards the root until we encounter a node that is left child of its parent. If any such node is found, then inorder successor is its parent; otherwise, inorder successor does not exist for the node.Recursive Version
+
+Approach 2
+
+Iterative Version

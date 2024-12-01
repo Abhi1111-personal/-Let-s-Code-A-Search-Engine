@@ -1,0 +1,35 @@
+In this post, we will see how to compute the parity of a number using a lookup table. The parity is related to the total number of 1s in the binary number.
+
+Example: 
+
+
+{ 0, 1, 1, 0, 1, 0,  , 0, 1, 0, 1, 1, 0 } as
+
+The parity of 0 is 0
+The parity of 1 is 1
+The parity of 2 is 1
+The parity of 3 is 0
+The parity of 4 is 1
+The parity of 5 is 0
+
+
+The parity of 250 is 0
+The parity of 251 is 1
+The parity of 252 is 0
+The parity of 253 is 1
+The parity of 254 is 1
+The parity of 255 is 0
+
+
+Approach-1: 
+
+
+A naive solution would be to calculate parity by checking each bit of the given number one by one. The time taken is proportional to the total number of bits in the number. We can perform better by turning off the rightmost set bit of the number one by one and finding the parity. The time it takes is proportional to the total number of set bits. We have already discussed these solutions in this post. In this post, a few other interesting solutions are discussed.1. Divide and Conquer
+
+Approach 2
+
+
+
+Approach 3
+
+We can use a lookup table to find parity in constant time. An integer in C/C++ usually takes 4 bytes for storage. That means the maximum number it can store is 232-1. A lookup table for all 232-1 integers will be infeasible (Not to forget, we have negative numbers too). The trick is to create an 8bit (1 byte) version of the table, then iterate over each byte in the integer to be checked and summing the table lookup results.

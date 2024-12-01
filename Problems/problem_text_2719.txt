@@ -1,0 +1,13 @@
+Given a linked list, split it into two lists where each list contains alternating elements from the original list and then finally join them back together.
+
+Example: 
+
+
+Input : 1 > 2 > 3 > 4 > 5 > null
+
+Output: 1 > 3 > 5 > 2 > 4 > null
+
+
+Approach-1: 
+
+To split the given list into two, we can use temporary dummy header nodes for both lists as they are being built. Each sublist has a tail pointer that points to its current last node  that way, new nodes can be appended at the end of each list easily. The dummy nodes give the tail pointers something to point to initially. The dummy nodes are efficient in this case because they are temporary and allocated in the stack. Finally, after both lists are formed, we join them by rearranging their pointers and fixing the head node.The algorithm can be implemented as follows in C++, Java, and Python:

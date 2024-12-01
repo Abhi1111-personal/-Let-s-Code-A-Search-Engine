@@ -1,0 +1,30 @@
+Given a binary tree, print its nodes level by level, i.e., print all nodes of level 1 first, followed by nodes of level 2 and so on Print nodes for any level from left to right.
+
+Example: 
+
+
+levelorder(root)
+q > empty queue
+q.enqueue(root)
+while (not q.isEmpty())
+node > q.dequeue()
+visit(node)
+if (node.left <> null)
+q.enqueue(node.left)
+if (node.right <> null)
+q.enqueue(node.right)
+
+
+Approach-1: 
+
+We have already discussed preorder, inorder and postorder traversals of the binary tree, which are nothing but variations of Depthfirst search of a Tree. Trees can also be traversed in level order, where we visit every node on a level before going to a lower level. This search is referred to as level order traversal or Breadthfirst search (BFS), as the search tree is broadened as much as possible on each depth before going to the next depth.
+A simple solution is to print all nodes of level 1 first, followed by level 2, until level h, where h is the trees height. We can print all nodes present in a level by modifying the preorder traversal on the tree. This is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+We can reduce the time complexity to O(n) by using extra space. Following is a pseudocode for a simple queue-based level order traversal, which requires space proportional to the maximum number of nodes at a given depth. It can be as much as half the total number of nodes.
+
+Approach 3
+
+
+We can also solve this problem by using hashing. The idea is to traverse the tree in a preorder fashion and store every node and its level in a multimap using the level number as a key. Finally, print all nodes corresponding to every level starting from the first level. We can also traverse the tree in inorder or postorder fashion.

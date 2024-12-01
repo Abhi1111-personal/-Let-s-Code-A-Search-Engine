@@ -1,0 +1,16 @@
+In this post, we will see how to find all lexicographic permutations of a string where the repetition of characters is allowed.
+
+Example: 
+
+
+AAA AAB AAC ABA ABB ABC ACA ACB ACC BAA BAB BAC BBA BBB BBC BCA BCB BCC CAA CAB CAC CBA CBB CBC CCA CCB CCC
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. Start by sorting the string so that the characters are processed in the lexicographical order. Then at any point in the recursion, the current index in the output string is filled with each character of the input string one by one, and recur for the next index.Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+
+
+AAA AAA AAB AAA AAA AAB ABA ABA ABB AAA AAA AAB AAA AAA AAB ABA ABA ABB BAA BAA BAB BAA BAA BAB BBA BBA BBB

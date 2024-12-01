@@ -1,0 +1,21 @@
+Given a binary tree, the print vertical sum of it. Assume the left and right child of a node makes a 45degree angle with the parent.
+
+Example: 
+
+
+(horizontal distance > vertical sum)
+
+-1 > 9
+0 > 6
+1 > 11
+2 > 6
+
+
+Approach-1: 
+
+1. Using HashingWe can easily solve this problem with the help of hashing. The idea is to create an empty map where each key represents the relative horizontal distance of a node from the root node, and the value in the map maintains the sum of all nodes present at the same horizontal distance. Then perform preorder traversal on the tree, and update the sum for the current horizontal distance in the map. For each node, recur for its left subtree by decreasing horizontal distance by one, and recur for the right subtree by increasing horizontal distance by one.
+
+Approach 2
+
+
+Exercise: Reduce time complexity to linear using std::unordered_map/HashMap.

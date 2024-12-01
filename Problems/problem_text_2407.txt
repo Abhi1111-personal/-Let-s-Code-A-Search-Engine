@@ -1,0 +1,7 @@
+Compute modulus division of a positive number n by another positive number d, which is a power of 2, without using division or modulo operator.
+
+Example: 
+
+
+00001000(d = 8)
+00000111(d-1 = 7)

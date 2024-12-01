@@ -1,0 +1,24 @@
+Given a singly linked list of integers, determine whether the linked list is a palindrome.
+
+Example: 
+
+
+Input: 1 > 2 > 3 > 2 > 1 > null
+Output: Linked list is a palindrome
+
+
+Input: 1 > 2 > 3 > 3 > 1 > null
+Output: Linked list is not a palindrome
+
+
+Approach-1: 
+
+The idea is to traverse the linked list and push all encountered elements into a stack. Then traverse the linked list again, and for each node, pop the top element from the stack and compare it with the nodes data. If a mismatch happens for any node, we can say that the linked list is not a palindrome.The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+
+We can determine whether a linked list is a palindrome in linear time and with constant space. The idea is to split the given list into two halves and reverse the second half. Then traverse both lists simultaneously and compare their data. If a mismatch happens for any node, we can say that the linked list is not a palindrome.
+
+Approach 3
+

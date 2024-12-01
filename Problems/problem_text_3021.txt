@@ -1,0 +1,30 @@
+Given a dictionary of words, determine if a given string can be segmented into a space-separated sequence of one or more dictionary words.
+
+Example: 
+
+
+Input:
+
+words[] = { this, th, is, famous, Word, break, b, r, e, a, k, br, bre, brea, ak, problem }
+
+string = Wordbreakproblem
+
+Output: The string can be segmented
+
+
+The segmented strings are:
+
+Word break problem
+Word brea k problem
+Word bre ak problem
+Word bre a k problem
+Word br e ak problem
+Word br e a k problem
+Word b r e ak problem
+Word b r e a k problem
+
+
+Approach-1: 
+
+We have already discussed a recursive solution of the word break problem and an alternate version where we actually print all sequences. This post covers the iterative version using Trie data structure that offers better time complexity.
+Consider the problem of breaking a string into component words. Call this string s. Let x be a prefix of s, and y be the remaining characters forming a suffix, so xy (x concatenated with y) is s. Then if we can break x and y into words recursively, we can break xy = s by merging the two sets of words. We can simplify things for ourselves by assuming that x will be a dictionary word; the problem is then to construct such x. We can do this with a Trie. Since x is known to be a prefix of s, any candidate word in the dictionary must be found on the Tries path corresponding to the first few letters of s. To do this using dynamic programming, any time we find an appropriate x, set our good array to have a solution at |x|+1, where |x| is the size of prefix x. Then we can check the last entry to find if the entire string can be broken up.

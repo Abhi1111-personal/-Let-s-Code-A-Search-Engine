@@ -1,0 +1,33 @@
+Given a string and a pattern (having all distinct characters), determine whether the string characters follow a specific order as defined by the patterns characters.
+
+Example: 
+
+
+Input:
+
+word = Techie Delight
+pattern = el
+
+Output: Pattern found
+
+The pattern characters follow the order [e, e, e, l] in the input string. Note that all es appear before l.
+
+
+Input:
+
+word = Techie Delight
+pattern = ei
+
+Output: Pattern not found
+
+The pattern characters follow the order [e, i, e, e, i] in the input string. Note that all es doesnt appear before all is.
+
+
+Approach-1: 
+
+The idea is to loop through all characters of the pattern. If at any point, the last occurrence of the previous encountered character is after the first occurrence of the current character in the input string, we can say that the string doesnt follow the order defined by the pattern.Following is the implementation in C++, Java, and Python based on the above idea:
+
+Approach 2
+
+
+Heres another simple approach to solving this problem. The solution can be divided into three steps:

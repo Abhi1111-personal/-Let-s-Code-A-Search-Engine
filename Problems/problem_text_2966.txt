@@ -1,0 +1,15 @@
+Write an efficient algorithm to construct the longest palindrome by shuffling or deleting characters from a given string.
+
+Example: 
+
+
+Input: ABBDAB
+Output: The longest palindrome is BABAB (or BADAB or ABBBA or ABDBA)
+
+Input: ABCDD
+Output: The longest palindrome is DAD (or DBD or DCD)
+
+
+Approach-1: 
+
+We know that the left and right half of a palindrome contains the same set of characters in reverse order, and optionally a middle character, which can be anything. The idea is to find all even occurring characters and construct the left half of the palindrome using half their count. Their ordering doesnt matter as shuffling is permitted. Then we can easily build the right half from the left half by reversing it. All odd occurring characters are ignored except the one, which forms the resultant palindromic strings middle character.Following is the implementation in C++, Java, and Python based on the above idea:

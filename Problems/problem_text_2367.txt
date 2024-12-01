@@ -1,0 +1,30 @@
+Given a positive number n, find all combinations of 2n elements such that every element from 1 to n appears exactly twice and the distance between its two appearances is exactly equal to the value of the element.
+
+Example: 
+
+
+Input: n = 3
+Output:
+3 1 2 1 3 2
+2 3 1 2 1 3
+
+Input: n = 4
+Output:
+4 1 3 1 2 4 3 2
+2 3 4 2 1 3 1 4
+
+Input: n = 7
+Output:
+1 7 1 2 5 6 2 3 4 7 5 3 6 4
+5 1 7 1 6 2 5 4 2 3 7 6 4 3
+4 1 7 1 6 4 2 5 3 2 7 6 3 5
+
+
+Total 52 configurations possible.
+
+Note that no combination of elements is possible for some values of n like 2, 5, 6, etc.
+
+
+Approach-1: 
+
+We can use backtracking to solve this problem. The idea is to try all possible combinations for the first element and recursively explore the remaining elements to check if they will lead to the solution or not. If the current configuration doesnt result in a solution, backtrack. Note that an element k can be placed at position i and (i+k+1) in the output array where i >= 0 and (i+k+1) < 2n.The algorithm can be implemented as follows in C++, Java, and Python:

@@ -1,0 +1,9 @@
+Given a binary tree, print all nodes for each diagonal having negative slope (\). Assume that the left and right child of a node makes a 45degree angle with the parent.
+
+Approach-1: 
+
+Recursive VersionWe can easily solve this problem with the help of hashing. The idea is to create an empty map where each key in the map represents a diagonal in the binary tree, and its value maintains all nodes present in the diagonal. Then perform preorder traversal on the tree and update the map. For each node, recur for its left subtree by increasing the diagonal by one and recur for the right subtree with the same diagonal.
+
+Approach 2
+
+Iterative Version

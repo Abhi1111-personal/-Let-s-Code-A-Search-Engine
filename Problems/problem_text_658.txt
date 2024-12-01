@@ -1,0 +1,18 @@
+b'1784. Check if Binary String Has at Most One Segment of OnesEasy170534Add to ListShareGiven a binary string s \xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8bwithout leading zeros, return true\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b if s contains at most one contiguous segment of ones. Otherwise, return false.
+\xc2\xa0
+Example 1:
+Input: s = "1001"
+Output: false
+Explanation: The ones do not form a contiguous segment.
+
+Example 2:
+Input: s = "110"
+Output: true
+\xc2\xa0
+Constraints:
+
+1 <= s.length <= 100
+s[i]\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b is either \'0\' or \'1\'.
+s[0] is\xc2\xa0\'1\'.
+
+Accepted24.1KSubmissions59KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringSimilar QuestionsLonger Contiguous Segments of Ones than ZerosEasyShow Hint 1It\'s guaranteed to have at least one segmentShow Hint 2The string size is small so you can count all segments of ones with no that have no adjacent ones.'

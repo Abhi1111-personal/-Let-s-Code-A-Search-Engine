@@ -1,0 +1,7 @@
+There are three ants on a triangle, one at each corner. 
+At a given moment in time, they all set off for a corner at random. 
+What is the probability that they dont collide?
+
+Answer is a floating point number. Round it off to 2 decimal places and output it as I.xx where I is the integer part of the answer, and xx are 2 decimal digits after rounding off.
+For example, if the answer is 2/3, the response should be 0.67
+

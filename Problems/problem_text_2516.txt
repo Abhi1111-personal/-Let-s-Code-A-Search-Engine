@@ -1,0 +1,9 @@
+Given a binary tree, find the size of the largest BST (Binary Search Tree) in it.
+
+Approach-1: 
+
+A simple solution is to traverse the binary tree in a preorder fashion and for each encountered node, check whether the subtree rooted at the node is a BST or not. If the subtree is a BST, calculate and return the subtrees size rooted at the node. Otherwise, return the maximum size BST returned by the left and right subtrees.Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+
+We know that a binary tree is a BST if the following properties hold for every tree node:

@@ -1,0 +1,16 @@
+Given a simple sentence and a set of syntax rules, validate if it is syntactically correct or not.
+
+Example: 
+
+
+This sentence is syntactically correct.
+
+This sentence is syntactically incorrect as two continuous spaces are not allowed.
+
+This sentence is syntactically correct Y.
+
+This sentence is syntactically incorRect as uppercase character is not allowed midway of the string.
+
+THis sentence is syntactically incorrect as two continuous uppercase characters are not allowed.
+
+This sentence is syntactically incorrect as it doesnt end with a full stop

@@ -1,0 +1,18 @@
+Given an M  N matrix, find the common elements present in all rows of the matrix. The solution should traverse the matrix once and print the common elements in O(M  N) time.
+
+Example: 
+
+
+Input:
+
+{ 2, 4, 3, 8, 7 }
+{ 4, 7, 1, 3, 6 }
+{ 3, 5, 2, 1, 3 }
+{ 4, 5, 0, 2, 3 }
+
+Output: 3
+
+
+Approach-1: 
+
+A naive solution would be to check if each element is present in all rows or not. The time complexity of this solution is O(M2  N2), which is pretty bad.An efficient solution is to use a map. Start by inserting every element of the first row into an empty map. Then for every element in the remaining rows, if they are present on the map and occur for the first time in the current row, increment their value in the map by 1. Finally, print the element for the last row, if it has already appeared M-1 times.

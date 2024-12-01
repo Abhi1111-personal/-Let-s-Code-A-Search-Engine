@@ -1,0 +1,21 @@
+Given a square matrix, print the maximum length snake sequence in it. A snake sequence is defined as a sequence of numbers where each new number, which can only be located to the right or down of the current number, is either plus or minus one.
+
+Example: 
+
+
+if (abs(M[i][j]  M[i][j  1]) == 1)
+L[i][j] = max(L[i][j], L[i][j  1] + 1)
+
+if (abs(M[i][j]  M[i  1][j]) == 1)
+L[i][j] = max(L[i][j], L[i  1][j] + 1)
+
+
+Approach-1: 
+
+
+We can use dynamic programming to solve this problem. For each matrix cell (i, j), we need to calculate the maximum length of a snake, say L[i][j], which ends in that cell. The recurrence relation for calculating L[i][j] will be:
+if (abs(M[i][j]  M[i][j  1]) == 1)
+L[i][j] = max(L[i][j], L[i][j  1] + 1)
+
+if (abs(M[i][j]  M[i  1][j]) == 1)
+L[i][j] = max(L[i][j], L[i  1][j] + 1)

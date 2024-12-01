@@ -1,0 +1,26 @@
+Given an integer array, find all distinct combinations of a given length k, where the repetition of elements is allowed.
+
+Example: 
+
+
+Input: {1, 2, 3}, k = 2
+Output: {1, 1}, {1, 2}, {1, 3}, {2, 2}, {2, 3}, {3, 3}
+
+
+Input: {1, 2, 3, 4}, k = 2
+Output: {1, 1}, {1, 2}, {1, 3}, {1, 4}, {2, 2}, {2, 3}, {2, 4}, {3, 3}, {3, 4}, {4, 4}
+
+
+Input: {1, 2, 1}, k = 2
+Output: {1, 1}, {1, 2}, {2, 2}
+
+
+Approach-1: 
+
+
+We can use recursion to solve this problem. The idea is to add each array element to the output starting from the last considered element and recur for the remaining elements. To avoid printing permutations, construct each tuple in the same order as array elements. If the combination of size k is found, print it.Following is the implementation in C++, Java, and Python based on the above idea:
+
+Approach 2
+
+
+In case the array contains repeated elements, the above code will print duplicate combinations. To print only distinct tuples in case input contains repeated elements, sort the array and recur for only one occurrence of adjacent identical elements. This approach is demonstrated below in C++, Java, and Python:

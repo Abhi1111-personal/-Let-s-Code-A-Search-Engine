@@ -1,0 +1,26 @@
+Given two integers, add their binary representation.
+
+Example: 
+
+
+Input:
+
+x = 12731 (which is 00000000000000000011000110111011 in binary)
+y = 38023 (which is 00000000000000001001010010000111 in binary)
+
+Output: 00000000000000001100011001000010
+
+
+Input:
+
+x = 1023 (which is 00000000000000000000001111111111 in binary)
+y = 1023 (which is 00000000000000000000001111111111 in binary)
+
+Output: 00000000000000000000011111111110
+
+
+Approach-1: 
+
+Binary addition is much like decimal addition, except that it carries on a value of 2 instead of 10. For example, in decimal addition, if we add 9 + 6, we get 16, which in the sum gives a digit 6 and a carry of 1. Binary addition follows a similar logic.
+When we add 1 and 1 (with a carry of 0); the result is 2 in decimal, but since 2 is written as 10 in binary, we get, after summing 1 + 1 in binary, a digit 0 and a carry of 1.
+Similarly, if we add 1 and 1 (with a carry of 1), the result is 3 in decimal, 11 in binary. So, after summing 1 + 1 + 1 in binary, we get a digit 1 and a carry of 1.

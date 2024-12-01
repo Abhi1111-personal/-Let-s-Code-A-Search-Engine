@@ -1,0 +1,9 @@
+Given a string and a positive integer k, print the string in k rows in the zigzag form.
+
+Approach-1: 
+
+
+The idea is to identify a pattern in the problem. If we consider a characters index in the output, we have observed some patterns:
+The first key of each row, i, is present at index i in the string.
+For the first and the last row, the distance between each key is (k-1)2. For example, for k = 4, the difference is 6. So, the first element of the first row is located at index 0; the second element is located at index 6; the third element at 12, and so on Similarly, the first element of the last row is located at index 3; the second element is located at index 9, the third element at 15, and so on
+For all middle rows, depending upon whether we are going up or going down, the index differs, as evident from the following code:

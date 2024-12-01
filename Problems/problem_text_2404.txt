@@ -1,0 +1,28 @@
+Given an integer, reverse its bits using binary operators and lookup table in O(1) time.
+
+Example: 
+
+
+{ 0, 128, 64, 192, 32, 160,  , 95, 223, 63, 191, 127, 255 } as
+
+0 reverse is 0
+1 reverse is 128
+2 reverse is 64
+3 reverse is 192
+4 reverse is 32
+5 reverse is 160
+
+
+250 reverse is 95
+251 reverse is 223
+252 reverse is 63
+253 reverse is 191
+254 reverse is 127
+255 reverse is 255
+
+
+Approach-1: 
+
+
+We have discussed two solutions to reverse bits of a number in the previous post. Both solutions have a worst-case time complexity of O(log(n)). In this post, an O(1) time solution is discussed.
+The idea is to use a lookup table to return the reverse of a number in constant time. An integer in C/C++ usually takes 4 bytes for storage. That means the maximum number it can store is 232-1. A lookup table for all 232-1 integers will be infeasible (Not to forget, we have negative numbers too). The trick is to create an 8bit (1 byte) version of the table, then iterate over each byte in the integer to be checked and summing the lookup table results.

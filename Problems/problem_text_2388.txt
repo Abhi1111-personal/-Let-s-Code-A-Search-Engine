@@ -1,0 +1,14 @@
+Given two integers, find their minimum and maximum without using branching.
+
+Example: 
+
+
+r = y ^ ((x ^ y) & -(x < y))
+r = y ^ ((x ^ y) & -1)
+r = y ^ (x ^ y)
+r = x
+
+
+Approach 2
+
+To find the minimum(x, y), we can use the expression y + ((x - y) & ((x - y) >> 31)).

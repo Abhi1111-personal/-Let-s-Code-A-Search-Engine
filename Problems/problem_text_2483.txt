@@ -1,0 +1,5 @@
+Write an efficient algorithm to construct a Cartesian tree from inorder traversal. A Cartesian tree is a binary tree with the heap property: the parent of any node has a smaller value than the node itself.
+
+Approach-1: 
+
+Based on the heap property, the Cartesian tree root is the smallest number of the inorder sequence. The idea is to find the minimum element index in the inorder sequence and construct the root node from it. The left subtree consists of the values earlier than the root in the inorder sequence, while the right subtree consists of the values later than the root. Recursively follow this pattern for all nodes in the tree to construct the complete Cartesian tree.Following is the implementation of the above algorithm in C++, Java, and Python:

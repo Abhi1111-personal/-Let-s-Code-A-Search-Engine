@@ -1,0 +1,5 @@
+This post will find all permutations of a string containing all distinct characters in C++.
+
+Approach-1: 
+
+Approach 1: (Using Backtracking)We can in-place find all permutations of the given string by using backtracking. The idea is to swap each of the remaining characters in the string with its first character and then find all the permutations of the remaining characters using a recursive call. The base case of the recursion is when the string is left with only one unprocessed element. Following is the recursion tree for printing all permutations of the string ABC:

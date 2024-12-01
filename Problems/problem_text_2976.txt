@@ -1,0 +1,19 @@
+Find all ndigit binary numbers with an equal sum of left and right half, where n varies from 1 to 9 and the binary number should not start with 0.
+
+Example: 
+
+
+6digit numbers with an equal sum of left and right half
+
+100001 100010 101011 110011 100100 101101 101110 110101 110110 111111
+
+
+7digit numbers with an equal sum of left and right half (middle element can be 0 or 1 for odd numbers)
+
+1000001 1001001 1000010 1001010 1010011 1011011 1100011 1101011 1000100 1001100 1010101 1011101 1010110 1011110 1100101 1101101 1100110 1101110 1110111 1111111
+
+
+Approach-1: 
+
+A simple solution would be to generate all ndigit binary numbers and print only those numbers that satisfy the given constraints. The time complexity of this solution would be exponential.
+A better solution is to generate only those ndigit numbers that satisfy the given constraints. We can use recursion to form the left- and right-half of the binary number. The idea is to append 0 and 1 to the partially formed left- and right-half at each point in the recursion and recur with one less bit in both the halves. We also maintain a field to store the difference between the sum of bits in the partially formed left- and right-half. Once we have filled N/2digits in both left- and right-half and the difference is 0, print the binary number created by the left- and right-half. If the number is odd, the middle element can be either 0 or 1, i.e., the binary number is formed by (left half + mid + right half).

@@ -1,0 +1,31 @@
+Given a binary tree, print its nodes level by level in reverse order, i.e., print all nodes present at the last level first, followed by nodes of the second last level, and so on Print nodes at any level from left to right.
+
+Example: 
+
+
+levelorder(root)
+
+q > empty queue
+s > empty stack
+q.enqueue(root)
+while (not q.isEmpty())
+node > q.dequeue()
+s.push(node)
+if (node.right <> null)
+q.enqueue(node.right)
+if (node.left <> null)
+q.enqueue(node.left)
+
+while (not s.isEmpty())
+node > s.pop()
+print(node)
+
+
+Approach-1: 
+
+A simple solution would be to print all nodes of level h first, followed by level h-1, until level 1, where h is the trees height. We can print all nodes present in a level by modifying the preorder traversal on the tree. The time complexity of this solution is O(n2), where n is the total number of nodes in the binary tree.
+We can reduce the time complexity to O(n) by using extra space. Following is a pseudocode for a simple queue-based reverse level order traversal, which requires space proportional to the maximum number of nodes at a given depth. It can be as much as half of the total number of nodes.
+
+Approach 2
+
+Following is the implementation in C++, Java, and Python based on the above idea:

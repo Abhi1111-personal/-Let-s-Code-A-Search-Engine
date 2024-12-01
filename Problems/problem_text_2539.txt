@@ -1,0 +1,25 @@
+Given a sorted integer array and a target, determine if the target exists in the array or not using an interpolation search algorithm. If the target exists in the array, return the index of it.
+
+Example: 
+
+
+Input:
+
+arr[] = [2, 3, 5, 7, 9]
+target = 7
+
+Output: Element found at index 3
+
+
+Input:
+
+arr[] = [1, 4, 5, 8, 9]
+target = 2
+
+Output: Element not found
+
+
+Approach-1: 
+
+Interpolation search is an algorithm similar to binary search for searching for a given target value in a sorted array. It parallels how humans search through a telephone book for a particular name, the target value by which the books entries are ordered.
+We know that binary search always chooses the middle of the remaining search space, discarding one half or the other depending on the comparison result between the mid-value and the target value. The remaining search space is reduced to the part before or after the mid-position.

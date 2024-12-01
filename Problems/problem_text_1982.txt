@@ -1,0 +1,44 @@
+Given a string A, find length of the longest repeating sub-sequence such that the two subsequence dont have same string character at same position,
+i.e., any ith character in the two subsequences shouldnt have the same index in the original string.
+NOTE: Sub-sequence length should be greater than or equal to 2.
+
+Constraints: 
+
+ 1 <= |A| <= 100
+
+Input Format: 
+
+The first and the only argument of input contains a string A.
+
+Output Format: 
+
+Return an integer, 0 or 1:
+    => 0 : False
+    => 1 : True
+
+
+Example Input: 
+
+Input 1:
+ A = "abab"
+
+Input 2:
+ A = "abba"
+
+
+Example Output: 
+
+Output 1:
+ 1
+
+Output 2:
+ 0
+
+
+Example Explanation: 
+
+Explanation 1:
+ "ab" is repeated.
+
+Explanation 2:
+ There is no repeating subsequence.

@@ -1,0 +1,27 @@
+Given an N  N ancestor matrix, whose cell (i, j) has the value true if i is the ancestor of j in a binary tree, construct a binary tree from it where binary tree nodes are labeled from 0 to N-1.
+
+Example: 
+
+
+Input:
+
+00000
+10000
+00010
+00000
+11110
+
+Output:
+
+Any one of the following trees
+
+444
+/\/\/\
+12OR21OR12OR
+///\\/
+033003
+
+
+Approach-1: 
+
+We start by creating an array of pointers to store the binary tree nodes. Since the total number of set values in the i'th row indicates the total number of descendants of node i, store row numbers corresponding to a given count in a multimap. We then process the multimap entries in sorted order (smallest value first), and for each entry, assign a new node against the current row in the array. If it is a non-leaf node (having non-zero value), set the left/right child to its descendants nodes whose parents are not set (there can be at-max two such nodes if the given ancestor matrix is correct). Finally, return the last processed node, which has a maximum value and would be the root of the binary tree.The algorithm can be implemented as follows in C++, Java, and Python:

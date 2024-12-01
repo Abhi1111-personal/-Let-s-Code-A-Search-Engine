@@ -1,0 +1,42 @@
+Given two integers A and B which represent an integer range [A, B].Find themaximum number of distinct palindromic integers we can take from the given range, such that the absolute difference between any two integers doesn't exceed C.
+
+Constraints: 
+
+1 <= A <= B <= 1051 <= C <= 105
+
+Input Format: 
+
+The first argument is an integer A.The second argument is an integer B.The third argument is an integer C.
+
+Output Format: 
+
+Return an integer.
+
+Example Input: 
+
+Input 1:
+A = 80
+B = 110
+C = 10
+
+Input 2:
+A = 1
+B = 10
+C = 10
+
+
+Example Output: 
+
+Output 1:
+2
+Output 2:
+9
+
+Example Explanation: 
+
+Explanation 1:
+The plaindromic integers are 88, 99, 101.
+We will pick 99, 101.
+Explanation 2:
+The plaindromic integers are 1, 2, 3, 4, 5, 6, 7, 8, 9.
+We can pick all the palindrome integers.

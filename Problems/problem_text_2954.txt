@@ -1,0 +1,14 @@
+Given a string and a positive number k, find the longest substring of the string containing k distinct characters. If k is more than the total number of distinct characters in the string, return the whole string.
+
+Example: 
+
+
+For k = 2, o/p is bdbdbbd
+For k = 3, o/p is bcbdbdbbdcd
+For k = 5, o/p is abcbdbdbbdcdabd
+
+
+Approach-1: 
+
+A simple solution would be to generate all substrings of the given string and return the longest substring containing k distinct characters. The time complexity of this solution is O(n3) since it takes O(n2) time to generate all substrings for a string of length n and O(n) time to process each substring.
+We can easily solve this problem in O(n) time and O(n) space. The idea is to use a sliding window technique. In the sliding window technique, a window is maintained that satisfies the problem constraints. The window is unstable if it violates the problem constraints, and it tries to stabilize by increasing or decreasing its size.

@@ -1,0 +1,9 @@
+Given a perfect binary tree, print the values of alternating left and right nodes for each level in a top-down and bottom-up manner.
+
+Approach-1: 
+
+The idea is to modify level order traversal by maintaining two queues. We process two nodes each from one queue and enqueue the left and right child of the first popped node into the first queue and the right and left child of the second popped node into the second queue.Following is the C++, Java, and Python implementation based on the above idea:
+
+Approach 2
+
+Variation 2: Print Bottom-Up

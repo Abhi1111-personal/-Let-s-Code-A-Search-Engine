@@ -1,0 +1,16 @@
+Given a BST, count subtrees in it whose nodes lie within a given range.
+
+Example: 
+
+
+698101218
+/\/\
+69812
+/\
+69
+
+
+Approach-1: 
+
+A simple solution would be to traverse the tree and, for each encountered node, check if all nodes under the subtree rooted under the node are within the given range or not. The time complexity of this solution is O(n2) for a binary search tree with n nodes. We can improve time complexity to linear by traversing the tree in a bottom-up manner and transfer some information from children to the parent node.
+The idea is to perform a postorder traversal on the given BST. Then for any node, if both its left and right subtrees are within the range along with the node itself, we can say that the subtree rooted with this node is also within the range.

@@ -1,0 +1,19 @@
+Given a weighted digraph (directed graph), find the least-cost path from a given source to a given destination with exactly m edges.
+
+Example: 
+
+
+Let source = 0, destination = 3, number of edges (m) = 4.
+
+The graph has 3 routes from source 0 to destination 3 with 4 edges.
+
+01523 having cost 17
+01653 having cost 19
+06523 having cost 8
+
+The solution should return the least-cost, i.e., 8.
+
+
+Approach-1: 
+
+Whenever we see the term shortest, the first thing we should think about is doing a BFS traversal. So, here also, we start BFS traversal from the given source vertex. Usually, BFS doesnt explore already discovered vertices again, but here we do the opposite. To cover all possible paths from source to destination, remove this check from BFS. But what if the graph contains a cycle? Removing this check will cause the program to go into an infinite loop. We can easily handle that if we dont consider nodes having a BFS depth of more than m.The solution below maintains the following information in a BFS queue node:

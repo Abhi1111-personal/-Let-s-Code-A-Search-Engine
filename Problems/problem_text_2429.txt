@@ -1,0 +1,13 @@
+Given a binary tree, check if it is a complete binary tree or not.
+
+Approach-1: 
+
+1. Level Order Traversal (BFS)We can modify level order traversal to check if a given binary tree is a complete binary tree or not. The idea is for every dequeued node, check if it is a full node (have both left and right children). If a node is found that is not a full node, i.e., either it has no children or only one child, then all the remaining nodes in the queue should not have any children. If anyone has a child, then its not a complete binary tree; otherwise, it is.
+
+Approach 2
+
+2. Array representation of a complete tree
+
+Approach 3
+
+3. Space-optimized previous Approach

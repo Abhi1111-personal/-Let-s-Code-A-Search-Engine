@@ -1,0 +1,5 @@
+Given a binary search tree, find a pair with a given sum present in it.
+
+Approach-1: 
+
+We can easily solve this problem by using hashing. The idea is to traverse the tree in an inorder fashion and insert every nodes value into a set. Also check if, for any node, the difference between the given sum and nodes value is found in the set, then the pair with the given sum exists in the tree.The algorithm can be implemented as follows in C++, Java, and Python:

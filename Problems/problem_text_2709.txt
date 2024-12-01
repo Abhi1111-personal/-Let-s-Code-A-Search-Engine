@@ -1,0 +1,17 @@
+In this post, we will see how to reverse the singly linked list iteratively without using recursion.
+
+Example: 
+
+
+Input: 1 > 2 > 3 > 4 > 5 > 6 > null
+
+Output: 6 > 5 > 4 > 3 > 2 > 1 > null
+
+
+Approach-1: 
+
+The idea is to use three-pointers: next, current, previous and move them down the list. Here, current is the main pointer running down the list, next leads it, and previous trails it. For each step, reverse the current pointer and then advance all three to get the next node.This previous-current-next strategy can be implemented as follows in C, Java, and Python:
+
+Approach 2
+
+The implementation can be seen below in C:

@@ -1,0 +1,24 @@
+{
+  "name": "searchengineapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "natural": "^5.2.2",
+    "number-to-words": "^1.2.4",
+    "remove-punctuation": "^0.0.4",
+    "simple-spellchecker": "^1.0.2",
+    "stopword": "^2.0.2",
+    "string-similarity": "^4.0.4",
+    "validator": "^13.7.0",
+    "wink-lemmatizer": "^3.0.2",
+    "words-to-numbers": "^1.5.1"
+  }
+}

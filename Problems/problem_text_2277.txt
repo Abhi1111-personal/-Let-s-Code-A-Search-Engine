@@ -1,0 +1,20 @@
+Given an integer array, find a triplet having the maximum product.
+
+Example: 
+
+
+Input: { -4, 1, -8, 9, 6 }
+Output: The triplet having the maximum product is (-4, -8, 9)
+
+Input: { 1, 7, 2, -2, 5 }
+Output: The triplet having the maximum product is (7, 2, 5)
+
+
+Approach-1: 
+
+A naive solution would be to consider every triplet present in the array and compute the product of its elements. Finally, after processing all triplets, print the triplet having the maximum product. The time complexity of this solution would be O(n3), where n is the size of the input.
+A better approach involves sorting the array. Then the triplet having the maximum product can be one of the two:
+
+Approach 2
+
+Can we do better?

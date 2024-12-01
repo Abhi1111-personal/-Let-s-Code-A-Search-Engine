@@ -1,0 +1,33 @@
+Given an unsorted integer array that represents binary search tree (BST) keys, construct a height-balanced BST from it. For each node of a height-balanced tree, the difference between its left and right subtree height is at most 1.
+
+Example: 
+
+
+Input: keys = [15, 10, 20, 8, 12, 16, 25]
+
+Output:
+
+15
+/\
+1020
+/\/\
+8121625
+
+OR
+
+12
+/\
+1020
+//\
+81625
+/
+15
+
+OR
+
+Any other possible representation.
+
+
+Approach-1: 
+
+We have already discussed how to insert a key into a BST. The height of such BST in the worst-case can be as much as the total number of keys in the BST. The worst case happens when given keys are sorted in ascending or descending order, and we get a skewed tree where all the nodes except the leaf have one and only one child.For height-balanced BSTs, with each comparison, skip about half of the tree so that each insertion operation takes time proportional to the logarithm of the total number of items n stored in the tree, i.e., log2n. This is much better than the linear time required to find items by key in an (unsorted) array or unbalanced trees.

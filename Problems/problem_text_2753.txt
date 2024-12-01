@@ -1,0 +1,19 @@
+Given an integer array containing M  N elements, construct an M  N matrix from it in spiral order.
+
+Example: 
+
+
+Input: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+
+Output:
+
+[12345]
+[161718196]
+[152425207]
+[142322218]
+[131211109]
+
+
+Approach-1: 
+
+This problem is mainly the reverse of the following problem:Print matrix in spiral order

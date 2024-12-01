@@ -1,0 +1,22 @@
+The Longest Increasing Subsequence (LIS) problem is to find a subsequence of a given sequence in which the subsequences elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. This subsequence is not necessarily contiguous or unique.
+
+Example: 
+
+
+Initialize to an empty set S = {}
+Inserting 2 - S = {2}  New largest LIS
+Inserting 6 - S = {2, 6}  New largest LIS
+Inserting 3 - S = {2, 3}  Replaced 6 with 3
+Inserting 4 - S = {2, 3, 4}  New largest LIS
+Inserting 1 - S = {1, 3, 4}  Replaced 2 with 1
+Inserting 2 - S = {1, 2, 4}  Replaced 3 with 2
+Inserting 9 - S = {1, 2, 4, 9}  New largest LIS
+Inserting 5 - S = {1, 2, 4, 5}  Replaced 9 with 5
+Inserting 8 - S = {1, 2, 4, 5, 8}  New largest LIS
+
+
+Approach-1: 
+
+
+We have already discussed an O(n2) time complexity solution of LIS here, which uses dynamic programming. In this post, an O(n.log(n)) time, non-DP solution, is discussed.
+Let S[i] be defined as the smallest integer that ends an increasing sequence of length i. Now iterate through every integer X of the input set and do the following:

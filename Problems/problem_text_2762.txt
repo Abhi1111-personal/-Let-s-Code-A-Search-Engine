@@ -1,0 +1,23 @@
+Given an M  N matrix, which is row-wise and column-wise sorted (with all strictly increasing elements in any row or column), report all occurrences of a given element in it in linear time.
+
+Example: 
+
+
+Input:
+
+[-4-3-135]
+[-3-2246]
+[-11358]
+[34789]
+
+Output:
+
+Element 3 is found at position (0, 3)
+Element 3 is found at position (2, 2)
+Element 3 is found at position (3, 0)
+
+
+Approach-1: 
+
+We can do a binary search to find an index of the first occurrence and the last occurrence of the given key for each row. The complexity of this solution will be O(M  log(N)), which is not linear as per problem time constraints.
+The idea is to take advantage of the fact that the matrix is row-wise and column-wise sorted. We start from the matrixs top-rightmost cell and do the following until the matrix boundary is reached:

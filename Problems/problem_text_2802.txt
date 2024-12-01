@@ -1,0 +1,14 @@
+Find the total number of unique paths that the robot can take in a given maze to reach a given destination from a given source.
+
+Example: 
+
+
+Go North: (x, y) > (x  1, y)
+Go West: (x, y) > (x, y  1)
+Go South: (x, y) > (x + 1, y)
+Go East: (x, y) > (x, y + 1)
+
+
+Approach-1: 
+
+The robot should search for a path from the starting position to the goal position until it finds one or until it exhausts all possibilities. We can easily achieve this with the help of Backtracking. We start from the given source cell in the matrix and explore all four paths possible and recursively check if they will lead to the destination or not. We update the unique path count whenever the destination cell is reached. If a path doesnt reach the destination or explored all possible routes from the current cell, we backtrack. To make sure that the path is simple and doesnt contain any cycles, keep track of cells involved in the current path in a matrix, and before exploring any cell, ignore the cell if it is already covered in the current path.The algorithm can be implemented as follows in C++, Java, and Python:

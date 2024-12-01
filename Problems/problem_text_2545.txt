@@ -1,0 +1,21 @@
+Given two sequences, print all the possible longest common subsequences present in them.
+
+Example: 
+
+
+Input: X = XMJYAUZ, Y = MZJAWXU
+Output: MJAU
+
+
+Input: X = ABCBDAB, Y = BDCABA
+Output: BCAB, BCBA, BDAB
+
+
+Approach-1: 
+
+In the previous post, we have discussed how to find the length of the longest common subsequence. This post will discuss how to print the longest common subsequence itself.
+Let X be XMJYAUZ and Y be MZJAWXU. The longest common subsequence between X and Y is MJAU. The table below shows the lengths of the longest common subsequences between prefixes of X and Y. The i'th row and j'th column show the LCSs length of substring X[0i-1] and Y[0j-1].
+
+Approach 2
+
+The above code doesnt generate all the longest common subsequences of given sequences. It will always print one LCS. The problem with the above code is when the last character of X and Y are different, it discards either the last character of X or the last character of Y based on the top or left cells value to the current cell. But what if LCS is also possible with the discarded character?

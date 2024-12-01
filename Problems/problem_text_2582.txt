@@ -1,0 +1,25 @@
+Calculate the total number of ways to achieve a given sum with n throws of dice having k faces.
+
+Example: 
+
+
+Input:
+
+The total number of throws n is 2
+The total number of faces k is 6 (i.e., each dice has values from 1 to 6)
+The desired sum is 10
+
+Output:
+The total number of ways is 3.
+
+The possible throws are (6, 4), (4, 6), (5, 5)
+
+
+Approach-1: 
+
+The problem has an optimal substructure as the problem can be broken down into smaller subproblems, which can further be broken down into yet smaller subproblems, and so on.The idea is to use recursion to solve this problem. We reduce the desired sum by values between 1 and k and recur for the remaining sum with throws left for each throw. If the expected sum is reached with n dices, we have found a way.
+
+Approach 2
+
+
+The above solution exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are getting computed repeatedly. We know that problems with optimal substructure and overlapping subproblems can be solved using dynamic programming, in which subproblem solutions are memoized rather than computed again and again. The memoized version follows the top-down approach since we first break the problem into subproblems and then calculate and store values.

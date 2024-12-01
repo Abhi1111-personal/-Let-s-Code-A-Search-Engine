@@ -1,0 +1,32 @@
+Given a string, count the number of times a given pattern appears in it as a subsequence.
+
+Example: 
+
+
+Input:
+
+string = subsequence
+pattern = sue
+
+Output: 7
+
+subsequence
+subsequence
+subsequence
+subsequence
+subsequence
+subsequence
+subsequence
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. If we compare the last character of the string X[0m] with the last character of pattern Y[0n], there are two possibilities:
+If the strings last character is the same as the last character of the pattern, recur for the remaining substring X[0m-1] and Y[0n-1]. Since we want all possible combinations, also consider the case when the strings current character does not form part of the solution, i.e., ignore the last character of the string and recur for the remaining substring X[0m-1].
+If the last character of the string is different from the last character of the pattern, ignore the last character of the string and recur for the remaining substring X[0m-1].
+
+
+Approach 2
+
+
+The idea is to use dynamic programming to solve this problem. The problem has an optimal substructure and exhibits overlapping subproblems. If we draw the recursion tree of the solution, we can see that the same subproblems are getting computed repeatedly.

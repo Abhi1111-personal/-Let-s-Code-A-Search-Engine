@@ -1,0 +1,11 @@
+Given a linked list with each node having an additional random pointer that points to any random node of the linked list or null, update the random pointer in each linked list node to point to a node with maximum value to its right.
+
+Approach-1: 
+
+A naive solution would be to traverse the list, and for each encountered node, find the node with maximum value by traversing the remaining list again. The time complexity of this approach is O(n2), where n is the total number of nodes in the linked list.
+If the given list was doubly linked, we could have easily updated the random pointers with maximum value node by traversing the list from the end. This would require only a single traversal of the linked list.
+
+Approach 2
+
+
+We can simplify the above code using recursion. The idea is to recursively call the next node of the linked list and update each nodes random pointer with the maximum value node found so far as the recursion unfolds. This is demonstrated below in C++, Java, and Python:

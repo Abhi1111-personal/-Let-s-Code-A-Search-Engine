@@ -1,0 +1,9 @@
+Given a BST and two nodes x and y in it, find the lowest common ancestor (LCA) of x and y. The solution should return null if either x or y is not the actual node in the tree.
+
+Approach-1: 
+
+A simple solution would be to store the path from root to x and the path from the root to y in two auxiliary arrays. Then traverse both arrays simultaneously till the values in the arrays match. The last matched value will be the LCA. If the end of one array is reached, then the last seen value is LCA. The time complexity of this solution is O(n) for a binary search tree with n nodes. However, it requires O(n) auxiliary space for storing two arrays.Recursive Version
+
+Approach 2
+
+Iterative Version

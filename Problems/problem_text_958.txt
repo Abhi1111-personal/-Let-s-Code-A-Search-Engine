@@ -1,0 +1,17 @@
+214. Shortest PalindromeHard2357189Add to ListShareYou are given a string s. You can convert s to a palindrome by adding characters in front of it.
+Return the shortest palindrome you can find by performing this transformation.
+
+Example 1:
+Input: s = "aacecaaa"
+Output: "aaacecaaa"
+Example 2:
+Input: s = "abcd"
+Output: "dcbabcd"
+
+
+Constraints:
+
+0 <= s.length <= 5 * 104
+s consists of lowercase English letters only.
+
+Accepted136.3KSubmissions428.7KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringRolling HashString MatchingHash FunctionSimilar QuestionsLongest Palindromic SubstringMediumImplement strStr()EasyPalindrome PairsHard

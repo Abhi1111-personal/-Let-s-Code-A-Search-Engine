@@ -1,0 +1,6 @@
+Given a binary tree, write an efficient algorithm to compute the diameter of it. A binary tree diameter equals the total number of nodes on the longest path between any two leaves in it.
+
+Approach-1: 
+
+A simple solution would be to calculate the left and right subtrees height for each node in the tree. The maximum node path that passes through a node will have a value one more than the sum of the height of its left and right subtree. Finally, the diameter is maximum among all maximum node paths for every node in the tree. The time complexity of this solution is O(n2) as there are n nodes in the tree, and for every node, we are calculating the height of its left and right subtree that takes O(n) time.
+We can solve this problem in linear time by doing a postorder traversal on the tree. Instead of calculating the height of the left and the right subtree for every node in the tree, get the height in constant time. The idea is to start from the bottom of the tree and return the height of the subtree rooted at a given node to its parent. The height of a subtree rooted at any node is one more than the maximum height of the left or right subtree.

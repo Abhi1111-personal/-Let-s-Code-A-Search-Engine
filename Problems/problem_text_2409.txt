@@ -1,0 +1,22 @@
+Given two integers, find their XOR without using the XOR operator.
+
+Example: 
+
+
+01000001|(x = 65)
+01010000(y = 80)
+~~~~~~~~
+01010001(x | y)
+
+
+01000001&(x = 65)
+01010000(y = 80)
+~~~~~~~~
+01000000(x & y)
+
+
+
+Approach-1: 
+
+A naive solution would be to consider every bit present in both numbers one by one (either from left or right) and compare them. If the current bit is the same in both numbers (i.e., both are 0 or both are 1), set it as 0; otherwise, set it as 1 and move to the next pair of bits until all bits are processed.
+The expression (x | y) - (x & y) is equivalent to x ^ y (finding XOR of two numbers x and y). The XOR works by setting the bits which are set in either of one of the given numbers (0 ^ 1 = 1, 1 ^ 0 = 1) and finally taking out the common bits present in both numbers (1 ^ 1 = 0).

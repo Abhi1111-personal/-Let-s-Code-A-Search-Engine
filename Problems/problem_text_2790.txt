@@ -1,0 +1,31 @@
+Given an M  N integer matrix where each cell has a non-negative cost associated with it, count the number of paths to reach the last cell (M-1, N-1) of the matrix from its first cell (0, 0) such that the path has given cost. We can only move one unit right or one unit down from any cell, i.e., from cell (i, j), we can move to (i, j+1) or (i+1, j).
+
+Example: 
+
+
+path(m, n, cost) = path(m, n  1, cost  M[m][n])(if m == 0)
+= path(m  1, n, cost  M[m][n])(if n == 0)
+= path(m  1, n, cost  M[m][n])
++ path(m, n  1, cost  M[m][n])(otherwise)
+
+path(0, 0, cost) = 1 (if M[m][n] == cost)
+= 0 (otherwise)
+
+
+Approach-1: 
+
+
+The idea is to use recursion. The problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. We can recursively define the problem as follows:
+path(m, n, cost) = path(m, n  1, cost  M[m][n])(if m == 0)
+= path(m  1, n, cost  M[m][n])(if n == 0)
+= path(m  1, n, cost  M[m][n])
++ path(m, n  1, cost  M[m][n])(otherwise)
+
+path(0, 0, cost) = 1 (if M[m][n] == cost)
+= 0 (otherwise)
+
+
+Approach 2
+
+
+We know that problems having optimal substructure and overlapping subproblems can be solved by dynamic programming, in which subproblem solutions are memoized rather than computed repeatedly. Each time we compute the total number of paths with cost c to reach any cell (i, j), save it. If we are ever asked to compute it again, give the saved answer and do not recompute it.

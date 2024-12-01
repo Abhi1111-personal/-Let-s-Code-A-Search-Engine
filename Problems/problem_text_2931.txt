@@ -1,0 +1,9 @@
+Given a string, check if it is a rotated palindrome or not.
+
+Approach-1: 
+
+Approach 1A naive solution is to consider all rotations of the given string and check if any rotation is a palindrome or not. If we have found a rotation that is a palindrome, return true; otherwise, return false.
+
+Approach 2
+
+The problem is similar to finding the Longest Palindromic Substring problem. Let the given string be S of length n. The idea is to concatenate the string with itself, i.e., (S = S + S), and find a palindromic substring of length n in the modified string (S + S). If a palindromic substring of length n exists in the modified string, return true; otherwise, return false.

@@ -1,0 +1,10 @@
+Given a distinct sequence of keys, check if it represents a preorder traversal of a binary search tree (BST).
+
+Approach-1: 
+
+The idea is first to construct a BST from the given sequence by inserting keys into the BST one at a time and then compare the preorder traversal of the constructed BST with the given sequence. If the order matches, we can say that the given sequence represents the preorder traversal of a BST.Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+
+We can reduce the time complexity to O(n) by constructing a BST from the given sequence in a preorder fashion. Now the problem reduces to just validating if the whole sequence is traversed or not while constructing the BST. If the whole sequence is traversed, we can say that the given sequence represents the preorder traversal of a BST.

@@ -1,0 +1,36 @@
+Given a string A consisting of only lowercase English letters. Return the number of substrings of A which are palindrome.
+
+Constraints: 
+
+1 <= A <= 103
+
+Input Format: 
+
+The first and only argument is a string A.
+
+Output Format: 
+
+Return an integer.
+
+Example Input: 
+
+Input 1:
+A = "aba"
+
+Input 2:
+A = "abcd"
+
+
+Example Output: 
+
+Output 1:
+4
+Output 2:
+4
+
+Example Explanation: 
+
+Explanation 1:
+The plaindrome substrings are "a", "b", "a" and "aba".
+Explanation 2:
+The plaindrome substrings are "a", "b", "c" and "d".

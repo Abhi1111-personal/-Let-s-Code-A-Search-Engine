@@ -1,0 +1,8 @@
+This post will implement a queue using the stack data structure in C++, Java, and Python. In other words, design a queue that supports enqueue and dequeue operations using standard push and pop operations of the stack.
+
+Approach 2
+
+Following is the C++, Java, and Python implementation of the idea:
+
+Approach 3
+

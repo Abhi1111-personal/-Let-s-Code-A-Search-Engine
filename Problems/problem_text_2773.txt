@@ -1,0 +1,28 @@
+Given an M  N binary matrix, fill it with alternating rectangles of 1s and 0s.
+
+Example: 
+
+
+Input: 10  8 matrix
+
+Output:
+
+ 11111111
+ 10000001
+ 10111101
+ 10100101
+ 10100101
+ 10100101
+ 10100101
+ 10111101
+ 10000001
+ 11111111
+
+
+Approach-1: 
+
+The idea is to fill the matrix by following the spiral order. All elements involved in each alternating run in spiral order are filled by either 0 or 1 based on input from the last run. Four loops are used to maintain the spiral order, each for the top, right, bottom, and left corner of the matrix.Following is the implementation in C++, Java, and Python based on the above idea:
+
+Approach 2
+
+An M  N matrix has min(ceil(M/2), ceil(N/2)) rectangular cycles. A cycle is formed by i'th row, (N-i+1)'th column, (M-i+1)'th row, and i'th column where i varies from 1 to min(ceil(M/2), ceil(N/2)). The idea is for each rectangular cycle, associate a value to it. For the outer cycle, the value will be 0; for the second cycle, the value will be 1, and the third cycle will have a value of 2, and so on The following figure shows 4 cycles in a 10  8 matrix marked by the value 03:

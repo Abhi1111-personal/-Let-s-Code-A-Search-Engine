@@ -1,0 +1,6 @@
+Given a linked list that can grow in both horizontal and vertical directions (right and down), flatten it into a sorted singly linked list provided that each horizontal and vertical list is already sorted.
+
+Approach 2
+
+
+The above solution first flattens the list and then sort it. We can combine both these steps into one step, i.e., sorting the list while flattening it. We can do this by calling the sortedMerge() routine of the merge sort algorithm, as demonstrated below in C, Java, and Python:

@@ -1,0 +1,5 @@
+Given a binary tree, write an efficient algorithm to find the maximum sum of a path between any two leaves in it. Assume that the binary tree is not skewed and contains at-least two nodes.
+
+Approach-1: 
+
+A simple solution would be to calculate the maximum sum node-to-leaf path from the left and right child for every node in the tree. The maximum sum path between two leaves that passes through a node has a value equal to the maximum sum node-to-leaf path of its left and right child plus the nodes value. Finally, consider the maximum value among all maximum sum paths found for every node in the tree.The time complexity of this solution is O(n2) as there are n nodes in the tree, and for every node, we are calculating the maximum sum node-to-leaf path of its left and right subtree that takes O(n) time.

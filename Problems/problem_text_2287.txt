@@ -1,0 +1,20 @@
+Given an array having elements between 0 and 31, find elements that occur an odd number of times without using the extra space.
+
+Example: 
+
+
+Input: { 5, 8, 2, 5, 8, 2, 8, 5, 1, 8, 2 }
+
+Output: The odd occurring elements are 5, 2, and 1
+
+Explanation:
+
+1 occurs once.
+2 and 5 occurs thrice.
+8 occurs four times.
+
+
+Approach-1: 
+
+nums simple solution would be to store frequencies of the array elements in a count array or a map and print elements with odd frequencies. This approachs advantage is that it can work on any input range in linear time, but it requires extra space.
+To solve this problem in linear time and constant space, use the bitwise XOR operator. We know that the result of an XOR operation is 0 if both the first and second bit are 0 or both are 1, and the result is 1 only if only the first bit is 1 or only the second bit is 1.

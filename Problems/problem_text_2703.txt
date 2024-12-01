@@ -1,0 +1,13 @@
+Given a linked list of integers, split it into two lists containing alternating elements from the original list.
+
+Approach-1: 
+
+1. Using moveNode() functionThe simplest approach iterates over the source list and use moveNode() to pull nodes off the source and alternately put them on a and b. The only strange part is that the nodes will be in the reverse order in the source list.
+
+Approach 2
+
+Here is an alternative approach that builds the sublists in the same order as the source list. The code uses temporary dummy header nodes for the a and b lists as they are being built. Each sublist has a tail pointer that points to its current last node  that way, new nodes can be appended at the end of each list easily. The dummy nodes give the tail pointers something to point to initially. The dummy nodes are efficient in this case because they are temporary and allocated in the stack.
+
+Approach 3
+
+We can easily solve this problem by recursion as well. The recursive implementation can be seen below in C, Java, and Python:

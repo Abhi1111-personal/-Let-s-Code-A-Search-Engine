@@ -1,0 +1,10 @@
+Given a BST and a valid range of keys, remove nodes from the BST that have keys outside the valid range.
+
+Approach-1: 
+
+The idea is simple  traverse the tree in a bottom-up fashion and truncate the left and right subtree before processing a node. Since we are doing a postorder traversal, the subtree rooted at the current node may be truncated, and the current node becomes a leaf node now. So, for each node, check
+
+If its key falls within the valid range, nothing needs to be done.
+If the roots key is smaller than the minimum allowed, remove it and set the root to its right child.
+If the roots key is larger than the maximum allowed, remove it and set the root to its left child.
+

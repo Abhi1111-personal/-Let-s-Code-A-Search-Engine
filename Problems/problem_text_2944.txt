@@ -1,0 +1,26 @@
+Given a list of words and a pattern, find all words in the list that follows the same order of characters as that of the pattern.
+
+Example: 
+
+
+Input:
+
+list = [leet, abcd, loot, geek, cool, for, peer, dear, seed, meet, noon, otto, mess, loss]
+
+pattern = moon (pattern is 4 digits with distinct character at first and last index, and same character at 1st and 2nd index)
+
+Output: [leet, loot, geek, cool, peer, seed, meet]
+
+
+Input:
+
+list = [leet, abcd, loot, geek, cool, for, peer, dear, seed, meet, noon, otto, mess, loss]
+
+pattern = pqrs (pattern is 4 digits and has all distinct characters)
+
+Output: [abcd, dear]
+
+
+Approach-1: 
+
+We can use hashing to solve this problem. The idea is to use a map and associate each distinct character of the given word with the corresponding character in the pattern and store it. For each character in both word and the pattern, if the character is seen before, it should only be mapped to the corresponding character in the pattern. Note that we also have to associate each character in the given pattern with the corresponding character in the given word and follow the same process.Lets understand this by taking an example. Consider the word 'moon' and the pattern 'noon'. We will process each character in both word and pattern. Lets check for mapping from the given word to the given pattern.

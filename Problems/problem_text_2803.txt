@@ -1,0 +1,33 @@
+Given a square matrix of 0's and 1's, calculate the size of the largest plus formed by 1's.
+
+Example: 
+
+
+if grid[i][j] == 1
+left[i][j] = left[i][j  1] + 1
+
+if grid[i][j] == 1
+top[i][j] = top[i  1][j] + 1
+
+if grid[i][j] == 1
+bottom[i][j] = bottom[i + 1][j] + 1
+
+if grid[i][j] == 1
+right[i][j] = right[i][j + 1] + 1
+
+
+Approach-1: 
+
+
+We start by creating four auxiliary matrices left[][], right[][], top[][], bottom[][], where left[j][j], right[i][j], top[i][j], and bottom[i][j] store the maximum number of consecutive 1's present at the left, right, top and bottom of cell (i, j) including cell (i, j), respectively by using dynamic programming:
+if grid[i][j] == 1
+left[i][j] = left[i][j  1] + 1
+
+if grid[i][j] == 1
+top[i][j] = top[i  1][j] + 1
+
+if grid[i][j] == 1
+bottom[i][j] = bottom[i + 1][j] + 1
+
+if grid[i][j] == 1
+right[i][j] = right[i][j + 1] + 1

@@ -1,0 +1,6 @@
+Given an M  N matrix, check if it is a Toeplitz matrix or not. A Toeplitz matrix or diagonal-constant matrix is a matrix in which each descending diagonal from left to right is constant.
+
+Approach-1: 
+
+
+The idea is simple  traverse the matrix once, and for each element (i, j), check if it is the same as its immediate diagonal element (i+1, j+1) or not. If any element differs from its immediate diagonal element, the matrix cannot be Toeplitz.Following is the implementation in C++, Java, and Python based on the above idea:

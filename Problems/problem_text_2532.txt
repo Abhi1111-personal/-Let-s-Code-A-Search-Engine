@@ -1,0 +1,1 @@
+This post will discuss the division of two numbers (integer or decimal) using the binary search algorithm.

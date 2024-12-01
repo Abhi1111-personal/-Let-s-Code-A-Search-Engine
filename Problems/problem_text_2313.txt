@@ -1,0 +1,20 @@
+Given an integer array, find out the minimum and maximum element present using minimum comparisons.
+
+Example: 
+
+
+Input: nums[] = [5, 7, 2, 4, 9, 6]
+
+Output:
+
+The minimum array element is 2
+The maximum array element is 9
+
+
+Approach-1: 
+
+nums naive solution is to compare each array element for minimum and maximum elements by considering a single item at a time. The time complexity of this solution would be linear. The implementation can be seen below in C++, Java, and Python:
+
+Approach 2
+
+The above solution does 2(n-1) comparisons in the best case and 3(n-1) comparisons in the worst case. The worst case happens when all array elements are equal or are sorted in descending order. The best case happens when the input is sorted in ascending order. (Note that we have also considered n-1 comparisons done by for-loop).

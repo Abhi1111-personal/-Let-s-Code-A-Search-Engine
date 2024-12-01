@@ -1,0 +1,10 @@
+Given a BST, find the floor and ceil of a given key in it. If the given key lies in the BST, then both floor and ceil are equal to that key; otherwise, the ceil is equal to the next greater key (if any) in the BST, and the floor is equal to the previous greater key (if any) in the BST.
+
+Approach-1: 
+
+The idea is simple  search for the given key in the tree and update the ceil to the current node before visiting its left subtree. Similarly, update the floor to the current node before visiting its right subtree. If the key is found in the BST, then the floor and ceil are equal to that key. If the key is not found in the BST, then the floor and ceil were already updated while searching for the key.Following is the iterative implementation of the above approach in C++, Java, and Python:
+
+Approach 2
+
+
+Following is the recursive C++, Java, and Python implementation of the idea:

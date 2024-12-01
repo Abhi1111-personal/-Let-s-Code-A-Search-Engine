@@ -1,0 +1,14 @@
+Given an integer array, duplicates are present in it in a way that all duplicates appear an even number of times except one which appears an odd number of times. Find that odd appearing element in linear time and without using any extra memory.
+
+Example: 
+
+
+Input: arr[] = [4, 3, 6, 2, 6, 4, 2, 3, 4, 3, 3]
+
+Output: The odd occurring element is 4
+
+
+Approach-1: 
+
+For an input containing n elements, we can use hashing to solve this problem in O(n) time. We initially traverse the array and maintain the frequency of each element in a hash table. Then, after each array element is processed, return the element with the odd frequency. The problem with this approach is that it requires O(n) extra space as well. Also, it requires one traversal of the array and one traversal of the hash table.
+We can solve this problem in a single traversal of the array and constant space. The idea is to use the XOR operator. We know that if we XOR a number with itself an odd number of times, the result is the number itself; otherwise, if we XOR a number an even number of times with itself, the result is 0. Also, the XOR of a number with 0 is always the number itself.

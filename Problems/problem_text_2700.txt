@@ -1,0 +1,5 @@
+Given a linked list sorted in increasing order, write a function that removes duplicate nodes from it by traversing the list only once.
+
+Approach-1: 
+
+Since the list is sorted, we can proceed down the list and compare adjacent nodes. When adjacent nodes are the same, remove the second one. Theres a tricky case where the node after the next node needs to be noted before the deletion.The algorithm can be implemented as follows in C, Java, and Python:

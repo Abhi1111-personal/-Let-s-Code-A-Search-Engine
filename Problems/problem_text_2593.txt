@@ -1,0 +1,28 @@
+There are two players, A and B, in Pots of gold game, and pots of gold arranged in a line, each containing some gold coins. The players can see how many coins are there in each gold pot, and each player gets alternating turns in which the player can pick a pot from either end of the line. The winner is the player who has a higher number of coins at the end. The objective is to maximize the number of coins collected by A, assuming B also plays optimally, and A starts the game.
+
+Example: 
+
+
+PlayerOpponent
+
+4, 6, 2, 33
+4, 6, 24
+6, 26
+22
+9 coins6 coins
+
+
+Approach-1: 
+
+The idea is to find an optimal strategy that makes the player wins, knowing that an opponent is playing optimally. The player has two choices for coin[ij], where i and j denote the front and rear of the line, respectively.
+1. If the player chooses the front pot i, the opponent is left to choose from [i+1, j].
+
+Approach 2
+
+
+The problem has optimal substructure. We have seen that the problem can be broken down into smaller subproblems, which can further be broken down into yet smaller subproblems, and so on. The problem also exhibits overlapping subproblems, so we will end up solving the same subproblem over and over again. We know that problems with optimal substructure and overlapping subproblems can be solved by dynamic programming, where subproblem solutions are memoized rather than computed and again.
+
+Approach 3
+
+
+Following is a bottom-up version of the above approach in C++, Java, and Python:

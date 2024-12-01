@@ -1,0 +1,21 @@
+Find all ndigit numbers with an equal sum of digits at even and odd indices, where n varies from 2 to 9.
+
+Example: 
+
+
+3digit numbers with an equal sum of digits at even and odd indices
+
+110 121 132 143 154 165 176 187 198 220 231 242 253 264 275 286 297 330 341 352 363 374 385 396 440 451 462 473 484 495 550 561 572 583 594 660 671 682 693 770 781 792 880 891 990
+
+
+5digit numbers with an equal sum of digits at even and odd indices
+
+10010 10021 10032 10043 10054 10065 10076 10087 10098 10120 10131 10142 10153 10164 10175 10186 10197 10230 10241 10252 10263 10274 10285 10296 10340 10351 10362 10373 10384 10395 10450 10461 10472 10483 10494 10560 10571 10582 10593 10670 10681 10692 10780 10791 10890 11000 11011 11022 11033 11044 11055 11066 11077 11088 11099 11110 11121 11132 11143 11154 11165 11176 11187 11198 11220
+
+
+and many more
+
+
+Approach-1: 
+
+The idea is to use recursion. We append digits from 0 to 9 to the partially formed number and recur with one less digit at each point in the recursion. We also maintain a variable to store the difference between even and odd digits so far in the partially formed number. If we have filled ndigits and the difference is 0, print the number. One special case we need and handle that the number should not start with 0.The algorithm can be implemented as follows in C, C++, Java, and Python in a bottom-up manner, i.e., we start from the first index and recursively fill the digits from left to right.

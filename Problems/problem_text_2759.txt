@@ -1,0 +1,20 @@
+Given an M  N binary matrix, replace all occurrences of 0s by 1s, which are not completely surrounded by 1s from all sides (top, left, bottom, right, top-left, top-right, bottom-left, and bottom-right).
+
+Example: 
+
+
+[1111001101]
+[1001101111]
+[1001111111]
+[1111001101]
+[1111000101]
+[1101101100]
+[1101111111]
+[1101100101]
+[1110101001]
+[1110111111]
+
+
+Approach-1: 
+
+We can use Depthfirst search (DFS) to solve this problem. The idea is to consider all zeroes present on the matrix boundary one by one and start a depthfirst search from them to replace all connected 0s. Note that we dont need a visited array here as we are replacing every processed nodes value, and it wont be considered again next time as it will have value 1.The algorithm can be implemented as follows in C++, Java, and Python:

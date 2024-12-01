@@ -1,0 +1,5 @@
+Given a binary tree, print corner nodes of every level in it.
+
+Approach-1: 
+
+The idea is simple. First, modify the level order traversal on a given binary tree to maintain the level of each node. Then while doing level order traversal, if the current node happens to be the first or last node at the current level, print it.Following is the implementation in C++, Java, and Python based on the above idea:

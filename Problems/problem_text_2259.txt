@@ -1,0 +1,23 @@
+Given an unsorted integer array, print all pairs with a given difference k in it.
+
+Example: 
+
+
+Input:
+
+arr = [1, 5, 2, 2, 2, 5, 5, 4]
+k = 3
+
+Output:
+
+(2, 5) and (1, 4)
+
+
+Approach-1: 
+
+A naive solution would be to consider every pair in a given array and return if the desired difference is found. The time complexity of this solution would be O(n2), where n is the size of the input.
+We can use a set to solve this problem in linear time. The idea is to insert each array element arr[i] into a set. We also check if element (arr[i] - diff) or (arr[i] + diff) already exists in the set or not. If the element is seen before, print the pair (arr[i], arr[i] - diff) or (arr[i] + diff, arr[i]).
+
+Approach 2
+
+How to handle duplicates?

@@ -1,0 +1,6 @@
+Given an undirected or a directed graph, implement the graph data structure without using any container provided by any programming language library (e.g., STL in C++ or Collections in Java, etc.). Implement for both weighted and unweighted graphs using the adjacency list representation.
+
+Approach-1: 
+
+
+As we already know, the adjacency list associates each vertex in the graph with the collection of its neighboring vertices or edges, i.e., every vertex stores a list of adjacent vertices. There are many variations of adjacency list representation depending upon the implementation.

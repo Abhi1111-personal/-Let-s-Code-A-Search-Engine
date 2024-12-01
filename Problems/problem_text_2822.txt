@@ -1,0 +1,12 @@
+Given two integers, multiply them without using the multiplication operator or conditional loops.
+
+Example: 
+
+
+multiply(a, b) = | multiply(a*2, b/2)if b is even
+| b + multiply(a*2, b/2)if b is odd
+
+
+Approach 2
+
+If loops are allowed, we can use the following relation:

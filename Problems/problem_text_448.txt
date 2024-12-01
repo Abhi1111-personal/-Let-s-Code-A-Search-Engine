@@ -1,0 +1,29 @@
+b"1536. Minimum Swaps to Arrange a Binary GridMedium42959Add to ListShareGiven an n x n binary grid, in one step you can choose two adjacent rows of the grid and swap them.
+A grid is said to be valid if all the cells above the main diagonal are zeros.
+Return the minimum number of steps needed to make the grid valid, or -1 if the grid cannot be valid.
+The main diagonal of a grid is the diagonal that starts at cell (1, 1) and ends at cell (n, n).
+\xc2\xa0
+Example 1:
+
+Input: grid = [[0,0,1],[1,1,0],[1,0,0]]
+Output: 3
+
+Example 2:
+
+Input: grid = [[0,1,1,0],[0,1,1,0],[0,1,1,0],[0,1,1,0]]
+Output: -1
+Explanation: All rows are similar, swaps have no effect on the grid.
+
+Example 3:
+
+Input: grid = [[1,0,0],[1,1,0],[1,1,1]]
+Output: 0
+
+\xc2\xa0
+Constraints:
+
+n == grid.length == grid[i].length
+1 <= n <= 200
+grid[i][j] is either 0 or 1
+
+Accepted11.3KSubmissions24.7KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArrayGreedyMatrixShow Hint 1For each row of the grid calculate the most right 1 in the grid in the array maxRight.Show Hint 2To check if there exist answer, sort maxRight and check if maxRight[i] \xe2\x89\xa4 i for all possible i's.Show Hint 3If there exist an answer, simulate the swaps."

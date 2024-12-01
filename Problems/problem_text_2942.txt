@@ -1,0 +1,19 @@
+Given a sequence of numbers between 2 and 9, print all possible combinations of words formed from the mobile keypad which has english alphabets associated with each key.
+
+Example: 
+
+
+Input: [2, 3, 4]
+
+Output:
+
+ADG BDG CDG AEG BEG CEG AFG BFG CFG ADH BDH CDH AEH BEH CEH AFH BFH CFH ADI BDI CDI AEI BEI CEI AFI BFI CFI
+
+
+Approach-1: 
+
+Recursive ImplementationWe can use recursion to solve this problem. The idea is to consider every input digit one by one, replace the digit with each character in the mobile keypad, and recur for the next digit. When all the digits are processed, print the result.
+
+Approach 2
+
+We can also solve this problem iteratively using a list. The idea remains the same, but instead of recursing, we push the partial-word into a list. For each character associated with a current digit in the keypad, we append each words character in the output list and push the result into a list. So at the end of each iteration, the list contains all possible combinations of words until the current digit. We repeat this process until all digits are processed.

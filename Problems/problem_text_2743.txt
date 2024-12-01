@@ -1,0 +1,9 @@
+Write an efficient code to clone a linked list with each node containing an additional random pointer. The random pointer can point to any random node of the linked list or null.
+
+Approach-1: 
+
+1. Linear time solution using extra spaceTo clone a linked list with random pointers, maintain a hash table for storing the mappings from a linked list node to its clone. We create a new node with the same data for each node in the original linked list and recursively set its next pointers. We also create a mapping from the original node to the duplicate node in the hash table. Finally, traverse the original linked list again and update the duplicate nodes random pointers using the hash table.
+
+Approach 2
+
+2. Linear time solution using constant space

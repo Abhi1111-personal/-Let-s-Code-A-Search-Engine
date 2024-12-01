@@ -1,0 +1,1 @@
+This post will discuss how to implement two stacks in a single array efficiently.

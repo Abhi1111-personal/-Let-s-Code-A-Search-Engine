@@ -1,0 +1,85 @@
+Given a string and a pattern containing wildcard characters, write an efficient algorithm to check if the string matches with the wildcard pattern or not.
+
+Example: 
+
+
+Input: string = XYXZZXY, pattern = X***Y
+Output: true
+
+Input: string = XYXZZXY, pattern = X***X
+Output: false
+
+Input: string = XYXZZXY, pattern = X***X?
+Output: true
+
+Input: string = XYXZZXY, pattern = *
+Output: true
+
+
+Approach-1: 
+
+The idea is to solve this problem by dividing the problem into subproblems recursively. For a given pattern[0m] and word[0n],
+If pattern[m] == *, if * matches the current character in the input string, move to the next character in the string; otherwise, ignore the * character and move to the next character in the pattern.
+If pattern[m] == ?, ignore the current characters of both string and pattern and check if pattern[0m-1] matches word[0n-1].
+If the current character in the pattern is not a wildcard character, it should match the current character in the input string.
+
+
+Approach 2
+
+C++JavaPython
+C++
+
+
+
+
+
+
+
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192
+
+#include <iostream>#include <string>#include <unordered_map>using namespace std;// Recursive function to check if the input string matches// with a given wildcard patternbool isMatch(string word, int n,string pattern, int m,unordered_map<string, bool> &lookup){// construct a unique map key from dynamic elements of the inputstring key = to_string(n) + "|" + to_string(m);// if the subproblem is seen beforeif (lookup.find(key) != lookup.end()) {return lookup[key];}// since the subproblem is seen for the first time, solve it and// store its result in a map// end of the pattern is reachedif (m == pattern.size()){// return true only if the end of the input string is also reachedreturn (lookup[key] = (n == word.size()));}// if the input string reaches its end, return when the// remaining characters in the pattern are all '*'if (n == word.size()){for (int i = m; i < pattern.size(); i++){if (pattern[i] != '*') {return (lookup[key] = false);}}return (lookup[key] = true);}// if the current wildcard character is '?' or the current character in// the pattern is the same as the current character in the input stringif (pattern[m] == '?' || pattern[m] == word[n]){// move to the next character in the pattern and the input stringlookup[key] = isMatch(word, n + 1, pattern, m + 1, lookup);}// if the current wildcard character is '*'else if (pattern[m] == '*'){// move to the next character in the input string or// ignore '*' and move to the next character in the patternlookup[key] = isMatch(word, n + 1, pattern, m, lookup) ||isMatch(word, n, pattern, m + 1, lookup);}else {// we reach here when the current character in the pattern is not a// wildcard character, and it doesn't match the current// character in the input stringlookup[key] = false;}return lookup[key];}// Check if a string matches with a given wildcard patternbool isMatch(string word, string pattern){unordered_map<string, bool> lookup;return isMatch(word, 0, pattern, 0, lookup);}int main(){cout << boolalpha;cout << isMatch("XYXZZXY", "X***Y") << endl;// truecout << isMatch("XYXZZXY", "X*ZZ??") << endl; // truecout << isMatch("XYXZZXY", "*X*X?") << endl;// truecout << isMatch("XYXZZXY", "X***X") << endl;// falsecout << isMatch("XYXZZXY", "*") << endl;// truereturn 0;}
+
+
+
+
+
+DownloadRun Code
+
+Java
+
+
+
+
+
+
+
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192
+
+import java.util.HashMap;import java.util.Map;class Main{// Recursive function to check if the input string matches// with a given wildcard patternpublic static boolean isMatch(String word, int n, String pattern, int m,Map<String, Boolean> lookup){// construct a unique map key from dynamic elements of the inputString key = n + "|" + m;// if the subproblem is seen beforeif (lookup.containsKey(key)) {return lookup.get(key);}// since the subproblem is seen for the first time, solve it and// store its result in a map// end of the pattern is reachedif (m == pattern.length()){// return true only if the end of the input string is also reachedlookup.put(key, (n == word.length()));return n == word.length();}// if the input string reaches its end, return when the// remaining characters in the pattern are all '*'if (n == word.length()){for (int i = m; i < pattern.length(); i++){if (pattern.charAt(i) != '*'){lookup.put(key, false);return false;}}lookup.put(key, true);return true;}// if the current wildcard character is '?' or the current character in// the pattern is the same as the current character in the input stringif (pattern.charAt(m) == '?' || pattern.charAt(m) == word.charAt(n)){// move to the next character in the pattern and the input stringlookup.put(key, isMatch(word, n + 1, pattern, m + 1, lookup));}// if the current wildcard character is '*'else if (pattern.charAt(m) == '*'){// move to the next character in the input string or// ignore '*' and move to the next character in the patternlookup.put(key, isMatch(word, n + 1, pattern, m, lookup) ||isMatch(word, n, pattern, m + 1, lookup));}else {// we reach here when the current character in the pattern is not a// wildcard character, and it doesn't match the current// character in the input stringlookup.put(key, false);}return lookup.get(key);}// Check if a string matches with a given wildcard patternpublic static boolean isMatch(String word, String pattern){Map<String, Boolean> lookup = new HashMap<>();return isMatch(word, 0, pattern, 0, lookup);}public static void main(String[] args){System.out.println(isMatch("XYXZZXY", "X***Y"));// trueSystem.out.println(isMatch("XYXZZXY", "X*ZZ??")); // trueSystem.out.println(isMatch("XYXZZXY", "*X*X?"));// trueSystem.out.println(isMatch("XYXZZXY", "X***X"));// falseSystem.out.println(isMatch("XYXZZXY", "*"));// true}}
+
+
+
+
+
+DownloadRun Code
+
+Python
+
+
+
+
+
+
+
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374
+
+# Recursive function to check if the input string matches# with a given wildcard patterndef isMatch(word, pattern, n, m, lookup):# construct a unique key from dynamic elements of the inputkey = (n, m)# if the subproblem is seen beforeif key in lookup:return lookup.get(key)# since the subproblem is seen for the first time, solve it and# store its result in a dictionary# end of the pattern is reachedif m == len(pattern):# return true only if the end of the input string is also reachedlookup[key] = (n == len(word))return n == len(word)# if the input string reaches its end, return when the# remaining characters in the pattern are all '*'if n == len(word):for i in range(m, len(pattern)):if pattern[i] != '*':lookup[key] = Falsereturn Falselookup[key] = Truereturn True# if the current wildcard character is '?' or the current character in# the pattern is the same as the current character in the input stringif pattern[m] == '?' or pattern[m] == word[n]:# move to the next character in the pattern and the input stringlookup[key] = isMatch(word, pattern, n + 1, m + 1, lookup)# if the current wildcard character is '*'elif pattern[m] == '*':# move to the next character in the input string or# ignore '*' and move to the next character in the patternlookup[key] = isMatch(word, pattern, n + 1, m, lookup) or \isMatch(word, pattern, n, m + 1, lookup)else:# we reach here when the current character in the pattern is not a# wildcard character, and it doesn't match the current# character in the input stringlookup[key] = Falsereturn lookup.get(key)# Check if a string matches with a given wildcard patterndef isMatching(word, pattern):lookup = {}return isMatch(word, pattern, 0, 0, lookup)if __name__ == '__main__':print(isMatching('XYXZZXY', 'X***Y')) # Trueprint(isMatching('XYXZZXY', 'X*ZZ??'))# Trueprint(isMatching('XYXZZXY', '*X*X?')) # Trueprint(isMatching('XYXZZXY', 'X***X')) # Falseprint(isMatching('XYXZZXY', '*')) # True
+
+
+
+
+
+DownloadRun Code

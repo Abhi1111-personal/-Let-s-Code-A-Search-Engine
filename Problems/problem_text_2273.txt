@@ -1,0 +1,23 @@
+Given an integer array, partition it into two subarrays having the same sum of elements.
+
+Example: 
+
+
+Input: {6, -4, -3, 2, 3}
+
+Output: The two subarrays are {6, -4} and {-3, 2, 3} having equal sum of 2
+
+
+Input: {6, -5, 2, -4, 1}
+
+Output: The two subarrays are {} and {6, -5, 2, -4, 1} having equal sum of 0
+
+
+Approach-1: 
+
+Please note that the problem specifically targets subarrays that are contiguous (i.e., occupy consecutive positions) and inherently maintains the order of elements.
+A simple solution is to iterate the array and calculate the sum of the left and right subarray for each array element. The time complexity of this solution is O(n2), where n is the size of the input. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+sum of right subarray = total sum  sum of elements so far

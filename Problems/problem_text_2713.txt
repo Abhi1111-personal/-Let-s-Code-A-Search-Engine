@@ -1,0 +1,12 @@
+Given two linked lists, merge their nodes into the first list by taking nodes alternately between the two lists. If the first list runs out, the remaining nodes of the second list should not be moved.
+
+Approach-1: 
+
+The solution depends on being able to move nodes to the end of a list. Many techniques are available to solve this problem: dummy node, local reference, or recursion.1. Using Dummy Node
+
+Approach 2
+
+This method uses a local reference to get rid of the dummy nodes entirely. Instead of using a dummy node, it maintains a struct node** pointer, lastPtrRef, which always points to the last pointer of the result list. This solves the same case that the dummy node did  dealing with the result list when it is empty. When trying to build up a list at its tail, either use the dummy node or the struct node** reference strategy. It uses moveNode() function as a helper.
+
+Approach 3
+

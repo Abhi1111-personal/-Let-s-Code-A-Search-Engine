@@ -1,0 +1,13 @@
+Given a sorted list in increasing order and a single node, insert the node into the lists correct sorted position. The function should take an existing node and rearranges pointers to insert it into the list.
+
+Approach-1: 
+
+There are many possible solutions to this problem. The basic strategy is to iterate down the list looking for the place to insert the new node. That could be the end of the list or a point just before a larger node than the new node. The three solutions presented handle the head end case in different ways.1. Naive Approach
+
+Approach 2
+
+Another strategy is to use a temporary dummy node to take care of the first node case  the dummy node nothing but temporarily the first node in the list. Following is the C, Java, and Python program that demonstrates it:
+
+Approach 3
+
+Finally, we can use also use local references to insert a node into the lists correct sorted position. The implementation can be seen below in C:

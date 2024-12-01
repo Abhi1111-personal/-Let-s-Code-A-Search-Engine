@@ -1,0 +1,5 @@
+Given an integer array, sort it using the merge sort algorithm.
+
+Approach-1: 
+
+Following is the C, Java, and Python implementation of the merge sort algorithm:

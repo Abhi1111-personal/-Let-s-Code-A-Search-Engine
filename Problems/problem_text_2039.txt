@@ -1,0 +1,153 @@
+Given a set of reviews provided by the customers for different hotels and a string containing Good Words, you need to sort the reviews in descending order according to their Goodness Value (Higher goodness value first). We define the Goodness Value of a string as the number of Good Words in that string.
+NOTE: Sorting should be stable. If review i and review j have the same Goodness Value then their original order would be preserved.
+You are expected to use Trie in an Interview for such problems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constraints: 
+
+1 <= No.of reviews <= 200
+1 <= No. of words in a review <= 1000
+1 <= Length of an individual review <= 10,000
+1 <= Number of Good Words <= 10,000
+1 <= Length of an individual Good Word <= 4
+All the alphabets are lower case (a - z)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input Format: 
+
+First argument is a string A containing "Good Words" separated by "" character
+Second argument is a vector B of strings containing Hotel Reviews. Review strings are also separated by "" character.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Output Format: 
+
+Return a vector of integers which contain the original indexes of the reviews in the sorted order of reviews.
+
+Example Input: 
+
+Input 1:
+ A = "coolicewifi"
+ B = ["wateriscool", "coldicedrink", "coolwifispeed"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example Output: 
+
+Output 1:
+ [2, 0, 1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example Explanation: 
+
+Explanation 1:
+ sorted reviews are ["coolwifispeed", "wateriscool", "coldicedrink"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

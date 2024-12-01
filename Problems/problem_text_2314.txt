@@ -1,0 +1,9 @@
+This post will discuss the difference between a subarray, a substring, a subsequence, and a subset.
+
+Approach 2
+
+2. Substring
+
+Approach 3
+
+A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements. For example, {nums, B, D} is a subsequence of sequence {nums, B, C, D, E} obtained after removing {C} and {E}.

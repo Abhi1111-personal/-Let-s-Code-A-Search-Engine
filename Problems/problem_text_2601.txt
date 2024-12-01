@@ -1,0 +1,17 @@
+The longest increasing subsequence problem is to find a subsequence of a given sequence in which the subsequences elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. This subsequence is not necessarily contiguous or unique.
+
+Approach-1: 
+
+
+We have discussed a dynamic programming solution to solve the longest increasing subsequence problem in the previous post. In this post, another interesting DP solution is discussed in which we reduce the Longest Increasing Subsequence (LIS) to the Longest Common Subsequence (LCS). Following is the complete algorithm:
+
+Create a copy of the original array.
+Sort the copy of the original array.
+Remove all the duplicates from the copy.
+Perform LCS of original sequence with its modified copy.
+
+
+
+Approach 2
+
+The idea is to read the LCS lookup table and follow the path from the bottom-right to the top-left corner of the table. If the current element in X and Y are equal, they are part of the LIS, and we move diagonally. If the current element in X and Y are different, we go up or left, depending on which cell has a higher number.

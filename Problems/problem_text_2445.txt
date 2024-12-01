@@ -1,0 +1,20 @@
+Given a binary tree, perform vertical traversal on it. In a vertical traversal, nodes of a binary tree are processed in vertical order from left to right. Assume that the left and right child makes a 45degree angle with the parent.
+
+Example: 
+
+
+(horizontal distance > Nodes)
+
+-1 > [2, 7]
+0 > [1, 5]
+1 > [3, 8]
+2 > [6]
+
+
+Approach-1: 
+
+We can easily solve this problem with the help of hashing. This post provides an overview of some available alternatives to accomplish this using hashing.1. Using Preorder Traversal
+
+Approach 2
+
+2. Using Level Order Traversal

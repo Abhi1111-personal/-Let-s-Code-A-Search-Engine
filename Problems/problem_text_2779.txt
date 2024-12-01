@@ -1,0 +1,34 @@
+Given an M  N matrix of integers whose each cell can contain a negative, zero, or a positive value, determine the minimum number of passes required to convert all negative values in the matrix positive.
+
+Example: 
+
+
+row[] = { -1, 0, 0, 1 }
+col[] = { 0, -1, 1, 0 }
+
+So, from any position (x, y), we can move to:
+
+(x  1, y)
+(x, y  1)
+(x, y + 1)
+(x + 1, y)
+
+
+Approach-1: 
+
+
+The idea is to use Breadthfirst Search as it is the shortest path problem. The algorithm can be implemented as follows:
+Create a queue Q and enqueue cell coordinates of all positive numbers in the matrix. Create another queue q to separate the positive numbers involved in the previous pass from the positive numbers in the current pass.
+Do till first queue Q is empty
+
+Copy contents of the original queue Q to the second queue q and empty the original queue.
+Do till second queue q is empty
+
+Remove the front node from queue q and check all four adjacent cells of the current cell.
+If any of the four adjacent cells is negative, make its value positive and enqueue it into queue Q.
+
+
+Increment number of passes by 1.
+
+
+If all the nodes in the queue are processed, return the total number of passes.

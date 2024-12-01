@@ -1,0 +1,19 @@
+Given a binary tree and a node in it, write an efficient algorithm to find its next node at the same level as the node.
+
+Example: 
+
+
+The next node of 2 is 3
+The next node of 5 is 6
+The next node of 7 is 8
+The next node of 8 is null
+
+
+Approach-1: 
+
+A simple solution is to perform a level order traversal on the tree. The idea is to modify the level order traversal to maintain the level number of each node, and if the given node is found, we return its immediate right node, present at the same level.The implementation can be seen below in C++, Java, and Python:
+
+Approach 2
+
+
+We can also solve this problem by using constant auxiliary space and linear time. The idea is to traverse the tree in a preorder fashion and search for the given node. Once the node is found, mark its level number. Then the first node encountered at the same level is the next right node.

@@ -1,0 +1,17 @@
+This article will introduce a significant data structure, priority queue, and discuss how we can implement them using (Binary) Heaps.
+
+Example: 
+
+
+PARENT(i) = floor((i  1)/2)
+LEFT-CHILD(i) = 2i + 1
+RIGHT_CHILD(i) = 2i + 2
+
+Min Heap Property: A[PARENT[i]] <= A[i]
+Max Heap Property: A[PARENT[i]] >= A[i]
+
+
+Approach-1: 
+
+Min Heap and Max Heap Implementation in Java
+References:

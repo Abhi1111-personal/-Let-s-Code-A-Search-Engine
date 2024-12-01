@@ -1,0 +1,26 @@
+Given two integers, x and n, where n is non-negative, efficiently compute the power function pow(x, n).
+
+Example: 
+
+
+pow(-2, 10) = 1024
+pow(-3, 4) = 81
+pow(5, 0) = 1
+pow(-2, 3) = -8
+
+
+Approach-1: 
+
+1. Naive Iterative SolutionA simple solution to calculate pow(x, n) would multiply x exactly n times. We can do that by using a simple for loop. This is demonstrated below in C, Java, and Python:
+
+Approach 2
+
+2. Using Divide and Conquer
+
+Approach 3
+
+3. Optimized Divide and Conquer Solution
+
+Approach 4
+
+4. Using Low-Level Programming (Binary Operators)

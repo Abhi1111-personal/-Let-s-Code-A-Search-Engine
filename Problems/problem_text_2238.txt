@@ -1,0 +1,22 @@
+Given an integer array, find and print a contiguous subarray with the maximum sum in it.
+
+Example: 
+
+
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4}
+
+Output: The contiguous subarray with the largest sum is {4, -1, 2, 1}
+
+
+Input: {8, -7, -3, 5, 6, -2, 3, -4, 2}
+
+Output: The contiguous subarray with the largest sum is {5, 6, -2, 3}
+
+
+Approach-1: 
+
+We can easily solve this problem in linear time by maintaining the maximum subarray sum ending at each array index. Then,
+
+The subarray is either empty in which case its sum is zero, or
+It consists of one more element than the maximum subarray ending at the previous index.
+

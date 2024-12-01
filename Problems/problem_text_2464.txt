@@ -1,0 +1,13 @@
+Given an integer array representing a binary tree, such that the parent-child relationship is defined by (A[i], i) for every index i in array A, build a binary tree out of it. The root nodes value is i if -1 is present at index i in the array. It may be assumed that the input provided to the program is valid.
+
+Example: 
+
+
+Parent: [-1, 0, 0, 1, 2, 2, 4, 4]
+Index : [ 0, 1, 2, 3, 4, 5, 6, 7]
+
+
+
+Approach-1: 
+
+The solution is simple and effective  create n new tree nodes, each having values from 0 to n-1, where n is the arrays size, and store them in a map or array for the quick lookup. Then traverse the given parent array and build the tree by setting the parent-child relationship defined by (A[i], i) for every index i in array A. Since several binary trees can be formed from a single input, the solution should build any of them. The solution will always set the left child for a node before setting its right child.The algorithm can be implemented as follows in C++, Java, and Python:

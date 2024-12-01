@@ -1,0 +1,20 @@
+Given two integer arrays, reorder elements of the first array by the order of elements defined by the second array.
+
+Example: 
+
+
+Input:
+
+first = [5, 8, 9, 3, 5, 7, 1, 3, 4, 9, 3, 5, 1, 8, 4]
+second = [3, 5, 7, 2]
+
+Output: [3, 3, 3, 5, 5, 5, 7, 1, 1, 4, 4, 8, 8, 9, 9]
+
+
+Approach-1: 
+
+1. Using HashingThe idea is to count the frequency of each element of the first array and store it in a hash table. Now for each element of the second array, check if the element is present on the map or not. If it is present on the map, print the element n number of times, where n is the frequency of that element in the first array. We also remove that element from the map so that we are only left with only present elements in the first array (but not present in the second array). To append them at the end, they need to be sorted.
+
+Approach 2
+
+2. Using Comparator

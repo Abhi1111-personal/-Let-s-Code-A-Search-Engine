@@ -1,0 +1,25 @@
+Find duplicate rows present in a given binary matrix by traversing the matrix only once.
+
+Example: 
+
+
+Input:
+
+[10010]
+[01100]
+[10010]
+[00110]
+[01100]
+
+Output: {3, 5}
+
+Explanation: Row #3 is duplicate of row #1 and row #5 is duplicate of row #2
+
+
+Approach-1: 
+
+Approach 1 (Using Trie)The idea is to insert each row of the given binary matrix into a binary Trie. The alphabet size of a binary trie is only limited to Boolean numbers (0 and 1). If a row is seen before (i.e., it is already present in the Trie), report it as duplicate.
+
+Approach 2
+
+Approach 2 (Converting to Decimal)

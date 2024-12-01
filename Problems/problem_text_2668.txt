@@ -1,0 +1,20 @@
+Given a connected and weighted undirected graph, construct a minimum spanning tree out of it using Kruskals Algorithm.
+
+Example: 
+
+
+sort all edges in graph G in order of their increasing weights;
+repeat V-1 times// as MST contains V-1 edges
+{
+select the next edge with minimum weight from graph G;
+
+if (no cycle is formed by adding the edge in MST, i.e., the edge connects two
+different connected components in MST)
+add the edge to MST;
+}
+
+
+Approach-1: 
+
+
+Prerequisite:UnionFind Algorithm for cycle detection in a graph

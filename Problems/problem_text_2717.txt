@@ -1,0 +1,11 @@
+Given a linked list, check if it is a palindrome or not.
+
+Approach-1: 
+
+A simple solution would be to create a clone of the linked list, reverse it, and check if both linked lists are equal or not. This approach requires three traversals of the linked list and requires extra space for storing duplicates.
+A better solution is to use recursion. The idea is to reach the end of the linked list by recursion and then compare if the last node has the same value as the first node and the second previous node has the same value as the second node, and so on using the call stack and a pointer at the beginning of the linked list.
+
+Approach 2
+
+
+We can solve this problem in constant space and linear time by dividing the problem into three subproblems:

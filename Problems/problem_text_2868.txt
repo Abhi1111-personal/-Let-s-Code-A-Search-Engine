@@ -1,0 +1,27 @@
+Given a maze in the form of a rectangular matrix, filled with either O, X, or M, where O represents an open cell, X represents a blocked cell, and M represents landmines in the maze, find the shortest distance of every open cell in the maze from its nearest mine.
+
+Example: 
+
+
+Input: 6  5 matrix filled with O (Open cell), X (Blocked Cell), and M (Landmine).
+
+OMOOX
+OXXOM
+OOOOO
+OXXXO
+OOMOO
+OXXMO
+
+Output:
+
+1012-1
+2-1-110
+34321
+3-1-1-12
+21012
+3-1-101
+
+
+Approach-1: 
+
+The idea is to perform a BFS to solve this problem. Start by creating an empty queue and enqueue all cells with the mines. Then loop through the queue and consider each of four adjacent cells of the front cell. Enqueue the adjacent cell (with updated distance) if it represents an open space, and its distance from the mine is yet to be calculated. Repeat the procedure till the queue is empty.Following is the C++, Java, and Python implementation of the idea:

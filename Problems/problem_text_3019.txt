@@ -1,0 +1,22 @@
+Given a huge set of words with duplicates present and a positive integer k, find the first kmaximum occurring words in it.
+
+Example: 
+
+
+Input:
+
+keys = [code, coder, coding, codable, codec, codecs, coded, codeless, codec, codecs, codependence, codex, codify, codependents, codes, code, coder, codesign, codec, codeveloper, codrive, codec, codecs, codiscovered]
+
+k = 4
+
+Output:
+
+codec occurs 4 times
+codecs occurs 3 times
+code occurs 2 times
+coder occurs 2 times
+
+
+Approach-1: 
+
+

@@ -1,0 +1,16 @@
+3-partition problem: Given a set S of positive integers, determine if it can be partitioned into three disjoint subsets that all have the same sum, and they cover S.
+
+Approach-1: 
+
+We can start by calculating the sum of all St in the set. If St is not divisible by 3, we cant divide the array into three subsets with an equal sum. If St is divisible by 3, check if 3 subsets with the sum of elements equal to St/3 exists or not. We can find this by considering each item in the given array one by one, and for each item, there are three possibilities:
+
+Include the current item in the first subset and recur for the remaining items with the remaining sum.
+Include the current item in the second subset and recur for the remaining items with the remaining sum.
+Include the current item in the third subset and recur for the remaining items with the remaining sum.
+
+
+
+Approach 2
+
+
+The problem has an optimal substructure and also exhibits an overlapping subproblems, i.e., the problem can be split into smaller subproblems, and the same subproblem will get computed again and again. We can easily prove this by drawing a recursion tree of the above code for a huge input.

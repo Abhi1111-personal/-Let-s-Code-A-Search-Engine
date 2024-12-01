@@ -1,0 +1,15 @@
+Find the minimum number of moves required for converting an array of zeroes to a given array of non-negative integers using only increment and double operations. The increment operation increases the value of an array element by 1 and the double operation doubles the value of each array element.
+
+Example: 
+
+
+The minimum number of moves required to convert an array {0, 0, 0} to array {8, 9, 8} is 7.
+
+The optimal sequence is 3 increment operations, followed by 3 double operations, and a single increment operation, as shown below:
+
+{ 0, 0, 0 } > { 1, 0, 0 } > { 1, 1, 0 } > { 1, 1, 1 } > { 2, 2, 2 }  > { 4, 4, 4 } > { 8, 8, 8 } > { 8, 9, 8 }
+
+
+Approach-1: 
+
+The idea is to do the opposite, i.e., the array can be converted to an array of zeroes using decrement and reduce operation. The decrement operation lowers the value of an array element by one. And, that reduce operation minimizes the value of each array element by half. This logic works since the minimum number of moves would remain the same for converting either array to another. The algorithm can be implemented as the following:Traverse the array and convert each odd number to even by reducing its value by 1. For each decrement operation, increment the number of moves required. After traversing the array, the array is left with all even numbers. Now divide each even number by two and increment the number of moves by 1. Note this is done only once for the divide operation performed on the whole array. Repeat this process till each array element becomes 0.

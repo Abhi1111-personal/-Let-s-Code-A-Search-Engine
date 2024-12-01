@@ -1,0 +1,29 @@
+Given a 3 x A board,  find the number of ways to color it using at most 4 colors such that no 2 adjacent boxes have same color.
+Diagonal neighbors are not treated as adjacent boxes.
+Return the ways modulo 109 + 7 as the answer grows quickly.
+Input Format:
+The first and the only argument contains an integer, A.
+
+
+Output Format:
+Return an integer representing the number of ways to color the board.
+
+
+Constraints:
+1 <= A < 100000
+
+
+Examples:
+Input 1:
+    A = 1
+
+Output 1:
+    36
+
+Input 2:
+    A = 2
+
+Output 2:
+    588
+
+

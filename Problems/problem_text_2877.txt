@@ -1,0 +1,8 @@
+Given an integer array, sort it using the bubble sort algorithm.
+
+Approach-1: 
+
+Insertion Sort ImplementationFollowing is an iterative implementation of the bubble sort algorithm in C, Java, and Python. The implementation can be easily optimized by observing that the n'th pass finds the n'th largest element and puts it in its final place. So, the inner loop can avoid looking at the last n-1 items when running for the n'th time. Another optimization is to stop the algorithm when the inner loop didnt do any swap.
+
+Approach 2
+

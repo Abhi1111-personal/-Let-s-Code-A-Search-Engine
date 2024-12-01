@@ -1,0 +1,6 @@
+In this post, we will see how to sort N2 numbers in increasing order using an N  N Young tableau in O(N3) time.
+
+Approach-1: 
+
+Practice this problem
+To sort an array using Young tableau, insert each of its values into an empty Young tableau, one at a time. Afterward, repeatedly call the Extract-Min routine on the Young tableau until the tableau is empty and put the returned values back to the original array.

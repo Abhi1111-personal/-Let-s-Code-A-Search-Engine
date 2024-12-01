@@ -1,0 +1,22 @@
+The Longest Bitonic Subarray (LBS) problem is to find a subarray of a given sequence in which the subarrays elements are first sorted in increasing order, then in decreasing order, and the subarray is as long as possible. Strictly ascending or descending subarrays are also accepted.
+
+Example: 
+
+
+Longest bitonic subarray of the sequence { 3, 5, 8, 4, 5, 9, 10, 8, 5, 3, 4 } is { 4, 5, 9, 10, 8, 5, 3 }
+
+For sequences sorted in increasing or decreasing order, the output is the same as the input sequence, i.e.,
+
+[1, 2, 3, 4, 5] > [1, 2, 3, 4, 5]
+[5, 4, 3, 2, 1] > [5, 4, 3, 2, 1]
+
+
+Approach-1: 
+
+The problem differs from the problem of finding the longest bitonic subsequence. Unlike subsequences, subarrays are required to occupy consecutive positions within the original array.
+The idea is to maintain two arrays, I[] and D[]:
+
+Approach 2
+
+
+We can solve this problem without using extra space. The idea is to check for the longest bitonic subarray starting at A[i]. If the longest bitonic subarray starting at A[i] ends at A[j], the trick is to skip all elements between i and j as the longest bitonic subarray starting from them will have less length. Next, check for the longest bitonic subarray starting at A[j]. We continue this process until the end of the array is reached and keep track of the longest bitonic subarray found so far.

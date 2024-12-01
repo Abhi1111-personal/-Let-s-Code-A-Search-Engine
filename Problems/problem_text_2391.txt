@@ -1,0 +1,19 @@
+Given a positive number, check if it is a power of four or not.
+
+Example: 
+
+
+(0xAAAAAAAA)16 = (10101010101010101010101010101010)2
+
+
+Approach-1: 
+
+Approach 1A simple solution is to calculate log4n for a given number n. If it returns an integral value, then we can say that the number is a power of four.
+
+Approach 2
+
+The given number n is a power of 4 if it is a power of 2 and its only set bit is present at even position (0, 2, 4, ).
+
+Approach 3
+
+The given number n is a power of 4 if it is a power of 2 and its remainder is 1 when it is divided by 3. This approach is demonstrated below in C++, Java, and Python:

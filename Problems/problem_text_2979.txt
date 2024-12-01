@@ -1,0 +1,22 @@
+Given a string, calculate its rank among all its lexicographically sorted permutations.
+
+Example: 
+
+
+Input: CBA
+Output: 6
+Explanation: The rank of string DCBA in the lexicographically sorted permutations [ABC, ACB, BAC, BCA, CAB, CBA] is 6.
+
+Input: AABA
+Output: 2
+Explanation: The rank of string AABA in the lexicographically sorted permutations [AAAB, AABA, ABAA, BAAA] is 2.
+
+
+Approach-1: 
+
+A simple solution is to use std::next_permutation that generates the next greater lexicographic permutation of a string. The idea is to sort the string in ascending order and repeatedly calculate the lexicographic next permutation until the current permutation becomes equal to the given string.
+
+Approach 2
+
+
+Note that we can also use std::prev_permutation replacing std::next_permutation that generates the next smaller lexicographic permutation of a string. The implementation can be seen here.

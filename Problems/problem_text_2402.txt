@@ -1,0 +1,14 @@
+In this post, we will see how to negate a value without branching conditionally.
+
+Example: 
+
+
+If flag = 0, (0 ^ (-1))  n = -n
+If flag = 1, (1 ^ (0))  n = n
+
+
+Approach 2
+
+
+If flag = 0, (n ^ 0) + 0 = n
+If flag = 1, (n ^ -1) + 1 = ~n + 1 = -n (2s complement notation)

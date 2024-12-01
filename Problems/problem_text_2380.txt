@@ -1,0 +1,11 @@
+This post will discuss some bit hacks/tricks on letters of the English alphabet.
+
+Example: 
+
+
+A  01000001 a  01100001
+B  01000010 b  01100010
+C  01000011 c  01100011
+D  01000100 d  01100100
+E  01000101 e  01100101
+and so on

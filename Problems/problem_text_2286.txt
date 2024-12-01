@@ -1,0 +1,18 @@
+Given an array of distinct integers, replace every element with the least greater element on its right or with -1 if there are no greater elements.
+
+Example: 
+
+
+Input: { 10, 100, 93, 32, 35, 65, 80, 90, 94, 6 }
+
+Output: { 32, -1, 94, 35, 65, 80, 90, 94, -1, -1 }
+
+
+Approach-1: 
+
+A simple solution is to check if every array element has a successor to its right or not by using nested loops. The outer loop picks elements from left to right of the array, and the inner loop searches for the smallest element greater than the picked element and replaces the picked element with it. Following is the C, Java, and Python program that demonstrates it:
+
+Approach 2
+
+
+Another solution is to use a BST. The idea is to traverse the array from right to left and insert each element into the BST. Replace each array element by its inorder successor in the BST or by -1 if its inorder successor doesnt exist.

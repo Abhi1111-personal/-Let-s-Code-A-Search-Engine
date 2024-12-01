@@ -1,0 +1,20 @@
+Given a sorted array of n integers and a target value, determine if the target exists in the array or not in logarithmic time. If the target exists in the array, return the index of it.
+
+Example: 
+
+
+Input: A[] = [2, 3, 5, 7, 9]
+target = 7
+
+Output: Element found at index 3
+
+
+Input: A[] = [1, 4, 5, 8, 9]
+target = 2
+
+Output: Element not found
+
+
+Approach-1: 
+
+Exponential search is an algorithm used for searching sorted, unbounded/infinite arrays. The idea is to determine a range that the target value resides in and perform a binary search within that range. Assuming that the array is sorted in ascending order, it looks for the first exponent, k, where the value 2k is greater than the search key. Now 2k and 2k-1 becomes the upper bound and lower bound for the binary search algorithm, respectively.The algorithm can be implemented as follows in C, Java, and Python:

@@ -1,0 +1,29 @@
+Given an integer array, return the total number of ways to calculate the specified target from array elements using only the addition and subtraction operator. The use of any other operator is forbidden.
+
+Example: 
+
+
+Consider the array { 5, 3, -6, 2 }.
+
+The total number of ways to reach a target of 6 using only + and  operators is 4 as:
+
+(-)-6 = 6
+(+) 5 (+) 3 (-) 2 = 6
+(+) 5 (-) 3 (-) -6 (-) 2 = 6
+(-) 5 (+) 3 (-) -6 (+) 2 = 6
+
+Similarly, there are 4 ways to calculate the target of 4:
+
+(-)-6 (-) 2 = 4
+(-) 5 (+) 3 (-)-6 = 4
+(+) 5 (-) 3 (+) 2 = 4
+(+) 5 (+) 3 (+)-6 (+) 2 = 4
+
+
+Approach-1: 
+
+We can use recursion to solve this problem. The idea is to recursively consider each array element, add or subtract its value from the target, and recur for the remaining elements with every elements remaining target. Also recur with remaining elements with the same target by ignoring the element completely. Finally, return the number of times the desired target is reached at any point in the recursion.The algorithm can be implemented as follows in C, Java, and Python:
+
+Approach 2
+
+How can we extend the solution to print all pairs?

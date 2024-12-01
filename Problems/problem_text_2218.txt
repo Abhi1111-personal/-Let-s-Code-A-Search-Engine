@@ -1,0 +1,23 @@
+Given a binary array, sort it in linear time and constant space. The output should print all zeroes, followed by all ones.
+
+Example: 
+
+
+Input: { 1, 0, 1, 0, 1, 0, 0, 1 }
+
+Output: { 0, 0, 0, 0, 1, 1, 1, 1 }
+
+
+Approach-1: 
+
+A simple solution would be to count the total number of 0s present in the array, say k, and fill the first k indices in the array by 0 and all remaining indices by 1.Alternatively, we can count the total number of 1s present in the array k and fill the last k indices in the array by 1 and all remaining indices by 0. This approach is demonstrated below in C, Java, and Python:
+
+Approach 2
+
+
+Instead of counting the total number of zeroes, if the current element is 0, we can place 0 at the next available position in the array. After all elements in the array are processed, we fill all remaining indices by 1. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 3
+
+
+We can also solve this problem in linear time by using the partitioning logic of Quicksort. The idea is to use 1 as a pivot element and make one pass of the partition process. The resultant array will be sorted. The implementation can be seen below in C++, Java, and Python:

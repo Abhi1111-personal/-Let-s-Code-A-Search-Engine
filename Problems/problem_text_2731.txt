@@ -1,0 +1,9 @@
+Given a single-digit number k and a singly linked list whose nodes stores digits of a non-negative number, add k to the linked list.
+
+Approach-1: 
+
+The idea is to solve this problem using the basic algorithm for the addition of two numbers. But since the given list is singly linked, we cant iterate it in the backward direction. Therefore, to facilitate the addition, we can reverse the list.We start by adding the given single-digit number to the digit at the first node in the reversed list. If the resultant sum is a 2-digit number, update the node with a single-digit sum and move the carry to the next node. This process is repeated while there is a carry. If we reach the last node and a carry exists, add a new node at the end of the linked list with carry as the value. Finally, reverse the list again to restore the original order.
+
+Approach 2
+
+This is demonstrated below in C, Java, and Python:

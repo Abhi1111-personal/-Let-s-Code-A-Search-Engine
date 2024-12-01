@@ -1,0 +1,24 @@
+The Shortest Common Supersequence (SCS) is finding the shortest supersequence Z of given sequences X and Y such that both X and Y are subsequences of Z.
+
+Example: 
+
+
+Consider the two following sequences, X and Y:
+X: ABCBDAB
+Y: BDCABA
+
+The length of the SCS is 9
+SCS are ABCBDCABA, ABDCABDAB, and ABDCBDABA
+
+
+Approach-1: 
+
+1. Finding Length of Shortest Common SupersequenceThe shortest common supersequence problem is closely related to the Longest Common Subsequence (LCS) problem. The length of the shortest common supersequence of two subsequences can be easily derived from the length of their longest common subsequence. For given two sequences X and Y of length m and n, respectively, the relation is:
+
+Approach 2
+
+For two input sequences, an SCS can be easily formed from the Longest Common Subsequence (LCS) problem. The idea is to construct an SCS by considering the non-lcs characters while preserving the character order.
+
+Approach 3
+
+3. Finding All Shortest Common Supersequence

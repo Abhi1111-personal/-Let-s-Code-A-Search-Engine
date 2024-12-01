@@ -1,0 +1,24 @@
+Given an M  N integer matrix, find all paths from the first cell to the last cell. We can only move down or to the right from the current cell.
+
+Example: 
+
+
+Input:
+
+[123]
+[456]
+[789]
+
+Output:
+
+1, 2, 3, 6, 9
+1, 2, 5, 6, 9
+1, 2, 5, 8, 9
+1, 4, 5, 6, 9
+1, 4, 5, 8, 9
+1, 4, 7, 8, 9
+
+
+Approach-1: 
+
+We can easily solve this problem by using recursion. The idea is to start from the top-left cell of the matrix and recur for the next node (immediate right or immediate bottom cell) and keep on doing that for every visited cell until the destination is reached. Also maintain a path array to store the nodes in the current path and update the path array (including the current node) whenever any cell is visited. Now, whenever the destination (bottom-right corner) is reached, print the path array.The algorithm can be implemented as follows in C++, Java, and Python:

@@ -1,0 +1,27 @@
+Given an integer array, find subarrays with a given sum in it.
+
+Example: 
+
+
+Input:
+
+nums[] = { 3, 4, -7, 1, 3, 3, 1, -4 }
+target = 7
+
+Output:
+
+Subarrays with the given sum are
+
+{ 3, 4 }
+{ 3, 4, -7, 1, 3, 3 }
+{ 1, 3, 3 }
+{ 3, 3, 1 }
+
+
+Approach-1: 
+
+Please note that the problem specifically targets subarrays that are contiguous (i.e., occupy consecutive positions) and inherently maintains the order of elements.1. Brute-Force Solution
+
+Approach 2
+
+2. Hashing

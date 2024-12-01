@@ -1,0 +1,16 @@
+Given an integer, count set bits in it using a lookup table.
+
+Example: 
+
+
+Input: n = -1 (111111)
+Output: The total number of set bits in -1 is 32
+
+Input: n = 16 (00001000)
+Output: The total number of set bits in 16 is 1
+
+
+Approach-1: 
+
+We have discussed a naive solution and Brian Kernighans algorithm to count the total number of set bits in the previous post. Both solutions have the worst-case time complexity of O(log(n)). In this post, an O(1) time solution is discussed.
+The idea is to use a lookup table to return the total number of set bits in constant time. An integer in C/C++ usually takes 4 bytes for storage. That means the maximum number it can store is 232-1. A lookup table for all 232-1 integers will be infeasible (Not to forget, we have negative numbers too).

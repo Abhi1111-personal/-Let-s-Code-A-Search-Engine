@@ -1,0 +1,20 @@
+Given an integer array, replace each element with the product of every other element without using the division operator.
+
+Example: 
+
+
+Input: { 1, 2, 3, 4, 5 }
+Output: { 120, 60, 40, 30, 24 }
+
+
+Input: { 5, 3, 4, 2, 6, 8 }
+Output: { 1152, 1920, 1440, 2880, 960, 720 }
+
+
+Approach-1: 
+
+A naive solution would be to calculate the product of all elements in the left and right subarray for each array element. The time complexity of this approach is O(n2), where n is the size of the input.
+We can solve this problem in linear time by using two auxiliary arrays, left[] and right[], where left[i] stores the product of all elements in subarray A[0i-1] and right[i] stores the product of all elements in subarray A[i+1n-1]. Now for each element A[i], replace it with the product of its left-subarray and right-subarray (i.e., A[i] = left[i]  right[i]).
+
+Approach 2
+

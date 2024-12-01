@@ -1,0 +1,6 @@
+Given two strings, determine whether they are isomorphic. Two strings, X and Y, are called isomorphic if all occurrences of each character in X can be replaced with another character to get Y and vice-versa.
+
+Approach-1: 
+
+
+A naive solution would be to check if every character in the first string is mapped to the same character in the second string for all its occurrences. But even then, two characters in the first string might still be mapped to the same character in the second string. So, we have to repeat the process for the second string as well, i.e., check if every character in the second string is mapped to the same character in the first string for all its occurrences.The time complexity of this solution is O(n2), where n is the length of each string. We can improve time complexity to linear by using O(n) space.

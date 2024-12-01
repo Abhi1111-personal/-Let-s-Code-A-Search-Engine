@@ -1,0 +1,30 @@
+The Longest Palindromic Subsequence (LPS) problem is finding the longest subsequences of a string that is also a palindrome.
+
+Example: 
+
+
+The length of the longest palindromic subsequence is 5
+The longest palindromic subsequence is BCACB
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. The idea is to compare the last character of the string X[ij] with its first character. There are two possibilities:
+If the strings last character is the same as the first character, include the first and last characters in palindrome and recur for the remaining substring X[i+1, j-1].
+If the last character of the string is different from the first character, return the maximum of the two values we get by
+
+Removing the last character and recursing for the remaining substring X[i, j-1].
+Removing the first character and recursing for the remaining substring X[i+1, j].
+
+
+
+
+Approach 2
+
+
+The LPS problem has an optimal substructure and also exhibits overlapping subproblems. Lets consider the recursion tree for a sequence of length 6 having all distinct characters, say ABCDEF, whose LPS length is 1.
+
+Approach 3
+
+
+However, both the above-discussed methods only find the longest palindromic subsequence length but does not print the longest palindromic subsequence itself.

@@ -1,0 +1,16 @@
+1360. Number of Days Between Two DatesEasy188821Add to ListShareWrite a program to count the number of days between two dates.
+The two dates are given as strings, their format is YYYY-MM-DDas shown in the examples.
+
+Example 1:
+Input: date1 = "2019-06-29", date2 = "2019-06-30"
+Output: 1
+Example 2:
+Input: date1 = "2020-01-15", date2 = "2019-12-31"
+Output: 15
+
+
+Constraints:
+
+The given dates are validdates between the years 1971 and 2100.
+
+Accepted29.2KSubmissions62.5KSeen this question in a real interview before?YesNoCompaniesRelated TopicsMathStringShow Hint 1Create a function f(date) that counts the number of days from 1900-01-01 to date. How can we calculate the answer ?Show Hint 2The answer is just |f(date1) - f(date2)|.Show Hint 3How to construct f(date) ?Show Hint 4For each year from 1900 to year - 1 sum up 365 or 366 in case of leap years. Then sum up for each month the number of days, consider the case when the current year is leap, finally sum up the days.

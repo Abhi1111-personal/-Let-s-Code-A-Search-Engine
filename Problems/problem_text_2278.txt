@@ -1,0 +1,17 @@
+Given an integer array, find the minimum index of a repeating element in linear time and doing just a single traversal of the array.
+
+Example: 
+
+
+Input: { 5, 6, 3, 4, 3, 6, 4 }
+Output: The minimum index of the repeating element is 1
+
+
+Input: { 1, 2, 3, 4, 5, 6 }
+Output: Invalid Input
+
+
+Approach-1: 
+
+A naive solution would be to consider each element arr[i] present in the array and search it in subarray arr[i+1n-1]. We return its index as soon as a duplicate is found. The implementation can be seen here, and requires O(n2) time, where n is the size of the input.
+We can use hashing to solve this problem in linear time. The idea is to traverse the array from right to left. If the element is seen for the first time, insert it into the set; otherwise, update the minimum index to the elements index. Finally, return the minimum index after all elements are processed.

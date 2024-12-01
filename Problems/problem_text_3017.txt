@@ -1,0 +1,7 @@
+Lexicographic sorting: Given a set of strings, return them in lexicographic order (dictionary/alphabetical order).
+
+Approach-1: 
+
+Lexicographic sorting of a set of keys can be accomplished with a simple Trie-based algorithm as follows:
+Insert all keys into a Trie.
+Print all keys in the Trie by performing preorder traversal on Trie to get output in lexicographically increasing order.

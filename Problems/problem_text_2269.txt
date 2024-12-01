@@ -1,0 +1,20 @@
+Given an unsorted integer array containing many duplicate elements, rearrange it such that the same element appears together and the relative order of the first occurrence of each element remains unchanged.
+
+Example: 
+
+
+Input: { 1, 2, 3, 1, 2, 1 }
+
+Output: { 1, 1, 1, 2, 2, 3 }
+
+
+Input: { 5, 4, 5, 5, 3, 1, 2, 2, 4 }
+
+Output: { 5, 5, 5, 4, 4, 3, 1, 2, 2 }
+
+
+Approach-1: 
+
+The idea is to use hashing to solve this problem. Store the frequency of each element present in the input array in a map. Then traverse the input array, and for each element A[i], two cases are possible:
+If A[i] exists in the map, then this is the first occurrence of A[i] in the input array. Print the element, A[i], k times, where k is the frequency of A[i] in the input array (stored in the map). Finally, delete A[i] from the map to avoid getting reprocessed.
+If A[i] is not present on the map, then this is the repeated occurrence of A[i]. So move to the next element.

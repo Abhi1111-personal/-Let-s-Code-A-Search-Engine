@@ -1,0 +1,27 @@
+Given a sorted array containing duplicates, efficiently find each elements frequency without traversing the whole array.
+
+Example: 
+
+
+Input: [2, 2, 2, 4, 4, 4, 5, 5, 6, 8, 8, 9]
+Output: {2: 3, 4: 3, 5: 2, 6: 1, 8: 2, 9: 1}
+
+Explanation:
+
+2 and 4 occurs thrice
+5 and 8 occurs twice
+6 and 9 occurs once
+
+
+Approach-1: 
+
+A simple solution would be to run a linear search on the array and count the number of occurrences of each element and finally print them. The problem with this approach is that its worst-case time complexity is O(n), where n is the input size, and we are scanning the whole array (violating problem constraints).
+We can easily solve this problem in O(m.log(n)) time by taking advantage of the fact that the input is sorted and contains duplicates. Here m is the total number of distinct elements in the array, and n is the input size.
+
+Approach 2
+
+Following is the iterative implementation of the algorithm in C++, Java, and Python. The implementation updates the frequency of each distinct array element one at a time and grow/shrink the collection dynamically to consider each item.
+
+Approach 3
+
+We can easily solve this problem by using STL as well. The idea is to find the index of the first and last occurrence of every distinct number in the array and update the difference between two indices in a map. In the following solution, we will use STLs std::upper_bound and std::lower_bound to find the first and last occurrence of each element using binary search algorithm.

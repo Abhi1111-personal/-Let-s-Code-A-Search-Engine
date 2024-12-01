@@ -1,0 +1,16 @@
+Given a binary tree, determine whether it is a subtree of another binary tree. A subtree of a tree T is a tree consisting of a node in T and all of its descendants in T.
+
+Example: 
+
+
+inorder(X) = {4, 2, 5, 1, 6, 3, 7}
+inorder(Y) = {6, 3, 7}
+
+postorder(X) = {4, 5, 2, 6, 7, 3, 1}
+postorder(Y) = {6, 7, 3}
+
+
+Approach-1: 
+
+A naive solution would be to check if every subtree rooted at every node in the first tree is identical to the second tree or not. The time complexity of this solution is O(m.n), where n is the size of the first tree and m is the size of the second tree.
+Also, we know that inorder and preorder traversal, or inorder and postorder traversal identify a tree uniquely. The idea is to store inorder and postorder traversal of both trees in separate arrays. Then for a given binary tree X to be a subset of another binary tree Y, the inorder traversal of X should be a subset of the inorder traversal of Y. Similarly, the postorder traversal of X should be a subset of the postorder traversal of Y. We can also perform preorder instead of the postorder traversal. For example, consider the above trees:

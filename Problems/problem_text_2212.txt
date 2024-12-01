@@ -1,0 +1,37 @@
+Given a sentence as a string A.Return the number of palindromic words in the sentence.
+
+Constraints: 
+
+1 <= A <= 105Ai = {Lowercase English letters and whitespaces}
+
+Input Format: 
+
+The first and only argument is a string A.
+
+Output Format: 
+
+Return an integer.
+
+Example Input: 
+
+Input 1:
+A = "the fastest racecar"
+
+Input 2:
+A = "wow mom"
+
+
+Example Output: 
+
+Output 1:
+1
+Output 2:
+2
+
+Example Explanation: 
+
+Explanation 1:
+The words are "hello" and "world".
+12 + 34 = 46
+Explanation 2:
+The words are "how", "are" and "you".

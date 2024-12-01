@@ -1,0 +1,22 @@
+Given an unsorted integer array whose elements lie in the range 0 to n-1 where n is the array size, calculate the frequency of all array elements in linear time and using constant space.
+
+Example: 
+
+
+Input: { 2, 3, 3, 2, 1 }
+
+Output:
+
+Element 1 appears once.
+Element 2 appears twice.
+Element 3 appears twice.
+
+
+Approach-1: 
+
+A simple solution is to use a count array. We traverse through the given array and update the frequency of each element in the count array. Finally, after all the array elements are processed, iterate through the count array to print frequencies. We can also use a map instead of a count array but using a map does not take advantage of the fact that array elements lie between 0 and n-1.Following is the implementation in C, Java, and Python based on the above idea:
+
+Approach 2
+
+
+We can also solve this problem without using any extra space by taking advantage of the fact that array elements lie in range 0 to n-1. For each element A[i] present in the array, increment the value present at index (A[i] % n) by n. Then, traverse the modified array, and if A[i] is more than or equal to n, then i appears in array (A[i]/n) times.

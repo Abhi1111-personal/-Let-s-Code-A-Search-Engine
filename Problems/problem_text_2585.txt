@@ -1,0 +1,32 @@
+Given an M  N matrix, count the number of different ways to reach the bottom-right corner of a matrix from its top-left corner with exactly k turn allowed and using only the directions right or down.
+
+Example: 
+
+
+Input: k = 1
+Output: Total number of paths are 2
+
+(0, 0) > (0, 1) > (0, 2) > (1, 2) > (2, 2)
+(0, 0) > (1, 0) > (2, 0) > (2, 1) > (2, 2)
+
+
+Input: k = 2
+Output: Total number of paths are 2
+
+(0, 0) > (0, 1) > (1, 1) > (2, 1) > (2, 2)
+(0, 0) > (1, 0) > (1, 1) > (1, 2) > (2, 2)
+
+
+Input: k = 3
+Output: Total number of paths are 2
+
+(0, 0) > (0, 1) > (1, 1) > (1, 2) > (2, 2)
+(0, 0) > (1, 0) > (1, 1) > (2, 1) > (2, 2)
+
+Input: k = 4
+Output: Total number of paths are 0
+
+
+Approach-1: 
+
+We can recursively solve this problem. The idea is to keep track of the current direction and number of turns so far. If the current direction is along a column, we have two options for the next move  continue moving along the column, or turn right and decrement the number of turns by 1. Similarly, if the current direction is along a row, continue moving in the same direction, or turn down and decrement the number of turns by 1. A path is found if the destination is reached with exactly k turns.The algorithm can be implemented as follows in C++, Java, and Python:

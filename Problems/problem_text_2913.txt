@@ -1,0 +1,7 @@
+Given a string consisting of opening and closing parenthesis, find the length of the longest balanced parenthesis in it.
+
+Approach-1: 
+
+
+A simple solution would be to generate all substrings of the given string and, for each substring, check if it is balanced or not. If the substring is balanced and has more length than the maximum length balanced substring found so far, update the result. The time complexity of this solution is O(n3) since there are O(n2) substrings for a string of length n, and each substring takes O(n) time to check if it is balanced.
+We can solve this problem in O(n) time by using O(n) space. The idea is to iterate over the string characters, and if the current character is an opening parenthesis, push its index in a stack. If the current character is a closing parenthesis, pop the top index from the stack and push the current index into the stack if it becomes empty.

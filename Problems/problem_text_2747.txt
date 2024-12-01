@@ -1,0 +1,9 @@
+Given a binary tree, print its nodes in vertical order. Assume that the left and right child of a node makes a 45degree angle with the parent.
+
+Approach-1: 
+
+We have seen hash table implementation in the previous post, which takes O(n.log(n)) time for a binary tree with n nodes. We can improve the time complexity of the above solution to linear with an auxiliary data structure such as a doubly-linked list. The idea is to store the vertical order of the binary tree in a doubly-linked list, where each node of the doubly linked list stores every node corresponding to a vertical line in a binary tree. This post provides an overview of some available alternatives to accomplish this using a doubly-linked list.1. Using Preorder traversal
+
+Approach 2
+
+Since the above solution uses preorder traversal to traverse the tree, the nodes might not get processed in the same order as they appear in the binary tree from top to bottom. For instance, node 10 get printed before node 6 in the above solution.

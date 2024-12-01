@@ -1,0 +1,19 @@
+Given an M  N matrix of non-negative integers where each cell contains a coin of some denomination, collect the maximum value of coins by traversing the grid.
+
+Example: 
+
+
+Input: The given matrix is
+
+[ 0 2 4 1 ]
+[ 4 8 3 7 ]
+[ 2 3 6 2 ]
+[ 9 7 8 3 ]
+[ 1 5 9 4 ]
+
+Output: The maximum coins collected is 47 (Red coins + Blue coins)
+
+
+Approach-1: 
+
+The idea is to simultaneously start both traversals from the top-left corner (0, 0) and the top-right corner (0, N-1) of the matrix. For each step, the row number would increase by one and the column number might remain the same or can increase/decrease by 1, i.e., (i, j) > (i+1, j-1) or (i+1, j) or (i+1, j+1).We collect the coins as we move along and return the maximum possible collection. The recursive algorithm can be implemented as follows in C, Java, and Python:

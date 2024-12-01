@@ -1,0 +1,23 @@
+Given an unsorted integer array, find all pairs with a given difference k in it without using any extra space.
+
+Example: 
+
+
+Input:
+
+arr = [1, 5, 2, 2, 2, 5, 5, 4]
+k = 3
+
+Output:
+
+(2, 5) and (1, 4)
+
+
+Approach-1: 
+
+We have discussed a linear time solution in the previous post that takes O(n) extra space for an input containing n items. The solution inserts each array element arr[i] in a set and check if element (arr[i] - diff) or (arr[i] + diff) already exists in the set or not. If the element is seen before, it prints the pair (arr[i], arr[i] - diff) or (arr[i] + diff, arr[i]).
+We can avoid using extra space by performing binary search for element (arr[i] - diff) or (arr[i] + diff) instead of using hashing. This approach is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+Alternate Approach

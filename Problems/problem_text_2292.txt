@@ -1,0 +1,14 @@
+Given an integer array having distinct elements, find the surpasser count for each element in it. In other words, for each array element, find the total number of elements to its right, which are greater than it.
+
+Example: 
+
+
+Input: { 4, 6, 3, 9, 7, 10 }
+
+Output: { 4, 3, 3, 1, 1, 0 }
+
+
+Approach-1: 
+
+A simple solution would be for each array element, count all elements greater than it to its right. The implementation of this approach can be seen here. It runs in O(n2) time, where n is the size of the input.
+We can reduce the time complexity to O(n.log(n)) by using merge sort algorithm. The problem is similar to finding the inversion count of an array. Since surpasser is just the opposite of inversion, sort the array in descending order and maintain a map to store the surpasser count for each distinct array element.

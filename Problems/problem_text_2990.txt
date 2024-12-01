@@ -1,0 +1,12 @@
+Given a string, find first k non-repeating characters in it by doing only a single traversal of it.
+
+Approach-1: 
+
+
+A simple solution would be to store each characters count in a map or an array by traversing it once. Then traverse the string once more to find the first k characters having their count as 1. The time complexity of this solution is O(n) and requires O(n) extra space, where n is the length of the input string. The problem with this solution is that we are traversing the string twice, violating the program constraints.
+We can solve this problem in a single traversal of the string. The idea is to use a map to store each distinct character count and the index of its first or last occurrence in the string. Then traverse the map and push the index of all characters having count 1 into the min-heap. Finally, pop the top k keys from the min-heap, and that will be our first k non-repeating characters in the string.
+
+Approach 2
+
+
+We can reduce the heap size to O(k) in the worst case. The idea is to push only the first k characters into the min-heap, and then for all subsequent elements in the map, if the current element is less than the root of the heap, replace the root with it. After we have processed every key of the map, the heap will contain the first k non-repeating characters. (Note that by character, we mean index of it)

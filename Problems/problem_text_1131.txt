@@ -1,0 +1,19 @@
+316. Remove Duplicate LettersMedium5266345Add to ListShareGiven a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+
+Example 1:
+Input: s = "bcabc"
+Output: "abc"
+
+Example 2:
+Input: s = "cbacdcbc"
+Output: "acdb"
+
+
+Constraints:
+
+1 <= s.length <= 104
+s consists of lowercase English letters.
+
+
+Note: This question is the same as 1081: https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
+Accepted192,375Submissions437,809Seen this question in a real interview before?YesNoCompaniesRelated TopicsStringStackGreedyMonotonic StackSimilar QuestionsSmallest K-Length Subsequence With Occurrences of a LetterHardShow Hint 1Greedily try to add one missing character. How to check if adding some character will not cause problems ? Use bit-masks to check whether you will be able to complete the sub-sequence if you add the character at some index i.

@@ -1,0 +1,5 @@
+Given a directed graph, check if it is strongly connected or not. A directed graph is said to be strongly connected if every vertex is reachable from every other vertex.
+
+Approach-1: 
+
+Types of edges involved in DFS and relation between themPractice this problem

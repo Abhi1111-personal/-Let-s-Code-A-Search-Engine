@@ -1,0 +1,31 @@
+The Longest Repeating Subsequence (LRS) problem is finding the longest subsequences of a string that occurs at least twice.
+
+Example: 
+
+
+The length of the longest repeating subsequence is 4
+The longest repeating subsequence is ATCG
+
+A T A C T C G G A
+A T A C T C G G A
+
+Note that repeated characters holds a different index in the input string.
+
+
+Approach-1: 
+
+The longest repeating subsequence problem is a classic variation of the Longest Common Subsequence (LCS) problem. The idea is to find the LCS of the given string with itself, i.e., call LCS(X, X) and exclude the cases when indexes are the same (i = j) since repeated characters hold a different index in the input string.The LRS problem has optimal substructure. We can recursively define the problem as:
+
+Approach 2
+
+
+The LRS problem also exhibits overlapping subproblems. Lets consider the recursion tree for a sequence of length 5 having all distinct characters whose LRS length is 0.
+
+Approach 3
+
+
+The above memoized version follows the top-down approach since we first break the problem into subproblems and then calculate and store values. We can also solve this problem in a bottom-up manner by calculating the smaller values of LRS(i, j) first and then building larger values from them. This is demonstrated below in C++, Java, and Python:
+
+Approach 4
+
+How to extend the above solution for printing the longest repeating subsequence?

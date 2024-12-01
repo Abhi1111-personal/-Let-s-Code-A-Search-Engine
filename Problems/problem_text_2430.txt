@@ -1,0 +1,5 @@
+Given a binary tree, in-place replace each nodes value to the sum of all elements present in its left and right subtree. You may assume the value of an empty child node to be 0.
+
+Approach-1: 
+
+We can easily solve this problem by using recursion. The idea is to recursively convert the left and right subtree before processing a node by traversing the tree in a postorder fashion. Then for each node, update the nodes value to the sum of all elements present in its left and right subtree and return the sum of all elements present in the subtree rooted at the node from the function. The value is calculated at a constant time for each node using the left and right subtrees return values.The algorithm can be implemented as follows in C++, Java, and Python:

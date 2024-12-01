@@ -1,0 +1,9 @@
+Write an algorithm to generate 0, 1, and 2 with equal probability using a specified function that either produces 0 or 1 with 50% probability.
+
+Approach-1: 
+
+Lets assume the specified function is random(), which generates 0 or 1 with 50% probability. Then if we make two different calls to the random() function and store the result in two variables, x and y, then their sum x+y can be any of {0, 1, 2}. Here, the probability of getting 0 and 2 is 25% each, and the likelihood of getting 1 is 50%.Now the problem reduces to decreasing the probability of getting 1 from 50% to 25%. We can easily do so by forcing our function to never generate either (x = 1, y = 0) or (x = 0, y = 1) which causes the sum to be equal to 1.
+
+Approach 2
+
+Following is the C, Java, and Python implementation of the idea:

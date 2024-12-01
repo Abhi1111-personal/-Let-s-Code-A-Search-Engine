@@ -1,0 +1,20 @@
+Given a binary tree, write an iterative algorithm to print the leaf-to-root path for every leaf node. Use of recursion is prohibited.
+
+Example: 
+
+
+4 > 2 > 1
+5 > 2 > 1
+8 > 6 > 3 > 1
+9 > 6 > 3 > 1
+7 > 3 > 1
+
+
+Approach-1: 
+
+Since use of recursion is not allowed, we can do postorder iterative traversal of the tree and, while doing so, maintain a map that contains (child, parent) pair for every encountered node. Now, if a leaf node is encountered, we can easily print the leaf-to-root path using that map, as shown below in C++, Java, and Python:
+
+Approach 2
+
+
+One workaround doesnt involve maintaining a parent pointer or the use of any additional extra space. We can store the path from the root-to-leaf in a string as we traverse the tree iteratively and print the path whenever we encounter any leaf node.

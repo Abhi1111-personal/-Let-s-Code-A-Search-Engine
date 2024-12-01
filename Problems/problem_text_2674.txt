@@ -1,0 +1,9 @@
+Given an integer array, sort it using the heapsort algorithm in C, C++, Java, and Python.
+
+Approach-1: 
+
+1. In-place Heapsort ImplementationHeapsort can be performed in place. We can do this by
+
+Approach 2
+
+2. Out-of-place Heapsort Implementation

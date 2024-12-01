@@ -1,0 +1,15 @@
+Given a set of rectangular 3D boxes (cuboids), create a stack of boxes as tall as possible and return the maximum height of the stacked boxes.
+
+Example: 
+
+
+(4  2  5)
+(3  1  6)
+(3  2  1)
+(6  3  8)
+
+
+Approach-1: 
+
+The idea is to use dynamic programming to solve this problem. We start by generating all rotations of each box. For simplicity, we can easily enforce the constraint that a boxs width is never more than the length. After generating all rotations, sort the boxes in descending order of area and then apply the LIS algorithm to get the maximum height. Let L(i) store the maximum possible height when the i'th box is on the top. Then the recurrence is:
+L(i) = height(i) + max(L(j) | j < i and block i can be put on top of block j)

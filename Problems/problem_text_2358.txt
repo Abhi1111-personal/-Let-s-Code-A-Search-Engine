@@ -1,0 +1,19 @@
+The Nqueens puzzle is the problem of placing N chess queens on an N  N chessboard so that no two queens threaten each other. Thus, the solution requires that no two queens share the same row, column, or diagonal.
+
+Example: 
+
+
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+
+
+Approach-1: 
+
+
+We can solve this problem with the help of backtracking. The idea is to start from the first row and place Queen in each square of the first row and recursively explore the remaining rows to check if they lead to the solution or not. If the current configuration doesnt result in a solution, backtrack. Before exploring any square, ignore the square if two queens threaten each other.The algorithm can be implemented as follows in C, Java, and Python:

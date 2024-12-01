@@ -1,0 +1,14 @@
+Matrix chain multiplication problem: Determine the optimal parenthesization of a product of n matrices.
+
+Approach-1: 
+
+The idea is to break the problem into a set of related subproblems that group the given matrix to yield the lowest total cost.Following is the recursive algorithm to find the minimum cost:
+
+Approach 2
+
+This approach is demonstrated below in C++, Java, and Python:
+
+Approach 3
+
+
+The following bottom-up approach computes, for each 2 <= k <= n, the minimum costs of all subsequences of length k, using the prices of smaller subsequences already computed. It has the same asymptotic runtime and requires no recursion.

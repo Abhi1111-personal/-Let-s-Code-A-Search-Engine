@@ -1,0 +1,6 @@
+Write an efficient algorithm to determine if a binary tree satisfies the height-balanced property of the redblack tree or not.
+
+Approach-1: 
+
+A simple solution would be to calculate the maximum and minimum height of every node in the tree and determine if the subtree rooted at that node is balanced or not. If the height-balanced property is satisfied for every subtree, the binary tree enforces the redblack trees height-balanced property. For a tree containing n elements, this solution takes O(n2) time since, for every node, we are traversing the whole subtree rooted at that node.
+The main challenge is to perform this in a single tree traversal, i.e., in O(n) time. The idea is to perform a postorder traversal on the binary tree and calculate the maximum and minimum height for every node in a bottom-up fashion. Then we can easily check if the height-balanced property of the redblack tree is satisfied for every node in the tree or not.

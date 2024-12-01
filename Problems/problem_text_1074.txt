@@ -1,0 +1,25 @@
+b'229. Majority Element IIMedium4811284Add to ListShareGiven an integer array of size n, find all elements that appear more than \xe2\x8c\x8a n/3 \xe2\x8c\x8b times.
+\xc2\xa0
+Example 1:
+Input: nums = [3,2,3]
+Output: [3]
+
+Example 2:
+Input: nums = [1]
+Output: [1]
+
+Example 3:
+Input: nums = [1,2]
+Output: [1,2]
+
+\xc2\xa0
+Constraints:
+
+1 <= nums.length <= 5 * 104
+-109 <= nums[i] <= 109
+
+\xc2\xa0
+Follow up: Could you solve the problem in linear time and in O(1) space?
+Accepted288,748Submissions680,519Seen this question in a real interview before?YesNoCompaniesRelated TopicsArrayHash TableSortingCountingSimilar QuestionsMajority ElementEasyCheck If a Number Is Majority Element in a Sorted ArrayEasyShow Hint 1How many majority elements could it possibly have?
+
+Do you have a better hint? Suggest it!'

@@ -1,0 +1,14 @@
+Given an array containing only 0s, 1s, and 2s, sort it in linear time and using constant space.
+
+Example: 
+
+
+Input: { 0, 1, 2, 2, 1, 0, 0, 2, 0, 1, 1, 0 }
+
+Output: { 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2 }
+
+
+Approach-1: 
+
+A simple solution would be to perform a counting sort. We count the total number of 0s, 1s, and 2s and then put them in the array in their correct order. The time complexity of this solution is O(n), where n is the size of the input. However, this requires two traversals of the array.
+We can rearrange the array in a single traversal using an alternative linear-time partition routine that separates the values into three groups:

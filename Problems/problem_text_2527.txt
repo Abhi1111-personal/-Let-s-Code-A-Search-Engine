@@ -1,0 +1,19 @@
+Given a sorted binary array, efficiently count the total number of 1s in it.
+
+Example: 
+
+
+Input: nums[] = [0, 0, 0, 0, 1, 1, 1]
+
+Output: The total number of 1s present is 3
+
+
+Input: nums[] = [0, 0, 1, 1, 1, 1, 1]
+
+Output: The total number of 1s present is 5
+
+
+Approach-1: 
+
+A simple solution would be to run a linear search on the array and find the first occurrence of 1. The output will then be the arrays length minus the index of the first occurrence of 1. The problem with this approach is that its worst-case time complexity is O(n), where n is the size of the input.
+We can easily solve this problem in O(log(n)) time using recursion by taking advantage of the fact that the input is sorted (i.e., all 0s, followed by all 1s). The idea is to split the array into two halves and recur for both halves. If the last element of the subarray is 0, then all 0s are present in it since it is sorted, and we return 0 from the function. If the first array element is 1, then all its elements are 1s only since the array is sorted, and we return the total number of elements in that partition.

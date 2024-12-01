@@ -1,0 +1,7 @@
+Given an integer array, find an index that divides it into two non-empty subarrays having an equal sum.
+
+Approach-1: 
+
+
+A naive solution would calculate the sum of the left and right subarray for each array element and print the index if both sums are the same. The time complexity of this approach O(n2), where n is the size of the input.
+We can solve this problem in O(n) time by using extra space. The idea is to preprocess the array and store the sum of every indexs left and right subarray in two auxiliary arrays. Then we can calculate the left and right sum in constant time for any index.

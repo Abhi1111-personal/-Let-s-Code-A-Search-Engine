@@ -1,0 +1,64 @@
+Given a 2D integer matrix A of size N x M.
+
+
+From A[i][j] you can move to A[i+1][j], if A[i+1][j] > A[i][j], or can move to A[i][j+1] if A[i][j+1] > A[i][j].
+The task is to find and output the longest path length possible if we start from the cell(0, 0) and want to reach cell(N - 1, M - 1).
+NOTE:
+
+
+
+If there doesn't exist a path return -1.
+
+
+Constraints: 
+
+1 <= N, M <= 103
+1 <= A[i][j] <= 108
+
+
+
+Input Format: 
+
+First and only argument is an 2D integer matrix A of size N x M. 
+
+Output Format: 
+
+Return a single integer denoting the length of longest path in the matrix if no such path exists return -1.
+
+Example Input: 
+
+Input 1:
+ A = [  [1, 2]
+        [3, 4]
+     ]
+
+Input 2:
+ A = [  [1, 2, 3, 4]
+        [2, 2, 3, 4]
+        [3, 2, 3, 4]
+        [4, 5, 6, 7]
+     ]
+
+
+
+
+Example Output: 
+
+Output 1:
+ 3
+
+Output 2:
+ 7
+
+
+
+
+Example Explanation: 
+
+Explanation 1:
+ Longest path is either 1 2 4 or 1 3 4.
+
+Explanation 2:
+ Longest path is 1 2 3 4 5 6 7.
+
+

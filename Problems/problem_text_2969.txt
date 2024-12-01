@@ -1,0 +1,1 @@
+Write a program to in-place remove all extra spaces from a string. There maybe leading spaces, trailing spaces, or consecutive spaces between words of the string. The solution should remove them and also handle punctuation marks.

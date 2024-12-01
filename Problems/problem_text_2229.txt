@@ -1,0 +1,9 @@
+Given an integer array, find the equilibrium index in it.
+
+Approach-1: 
+
+A naive solution would be to calculate the sum of elements to the left and the sum of elements to each array elements right. If the left subarray sum is the same as the right subarray sum for an element, print its index. The time complexity of this solution is O(n2), where n is the size of the input.1. Linear-time Solution
+
+Approach 2
+
+2. Optimized Solution

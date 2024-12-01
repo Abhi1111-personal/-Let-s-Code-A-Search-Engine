@@ -1,0 +1,20 @@
+Given a string containing opening and closing braces, check if it represents a balanced expression or not.
+
+Example: 
+
+
+{[{}{}]}[()], {{}{}}, []{}() are balanced expressions.
+
+{()}[), {(}) are not balanced.
+
+
+Approach-1: 
+
+We can use a stack to solve this problem. The idea is to traverse the given expression, and
+If the current character in the expression is an opening brace ( or { or [, push it into the stack.
+If the current character in the expression is a closing brace ) or } or ], pop a character from the stack, and return false if the popped character is not the same as the current character, or it does not pair with the current character of the expression. Also, if the stack is empty, the total number of opening braces is less than the closing brace number at that point, so the expression cannot be balanced.
+
+
+Approach 2
+
+This would translate to a simple code below in C++, Java, and Python:

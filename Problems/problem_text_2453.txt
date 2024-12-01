@@ -1,0 +1,7 @@
+Given a binary tree and a number k, remove nodes from the tree which lie on a complete path having a sum less than k. A complete path in a binary tree is defined as a path from the root to a leaf. The sum of all nodes on that path is defined as the sum of that path.
+
+Approach-1: 
+
+The problem might look complex at first look, but its solution is simple. The idea is to traverse the tree in a bottom-up fashion and truncate the left and right subtree before processing its parent. Since we are doing a postorder traversal, the subtree rooted at the current node may be truncated, and the current node becomes a leaf node now. So, for each node, check
+If the sum of nodes in the path from the root node to the current node is more than or equal to k, nothing needs to be done.
+If it is a leaf node and its path from the root node has a sum less than k, remove it.

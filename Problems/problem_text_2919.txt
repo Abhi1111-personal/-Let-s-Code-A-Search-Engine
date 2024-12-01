@@ -1,0 +1,19 @@
+Write an efficient algorithm to find a binary trees preorder traversal from its inorder and postorder sequence without constructing the tree.
+
+Example: 
+
+
+Input:
+
+Inorder traversal is { 4, 2, 1, 7, 5, 8, 3, 6 }
+Postorder traversal is { 4, 2, 7, 8, 5, 6, 3, 1 }
+
+
+Output:
+
+The preorder traversal is { 1, 2, 4, 3, 5, 7, 8, 6 }
+
+
+Approach-1: 
+
+We start with the root node, whose value would be the last item in the postorder sequence. The idea is to find boundaries of the left and right subtree of the root node in a given inorder sequence. To find the left and right subtree edges, search for the root node index in the inorder sequence. All keys before the root node in the inorder sequence become part of the left subtree, and all keys after the root node become part of the right subtree. If we repeat this recursively for all tree nodes, we will end up doing a preorder traversal on the tree.The algorithm can be implemented as follows in C++, Java, and Python:

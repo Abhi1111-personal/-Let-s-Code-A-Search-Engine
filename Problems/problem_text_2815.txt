@@ -1,0 +1,1 @@
+Write a program to print all numbers between 1 and n without using a semicolon.

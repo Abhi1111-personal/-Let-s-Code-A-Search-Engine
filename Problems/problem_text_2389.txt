@@ -1,0 +1,13 @@
+Given two 16bit positive values stored in 32bit integer variables, find the product using the 8bit multiply operator that takes two 8bit numbers and returns a 16bit value.
+
+Example: 
+
+
+ [mHigh mLow]
+ [nHigh nLow]
+      
+ [mHigh * nLow] [mLow * nLow]
+ [mHigh * nHigh] [mLow * nHigh]
+                               
+[mHigh * nHigh] + [mLow * nHigh + mHigh * nLow] + [mLow * nLow]
+                               

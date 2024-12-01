@@ -1,0 +1,5 @@
+Write a pop() function that is the inverse of push(). The pop() function takes a non-empty list, deletes the head node, and returns the head nodes data.
+
+Approach-1: 
+
+The pop() operation is a bit tricky as it needs to unlink the front node from the list and deallocate it with a call to free(). The pop() function needs to use a reference parameter like push() so that it can change the callers head pointer. So, we extract the data from the head node, delete the node, advance the head pointer to point at the next node in line.Following is the C, Java, and Python program that demonstrates it. The C code uses a reference parameter since it changes the head pointer.

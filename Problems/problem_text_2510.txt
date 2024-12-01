@@ -1,0 +1,15 @@
+Given a distinct sequence of keys representing the postorder traversal of a binary search tree, construct a BST from it.
+
+Approach-1: 
+
+We can easily build a BST for a given postorder sequence by recursively repeating the following steps for all keys in it, starting from the right.
+Construct the root node of BST, which would be the last key in the postorder sequence.
+Find index i of the last key in the postorder sequence, which is smaller than the root node.
+Recur for right subtree with keys in the postorder sequence that appears after the i'th index (excluding the last index).
+Recur for left subtree with keys in the postorder sequence that appears before the i'th index (including i'th index).
+
+
+Approach 2
+
+
+We know that each node has a key that is greater than all keys present in its left subtree and less than the keys present in the right subtree in the BST. The idea to pass the information regarding the valid range of keys for the current root node and its children in the recursion itself.

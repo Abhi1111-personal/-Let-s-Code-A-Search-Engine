@@ -1,0 +1,31 @@
+1572. Matrix Diagonal SumEasy110720Add to ListShareGiven asquarematrixmat, return the sum of the matrix diagonals.
+Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
+
+Example 1:
+
+Input: mat = [[1,2,3],
+             [4,5,6],
+             [7,8,9]]
+Output: 25
+Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
+Notice that element mat[1][1] = 5 is counted only once.
+
+Example 2:
+Input: mat = [[1,1,1,1],
+             [1,1,1,1],
+             [1,1,1,1],
+             [1,1,1,1]]
+Output: 8
+
+Example 3:
+Input: mat = [[5]]
+Output: 5
+
+
+Constraints:
+
+n == mat.length == mat[i].length
+1 <= n <= 100
+1 <= mat[i][j] <= 100
+
+Accepted104.9KSubmissions132.5KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArrayMatrixSimilar QuestionsCheck if Every Row and Column Contains All NumbersEasyShow Hint 1There will be overlap of elements in the primary and secondary diagonals if and only if the length of the matrix is odd, which is at the center.

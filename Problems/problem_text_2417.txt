@@ -1,0 +1,5 @@
+Given a binary tree, write an efficient algorithm to delete the entire binary tree. The algorithm should deallocate every single node present in the tree, not just change the root nodes reference to null.
+
+Approach 2
+
+In the iterative version, perform a level order traversal on the tree. The idea is to delete each node in the queue, one by one, after enqueuing their children. Note that the parent is deleted before deleting its children as we are enqueuing them, and they will be processed and deleted afterward.

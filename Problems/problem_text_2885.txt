@@ -1,0 +1,5 @@
+Given an integer array, sort it using introsort sorting algorithm.
+
+Approach-1: 
+
+Following is the C++ implementation of the introsort algorithm is similar to the GNU Standard C++ library. It uses introsort with a maximum depth of 2.log2(n), followed by an insertion sort on partitions smaller than 16. The Quicksort algorithm is optimized by better pivot selection.

@@ -1,0 +1,31 @@
+Given A and B you have to find all stepping numbers in range A to B.
+The stepping number:
+A number is called as a stepping number if the adjacent digits have a difference of 1.
+e.g. 123 is stepping number, but 358 is not a stepping number
+
+Input Format: 
+
+First argument is an integer A.
+Second argument is an integer B.
+
+Output Format: 
+
+Return a integer array sorted in ascending order denoting the stepping numbers between A and B.
+
+Example Input: 
+
+Input 1:
+ A = 10
+ B = 20
+
+
+Example Output: 
+
+Output 1:
+ [10, 12]
+
+
+Example Explanation: 
+
+Explanation 1:
+ All stepping numbers are 10 , 12 

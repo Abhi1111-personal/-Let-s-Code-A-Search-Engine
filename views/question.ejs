@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code It - <%=questionObject.title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="/search-code-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <section class="header">
+      <div class="header-container">
+        <div class="header-text">
+          <div class="header-text-1">
+            <h1>Code</h1>
+          </div>
+          <div class="header-text-2">
+            <h1>it.</h1>
+          </div>
+        </div>
+        <div class="header-logo"></div>
+      </div>
+    </section>
+
+    <section class="header-laptop">
+      <div class="header-laptop-container">
+        <div class="header-laptop-1">
+          <div class="header-laptop-1-container">
+            <div class="header-laptop-1-1">Stuck ?</div>
+            <!-- <div class="header-laptop-1-2">
+              <div>?</div>
+              <div class="header-laptop-logo-2"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="header-laptop-2">
+          <h1>
+            I'm
+            <span class="auto-type" style="color: #f7fe72 !important"></span>
+          </h1>
+        </div>
+        <div class="header-laptop-4">
+          <div class="header-laptop-6-container">
+            <div class="header-laptop-1-1">Code</div>
+            <div class="header-laptop-1-2">
+              <div>it.</div>
+              <div class="header-laptop-logo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-laptop-5">
+          <div class="header-laptop-5-container">
+            <h1>Search It.</h1>
+          </div>
+        </div>
+        <div class="header-laptop-6"></div>
+      </div>
+    </section>
+
+    <section class="loading-div">
+      <div>
+        <img src="./Dual Ball-1s-200px.svg" alt="" />
+      </div>
+    </section>
+
+    <section class="question-div">
+      <h1 class="question-title"><%= questionObject.title %></h1>
+      <small
+        >Source:
+        <a
+          href="<%= questionObject.link %>"
+          target="_blank"
+          class="question-link"
+          style="color: #226ce0"
+          ><%= questionObject.type %></a
+        ></small
+      >
+      <p class="question-body"><%- questionObject.value %></p>
+    </section>
+
+    <section class="footer">
+      <div class="footer-container">
+        <a
+          href="https://www.linkedin.com/in/aditya-agrawal-37721b146/"
+          target="_blank"
+          class="footer-link link-1"
+          ><img src="/icons8-linkedin.svg" alt=""
+        /></a>
+        <a href="mailto: adityaagr00@gmail.com" class="footer-link link-2"
+          ><img src="/icons8-mail-50.png" alt=""
+        /></a>
+      </div>
+      <div class="copy-container">&copy; 2022 Made by Aditya Agrawal</div>
+    </section>
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap"></script>
+
+<script>
+  gsap.fromTo(
+    ".header-laptop-1",
+    { x: -800, rotation: 40 },
+    { x: 0, rotation: 0, duration: 2, ease: "expo.out" }
+  );
+  gsap.fromTo(
+    ".header-laptop-4",
+    { x: 2000, rotation: -60 },
+    { x: 0, rotation: 0, duration: 2, delay: 1, ease: "expo.out" }
+  );
+  gsap.fromTo(
+    ".header-laptop-5",
+    { y: -800 },
+    { y: 0, duration: 2, delay: 0.5, ease: "expo.out" }
+  );
+  gsap.fromTo(
+    ".header-laptop-6",
+    { y: -800 },
+    { y: 0, duration: 2, delay: 2, ease: "expo.out" }
+  );
+  gsap.fromTo(
+    ".header-laptop-2",
+    { y: -800, rotation: 30 },
+    { y: 0, rotation: 0, duration: 2, delay: 2, ease: "bounce.out" }
+  );
+</script>
+
+<script>
+  let typed = new Typed(".auto-type", {
+    strings: ["Coding^500", "Sleeping^500", "Eating^500"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true,
+    cursorChar: "_",
+  });
+</script>

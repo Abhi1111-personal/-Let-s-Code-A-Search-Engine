@@ -1,0 +1,10 @@
+Given a collection of n items, each of which has a non-negative integer key whose maximum value is at most k, effectively sort it using the counting sort algorithm.
+
+Approach-1: 
+
+OverviewCounting sort is an integer-based sorting algorithm for sorting an array whose keys lie between a specific range. It counts the total number of elements with each distinct key value and then uses those counts to determine the positions of each key value in the output.
+
+Approach 2
+
+
+Following is the simpler version of counting sort that doesnt produce a stable sort, i.e., the relative order of items with equal keys is not preserved anymore.

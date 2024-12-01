@@ -1,0 +1,25 @@
+Write an efficient algorithm to check if a given string is kpalindrome or not. A string is kpalindrome if it becomes a palindrome on removing at most k characters from it.
+
+Example: 
+
+
+Input: ABCDBA, k = 1
+Output: kpalindrome
+Explanation: The string becomes a palindrome by removing either C or D from it.
+
+Input: ABCDECA, k = 1
+Output: Not a kpalindrome
+Explanation: The string needs at least 2removals from it to become a palindrome.
+
+
+Approach-1: 
+
+By carefully analyzing the problem, we can see that it is a variation of the classic Edit Distance Problem, where we need to convert the given string to its reverse by removing at most k characters from it (i.e., only delete operation is allowed).Please note that we need to perform at most n deletions from the original string and n deletions from the reverse string to make the original string and its reverse equal. Therefore, the expression 2n <= 2k is satisfied if the string is kpalindrome.
+
+Approach 2
+
+The problem has an optimal substructure and exhibits overlapping subproblems. Since both dynamic programming properties are satisfied, we can save subproblem solutions in memory rather than computing them repeatedly. The dynamic programming is demonstrated below in C++, Java, and Python, which runs in O(n2) time:
+
+Approach 3
+
+For example, the LPS of string CABCBC is CBCBC, and on removing A from it, the string becomes a palindrome. Following is the C++, Java, and Python implementation of the idea:

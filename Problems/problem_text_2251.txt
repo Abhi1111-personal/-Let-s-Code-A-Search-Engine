@@ -1,0 +1,10 @@
+Trapping rainwater problem: Find the maximum amount of water that can be trapped within a given set of bars where each bars width is 1 unit.
+
+Approach-1: 
+
+
+The idea is to calculate the maximum height bar on the left and right of every bar. The amount of water stored on top of each bar is equal to the minimum among the leading bar to the left and right minus the current bars height. This approach is demonstrated below in C, Java, and Python:
+
+Approach 2
+
+Constant space solution

@@ -1,0 +1,33 @@
+In the 01 Knapsack problem, we are given a set of items, each with a weight and a value, and we need to determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
+
+Example: 
+
+
+Input:
+
+value = [ 20, 5, 10, 40, 15, 25 ]
+weight = [ 1, 2, 3, 8, 7, 4 ]
+int W = 10
+
+Output: Knapsack value is 60
+
+value = 20 + 40 = 60
+weight = 1 + 8 = 9 < W
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. For each item, there are two possibilities:
+Include the current item in the knapsack and recur for remaining items with knapsacks decreased capacity. If the capacity becomes negative, do not recur or return -INFINITY.
+Exclude the current item from the knapsack and recur for the remaining items.
+
+
+Approach 2
+
+
+The above solution has an optimal substructure, i.e., the optimal solution can be constructed efficiently from optimal solutions of its subproblem. It also has overlapping subproblems, i.e., the problem can be broken down into subproblems, and each subproblem is repeated several times. To reuse the subproblem solutions, we can apply dynamic programming, in which subproblem solutions are memoized rather than computed over and over again.
+
+Approach 3
+
+
+We can also solve this problem in a bottom-up manner. In the bottom-up approach, we solve smaller subproblems first, then solve larger subproblems from them. The following bottom-up approach computes T[i][j], for each 1 <= i <= n and 0 <= j <= W, which is the maximum value that can be attained with weight less than or equal to j and using items up to first i items. It uses the value of smaller values i and j already computed. It has the same asymptotic runtime as Memoization but no recursion overhead.

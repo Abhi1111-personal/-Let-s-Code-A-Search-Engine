@@ -1,0 +1,9 @@
+Given a BST, write an efficient function to search a given key in it. The algorithm should return the parent node of the key and print if the key is the left or right node of the parent node. If the key is not present in the BST, the algorithm should be able to determine that.
+
+Approach-1: 
+
+We begin by examining the root node. If the tree is null, the key we are searching for does not exist in the tree. Otherwise, if the key equals that of the root, the search is successful, we return the node. If the key is less than that of the root, we search the left subtree. Similarly, if the key is greater than that of the root, we search the right subtree. This process is repeated until the key is found or the remaining subtree is null. If the searched key is not found after a null subtree is reached, then the key is not present in the tree.This can be easily expressed as a recursive algorithm. The implementation can be seen below in C++, Java, and Python:
+
+Approach 2
+
+The space used by the call stack is also proportional to the trees height. The algorithm can be implemented iteratively to avoid use of extra space.

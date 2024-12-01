@@ -1,0 +1,16 @@
+Given two positive integers, implement the power function without using multiplication and division operators.
+
+Example: 
+
+
+pow(x, y) = pow(x, y  1) * x
+pow(x, 0) = 1
+
+
+Approach-1: 
+
+Method 1: Using RecursionWe know that pow(x, y) can be recursively written as:
+
+Approach 2
+
+The idea is if x = ab, then log(x) = b.log(a). Since, x can be expressed as x = elog(x), by substituting the value of log(x) in the equation, we get x = eb.log(a).

@@ -1,0 +1,32 @@
+Given M sorted lists of variable length, efficiently compute the smallest range, including at least one element from each list.
+
+Example: 
+
+
+Input: 4 sorted lists of variable length
+
+[ 3, 6, 8, 10, 15 ]
+[ 1, 5, 12 ]
+[ 4, 8, 15, 16 ]
+[ 2, 6 ]
+
+Output:
+
+The minimum range is 46
+
+
+Input: 4 sorted lists of variable length
+
+[ 2, 3, 4, 8, 10, 15 ]
+[ 1, 5, 12 ]
+[ 7, 8, 15, 16 ]
+[ 3, 6 ]
+
+Output:
+
+The minimum range is 47
+
+
+Approach-1: 
+
+We can solve this problem in O(N.log(M)) time using a min-heap where N is the total number of elements present in M lists. The idea is to construct a min-heap of size M and insert the first element of each list into it. Then pop the root element (minimum element) from the heap and insert the next element from the same list as the popped element. Repeat this process until any list is exhausted. To find the minimum range, maintain a variable high that stores the maximum element present in a heap at any point. Since the minimum element is present in the min-heap at its root, compute the range (high element  root element) and return the minimum range found at every pop operation.The algorithm can be implemented as follows in C++, Java, and Python:

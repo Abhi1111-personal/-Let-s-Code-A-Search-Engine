@@ -1,0 +1,19 @@
+b'169. Majority ElementEasy9597336Add to ListShareGiven an array nums of size n, return the majority element.
+The majority element is the element that appears more than \xe2\x8c\x8an / 2\xe2\x8c\x8b times. You may assume that the majority element always exists in the array.
+\xc2\xa0
+Example 1:
+Input: nums = [3,2,3]
+Output: 3
+Example 2:
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+
+\xc2\xa0
+Constraints:
+
+n == nums.length
+1 <= n <= 5 * 104
+-109 <= nums[i] <= 109
+
+\xc2\xa0
+Follow-up: Could you solve the problem in linear time and in O(1) space?Accepted1,225,000Submissions1,945,501Seen this question in a real interview before?YesNoCompaniesRelated TopicsArrayHash TableDivide and ConquerSortingCountingSimilar QuestionsMajority Element IIMediumCheck If a Number Is Majority Element in a Sorted ArrayEasy'

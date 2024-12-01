@@ -1,0 +1,29 @@
+Given an expression consisting of an opening brace { and a closing brace }, find the minimum number of inversions needed to balance the expression.
+
+Example: 
+
+
+Input: {{}{{}{{
+Output: Minimum number of inversions needed is 2
+
+{{}{{}{{ > {{}{{}}{ > {{}{{}}}
+
+
+Input: {{{{{{
+Output: Minimum number of inversions needed is 3
+
+{{{{{{ > {{{}{{ > {{{}}{ > {{{}}}
+
+
+Approach-1: 
+
+The idea is to traverse the given expression and maintain a count of open braces in the expression seen.
+
+If the current character is an opening brace {, increment the opened braces count by 1.
+If the current character is a closing brace }, check if it has an unclosed brace to its left (look for non-zero opened brace count).
+
+If any unclosed brace is found, close it using the current brace and decrement the count of opened braces by 1.
+Otherwise, convert the current closing brace } to { and increment the total inversions needed and the opening brace count by 1.
+
+After we are done processing each character in the expression, if there are n opened braces, we will need exactly n/2 inversion to close them.
+

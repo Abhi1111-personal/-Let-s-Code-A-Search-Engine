@@ -1,0 +1,16 @@
+1556. Thousand SeparatorEasy33315Add to ListShareGiven an integer n, add a dot (".") as the thousands separator and return it in string format.
+
+Example 1:
+Input: n = 987
+Output: "987"
+
+Example 2:
+Input: n = 1234
+Output: "1.234"
+
+
+Constraints:
+
+0 <= n <= 231 - 1
+
+Accepted33.5KSubmissions60KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringShow Hint 1Scan from the back of the integer and use dots to connect blocks with length 3 except the last block.

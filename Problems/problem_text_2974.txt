@@ -1,0 +1,19 @@
+Find all ndigit numbers with a given sum where n varies from 1 to 9 and sum <= 81 (Maximum possible sum in a 9digit number).
+
+Example: 
+
+
+3digit numbers with sum 6 are
+
+105 114 123 132 141 150 204 213 222 231 240 303 312 321 330 402 411 420 501 510 600
+
+
+5digit numbers with sum 42 are
+
+69999 78999 79899 79989 79998 87999 88899 88989 88998 89799 89889 89898 89979 89988 89997 96999 97899 97989 97998 98799 98889 98898 98979 98988 98997 99699 99789 99798 99879 99888 99897 99969 99978 99987 99996
+
+
+Approach-1: 
+
+A simple solution would be to generate all ndigit numbers and print only those numbers that satisfy the given constraints. The time complexity of this solution would be exponential.
+A better solution is to generate only those ndigit numbers that satisfy the given constraints. The idea is to use recursion. We append digits from 0 to 9 to the partially formed number and recur with one less digit at each point in the recursion. One particular case we need to handle that the number should not start with 0. We also maintain the sum of digits so far in the partially formed number. The code can be optimized to return if the sum of digits so far is more than the given sum at any point in the recursion.

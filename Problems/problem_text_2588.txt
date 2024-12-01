@@ -1,0 +1,38 @@
+Given a staircase, find the total number of ways to reach the n'th stair from the bottom of the stair when a person is only allowed to take at most m steps at a time.
+
+Example: 
+
+
+Input: n = 3, m = 2
+Output: Total ways to reach the 3rd stair with at most 2 steps are 3
+
+1 step + 1 step + 1 step
+1 step + 2 steps
+2 steps + 1 step
+
+
+Input: n = 4, m = 3
+Output: Total ways to reach the 4th stair with at most 3 steps are 7
+
+1 step + 1 step + 1 step + 1 steps
+1 step + 1 step + 2 steps
+1 step + 2 steps + 1 step
+1 step + 3 steps
+2 steps + 1 step + 1 step
+2 steps + 2 steps
+3 steps + 1 step
+
+
+Approach-1: 
+
+In the previous post, we have discussed how to get the number of ways to reach the n'th stair from the bottom of the stair, when a person is allowed to take at most three steps at a time. In this post, we will extend the solution for at most m steps.
+For a maximum of 3 steps at a time, we have come up with the recurrence relation T(n):
+
+Approach 2
+
+
+The problem has an optimal substructure since a solution to a problem can be derived using the solution to its subproblems. Since both dynamic programming properties are satisfied, dynamic programming can bring down the time complexity to O(m.n) and the space complexity to O(n). We can do this in either a top-down or bottom-up fashion:
+
+Approach 3
+
+We can also use tabulation to solve this problem in a bottom-up fashion. The idea is to construct a temporary array that stores each subproblem results using already computed results of the smaller subproblems. The algorithm can be implemented as follows in C, Java, and Python:

@@ -1,0 +1,28 @@
+Given a limited range array of size n containing elements between 1 and n-1 with one element repeating, find the duplicate number in it without using any extra space.
+
+Example: 
+
+
+Input: { 1, 2, 3, 4, 4 }
+Output: The duplicate element is 4
+
+
+Input: { 1, 2, 3, 4, 2 }
+Output: The duplicate element is 2
+
+
+Approach-1: 
+
+Approach 1: Using HashingThe idea is to use hashing to solve this problem. We can use a visited boolean array to mark if an element is seen before or not. If the element is already encountered before, the visited array will return true.
+
+Approach 2
+
+Approach 2: Using Array Indices
+
+Approach 3
+
+Approach 3: Using XOR
+
+Approach 4
+
+Approach 4: Using Difference in Sum

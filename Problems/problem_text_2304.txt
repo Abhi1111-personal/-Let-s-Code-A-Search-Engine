@@ -1,0 +1,21 @@
+Given an integer array, find the length of the longest subsequence formed by the consecutive integers. The subsequence should contain all distinct values, and the character set should be consecutive, irrespective of its order.
+
+Example: 
+
+
+Input : [2, 0, 6, 1, 5, 3, 7]
+Output: 4
+
+Explanation: The longest subsequence formed by the consecutive integers is [2, 0, 1, 3]. It has distinct values and length 4.
+
+
+Input : [2, 4, 6, 3, 7, 4, 8, 1]
+Output: 4
+
+Explanation: The longest subsequence formed by the consecutive integers is [2, 4, 3, 4, 1]. The distinct subsequence is [2, 4, 3, 1] having length 4.
+
+
+Approach-1: 
+
+Note that the problem differs from finding the largest subarray formed by the consecutive integers. Unlike subarrays, subsequences are not required to occupy consecutive positions within the original array.
+A naive solution would be to sort the array in ascending order and compare the consecutive elements to find the maximum length subarray with consecutive integers. The time complexity of this solution would be O(n.log(n)), where n is the size of the given sequence.

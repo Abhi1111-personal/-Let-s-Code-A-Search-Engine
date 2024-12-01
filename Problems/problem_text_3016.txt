@@ -1,0 +1,17 @@
+Find the longest common prefix (LCP) in a given set of strings.
+
+Example: 
+
+
+Input:
+
+keys = [codable, code, coder, coding]
+
+Output:
+
+The longest common prefix is cod
+
+
+Approach-1: 
+
+In the below post, we have discussed a solution using the divide-and-conquer technique to solve the LCP problem. In this post, a Trie-based solution is discussed.Longest Common Prefix (LCP) Problem

@@ -1,0 +1,6 @@
+Given a maze in the form of a binary rectangular matrix, find the shortest paths length in the maze from a given source to a given destination. The path can only be constructed out of cells having value 1, and at any moment, we can only move one step in one of the four directions.
+
+Approach-1: 
+
+
+To find the mazes shortest path, search for all possible paths in the maze from the starting position to the goal position until all possibilities are exhausted. We can easily achieve this with the help of backtracking. The idea is to start from the given source cell in the matrix and explore all four paths possible and recursively check if they will lead to the destination or not. Then update the minimum path length whenever the destination cell is reached. If a path doesnt reach the destination or explored all possible routes from the current cell, backtrack. To make sure that the path is simple and doesnt contain any cycles, keep track of cells involved in the current path in a matrix, and before exploring any cell, ignore the cell if it is already covered in the current path.Following is the C++, Java, and Python implementation of the idea:

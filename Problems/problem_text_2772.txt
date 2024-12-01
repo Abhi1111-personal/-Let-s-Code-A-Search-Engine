@@ -1,0 +1,23 @@
+Given a square matrix, rotate the matrix by 180 degrees in a clockwise direction. The transformation should be done in-place in quadratic time.
+
+Example: 
+
+
+Input:
+
+1234
+5678
+9101112
+13141516
+
+Output:
+
+16151413
+1211109
+8765
+4321
+
+
+Approach-1: 
+
+If we swap elements of the first row with the last row elements in reverse order, elements of the second row with the elements of the second last row in reverse order, and so on we will get our desired matrix. Note that if the matrix has odd dimensions, reverse elements of the middle row.The algorithm can be implemented as follows in C++, Java, and Python:

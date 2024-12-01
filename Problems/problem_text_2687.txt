@@ -1,0 +1,13 @@
+Given a binary search tree (BST), efficiently convert it into a min-heap. In order words, convert a binary search tree into a complete binary tree where each node has a higher value than its parents value.
+
+Approach-1: 
+
+CASE 1: BST is a Complete Binary TreeIf the given BST is already a complete binary tree, the min-heaps structural property is already satisfied, and we need to take care of the only heap-ordering property of the min-heap. Basically, we need to ensure that each nodes value is greater than its parents value, with the minimum element present at the root.
+
+Approach 2
+
+CASE 2: BST is not a Complete Binary Tree
+
+Approach 3
+
+To convert a BST into a sorted linked list, perform reverse inorder traversal on the BST and push the encountered nodes at the front of the linked list. In the reverse inorder traversal, the right subtree is visited first; then the node is processed, followed by the left subtree.

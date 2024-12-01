@@ -1,0 +1,25 @@
+Given an array of sorted integers that may contain several duplicate elements, count the total number of distinct absolute values in it.
+
+Example: 
+
+
+Input: { -1, -1, 0, 1, 1, 1 }
+Output: The total number of distinct absolute values is 2 (0 and 1)
+
+
+Input: { -2, -1, 0, 1, 2, 3 }
+Output: The total number of distinct absolute values is 4 (0, 1, 2 and 3)
+
+
+Input: { -1, -1, -1, -1 }
+Output: The total number of distinct absolute values is 1 (only 1)
+
+
+Approach-1: 
+
+We can easily solve this problem by inserting the absolute value of each array element into a set. We know that a set doesnt permit duplicates, and hence its size would be the desired count. This approach is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+
+The idea is to initialize the distinct count as the total number of elements present in the input. The program checks for a pair with zero-sum with the help of two index variables (initially pointing to two corners of the array). If the pair with zero-sum is found (or duplicates are encountered), decrement the count of distinct elements. Finally, return the updated count.

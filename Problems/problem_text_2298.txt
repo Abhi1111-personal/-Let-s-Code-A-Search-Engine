@@ -1,0 +1,26 @@
+Given an integer array A, efficiently find a sorted triplet such that A[i] < A[j] < A[k] and 0 <= i < j < k < n, where n is the array size.
+
+Example: 
+
+
+Input: A[] = { 5, 4, 3, 7, 6, 1, 9 }
+
+Output: Any one of the following triplets:
+
+(5, 7, 9)
+(4, 7, 9)
+(3, 7, 9)
+(5, 6, 9)
+(4, 6, 9)
+(3, 6, 9)
+
+
+Approach-1: 
+
+A simple solution would be to traverse the array and, for each index, check if at least one smaller and one larger element exists on its left and right, respectively. If any such index exists, we have found our triplet. The time complexity of this approach is O(n2) since, for each array element, we might end up traversing the whole array again.
+We can easily solve this problem in linear time using some extra space. The idea is to create two auxiliary arrays where each index in the first array stores the smaller elements index to the left, and each index in the second array stores the larger elements index to the right. After filling up both arrays, find an index with a smaller value present to its left and a higher value to its right. If any such index exists, the triplet is found.
+
+Approach 2
+
+
+We can even solve this problem in linear time and constant extra space. The idea is to traverse the array from left to right and keep track of the minimum element found so far. Maintain two variables, low and mid, for storing the indices of the first two elements of the triplet. For the first element, which is more than the current minimum, initialize the low and mid index with the current minimum and current element indices. If we see a better candidate for the middle element, update the mid and low index. If at any point a value is encountered that is more than the mid value, the triplet is located, and we are done.

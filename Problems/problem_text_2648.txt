@@ -1,0 +1,40 @@
+Given a source vertex s from a set of vertices V in a weighted digraph where all its edge weights w(u, v) are non-negative, find the shortest path weights d(s, v) from source s for all vertices v present in the graph.
+
+Example: 
+
+
+
+
+
+Vertex
+Minimum Cost
+Route
+
+
+A > B
+4
+A > E > B
+
+
+A > C
+6
+A > E > B > C
+
+
+A > D
+5
+A > E > D
+
+
+A > E
+3
+A > E
+
+
+
+
+
+Approach-1: 
+
+We know that the Breadthfirst search (BFS) can be used to find the shortest path in an unweighted graph or even in a weighted graph having the same cost of all its edges. But if edges in the graph are weighted with different costs, then BFS generalizes to uniform-cost search. Instead of expanding nodes to their depth from the root, uniform-cost search expands the nodes in order of their cost from the root. A variant of this algorithm is known as Dijkstras algorithm.
+Dijkstras Algorithm is an algorithm for finding the shortest paths between nodes in a graph. For a given source node in the graph, the algorithm finds the shortest path between that node and every other node. It can also be used for finding the shortest paths from a single node to a single destination node by stopping the algorithm once the fastest route to the destination node has been determined.

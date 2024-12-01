@@ -1,0 +1,39 @@
+The longest increasing subsequence problem is to find a subsequence of a given sequence in which the subsequences elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. This subsequence is not necessarily contiguous or unique.
+
+Example: 
+
+
+LIS[0]  0
+LIS[1]  0 8
+LIS[2]  0 4
+LIS[3]  0 8 12
+LIS[4]  0 2
+LIS[5]  0 8 10
+LIS[6]  0 4 6
+LIS[7]  0 8 12 14
+LIS[8]  0 1
+LIS[9]  0 4 6 9
+LIS[10]  0 4 5
+LIS[11]  0 4 6 9 13
+LIS[12]  0 2 3
+LIS[13]  0 4 6 9 11
+LIS[14]  0 4 6 7
+LIS[15]  0 4 6 9 13 15
+
+
+Approach-1: 
+
+
+The idea is to use recursion to solve this problem. For each item, there are two possibilities:
+Include the current item in LIS if it is greater than the previous element in LIS and recur for the remaining items.
+Exclude the current item from LIS and recur for the remaining items.
+
+
+Approach 2
+
+
+The problem has an optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. The above solution also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are repeatedly computed. We know that problems with optimal substructure and overlapping subproblems can be solved using dynamic programming, where subproblem solutions are memoized rather than computed repeatedly. The memoized version follows the top-down approach since we first break the problem into subproblems and then calculate and store values.
+
+Approach 3
+
+How to print LIS?

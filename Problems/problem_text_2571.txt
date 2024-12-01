@@ -1,0 +1,23 @@
+Given an unlimited supply of coins of given denominations, find the minimum number of coins required to get the desired change.
+
+Example: 
+
+
+If the desired change is 15, the minimum number of coins required is 3
+
+(7 + 7 + 1) or (5 + 5 + 5) or (3 + 5 + 7)
+
+
+If the desired change is 18, the minimum number of coins required is 4
+
+(7 + 7 + 3 + 1) or (5 + 5 + 5 + 3) or (7 + 5 + 5 + 1)
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. We recur to see if the total can be reached by including the coin or not for each coin of given denominations. If choosing the current coin resulted in the solution, update the minimum number of coins needed. Finally, return the minimum value we get after exhausting all combinations.Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+
+
+The problem has an optimal substructure as the problem can be broken down into smaller subproblems, which can further be broken down into yet smaller subproblems, and so on. The problem also clearly exhibits overlapping subproblems, so we will end up solving the same subproblem over and over again. The repeated subproblems can be seen by drawing a recursion tree for higher values of n. We know that problems having optimal substructure and overlapping subproblems can be solved by dynamic programming, in which subproblem solutions are saved rather than computed repeatedly.

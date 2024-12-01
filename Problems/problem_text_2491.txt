@@ -1,0 +1,5 @@
+This post will cover the difference between the Depthfirst search (DFS) and Breadthfirst search (BFS) algorithm used to traverse/search tree or graph data structure.
+
+Approach-1: 
+
+Breadth First Search (BFS)  Interview Questions & Practice Problems

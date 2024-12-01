@@ -1,0 +1,9 @@
+Write an algorithm to generate random numbers from 1 to 12 with equal probability, using a given function that generates random numbers from 1 to 6, with equal probability.
+
+Approach-1: 
+
+Approach 1The idea is to make two separate calls to the specified function and store the result in two variables, x and y, which would be random numbers between 1 and 6. Then we can quickly establish that:
+
+Approach 2
+
+Another way to generate the desired random numbers is to use the expression x + (y & 1) * 6 or x + !(y & 1) * 6, where x and y represent the output of two distinct calls made to the random() function.

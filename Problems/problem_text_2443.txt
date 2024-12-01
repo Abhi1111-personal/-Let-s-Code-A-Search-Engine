@@ -1,0 +1,5 @@
+Given a binary tree, determine the distance between given pairs of nodes in it. The distance between two nodes is defined as the total number of edges in the shortest path from one node to other.
+
+Approach-1: 
+
+This problem is a standard application of the lowest common ancestor of given nodes. The distance from v to w can be computed as the distance from the root to v, plus the distance from the root to w, minus twice the distance from the root to their lowest common ancestor.The algorithm can be implemented as follows in C++, Java, and Python:

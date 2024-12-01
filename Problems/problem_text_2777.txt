@@ -1,0 +1,23 @@
+Given a binary M  N row-wise sorted matrix, find a row that contains the maximum number of 1's in linear time.
+
+Example: 
+
+
+Input:
+
+[00011]
+[00111]
+[00000]
+[01111]
+[00001]
+
+Output: The maximum 1s are present in row 4
+
+
+Approach-1: 
+
+The idea is to start from the top-right corner of the matrix and do the following:
+
+If the current cell has value 1, continue moving left till we encounter 0, or all columns are processed;
+If the current cell has value 0, continue moving down till we encounter 1, or all rows are processed.
+

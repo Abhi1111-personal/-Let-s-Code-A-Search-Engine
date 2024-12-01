@@ -1,0 +1,5 @@
+Write an algorithm to get 0 and 1 with equal probability using a function that generates random numbers from 1 to 5 with equal probability.
+
+Approach-1: 
+
+The algorithm can be implemented as follows in C (self-explanatory):

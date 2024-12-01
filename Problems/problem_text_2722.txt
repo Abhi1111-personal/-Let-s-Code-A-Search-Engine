@@ -1,0 +1,14 @@
+Given an unsorted linked list, delete duplicate nodes from it by traversing the list only once.
+
+Example: 
+
+
+Input: 5 > 3 > 4 > 2 > 5 > 4 > 1 > 3 > null
+
+Output: 5 > 3 > 4 > 2 > 1 > null
+
+
+Approach-1: 
+
+A simple solution would be to consider every distinct pair of nodes in the list and check if they have the same data or not. If their data matches, we delete the latter node. The time complexity of this solution is O(n2), where n is the total number of nodes in the linked list.
+We can perform better by using hashing. The idea is to traverse the given list and insert each encountered node into a set. If the current node already presents in the set (i.e., it is seen before), ignore it and move to the next element. In the end, all duplicated nodes is removed from the list.

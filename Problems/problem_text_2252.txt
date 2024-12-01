@@ -1,0 +1,30 @@
+Given a schedule containing the arrival and departure time of trains in a station, find the minimum number of platforms needed to avoid delay in any trains arrival.
+
+Example: 
+
+
+Trains arrival = { 2.00, 2.10, 3.00, 3.20, 3.50, 5.00 }
+Trains departure = { 2.30, 3.40, 3.20, 4.30, 4.00, 5.20 }
+
+The minimum platforms needed is 2
+
+
+The train arrived at 2.00 on platform 1
+The train arrived at 2.10 on platform 2
+The train departed at 2.30 from platform 1
+The train arrived at 3.00 on platform 1
+The train departed at 3.20 from platform 1
+The train arrived at 3.20 on platform 1
+The train departed at 3.40 from platform 2
+The train arrived at 3.50 on platform 2
+The train departed at 4.00 from platform 2
+The train departed at 4.30 from platform 1
+The train arrived at 5.00 on platform 1
+The train departed at 5.20 from platform 1
+
+
+Approach-1: 
+
+The idea is to merge the arrival and departure times of trains and consider them in sorted order. Maintain a counter to count the total number of trains present at the station at any point. The counter also represents the total number of platforms needed at that time.
+If the train is scheduled to arrive next, increase the counter by one and update the minimum platforms needed if the count is more than the minimum platforms needed so far.
+If the train is scheduled to depart next, decrease the counter by 1.

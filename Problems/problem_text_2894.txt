@@ -1,0 +1,19 @@
+Given an integer array with many duplicated elements, write an algorithm to efficiently sort it in linear time, where the order of equal elements doesnt matter.
+
+Example: 
+
+
+Input: { 4, 2, 40, 10, 10, 1, 4, 2, 1, 10, 40 }
+
+Output: { 1, 1, 2, 2, 4, 4, 10, 10, 10, 40, 40 }
+
+
+Approach-1: 
+
+A simple solution would be to use efficient sorting algorithms like Merge Sort, Quicksort, Heapsort, etc., that can solve this problem in O(n.log(n)) time, but those will not take advantage of the fact that there are many duplicated values in the array.
+A better approach is to use a counting sort. This will bring down the time complexity to O(n + k), where n is the size of the input and k is the input range. Following is the C, Java, and Python program that demonstrates it:
+
+Approach 2
+
+
+We can also use a hash table to solve this problem effectively. The idea is to:

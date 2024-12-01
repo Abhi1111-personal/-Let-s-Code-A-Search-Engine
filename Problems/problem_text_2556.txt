@@ -1,0 +1,37 @@
+Find a subsequence of a given sequence such that the subsequence sum is as high as possible and the subsequences elements are sorted in ascending order. This subsequence is not necessarily contiguous or unique.
+
+Example: 
+
+
+MSIS[0]  8
+MSIS[1]  4
+MSIS[2]  8 12
+MSIS[3]  2
+MSIS[4]  8 10
+MSIS[5]  4 6
+MSIS[6]  8 12 14
+MSIS[7]  1
+MSIS[8]  4 6 9
+MSIS[9]  4 5
+MSIS[10]  8 12 13
+MSIS[11]  2 3
+MSIS[12]  4 6 9 11
+
+
+Approach-1: 
+
+The Maximum Sum Increasing Subsequence (MSIS) problem is a standard variation of the Longest Increasing Subsequence (LIS) problem. The idea is to use recursion to solve this problem. For each item, there are two possibilities:
+
+Include the current item in MSIS if it is greater than the previous element in MSIS and recur for the remaining items.
+Exclude the current item from MSIS and recur for the remaining items.
+
+
+
+Approach 2
+
+
+The problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. The above solution also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are repeatedly computed.
+
+Approach 3
+
+How to print MSIS?

@@ -1,0 +1,12 @@
+Given an N  N matrix of integers, find the maximum sum submatrix present in it.
+
+Example: 
+
+
+submatrix sum = S[j+1][n+1]  S[j+1][m]  S[i][n+1] + S[i][m]
+
+
+Approach-1: 
+
+
+The idea is to preprocess the matrix. We take an auxiliary matrix S[][], where S[i][j] will store the sum of elements in the matrix from (0, 0) to (i-1, j-1). The idea is similar to the following post:Calculate the sum of all elements in a submatrix in constant time

@@ -1,0 +1,11 @@
+Given a sorted doubly linked list, in-place convert it into a height-balanced binary search tree (BST). The difference between the height of the left and right subtree for every node of a height-balanced BST is never greater than 1.
+
+Approach-1: 
+
+A simple solution would be to traverse the doubly linked list, store every node in an array, and then construct a height-balanced BST from nodes in the array. The idea is to make the middle node in the sorted array as the BSTs root node. All nodes before the middle node will go in the left subtree, and all nodes after the middle node will go in the right subtree. If we follow this recursively for the left and right subtree, we will get a height-balanced BST. Following is the pictorial representation of this approach, followed by the C++, Java, and Python implementation:
+
+
+Approach 2
+
+
+The idea is to build the BST in an inorder fashion, i.e., the same order as nodes appear in the doubly linked list. We start by counting the total number of nodes in the doubly linked list. Then recursively construct the left subtree with the first half of nodes in a doubly-linked list, assign the middle node of the doubly linked list to the BSTs root node, and set the constructed left subtree as the left child of the root node. To get the middle node in constant time, move the head pointer of the doubly linked list to the next node after setting the BSTs root node. Finally, recursively construct the right subtree with remaining nodes in the doubly linked list and set it as the root nodes right child.

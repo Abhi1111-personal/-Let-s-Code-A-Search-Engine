@@ -1,0 +1,18 @@
+Given a Directed Acyclic Graph (DAG), print it in topological order using topological sort algorithm. If the graph has more than one topological ordering, output any of them. Assume valid Directed Acyclic Graph (DAG).
+
+Example: 
+
+
+57310264
+35701264
+57301462
+75134062
+57123064
+37051426
+
+etc.
+
+
+Approach-1: 
+
+We can use Depthfirst search (DFS) to implement topological sort algorithm. The idea is to order the vertices in order of their decreasing departure time of vertices in DFS, and we will get our desired topological sort.How does it work?

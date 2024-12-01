@@ -1,0 +1,17 @@
+This post will discuss how to determine whether two integers are equal without using comparison operators (==, !=, <, >, <=, >=) and arithmetic operators (+, -, *, /, %).
+
+Approach 2
+
+We can also take advantage of the fact that a garbage value is assigned to a local array in C by default. The idea is to use the first number as the array index and set the value to 0. Then, check if the array is set for the second number or not.
+
+Approach 3
+
+Since the previous approach consumes a lot of memory, a more space-efficient version uses a hash map. The hash-based implementation can be seen below in C++, Java, and Python:
+
+Approach 4
+
+4. Repeated Subtraction
+
+Approach 5
+
+If we are permitted to use arithmetic operators, perform a simple subtraction to determine whether two integers are equal, as demonstrated below in C, Java, and Python:

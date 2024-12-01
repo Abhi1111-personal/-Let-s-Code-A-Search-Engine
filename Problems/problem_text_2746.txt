@@ -1,0 +1,27 @@
+Given a ternary tree, in-place convert it into a doubly-linked list. A ternary tree is a tree data structure in which each node has three child nodes distinguished as left, mid, and right.
+
+Example: 
+
+
+Input: Ternary Tree
+
+1
+/|\
+/|\
+/|\
+2912
+/|\/\|\
+36810111316
+|\/\|
+47141517
+\
+5
+
+Output: Doubly Linked List
+
+1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10 > 11 > 12 > 13 > 14 > 15 > 16 > 17 > nullptr
+
+
+Approach-1: 
+
+The idea is to perform reverse postorder traversal on a ternary tree. In reverse postorder traversal, before processing a ternary tree node, its right child is processed first, followed by its mid and left child. After traversing all children of a ternary tree node, insert the node at the front of the doubly linked list. The reverse postorder traversal is used to ensure the correct insertion order in a doubly-linked list.Following is the C++, Java, and Python program that demonstrates the idea:

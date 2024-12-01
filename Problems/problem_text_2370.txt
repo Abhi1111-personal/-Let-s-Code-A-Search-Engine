@@ -1,0 +1,51 @@
+We are given a set of bipolar magnets, each domino-shaped. The objective is to place magnets on an M  N board, which satisfies a set of conditions where both M and N are not odd.
+
+Example: 
+
+
+Input:
+
+top[] = [1, -1, -1, 2, 1, -1]
+bottom[] = [2, -1, -1, 2, -1, 3]
+left[] = [2, 3, -1, -1, -1]
+right[] = [-1, -1, -1, 1, -1]
+
+Rules[][] =
+[L R L R T T]
+[L R L R B B]
+[T T T T L R]
+[B B B B T T]
+[L R L R B B]
+
+Output:
++  +  X 
+ +  + X +
+X X +  + 
+X X  + X +
+ + X X X 
+
+
+Input:
+
+top[] = [2, -1, -1]
+bottom[] = [-1, -1, 2]
+left[] = [-1, -1, 2, -1]
+right[] = [0, -1, -1, -1]
+
+Rules[][] =
+[T T T]
+[B B B]
+[T L R]
+[B L R]
+
+Output:
++ X +
+ X 
++  +
+ + 
+
+
+Approach-1: 
+
+The idea is to use backtracking. We start from the first cell of the rules matrix and check for every horizontal and vertical slot. If the horizontal or vertical slot contains L and R or T and B, respectively, put ('+', '-') or ('-', '+') accordingly in the slot and recursively checks if they lead to the solution or not. If the solution is found with the required configuration, print the solution matrix; if none of the above solutions work, return false from the function.
+Following is the C++, Java, and Python implementation of the idea:

@@ -1,0 +1,26 @@
+Given two binary arrays, X and Y, find the length of the longest continuous sequence that starts and ends at the same index in both arrays and have the same sum. In other words, find max(j-i+1) for every j >= i, where the sum of subarray X[i, j] is equal to the sum of subarray Y[i, j].
+
+Example: 
+
+
+We can write previous difference as di = X[0, i]  Y[0, i]
+
+
+Similarly, the current difference dj can be written as:
+
+dj = X[0, j]  Y[0, j], or
+dj = (X[0, i] + X[i+1, j])  (Y[0, i] + Y[i+1, j])
+
+
+If the difference is seen before, i.e., (dj = di), then
+
+(X[0, i] + X[i+1, j])  (Y[0, i] + Y[i+1, j]) = X[0, i]  Y[0, i]
+X[i+1, j]  Y[i+1, j] = 0, or
+X[i+1, j] == Y[i+1, j]
+
+
+Approach-1: 
+
+
+A naive solution would be to consider every subarray [i, j], where j > i and check if the sum of X[i, j] is equal to the sum of Y[i, j] or not. If the sum is found to be equal and the length of the subarray is more than the maximum found so far, update the result. The time complexity of this solution O(n2), where n is the size of the given sequence. This assumes that the sum of each subarray is computed in constant time.
+We can solve this problem in linear time. The idea is to traverse the array and maintain the sum of X[] and Y[] till the current index and calculate the difference between the two sums.

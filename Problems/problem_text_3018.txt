@@ -1,0 +1,18 @@
+Given a huge set of words with duplicates present, find the maximum occurring word in it. If two words have the same count, return any one of them.
+
+Example: 
+
+
+Input:
+
+keys = [code, coder, coding, codable, codec, codecs, coded, codeless, codec, codecs, codependence, codex, codify, codependents, codes, code, coder, codesign, codec, codeveloper, codrive, codec, codecs, codiscovered]
+
+Output:
+
+The maximum occurring word is codec.
+Its count is 4
+
+
+Approach-1: 
+
+The idea is to use Trie (Prefix Tree) to solve this problem. We start by inserting each key into the Trie and store its count so far (along with the key itself) in the leaf nodes. After all nodes are inserted into the Trie, perform its preorder traversal (DFS), and find the maximum frequency word by comparing the count present at leaf nodes. Note that we can also use a map to solve this problem.Following is the C++, Java, and Python implementation of the idea:

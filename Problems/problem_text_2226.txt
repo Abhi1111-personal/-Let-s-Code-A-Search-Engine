@@ -1,0 +1,6 @@
+Given a binary array, find the index of 0 to be replaced with 1 to get the maximum length sequence of continuous ones.
+
+Approach-1: 
+
+
+We can efficiently solve this problem in linear time and constant space. The idea is to traverse the given array and maintain an index of the previous zero encountered. We can then easily find out the total number of 1s between the current zero and the last zero for each subsequent zeroes. For each element, check if the maximum sequence of continuous 1s ending at that element (including the last zero, which is now replaced by 1) exceeds the maximum sequence found so far. If yes, update the maximum sequence to the current sequence length and index of optimal zero and index the last zero encountered.The algorithm can be implemented as follows in C, Java, and Python:

@@ -1,0 +1,5 @@
+Given a linked list that stores a path formed by cells of a matrix, remove the redundant nodes in that path. The path can be both vertical and horizontal, but never diagonal. To determine the complete path, we need the endpoints of all vertical and horizontal paths; middle nodes dont provide any value and are therefore redundant. So, the resultant list should contain coordinates of only endpoints of all vertical and horizontal paths.
+
+Approach-1: 
+
+We can easily solve the problem by traversing the list and considering three nodes at a time. If a triplet is found with the same xvalue or same yvalue, then delete the middle node. If this is done for all adjacent triplets, we will get the desired list at the end.This is demonstrated below in C, Java, and Python:

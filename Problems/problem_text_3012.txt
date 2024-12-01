@@ -1,0 +1,5 @@
+This post covers the C++ implementation of the Trie data structure, which supports insertion, deletion, and search operations.
+
+Approach-1: 
+
+Java Implementation of Trie Data StructureTrie Data Structure  Python Implementation

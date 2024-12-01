@@ -1,0 +1,18 @@
+Given a linked list, pairwise swap its adjacent nodes. The swapping of data is not allowed, only links should be changed.
+
+Example: 
+
+
+Input: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > NULL
+
+Output: 2 > 1 > 4 > 3 > 6 > 5 > 8 > 7 > NULL
+
+
+Approach-1: 
+
+The idea is to traverse the linked list, consider two nodes simultaneously, and swap their links. This looks simple enough but needs special attention while exchanging the links.The algorithm can be implemented as follows in C, Java, and Python:
+
+Approach 2
+
+
+We can also write a recursive version of the above program. The idea remains the same, but here we pass the next pair information and the previous node through recursion.

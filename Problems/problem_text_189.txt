@@ -1,0 +1,26 @@
+1250. Check If It Is a Good ArrayHard260283Add to ListShareGiven an array nums ofpositive integers. Your task is to select some subset of nums, multiply each element by an integer and add all these numbers.The array is said to begoodif you can obtain a sum of1from the array by any possible subset and multiplicand.
+ReturnTrueif the array is goodotherwisereturnFalse.
+
+Example 1:
+Input: nums = [12,5,7,23]
+Output: true
+Explanation: Pick numbers 5 and 7.
+5*3 + 7*(-2) = 1
+
+Example 2:
+Input: nums = [29,6,10]
+Output: true
+Explanation: Pick numbers 29, 6 and 10.
+29*1 + 6*(-3) + 10*(-1) = 1
+
+Example 3:
+Input: nums = [3,6]
+Output: false
+
+
+Constraints:
+
+1 <= nums.length <= 10^5
+1 <= nums[i] <= 10^9
+
+Accepted13.4KSubmissions23.1KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArrayMathNumber TheoryShow Hint 1Eq.  ax+by=1 has solution x, y if gcd(a,b) = 1.Show Hint 2Can you generalize the formula?.  Check Bzout's lemma.

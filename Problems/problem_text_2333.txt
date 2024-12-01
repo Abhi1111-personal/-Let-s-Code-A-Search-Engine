@@ -1,0 +1,33 @@
+Given a sorted integer array, find the index of a given numbers first or last occurrence. If the element is not present in the array, report that as well.
+
+Example: 
+
+
+Input:
+
+nums = [2, 5, 5, 5, 6, 6, 8, 9, 9, 9]
+target = 5
+
+Output:
+
+The first occurrence of element 5 is located at index 1
+The last occurrence of element 5 is located at index 3
+
+
+Input:
+
+nums = [2, 5, 5, 5, 6, 6, 8, 9, 9, 9]
+target = 4
+
+Output:
+
+Element not found in the array
+
+
+Approach-1: 
+
+A simple solution would be to run a linear search on the array and return the given elements first or last occurrence. The problem with this approach is that its worst-case time complexity is O(n), where n is the size of the input. This solution also does not take advantage of the fact that the input is sorted. We can easily solve this problem in O(log(n)) time by modifying the binary search algorithm.Finding first occurrence of the element
+
+Approach 2
+
+To find the elements last occurrence, modify the standard binary search to continue searching even on finding the target. Instead, update the result to mid and go on searching towards the right (towards higher indices), i.e., modify our search space by adjusting low to mid+1 on finding the target at mid-index.

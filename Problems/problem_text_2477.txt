@@ -1,0 +1,18 @@
+Given a binary tree where each node has one extra pointer next, set it to the inorder successor for all binary tree nodes.
+
+Example: 
+
+
+The inorder successor of node 4 is 2
+The inorder successor of node 2 is 1
+The inorder successor of node 1 is 7
+The inorder successor of node 7 is 5
+The inorder successor of node 5 is 8
+The inorder successor of node 8 is 3
+The inorder successor of node 3 is 6
+The inorder successor of node 6 is null
+
+
+Approach-1: 
+
+The idea is to perform an inorder traversal of the tree and maintain the previously processed node for every tree node. Then set the next node to a previously visited node for every node in the inorder traversal. This approach is demonstrated below in C++, Java, and Python:

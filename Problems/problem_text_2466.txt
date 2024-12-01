@@ -1,0 +1,6 @@
+Given a binary tree, count all subtrees in it such that every node in the subtree has the same value.
+
+Approach-1: 
+
+A simple solution would be to consider every node and check if all nodes present in the subtree rooted at the current node have the same values or not. The time complexity of this solution is O(n2), where n is the total number of nodes in the binary tree.
+We can solve this problem in linear time. The idea is to traverse the tree in a postorder fashion. Then by comparing return values of the left and right subtree, we can easily check if the subtree rooted at any node has the same values or not. Following is the C++, Java, and Python program that demonstrates it:

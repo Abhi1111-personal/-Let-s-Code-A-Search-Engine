@@ -1,0 +1,6 @@
+Design a stack to support an additional operation that returns the minimum element from the stack in constant time. The stack should continue supporting all other operations like push, pop, top, size, empty, etc., with no degradation in these operations performance.
+
+Approach-1: 
+
+The first solution that appears in mind is to have a member variable in a stack to keep track of the minimum number. Unfortunately, this wont work as we cant get the next minimum number after the minimum one is popped.
+The correct approach uses two stacks  the main stack to store the actual stack elements and an auxiliary stack to store the required elements needed to determine the minimum number in constant time. This implementation requires few changes in push and pop operations:

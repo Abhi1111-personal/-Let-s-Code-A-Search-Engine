@@ -1,0 +1,16 @@
+Given a binary tree, print the bottom view of it. Assume the left and right child of a node makes a 45degree angle with the parent.
+
+Example: 
+
+
+(horizontal distance > (nodes value, nodes level))
+-1 > (7, 4)
+0 > (5, 3)
+1 > (8, 4)
+2 > (6, 3)
+
+
+Approach-1: 
+
+We can easily solve this problem with the help of hashing. The idea is to create an empty map where each key represents the relative horizontal distance of the node from the root node, and the value in the map maintains a pair containing the nodes value and its level number. Then perform preorder traversal on the tree. Suppose the current nodes level is more than or equal to the maximum level seen so far for the same horizontal distance as the current nodes or current horizontal distance is seen for the first time. In that case, update the value and the level for the current horizontal distance in the map. For each node, recur for its left subtree by decreasing horizontal distance and increasing level by one, and recur for right subtree by increasing both level and horizontal distance by one.
+The following figure shows the horizontal distance and level of each node in the above binary tree. The final values in the map will be:

@@ -1,0 +1,1 @@
+Graph coloring (also called vertex coloring) is a way of coloring a graphs vertices such that no two adjacent vertices share the same color. This post will discuss a greedy algorithm for graph coloring and minimize the total number of colors used.

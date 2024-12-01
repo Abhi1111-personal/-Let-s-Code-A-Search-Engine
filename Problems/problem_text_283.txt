@@ -1,0 +1,24 @@
+1358. Number of Substrings Containing All Three CharactersMedium141626Add to ListShareGiven a string sconsisting only of characters a, b and c.
+Return the number of substrings containing at leastone occurrence of all these characters a, b and c.
+
+Example 1:
+Input: s = "abcabc"
+Output: 10
+Explanation: The substrings containingat leastone occurrence of the charactersa,bandc are "abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc" (again). 
+
+Example 2:
+Input: s = "aaacb"
+Output: 3
+Explanation: The substrings containingat leastone occurrence of the charactersa,bandc are "aaacb", "aacb" and "acb". 
+
+Example 3:
+Input: s = "abc"
+Output: 1
+
+
+Constraints:
+
+3 <= s.length <= 5 x 10^4
+sonly consists ofa, b or ccharacters.
+
+Accepted36.8KSubmissions59.2KSeen this question in a real interview before?YesNoCompaniesRelated TopicsHash TableStringSliding WindowSimilar QuestionsVowels of All SubstringsMediumShow Hint 1For each position we simply need to find the first occurrence of a/b/c on or after this position.Show Hint 2So we can pre-compute three link-list of indices of each a, b, and c.

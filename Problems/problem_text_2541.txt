@@ -1,0 +1,5 @@
+Given an integer array, sort it using the Quicksort algorithm.
+
+Approach-1: 
+
+Following is the C++, Java, and Python implementation of the Quicksort algorithm:

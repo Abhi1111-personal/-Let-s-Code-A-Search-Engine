@@ -1,0 +1,7 @@
+Given a binary tree, convert it into a full tree by removing half nodes (remove nodes having one child). A full binary tree is a tree in which every node other than the leaves has two children.
+
+Approach-1: 
+
+The idea is to traverse the tree in a bottom-up fashion and convert the left and right subtree before processing a node. Then for each node,
+If it has two children or a leaf node, nothing needs to be done.
+If it has exactly one child, delete it and replace the node with the child node.

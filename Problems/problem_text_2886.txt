@@ -1,0 +1,1 @@
+The external merge sort algorithm is used to efficiently sort massive amounts of data when the data being sorted cannot be fit into the main memory (usually RAM) and resides in the slower external memory (usually a HDD).

@@ -1,0 +1,31 @@
+1324. Print Words VerticallyMedium44189Add to ListShareGiven a string s.Returnall the words vertically in the same order in which they appear in s.
+Words are returned as a list of strings, complete withspaces when is necessary. (Trailing spaces are not allowed).
+Each word would be put on only one column and that in one column there will be only one word.
+
+Example 1:
+Input: s = "HOW ARE YOU"
+Output: ["HAY","ORO","WEU"]
+Explanation: Each word is printed vertically. 
+ "HAY"
+"ORO"
+"WEU"
+
+Example 2:
+Input: s = "TO BE OR NOT TO BE"
+Output: ["TBONTB","OEROOE","   T"]
+Explanation: Trailing spaces is not allowed. 
+"TBONTB"
+"OEROOE"
+"   T"
+
+Example 3:
+Input: s = "CONTEST IS COMING"
+Output: ["CIC","OSO","N M","T I","E N","S G","T"]
+
+
+Constraints:
+
+1 <= s.length <= 200
+scontains only upper case English letters.
+It's guaranteed that there is only onespace between 2 words.
+Accepted26.4KSubmissions44.2KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArrayStringSimulationShow Hint 1Use the maximum length of words to determine the length of the returned answer. However, don't forget to remove trailing spaces.

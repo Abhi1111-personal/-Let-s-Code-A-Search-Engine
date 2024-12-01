@@ -1,0 +1,19 @@
+Given an integer array, duplicates appear in it an even number of times except for two elements, which appear an odd number of times. Find both odd appearing elements without using any extra memory.
+
+Example: 
+
+
+Input: arr[] = [4, 3, 6, 2, 4, 2, 3, 4, 3, 3]
+
+Output: The odd occurring elements are 4 and 6
+
+6 appears once.
+2 appears twice.
+4 appears thrice.
+3 appears 4 times.
+
+
+Approach-1: 
+
+
+Related Post:Find the odd occurring element in an array in a single traversal

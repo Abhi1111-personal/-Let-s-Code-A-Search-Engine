@@ -1,0 +1,12 @@
+Given a rectangular path in the form of a binary matrix, find the length of the longest possible route from source to destination by moving to only non-zero adjacent positions, i.e., We can form the route from positions having their value as 1. Note there should not be any cycles in the output path.
+
+Example: 
+
+
+(0, 0) > (1, 0) > (2, 0) > (2, 1) > (2, 2) > (1, 2) > (0, 2) > (0, 3) > (0, 4) > (1, 4) > (1, 5) > (2, 5) > (2, 4) > (3, 4) > (4, 4) > (5, 4) > (5, 5) > (5, 6) > (4, 6) > (4, 7) > (4, 8) > (5, 8) > (5, 7)
+
+
+Approach-1: 
+
+
+We can use backtracking to solve this problem. We start from the given source cell in the matrix and explore all four paths possible and recursively check if they will lead to the destination or not. We have to keep track of the current cells distance from the source and update the value of the longest path found so far on reaching the destination cell. If a path doesnt reach the destination or explored all possible routes from the current cell, backtrack. To make sure that the path is simple and doesnt contain any cycles, keep track of cells involved in the current path in a matrix, and before exploring any cell, ignore the cell if it is already covered in the current path.Following is the C++, Java, and Python implementation of the idea:

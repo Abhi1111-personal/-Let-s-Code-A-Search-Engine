@@ -1,0 +1,19 @@
+Given a chessboard, print all sequences of moves of a knight on a chessboard such that the knight visits every square only once.
+
+Example: 
+
+
+15045623118964
+4661324910633017
+51247443328198
+6035422748111629
+41523344324720
+3659385526211215
+53405742314256
+583754395652213
+
+
+Approach-1: 
+
+
+Suggested Read:Chess Knight Problem | Find the shortest path from source to destination

@@ -1,0 +1,6 @@
+We have introduced the linked list data structure in the previous post and discussed various types of linked lists. We have also covered the applications of linked list data structure and its pros and cons concerning arrays. This post will discuss various linked list implementation techniques in detail and construct a singly linked list in the C programming language.
+
+Approach-1: 
+
+
+Also See:Linked List Implementation in C++

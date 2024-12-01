@@ -1,0 +1,16 @@
+Given a linked list, swap the k'th node from the beginning with the k'th node from the end. The swapping should be done so that only links between the nodes are exchanged, and no data is swapped.
+
+Example: 
+
+
+Input:
+
+Linked List: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > NULL
+k = 2
+
+Output: 1 > 7 > 3 > 4 > 5 > 6 > 2 > 8 > NULL
+
+
+Approach-1: 
+
+The idea is to traverse the linked list and find pointers to the k'th node from the beginning and the end. Then swap their pointers. This looks easy enough, but the code needs to handle several boundary cases while exchanging the links, such as both nodes being adjacent to each other, one node is a head node, or both nodes doesnt exist (when k is more than the total number of nodes in a linked list).The algorithm can be implemented as follows in C, Java, and Python:

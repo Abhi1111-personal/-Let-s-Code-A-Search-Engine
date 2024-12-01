@@ -1,0 +1,6 @@
+Given a positive number, convert the number to the corresponding Excel column name.
+
+Approach-1: 
+
+
+The main trick in this problem lies in handling the boundary cases, such as the number 26 corresponds to column Z, and the number 27 corresponds to column AA. Similarly, the number 1014 corresponds to column ALZ, and the number 1015 corresponds to column AMA.Following is the C++, Java, and Python program that handles all these cases beautifully:

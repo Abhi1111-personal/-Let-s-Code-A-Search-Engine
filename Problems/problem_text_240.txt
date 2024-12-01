@@ -1,0 +1,26 @@
+1312. Minimum Insertion Steps to Make a String PalindromeHard175126Add to ListShareGiven a string s. In one step you can insert any character at any index of the string.
+Return the minimum number of steps to make spalindrome.
+APalindrome Stringis one that reads the same backward as well as forward.
+
+Example 1:
+Input: s = "zzazz"
+Output: 0
+Explanation: The string "zzazz" is already palindrome we don't need any insertions.
+
+Example 2:
+Input: s = "mbadm"
+Output: 2
+Explanation: String can be "mbdadbm" or "mdbabdm".
+
+Example 3:
+Input: s = "leetcode"
+Output: 5
+Explanation: Inserting 5 characters the string becomes "leetcodocteel".
+
+
+Constraints:
+
+1 <= s.length <= 500
+s consists of lowercase English letters.
+
+Accepted47.4KSubmissions74.3KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringDynamic ProgrammingSimilar QuestionsMinimum Number of Moves to Make PalindromeHardShow Hint 1Is dynamic programming suitable for this problem ?Show Hint 2If we know the longest palindromic sub-sequence is x and the length of the string is n then, what is the answer to this problem? It is n - x as we need n - x insertions to make the remaining characters also palindrome.

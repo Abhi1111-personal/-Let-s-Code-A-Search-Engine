@@ -1,0 +1,1 @@
+Given a number, determine if it is even or odd without using any conditional statement (ifelse) or ternary operator.

@@ -1,0 +1,21 @@
+An M  N Young tableau is an M  N matrix such that the entries of each row are sorted from left to right and the entries of each column are sorted from top to bottom. Some entries of a Young tableau may be infinity, which indicates an empty entry. Thus, a Young tableau can be used to hold n <= M*N finite numbers.
+
+Approach-1: 
+
+To insert an element into a non-full Young tableau, the idea is to place the element in the bottom-right corner of the tableau and then move it upwards and leftwards to its correct position within the tableau. This is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+2. Search operation in Young tableau
+
+Approach 3
+
+3. Extract-Min operation in Young tableau
+
+Approach 4
+
+T(M, N) = T(M-1, N) + T(M, N-1)
+
+Approach 5
+
+5. Replace operation in Young tableau

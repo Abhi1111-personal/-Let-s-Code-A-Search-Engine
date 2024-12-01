@@ -1,0 +1,18 @@
+Write an efficient algorithm to invert alternate levels of a perfect binary tree.
+
+Approach-1: 
+
+1. Using Level Order TraversalThe idea is to perform a level order traversal of the perfect binary tree and traverse its nodes level-by-level. Then for each odd level, push all nodes present in that level into a stack. Finally, at the end of each odd level, we put nodes present in the stack into their correct position. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+2. Using Inorder Traversal
+
+Approach 3
+
+
+We can replace stack with queue by doing reverse inorder traversal in the pushOddLevelNodes() function, i.e., call the right child before the left child. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 4
+
+The above solution requires two traversals of the binary tree and also needs a stack data structure. We can invert alternate levels of a perfect binary tree in single tree traversal and without any explicit stack. The idea is to perform a modified preorder traversal of the tree and use level information to swap the data within the function itself. It is a little tricky and requires special attention.

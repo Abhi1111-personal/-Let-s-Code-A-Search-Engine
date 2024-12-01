@@ -1,0 +1,39 @@
+Given two integers A and B. Find the number of sequences of length B, such that every element of this sequence is an positive integer and is less than of equal to A, also every previous element in the sequence is less than or equal to half of the next element.
+
+Constraints: 
+
+1 <= A <= 1051 <= B <= 20
+
+Input Format: 
+
+Given two integers A and B.
+
+Output Format: 
+
+Return an integer, the number of possible sequences modulo 109+7.
+
+Example Input: 
+
+Input 1:
+A = 4, B = 2
+
+Input 2:
+A = 4, B = 3
+
+
+Example Output: 
+
+Output 1:
+4
+
+Output 2:
+1
+
+
+Example Explanation: 
+
+Explanation 1:
+The possible sequences are {1, 2}, {1, 3}, {1, 4}, {2, 4}.
+
+Explanation 2:
+The only possible sequence is {1, 2, 4}.

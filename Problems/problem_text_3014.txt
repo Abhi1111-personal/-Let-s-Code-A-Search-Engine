@@ -1,0 +1,6 @@
+The following post shows how to implement the Trie data structure in Python.
+
+Approach-1: 
+
+
+Trie is a tree-based data structure used to efficiently retrieval a key in a huge set of strings. Following is the Python implementation of the Trie data structure, which supports insertion and search operations:

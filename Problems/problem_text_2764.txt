@@ -1,0 +1,29 @@
+Given an M  N integer matrix, calculate the maximum sum submatrix of size k  k in it in O(M  N) time. Here, 0 < k < M <= N.
+
+Example: 
+
+
+
+[3-46-51]
+[1-28-4-2]
+[3-8931]
+[-73427]
+[-37-57-6]
+
+
+If k = 2, the maximum sum k  k submatrix is
+
+[ 9 3 ]
+[ 4 2 ]
+
+
+If k = 3, the maximum sum k  k submatrix is
+
+[ 8 -4 -2 ]
+[ 9 3 1 ]
+[ 4 2 7 ]
+
+
+Approach-1: 
+
+We strongly suggest going through the following post as a prerequisite of the below solution:Calculate the sum of all elements in a submatrix in constant time

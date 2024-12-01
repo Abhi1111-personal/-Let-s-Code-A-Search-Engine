@@ -1,0 +1,26 @@
+Given an integer array, find k'th smallest element in the array where k is a positive integer less than or equal to the length of array.
+
+Example: 
+
+
+Input:
+
+arr = [7, 4, 6, 3, 9, 1]
+k = 3
+
+Output:
+
+kth smallest array element is 4
+
+
+Approach-1: 
+
+A simple solution would be to use an efficient sorting algorithm to sort the array in ascending order and return the element at (k-1)'th index. The worst-case time complexity of this approach will be O(n.log(n)), where n is the size of the input. We can improve the time complexity using the following methods:Using Max Heap
+
+Approach 2
+
+We can easily solve this problem in O(n + k.log(n)) by using a min-heap. The idea is to construct a min-heap of size n and insert all the array elements input[0n-1] into it. Then pop first k-1 elements from it. Now k'th smallest element will reside at the root of the min-heap.
+
+Approach 3
+
+We can easily solve this problem by using std::nth_element in C++. Following is the prototype of std::nth_element, which rearranges the elements in range [first, last) so that the element at the n'th position is the element that would be in that position in a sorted sequence:

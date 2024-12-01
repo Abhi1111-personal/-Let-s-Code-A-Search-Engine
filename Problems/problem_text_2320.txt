@@ -1,0 +1,26 @@
+Given an integer array, find kth largest element in the array where k is a positive integer less than or equal to the length of array.
+
+Example: 
+
+
+Input:
+
+arr = [7, 4, 6, 3, 9, 1]
+k = 2
+
+Output:
+
+The 2nd largest array element is 7
+
+
+Approach-1: 
+
+A simple solution would be to use an efficient sorting algorithm to sort the array in descending order and return the element at (k-1)'th index. The worst-case time complexity of this approach will be O(n.log(n)), where n is the size of the input. We can improve the time complexity using the following methods:Using Min Heap
+
+Approach 2
+
+We can easily solve this problem in O(n + k.log(n)) by using a max-heap. The idea is to simply construct a max-heap of size n and insert all the array elements [0n-1] into it. Then pop first k-1 elements from it. Now k'th largest element will reside at the root of the max-heap.
+
+Approach 3
+
+We can easily solve this problem by using std::nth_element in C++. Special thanks to a reader for sharing this approach in the comments. Following is the prototype of std::nth_element, which rearranges the elements in range [first, last) so that the element at the n'th position is the element that would be in that position in a sorted sequence:

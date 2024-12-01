@@ -1,0 +1,5 @@
+This post will explore a threaded binary tree and convert a normal binary tree into a single-threaded binary tree.
+
+Approach-1: 
+
+Convert a Binary Tree into a Threaded Binary Tree:To convert a binary tree into a threaded binary tree, point all null right child pointers to that nodes inorder successor. The idea is to perform an inorder traversal of the binary tree and pass information about the previously visited node along with the node. If the current node has a null right child, set the right child of its previous node to point to it.

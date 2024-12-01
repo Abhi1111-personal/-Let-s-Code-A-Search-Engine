@@ -1,0 +1,6 @@
+Given a monotonically increasing function f(x) on positive numbers, find the value of x when f(x) becomes positive for the first time. In other words, find a positive number x such that f(x-1), f(x-2),  are negative and f(x+1), f(x+2),  are positive.
+
+Approach-1: 
+
+A simple solution would be to consider all positive numbers starting from 0 and find the first number for which f(x) is positive. The time complexity of this solution is O(x).
+We can solve this problem in O(log(x)) time with the help of a binary search algorithm. But we cant apply standard binary search on an unbounded search space since the upper limit of the search space is not known.

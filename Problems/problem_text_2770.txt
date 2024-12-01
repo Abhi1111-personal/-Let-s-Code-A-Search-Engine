@@ -1,0 +1,15 @@
+Given a maze in the form of the binary rectangular matrix, find the shortest paths length in a maze from a given source to a given destination.
+
+Example: 
+
+
+Go Top: (x, y) > (x  1, y)
+Go Left: (x, y) > (x, y  1)
+Go Down: (x, y) > (x + 1, y)
+Go Right: (x, y) > (x, y + 1)
+
+
+Approach-1: 
+
+We have already discussed a backtracking solution in the previous post. The time complexity of the backtracking solution will be higher since all paths need to be traveled. However, since it is the shortest path problem, Breadthfirst search (BFS) would be an ideal choice.
+The Lee algorithm is one possible solution for maze routing problems based on Breadthfirst search. It always gives an optimal solution, if one exists, but is slow and requires considerable memory. Following is the complete algorithm:

@@ -1,0 +1,21 @@
+Write an efficient algorithm to reverse the specified portion of a given linked list.
+
+Example: 
+
+
+Input:
+
+Linked List: 1 > 2 > 3 > 4 > 5 > 6 > 7 > None
+
+start position = 2
+end position = 5
+
+Output: 1 > 5 > 4 > 3 > 2 > 6 > 7 > None
+
+
+Approach-1: 
+
+We can easily solve the problem iteratively by dividing the solution into three parts. To reverse a list from position m to n, do the following:
+Skip the first m nodes.
+Reverse the sublist from position m to n using the same previous-current-next strategy used in the solution to reverse a complete linked list.
+Rearrange the pointers and return the head node.

@@ -1,0 +1,29 @@
+Given three sorted arrays of variable length, efficiently compute the minimum range with at least one element from each array.
+
+Example: 
+
+
+Input: 3 sorted arrays of variable length
+
+[ 3, 6, 8, 10, 15 ]
+[ 1, 5, 12 ]
+[ 4, 8, 15, 16 ]
+
+Output: Minimum range is 35
+
+
+Input: 3 sorted arrays of variable length
+
+[ 2, 3, 4, 8, 10, 15 ]
+[ 1, 5, 12 ]
+[ 7, 8, 15, 16 ]
+
+Output: Minimum range is 47
+
+
+Approach-1: 
+
+A naive solution is to compute the range of every possible triplet and return the minimum of all values. The time complexity of this solution is O(n3) for an input containing n elements, as we need three nested loops to consider every triplet. This approach is demonstrated below in C++, Java, and Python:
+
+Approach 2
+

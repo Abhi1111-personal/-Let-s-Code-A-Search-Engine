@@ -1,0 +1,27 @@
+Given an integer, count its set bits.
+
+Example: 
+
+
+Input: n = -1 (111111)
+Output: The total number of set bits in -1 is 32
+
+Input: n = 16 (00001000)
+Output: The total number of set bits in 16 is 1
+
+
+Approach-1: 
+
+1. Brute-Force SolutionA simple solution is to consider every bit (set or unset) in a number and maintain a counter to keep track of the set bits. This method is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+2. Using Brian Kernighans algorithm
+
+Approach 3
+
+3. Using GCC built-in function
+
+Approach 4
+
+4. Using std::bitset::count function

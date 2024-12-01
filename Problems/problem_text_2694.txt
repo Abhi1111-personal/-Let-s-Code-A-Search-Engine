@@ -1,0 +1,21 @@
+Write a function that takes a singly linked list and returns a complete copy of that list.
+
+Approach-1: 
+
+1. Naive ApproachThe idea is to iterate over the original list in the usual way and maintain two pointers to keep track of the new list: one head pointer and one tail pointer, which always points to the last node of the new list. The first node is done as a special case, and then the tail pointer is used in the standard way for the others.
+
+Approach 2
+
+The above implementation is a little unsatisfying because the 3step link-in is repeated  once for the first node and once for all the other nodes. The following C, Java, and Python implementation uses push() to allocate and insert the new nodes and avoid repeating that code.
+
+Approach 3
+
+Another strategy is to use a temporary dummy node to take care of the first node case. The dummy node is temporarily the first node in the list, and the tail pointer starts off pointing to it. All nodes are added off the tail pointer.
+
+Approach 4
+
+The final and most unusual version uses the local references strategy instead of a tail pointer. The strategy is to keep a lastPtr that points to the last pointer in the list. All node additions are made at the lastPtr, and it always points to the last pointer in the list. When the list is empty, it points to the head pointer itself. Later it points to the .next pointer inside the last node in the list.
+
+Approach 5
+
+Finally, for completeness, following is the recursive version of copyList() in C, Java, and Python. It has the pleasing shortness that recursive code often has. However, it is probably not good for production code since it uses stack space proportional to its list length.

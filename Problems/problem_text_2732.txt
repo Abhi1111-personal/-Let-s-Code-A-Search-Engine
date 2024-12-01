@@ -1,0 +1,31 @@
+Given a linked list, reverse every alternate group of k nodes where k is a given positive integer.
+
+Example: 
+
+
+Input List: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10 > null
+
+
+For k = 2,
+Output List: 2 > 1 > 3 > 4 > 6 > 5 > 7 > 8 > 10 > 9 > null
+
+
+For k = 3,
+Output List: 3 > 2 > 1 > 4 > 5 > 6 > 9 > 8 > 7 > 10 > null
+
+
+For k = 1,
+Output List: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10 > null
+
+
+For k >= 10,
+Output List: 10 > 9 > 8 > 7 > 6 > 5 > 4 > 3 > 2 > 1 > null
+
+
+Approach-1: 
+
+1. Iterative SolutionThe idea is to traverse the linked list and consider every group of 2k nodes at a time. In a single iteration of the loop, reverse the first k nodes and skip the next k nodes. Special care has to be taken while linking reversed groups with the rest of the list.
+
+Approach 2
+
+2. Recursive Solution

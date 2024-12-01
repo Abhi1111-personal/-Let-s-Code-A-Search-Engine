@@ -1,0 +1,54 @@
+Given an N  N matrix of positive integers, find a path from the first cell of the matrix to its last cell.
+
+Example: 
+
+
+Input:
+
+[7135361175]
+[2361166612]
+[6172147662]
+[6671335134]
+[5561546174]
+[3552753436]
+[4143645326]
+[4417433142]
+[4451523535]
+[3635226421]
+
+Output:
+
+(0, 0) (7, 0) (3, 0) (9, 0) (6, 0) (2, 0) (8, 0) (4, 0) (4, 5) (0, 5) (6, 5) (2, 5) (2, 1) (1, 1) (4, 1) (9, 1) (3, 1) (3, 7) (2, 7) (8, 7) (8, 2) (3, 2) (3, 9) (7, 9) (9, 9)
+
+OR
+
+(0, 0) (7, 0) (3, 0) (9, 0) (6, 0) (2, 0) (8, 0) (4, 0) (4, 5) (8, 5) (6, 5) (2, 5) (2, 9) (4, 9) (8, 9) (3, 9) (7, 9) (9, 9)
+
+OR
+
+Any other path possible from source to destination
+
+
+[4465511174]
+[3624657266]
+[1361117145]
+[7563133117]
+[3464726544]
+[3251251234]
+[4222523773]
+[7243522363]
+[5142646737]
+[1417536534]
+
+Output:
+
+(0, 0) (4, 0) (1, 0) (1, 3) (5, 3) (4, 3) (0, 3) (0, 8) (7, 8) (1, 8) (1, 2) (3, 2) (9, 2) (8, 2) (4, 2) (4, 8) (8, 8) (5, 8) (2, 8) (6, 8) (6, 1) (4, 1) (0, 1) (0, 5) (1, 5) (6, 5) (4, 5) (2, 5) (3, 5) (3, 8) (3, 7) (2, 7) (1, 7) (1, 9) (7, 9) (7, 6) (5, 6) (6, 6) (6, 9) (9, 9)
+
+OR
+
+Any other path possible from source to destination.
+
+
+Approach-1: 
+
+We can use backtracking to solve this problem. The idea is to start from the source cell in the matrix and explore all four possible paths and recursively check if they will lead to the solution or not. If a path doesnt reach the destination or explored all possible routes from the current cell, backtrack. To make sure that the path is simple and doesnt contain any cycles, keep track of cells involved in the current path in a matrix, and before exploring any cell, ignore the cell if it is already covered in the current path.We can find all the possible locations we can move to from the given location by using the array that stores the relative position of movement from any location. For example, if the current location is (x, y), we can move to (x + row[k], y + col[k]) for 0 <= k < 4 using the arrays:

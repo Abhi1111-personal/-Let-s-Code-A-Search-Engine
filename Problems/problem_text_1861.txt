@@ -1,0 +1,7 @@
+Youve got someone working for you for seven days and a gold bar to pay him. The gold bar is segmented into seven connected pieces.
+
+You must give them a piece of gold at the end of every day. What are the fewest number of cuts to the bar of gold that will allow you to pay him 1/7th each day?
+
+Answer is a integer.  Just put the number without any decimal places if its an integer. If the answer is Infinity, output Infinity.
+Feel free to get in touch with us if you have any questions
+

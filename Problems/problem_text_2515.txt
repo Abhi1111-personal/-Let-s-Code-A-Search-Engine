@@ -1,0 +1,9 @@
+Given a binary search tree (BST), convert it into a height-balanced binary search tree.
+
+Approach-1: 
+
+The idea is to traverse the BST in an inorder fashion and store all encountered nodes in a container (array, list, vector, etc.). The container will be sorted since inorder traversal on a BST always visits the nodes in increasing order of their values.Then construct a height-balanced BST from the sorted nodes. The idea is to start from the middle element of the sorted array. That would be our root node of the BST. All elements before the middle element should go in the left subtree, and all elements after the middle element should go in the right subtree. We can easily do this recursively, and we will end up with a height-balanced BST.
+
+Approach 2
+
+We can do the conversion in-place without any auxiliary data structure. The idea is to convert the given BST into a sorted doubly linked list and then construct a height-balanced BST from it. This is demonstrated below in C++, Java, and Python:

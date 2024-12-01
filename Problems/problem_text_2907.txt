@@ -1,0 +1,15 @@
+Given a set of intervals, print all non-overlapping intervals after merging the overlapping intervals.
+
+Example: 
+
+
+Input: {1, 5}, {2, 3}, {4, 6}, {7, 8}, {8, 10}, {12, 15}
+
+Output: Intervals after merging overlapping intervals are {1, 6}, {7, 10}, {12, 15}.
+
+
+Approach-1: 
+
+The idea is to sort the intervals in increasing order of their starting time. Then create an empty stack and for each interval,
+If the stack is empty or the top interval in the stack does not overlap with the current interval, push it into the stack.
+If the top interval of the stack overlaps with the current interval, merge both intervals by updating the end of the top interval at the ending of the current interval.

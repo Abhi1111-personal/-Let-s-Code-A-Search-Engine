@@ -1,0 +1,20 @@
+Given a linked list of characters, recursively check if it is palindrome or not.
+
+Example: 
+
+
+Input: A > B > C > B > A > null
+Output: The linked list is a palindrome
+
+
+Input: A > B > C > C > B > null
+Output: The linked list is not a palindrome
+
+
+Approach-1: 
+
+The idea is to recursively traverse until the end of the linked list and construct a string out of the nodes characters in visited order. Then as the recursion unfolds, build another string from the linked list nodes, but this time, the encountered order of processed nodes is the opposite, i.e., from the last node towards the head node. If both constructed strings are equal, we can say that the linked list is a palindrome.The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+We can do this with the use of two head pointers as parameters to the recursive function. The idea is to recursively advance the second pointer until the end of the linked list is reached. When the recursion unfolds, compare the character pointed by the first pointer with that of the second pointer. If at any point the characters dont match, the linked list cannot be a palindrome. To keep the left pointer in sync with the right pointer, advance the left pointer to the next node after each recursive call.

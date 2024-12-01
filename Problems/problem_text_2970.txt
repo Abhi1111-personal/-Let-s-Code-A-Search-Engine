@@ -1,0 +1,13 @@
+Given a string, remove adjacent duplicates characters from it. In other words, remove all consecutive same characters except one.
+
+Example: 
+
+
+Input: AABBBCDDD
+
+Output: ABCD
+
+
+Approach-1: 
+
+The idea is to loop through the string, and for each character, compare it with its previous character. If the current character is different from the previous character, make it part of the resultant string; otherwise, ignore it. The time complexity of this approach is O(n), where n is the length of the input string and doesnt require any extra space.Following is the C, Java, and Python implementation of the idea:

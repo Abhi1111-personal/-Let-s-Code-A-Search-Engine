@@ -1,0 +1,12 @@
+Check if a given set of moves is circular or not. A move is circular if its starting and ending coordinates are the same. The moves can contain instructions to move one unit in the same direction (M), to change direction to the left of current direction (L), and to change direction to the right of current direction (R). Assume that the initial direction is North.
+
+Example: 
+
+
+Set of moves MRMRMRM is circular
+Set of moves MRMLMRMRMMRMM is circular
+
+
+Approach-1: 
+
+The idea is simple  start with (0, 0) as the starting coordinates and North as the starting direction and linearly read each instruction from the input string. For every instruction, update the coordinates of the current location (x, y) if the instruction is MOVE or update the current direction if the instruction is GO LEFT or GO RIGHT. The move is circular if we are back to the starting coordinates (0, 0) in the end.Following is the C++, Java, and Python implementation of the idea:

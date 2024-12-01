@@ -1,0 +1,21 @@
+Given a string, find the minimum cuts needed to partition it such that each partition is a palindrome.
+
+Approach-1: 
+
+We can break the problem into a set of related subproblems that partition the given string to yield the lowest total cuts. Following is the recursive algorithm to find the minimum cuts:
+
+Separate the given string into two subsequences.
+Recursively find the minimum cuts required in each subsequence.
+Do this for each possible position at which the string can be cut, and take the minimum over all of them.
+
+
+
+Approach 2
+
+
+The problem has an optimal substructure and also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are repeatedly computed. Since both optimal substructure and overlapping subproblems properties of dynamic programming are satisfied, we can save subproblem solutions in memory rather than computed them repeatedly.
+
+Approach 3
+
+
+We can also solve this problem in a bottom-up manner. In the bottom-up approach, we solve smaller subproblems first, then solve larger subproblems from them. It has the less asymptotic runtime and requires no recursion. The approach is demonstrated below in C++, Java, and Python:

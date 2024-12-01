@@ -1,0 +1,18 @@
+Write an efficient algorithm to construct a binary tree from the given inorder and postorder traversals.
+
+Example: 
+
+
+Input:
+
+Inorder Traversal: { 4, 2, 1, 7, 5, 8, 3, 6 }
+Postorder Traversal : { 4, 2, 7, 8, 5, 6, 3, 1 }
+
+
+Output: Below binary tree
+
+
+Approach-1: 
+
+The idea is to start with the root node, which would be the last item in the postorder sequence, and find the boundary of its left and right subtree in the inorder sequence. To find the boundary, search for the index of the root node in the inorder sequence. All keys before the root node in the inorder sequence become part of the left subtree, and all keys after the root node become part of the right subtree. Repeat this recursively for all nodes in the tree and construct the tree in the process.
+To illustrate, consider the following inorder and postorder sequence:

@@ -1,0 +1,5 @@
+Given a binary tree, check if it is a sum tree or not. In a sum tree, each non-leaf nodes value is equal to the sum of all elements present in its left and right subtree. The value of a leaf node can be anything and the value of an empty child node is considered to be 0.
+
+Approach-1: 
+
+We can easily solve this problem by using recursion. The idea is to traverse the tree in a postorder fashion. For each non-leaf node, check if the nodes value is equal to the sum of all elements present in its left and right subtree. If this relation does not hold for any node, then the given binary tree cannot be a sum tree.The algorithm can be implemented as follows in C++, Java, and Python:

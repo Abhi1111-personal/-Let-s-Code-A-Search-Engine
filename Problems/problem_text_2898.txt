@@ -1,0 +1,19 @@
+Given a list of words, efficiently group all anagrams.
+
+Example: 
+
+
+actors = costar
+altered = related
+auctioned = education
+aspired = despair
+mastering = streaming
+recurd = secured
+
+
+Approach-1: 
+
+The idea is to sort each word on the list and construct a map where the maps key is each sorted word, and the maps value is a list of indices in the array where it is present. After creating the map, traverse the map and get indices for each sorted key. The anagrams are present in the actual list at those indices.Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+

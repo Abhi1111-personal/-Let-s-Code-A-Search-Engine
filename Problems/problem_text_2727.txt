@@ -1,0 +1,6 @@
+Given a multilevel linked list, convert it into a singly linked list so that all nodes of the first level appear first, followed by all nodes of the second level, and so on.
+
+Approach 2
+
+
+The above solution requires O(n) extra space for the queue data structure. We can also solve this problem with constant space. The idea is to maintain a tail pointer that always points at the end of the current list. Like the previous approach, start by traversing the list horizontally using the next pointer. Whenever we encounter a child node, append it at the end of the list and update the tail to the last node of the child node. Repeat this process until the end of the list is reached.

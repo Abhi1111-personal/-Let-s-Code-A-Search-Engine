@@ -1,0 +1,5 @@
+Given a linked list, write a function to rearrange its nodes to be sorted in increasing order.
+
+Approach-1: 
+
+The idea is to use the sortedInsert() function to sort a linked list. We start with an empty result list. Iterate through the source list and sortedInsert() each of its nodes into the result list. Be careful to note the .next field in each node before moving it into the result list.Following is the C, Java, and Python program that demonstrates it:

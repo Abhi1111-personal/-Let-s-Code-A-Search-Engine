@@ -1,0 +1,18 @@
+Given an n  4 matrix where n is a positive number, find the number of ways to fill the matrix with 1  4 tiles.
+
+Example: 
+
+
+T(n) = T(n-1) + T(n-4), where n > 4 and
+T(1) = T(2) = T(3) = 1// all tiles can be placed horizontally only for n <= 3
+T(4) = 2// all tiles can be placed horizontally or vertically.
+
+
+Approach-1: 
+
+
+From the above examples, it is evident that a single tile can be placed horizontally or 4 tiles can be placed together vertically (since the matrix has dimensions n  4). So, the problem of computing the number of ways T(n) for an n  4 matrix can be broken down into the subproblems of computing T(n-1) and T(n-4), and then adding the two.Considering this, the recurrence relation T(n) can be written as:
+
+Approach 2
+
+We can easily solve this problem by using dynamic programming. The idea is to construct a temporary array that stores the results of each subproblem using already computed results of the smaller subproblems. The algorithm can be implemented as follows in C, Java, and Python:

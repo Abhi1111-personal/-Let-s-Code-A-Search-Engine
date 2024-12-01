@@ -1,0 +1,27 @@
+Given an integer array, find a subarray having a given sum in it.
+
+Example: 
+
+
+Input: nums[] = {2, 6, 0, 9, 7, 3, 1, 4, 1, 10}, target = 15
+Output: {6, 0, 9}
+
+
+Input: nums[] = {0, 5, -7, 1, -4, 7, 6, 1, 4, 1, 10}, target = 15
+Output: {1, -4, 7, 6, 1, 4} or {4, 1, 10}
+
+
+Input: nums[] = {0, 5, -7, 1, -4, 7, 6, 1, 4, 1, 10}, target = -3
+Output: {1, -4} or {-7, 1, -4, 7}
+
+
+Approach-1: 
+
+1. Using Sliding WindowWe can solve this problem by using a sliding window. The idea is to maintain a window that starts from the current element, and the sum of its elements is more than or equal to the given sum. If the current windows sum becomes less than the given sum, then the window is unstable, and we keep on adding elements to the current window from its right till the window becomes stable again. Print the window if its sum is equal to the given sum at any point. Note this approach will only work with an array of positive integers.
+
+Approach 2
+
+2. Using Hashing
+
+Approach 3
+

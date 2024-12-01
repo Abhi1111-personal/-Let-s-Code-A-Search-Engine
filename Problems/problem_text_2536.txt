@@ -1,0 +1,6 @@
+In this article, we will implement a ternary search algorithm and compare its performance with binary search algorithm.
+
+Approach-1: 
+
+
+In Ternary Search, we divide our array into three parts (by taking two mid) and discard two-third of our search space at each iteration. At first look, it seems that ternary search might be faster than binary search as its time complexity on an input containing n items should be O(log3n), which is less than the time complexity of binary search O(log2n). Before analyzing this claim, lets take a look at its C, Java, and Python implementation first.

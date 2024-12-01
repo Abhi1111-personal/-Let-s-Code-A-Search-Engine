@@ -1,0 +1,19 @@
+Write an efficient algorithm to construct a full binary tree from a sequence of keys representing preorder traversal and a boolean array that determines if the value at the corresponding index in the preorder sequence is a leaf node or an internal node. A full binary tree is a tree in which every node has either 0 or 2 children.
+
+Example: 
+
+
+Input:
+
+Preorder traversal : { 1, 2, 4, 5, 3, 6, 8, 9, 7 }
+Boolean array: { 0, 0, 1, 1, 0, 0, 1, 1, 1 }
+
+(1 represents a leaf node, and 0 represents an internal node)
+
+
+Output: Below full binary tree
+
+
+Approach-1: 
+
+The idea is first to construct the full binary trees root node using the first key in the preorder sequence and then using the given boolean array, check if the root node is an internal node or a leaf node. If the root node is an internal node, recursively construct its left and right subtrees.To construct the complete full binary tree, recursively repeat the above steps with subsequent keys in the preorder sequence. Following is the implementation of this approach in C++, Java, and Python:

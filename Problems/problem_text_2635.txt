@@ -1,0 +1,16 @@
+The transitive closure for a digraph G is a digraph G with an edge (i, j) corresponding to each directed path from i to j in G. The resultant digraph G representation in the form of the adjacency matrix is called the connectivity matrix.
+
+Example: 
+
+
+Its connectivity matrix C is
+
+1010
+1110
+0010
+1111
+
+
+Approach-1: 
+
+Method 1As discussed in the previous post, we can use the FloydWarshall algorithm to find the transitive closure of a graph with V vertices in O(V3) time. The algorithm returns the shortest paths between each of the vertices in the graph. We can easily modify the algorithm to return 1/0 depending upon path exists between a pair of vertices or not. The implementation can be seen here.

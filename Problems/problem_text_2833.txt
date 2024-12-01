@@ -1,0 +1,1 @@
+This post will implement a ternary-like operator in C without using conditional expressions like ternary operator, ifelse expression, or switch-case statements.

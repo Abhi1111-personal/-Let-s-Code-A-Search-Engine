@@ -1,0 +1,14 @@
+Given a large number, n, find all positive numbers less than or equal to n that can be represented as the sum of two cubes for at least two different pairs.
+
+Example: 
+
+
+1729 = 13 + 123 = 93 + 103
+4104 = 23 + 163 = 93 + 153
+13832 = 23 + 243 = 183 + 203
+20683 = 103 + 273 = 193 + 243
+
+
+Approach-1: 
+
+The idea is simple. We know that any number m that satisfies the constraint will have two distinct pairs (let's say (a, b) and (c, d)). Since m < n, we can say that a, b, c, and d are less than n1/3. Now for every distinct pair (x, y) formed by numbers less than the n1/3, store their sum x3 + y3 into a set. If two pairs with the same sum exist, print the sum.Following is the C++, Java, and Python implementation of the idea:

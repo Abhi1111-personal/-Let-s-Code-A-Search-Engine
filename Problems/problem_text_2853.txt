@@ -1,0 +1,40 @@
+Given a binary tree, print its nodes level by level in spiral order, i.e., all nodes present at level 1 should be printed first from left to right, followed by nodes of level 2 from right to left, followed by nodes of level 3 from left to right and so on In other words, odd levels should be printed from left to right, and even levels should be printed from right to left or vice versa.
+
+Example: 
+
+
+levelorder(root)
+q > empty double ended queue
+q.push(root)
+while (not q.isEmpty())
+while (level is even)
+node > q.popFront()
+visit(node)
+if (node.left <> null)
+q.pushBack(node.left)
+if (node.right <> null)
+q.pushBack(node.right)
+
+while (level is odd)
+node > q.popBack()
+visit(node)
+if (node.right <> null)
+q.pushFront(node.right)
+if (node.left <> null)
+q.pushFront(node.left)
+
+
+Approach-1: 
+
+
+A simple solution is to print all nodes of level 1 first, followed by level 2,  till level h, where h is the trees height. We can print all nodes present in a level by modifying the preorder traversal on the tree. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+
+We can reduce the time complexity to O(n) by using extra space. Following is a pseudocode for a simple queue-based spiral order traversal:
+
+Approach 3
+
+
+We can also solve this problem by using hashing. The following code traverses the tree in a preorder fashion and uses a map to store every node and its level using the level number as a key. This approach is demonstrated below in C++, Java, and Python:

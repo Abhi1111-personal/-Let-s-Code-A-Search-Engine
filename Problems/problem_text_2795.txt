@@ -1,0 +1,23 @@
+Given an M  N binary matrix, find the size of the largest square submatrix of 1's present.
+
+Example: 
+
+
+001011
+011100
+001111
+110111
+111111
+110111
+101111
+111011
+
+
+Approach-1: 
+
+The idea is to use dynamic programming to solve this problem. The problem has optimal substructure. The size of the largest square submatrix ending at a cell M[i][j] will be 1 plus the minimum among the largest square submatrix ending at M[i][j-1], M[i-1][j] and M[i-1][j-1]. The result will be the maximum of all square submatrix ending at M[i][j] for all possible values of i and j.How does this works?
+
+Approach 2
+
+
+The above solution exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are repeatedly computed. We know that problems with optimal substructure and overlapping subproblems can be solved using dynamic programming, in which subproblem solutions are memoized rather than computed repeatedly. The memoized version follows the top-down approach since we first break the problem into subproblems and then calculate and store values. We can also solve this problem in a bottom-up manner. In the bottom-up approach, we solve smaller subproblems first, then solve larger subproblems from them.

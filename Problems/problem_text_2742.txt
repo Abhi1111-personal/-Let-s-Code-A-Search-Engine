@@ -1,0 +1,18 @@
+Given a linked list representation of two positive numbers, calculate and store their sum in a new list without extra space.
+
+Example: 
+
+
+Input:
+
+X: 5 > 7 > 3 > 4 > null
+Y: 9 > 4 > 6 > null
+
+Output: 6 > 6 > 8 > 0 > null
+
+(as 5734 + 946 = 6680)
+
+
+Approach-1: 
+
+The idea is to reverse both input lists. The reversal is needed since the addition of two numbers is performed from right to left, but the traversal of the singly linked list is possible only from the beginning. After reversing, traverse both lists simultaneously and construct a new list with the sum of nodes from both lists. Special care needs to be taken when a sum is a 2-digit number (i.e., a carry exists) or any list runs out of elements. Note that we need to reverse the resultant list as well.This approach is demonstrated below in C, Java, and Python:

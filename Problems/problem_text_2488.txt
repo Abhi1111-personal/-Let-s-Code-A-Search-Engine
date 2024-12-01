@@ -1,0 +1,9 @@
+Given a binary tree, in-place convert it into a doubly-linked list following the spiral order.
+
+Approach-1: 
+
+1. Using HashingWe can use hashing to convert the binary tree into a doubly-linked list. The idea is to traverse the tree in a preorder fashion and store each node and its level number in a map using the level number as a key. Finally, iterate through the map and push each level node into the doubly linked list in spiral order.
+
+Approach 2
+
+2. By Traversing the Tree in Spiral Order

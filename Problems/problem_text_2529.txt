@@ -1,0 +1,17 @@
+Given an integer array, find the maximum sum among all subarrays possible.
+
+Example: 
+
+
+Input: nums[] = [2, -4, 1, 9, -6, 7, -3]
+
+Output: The maximum sum of the subarray is 11 (Marked in Green)
+
+
+Approach-1: 
+
+A naive solution is to consider every possible subarray, find the sum, and take the maximum. The problem with this approach is that its worst-case time complexity is O(n2), where n is the size of the input.Following is the C, Java, and Python program that demonstrates it:
+
+Approach 2
+
+The idea is to use Divide and Conquer technique to find the maximum subarray sum. The algorithm works as follows:

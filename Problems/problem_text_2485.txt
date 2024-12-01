@@ -1,0 +1,5 @@
+Write an efficient code to clone a binary tree with each node containing an additional random pointer. The random pointer can point to any node of the binary tree or can be null.
+
+Approach-1: 
+
+The intuitive solution to clone a binary tree with random pointers is to insert each node into a a hash table. The idea is to traverse the binary tree in a preorder fashion, and for each encountered node, create a new node with the same data and create a mapping from the original node to the duplicate node in the hash table. After creating the mapping, recursively set its left and right pointers. Finally, traverse the original binary tree again and update the duplicate nodes random pointers using the hash table.Following is the C++, Java, and Python implementation of the idea:

@@ -1,0 +1,25 @@
+Given n lists of characters and a number whose digits lie between 1 and n, print all possible combinations by replacing its digits with the characters of the corresponding list. If any digit of the number gets repeated, it should be replaced by the same character considered in its previous occurrence.
+
+Example: 
+
+
+Input:
+
+list[1] > { 'A', 'B', 'C', 'D' }
+list[2] > { 'E', 'F', 'G', 'H', 'I', 'J', 'K' }
+list[3] > { 'L', 'M', 'N', 'O', 'P', 'Q' }
+list[4] > { 'R', 'S', 'T' }
+list[5] > { 'U', 'V', 'W', 'X', 'Y', 'Z' }
+
+key = 131
+
+Output:
+
+ALA AMA ANA AOA APA AQA BLB BMB BNB BOB BPB BQB CLC CMC CNC COC CPC CQC DLD DMD DND DOD DPD DQD
+
+
+Approach-1: 
+
+We can use recursion to solve this problem. The idea is to consider every digit of the given key one by one, and for every digit, there are two possibilities:
+If the digit is seen for the first time, replace it with each character in the corresponding list and recur for the next digit.
+If the digit is seen before, replace it with the same character used in the previous occurrence.

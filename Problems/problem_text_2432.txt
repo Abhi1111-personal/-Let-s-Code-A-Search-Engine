@@ -1,0 +1,5 @@
+Given a binary tree, print all cousins of a given node. Two nodes of a binary tree are cousins of each other only if they have different parents, but they are at the same level.
+
+Approach-1: 
+
+The idea is to find the level of the given node in the binary tree by doing a preorder traversal on it. Once the level is found, print all nodes present in that level, which is not a sibling of the node or the node itself. Following is the implementation of the above approach in C++, Java, and Python:

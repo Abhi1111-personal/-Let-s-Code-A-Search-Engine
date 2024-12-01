@@ -1,0 +1,34 @@
+Given a rod of length n, find the optimal way to cut the rod into smaller rods to maximize the product of each of the smaller rods price. Assume that each rod of length i has price i.
+
+Example: 
+
+
+
+Best: Cut the rod into two pieces of length 2 each to gain revenue of 22 = 4
+
+CutProfit
+44
+1, 3(1  3) = 3
+2, 2(2  2) = 4
+3, 1(3  1) = 3
+1, 1, 2(1  1  2) = 2
+1, 2, 1(1  2  1) = 2
+2, 1, 1(2  1  1) = 2
+1, 1, 1, 1	(1  1  1  1) = 1
+
+
+Similarly, for n = 6, (3  3) = 9
+For n = 8, (2  3  3) = 18
+For n = 15, (3  3  3  3  3) = 243
+
+
+Approach-1: 
+
+The idea is simple. First, partition the given rod of length n into two parts of length i and n-i for each 1 <= i <= n. Then recur for the rod of length n-i but dont divide rod of length i any further. Finally, take a maximum of all values. This yields the following recursive relation:
+rodcut(n) = max { n, i * rodcut(n  i) } where 1 <= i <= n
+
+
+Approach 2
+
+
+We have seen that the problem can be broken down into smaller subproblems, which can further be broken down into yet smaller subproblems, and so on. So, the problem has optimal substructure. Lets consider a recursion tree for the rod of length 4.

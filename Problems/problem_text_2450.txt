@@ -1,0 +1,13 @@
+Given a binary tree, in-place convert it into a doubly linked list.
+
+Approach-1: 
+
+1. Using Inorder TraversalThe idea is to perform an inorder traversal on the tree, and for every node encountered, insert it at the beginning of a doubly linked list. Since we are inserting nodes at the beginning of the doubly linked list, reverse the linked list to follow the same order of nodes as in the inorder traversal.
+
+Approach 2
+
+2. Using Reverse Inorder Traversal
+
+Approach 3
+
+3. Keeping track of previously processed node in the inorder traversal

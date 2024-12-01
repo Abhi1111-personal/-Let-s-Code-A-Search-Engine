@@ -1,0 +1,17 @@
+Given a weighted directed acyclic graph (DAG) and a source vertex, find the cost of the longest path from the source vertex to all other vertices present in the graph. If the vertex cant be reached from the given source vertex, print its distance as infinity.
+
+Example: 
+
+
+dist(7, 0) = 7 (7 > 3 > 0)
+dist(7, 1) = -1 (7 > 1)
+dist(7, 2) = -5 (7 > 1 > 2)
+dist(7, 3) = 4 (7 > 3)
+dist(7, 4) = 9 (7 > 3 > 4)
+dist(7, 5) = -4 (7 > 5)
+dist(7, 6) = 9 (7 > 3 > 0 > 6)
+
+
+Approach-1: 
+
+Prerequisite:Find the cost of the shortest path in DAG using one pass of BellmanFord

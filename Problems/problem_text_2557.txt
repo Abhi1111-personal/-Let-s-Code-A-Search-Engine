@@ -1,0 +1,19 @@
+The Levenshtein distance (or Edit distance) is a way of quantifying how different two strings are from one another by counting the minimum number of operations required to transform one string into the other.
+
+Example: 
+
+
+kitten > sitten (substitution of s for k)
+sitten > sittin (substitution of i for e)
+sittin > sitting (insertion of g at the end)
+
+
+Approach-1: 
+
+The Edit distance problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can be broken down into yet simpler subproblems, and so on, until, finally, the solution becomes trivial.
+Problem: Transform string X[1m] into Y[1n] by performing edit operations on string X.
+
+Approach 2
+
+
+As seen above, the problem has optimal substructure. The above solution also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are repeatedly computed. We know that problems with optimal substructure and overlapping subproblems can be solved using dynamic programming, in which subproblem solutions are memoized rather than computed repeatedly.

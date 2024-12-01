@@ -1,0 +1,21 @@
+Given a set of activities and the starting and finishing time of each activity, find the maximum number of activities that can be performed by a single person assuming that a person can only work on a single activity at a time.
+
+Example: 
+
+
+Input:
+
+{1, 4}, {3, 5}, {0, 6}, {5, 7}, {3, 8}, {5, 9}, {6, 10}, {8, 11}, {8, 12}, {2, 13}, {12, 14}
+
+Output:
+
+{1, 4}, {5, 7}, {8, 11}, {12, 14}
+
+
+Approach-1: 
+
+In the previous post, we have discussed a greedy approach for activity selection problem. This post will discuss a dynamic programming solution for the activity selection problem, which is nothing but a variation of the Longest Increasing Subsequence (LIS) problem.The idea is first to sort given activities in increasing order of their start time. Let jobs[0n-1] be the sorted array of activities. We can define an array L such that L[i] itself is an array that stores maximum non-conflicting jobs ending at i'th job. Therefore, L[i] can be recursively written as:
+
+Approach 2
+
+2. Print the maximum number of non-conflicting jobs:

@@ -1,0 +1,11 @@
+Given a non-empty integer array, find the index of the maximum occurring element with an equal probability.
+
+Approach-1: 
+
+The problem looks complicated at first look but has a straightforward solution. Following is the algorithm:
+
+Store the count of each element of the input in a map.
+Traverse the map and find the first maximum occurring element.
+Generate a random number k between 1 and the count of the maximum occurring element.
+Traverse the input and return the index of the k'th occurrence of the maximum occurring element.
+

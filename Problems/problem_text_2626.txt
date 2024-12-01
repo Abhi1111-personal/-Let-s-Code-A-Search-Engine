@@ -1,0 +1,22 @@
+Depthfirst search (DFS) is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root for a graph) and explore as far as possible along each branch before backtracking.
+
+Example: 
+
+
+procedure preorder(treeNode v)
+{
+visit(v);
+for each child u of v
+preorder(u);
+}
+
+
+Approach-1: 
+
+
+References: https://www.ics.uci.edu/~eppstein/161/960215.html
+
+
+Approach 2
+
+Iterative Implementation of DFS

@@ -1,0 +1,5 @@
+Given an array representing a max-heap, in-place convert it into the min-heap in linear time.
+
+Approach-1: 
+
+The idea is simple and efficient and inspired by the Heapsort algorithm. The idea is to build the min-heap in-place using an array representing the max-heap. In other words, this is a trick question!! We should not be bothered about whether the given array is max-heap or not. The problem is the same as building a min-heap from an unsorted array.This approach is demonstrated below in C++, Java, and Python:

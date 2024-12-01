@@ -1,0 +1,25 @@
+Given an integer, swap two bits at given positions in a binary representation of it.
+
+Example: 
+
+
+Input:
+
+n = 31 (31 in binary is 00011111)
+p = 2, q = 6 (3rd and 7th bit from the right)
+
+Output: 91
+
+Explanation: 91 in binary is 01011011
+
+
+Approach-1: 
+
+We can solve this problem by checking if the two bits at given positions are the same or not. If they are the same, nothing needs to be done; otherwise, if they are not the same (i.e., one is 0 and the other is 1), then we can XOR them with 1 << position. This logic will work because:
+XOR with 1 will toggle the bits
+0 ^ 1 = 1
+1 ^ 1 = 0
+
+XOR with 0 will have no impact
+0 ^ 0 = 0
+1 ^ 0 = 1

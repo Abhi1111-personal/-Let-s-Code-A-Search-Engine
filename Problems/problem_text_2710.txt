@@ -1,0 +1,20 @@
+This post will reverse the singly linked list using recursion in C, C++, Java, and Python.
+
+Example: 
+
+
+Input: 1 > 2 > 3 > 4 > 5 > null
+
+Output: 5 > 4 > 3 > 2 > 1 > null
+
+
+Approach-1: 
+
+We have already discussed an iterative solution to reverse the linked list in the previous post. In this post, we will cover the recursive implementation of it.Following is the simple recursive implementation that works by fixing .next pointers of the lists nodes and finally the head pointer. Probably the hardest part is accepting the concept that the reverse(&rest, head) does reverse the rest. Then, theres a trick to getting the one front node at the end of the list. We recommend making a drawing to see how the trick works.
+
+Approach 2
+
+
+
+Approach 3
+

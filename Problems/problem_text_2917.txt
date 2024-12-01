@@ -1,0 +1,101 @@
+Given a binary tree, write an iterative and recursive solution to traverse the tree using preorder traversal in C++, Java, and Python.
+
+Example: 
+
+
+iterativePreorder(node)
+
+if (node = null)
+return
+s > empty stack
+s.push(node)
+while (not s.isEmpty())
+node > s.pop()
+visit(node)
+if (node.right != null)
+s.push(node.right)
+if (node.left != null)
+s.push(node.left)
+
+
+Approach-1: 
+
+Recursive ImplementationAs we can see, only after processing any node, the left subtree is processed, followed by the right subtree. These operations can be defined recursively for each node. The recursive implementation is referred to as a Depthfirst search (DFS), as the search tree is deepened as much as possible on each child before going to the next sibling.
+
+Approach 2
+
+
+iterativePreorder(node)
+
+if (node = null)
+return
+s > empty stack
+s.push(node)
+while (not s.isEmpty())
+node > s.pop()
+visit(node)
+if (node.right != null)
+s.push(node.right)
+if (node.left != null)
+s.push(node.left)
+
+
+Approach 3
+
+C++JavaPython
+C++
+
+
+
+
+
+
+
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485
+
+#include <iostream>#include <stack>using namespace std;// Data structure to store a binary tree nodestruct Node{int data;Node *left, *right;Node(int data){this->data = data;this->left = this->right = nullptr;}};// Iterative function to perform preorder traversal on the treevoid preorderIterative(Node* root){// return if the tree is emptyif (root == nullptr) {return;}// create an empty stack and push the root nodestack<Node*> stack;stack.push(root);// start from the root node (set current node to the root node)Node* curr = root;// loop till stack is emptywhile (!stack.empty()){// if the current node exists, print it and push its right child// to the stack before moving to its left childif (curr != nullptr){cout << curr->data << " ";if (curr->right) {stack.push(curr->right);}curr = curr->left;}// if the current node is null, pop a node from the stack// set the current node to the popped nodeelse {curr = stack.top();stack.pop();}}}int main(){/* Construct the following tree 1 / \/ \ 2 3// \ // \45 6/ \ / \7 8*/Node* root = new Node(1);root->left = new Node(2);root->right = new Node(3);root->left->left = new Node(4);root->right->left = new Node(5);root->right->right = new Node(6);root->right->left->left = new Node(7);root->right->left->right = new Node(8);preorderIterative(root);return 0;}
+
+
+
+
+
+DownloadRun Code
+
+Java
+
+
+
+
+
+
+
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283
+
+import java.util.Stack;// Data structure to store a binary tree nodeclass Node{int data;Node left, right;// Function to create a new binary tree node having a given keypublic Node(int key){data = key;left = right = null;}}class Main{// Iterative function to perform preorder traversal on the treepublic static void preorderIterative(Node root){// return if the tree is emptyif (root == null) {return;}// create an empty stack and push the root nodeStack<Node> stack = new Stack<>();stack.push(root);// start from the root node (set current node to the root node)Node curr = root;// loop till stack is emptywhile (!stack.empty()){// if the current node exists, print it and push its right child// to the stack before moving to its left childif (curr != null){System.out.print(curr.data + " ");if (curr.right != null) {stack.push(curr.right);}curr = curr.left;}// if the current node is null, pop a node from the stack// set the current node to the popped nodeelse {curr = stack.pop();}}}public static void main(String[] args){/* Construct the following tree 1 / \/ \ 2 3// \ // \45 6/ \ / \7 8*/Node root = new Node(1);root.left = new Node(2);root.right = new Node(3);root.left.left = new Node(4);root.right.left = new Node(5);root.right.right = new Node(6);root.right.left.left = new Node(7);root.right.left.right = new Node(8);preorderIterative(root);}}
+
+
+
+
+
+DownloadRun Code
+
+Python
+
+
+
+
+
+
+
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869
+
+from collections import deque# Data structure to store a binary tree nodeclass Node:def __init__(self, data=None, left=None, right=None):self.data = dataself.left = leftself.right = right# Iterative function to perform preorder traversal on the treedef preorderIterative(root):# return if the tree is emptyif root is None:return# create an empty stack and push the root nodestack = deque()stack.append(root)# start from the root node (set current node to the root node)curr = root# loop till stack is emptywhile stack:# if the current node exists, print it and push its right child# to the stack before moving to its left childif curr:print(curr.data, end=' ')if curr.right:stack.append(curr.right)curr = curr.left# if the current node is None, pop a node from the stack# set the current node to the popped nodeelse:curr = stack.pop()if __name__ == '__main__':''' Construct the following tree 1 / \/ \ 2 3// \ // \45 6/ \ / \7 8'''root = Node(1)root.left = Node(2)root.right = Node(3)root.left.left = Node(4)root.right.left = Node(5)root.right.right = Node(6)root.right.left.left = Node(7)root.right.left.right = Node(8)preorderIterative(root)
+
+
+
+
+
+DownloadRun Code

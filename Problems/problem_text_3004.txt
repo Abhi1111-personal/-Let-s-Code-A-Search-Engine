@@ -1,0 +1,26 @@
+Wildcard Pattern Matching: Given a string and a pattern containing wildcard characters, i.e., * and ?, where ? can match to any single character in the string and * can match to any number of characters including zero characters, design an efficient algorithm to check if the pattern matches with the complete string or not.
+
+Example: 
+
+
+Input: string = xyxzzxy, pattern = x***y
+Output: Match
+
+Input: string = xyxzzxy, pattern = x***x
+Output: No Match
+
+Input: string = xyxzzxy, pattern = x***x?
+Output: Match
+
+Input: string = xyxzzxy, pattern = *
+Output: Match
+
+
+Approach-1: 
+
+The idea is to use dynamic programming to solve this problem. If we carefully analyze the problem, we can see that it can easily be further divided into subproblems. Lets take the top-bottom approach to solve this problem.For a given pattern[0m] and word[0n],
+
+Approach 2
+
+
+Following is an iterative C++, Java, and Python implementation of the above code:

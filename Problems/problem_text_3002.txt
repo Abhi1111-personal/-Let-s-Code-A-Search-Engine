@@ -1,0 +1,27 @@
+The Shortest Common Supersequence (SCS) is finding the shortest supersequence Z of given sequences X and Y such that both X and Y are subsequences of Z.
+
+Example: 
+
+
+For example, consider the two following sequences, X and Y:
+
+X: ABCBDAB
+Y: BDCABA
+
+The length of the SCS is 9
+The SCS are ABCBDCABA, ABDCABDAB, and ABDCBDABA
+
+
+Approach-1: 
+
+The SCS problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can be broken down into yet simpler subproblems, and so on, until, finally, the solution becomes trivial.1. Lets consider two sequences, X and Y of length m and n, respectively, that both end in the same element.
+
+Approach 2
+
+
+The SCS problem exhibits overlapping subproblems. Lets consider the recursion tree for two sequences of length 6 and 8 whose SCS length is 6 + 8 = 14. As we can see, the same subproblems (highlighted in the same color) are getting computed repeatedly:
+
+Approach 3
+
+
+We can also solve this problem in a bottom-up manner. In the bottom-up approach, calculate the smaller values of SCS(i, j) first, then build larger values from them.

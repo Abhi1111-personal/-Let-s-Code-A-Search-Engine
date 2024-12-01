@@ -1,0 +1,35 @@
+Word Break Problem: Given a string and a dictionary of words, determine if the string can be segmented into a space-separated sequence of one or more dictionary words.
+
+Example: 
+
+
+Input:
+
+dict[] = { this, th, is, famous, Word, break, b, r, e, a, k, br, bre, brea, ak, problem };
+
+word = Wordbreakproblem
+
+Output:
+
+Word b r e a k problem
+Word b r e ak problem
+Word br e a k problem
+Word br e ak problem
+Word bre a k problem
+Word bre ak problem
+Word brea k problem
+Word break problem
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. We consider all prefixes of the current string one by one and check if the current prefix is present in the dictionary or not. If the prefix is a valid word, add it to the output string and recur for the remaining string. The recursionword base case is when the string becomes empty, and we print the output string.Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+
+
+
+Approach 3
+
+
+The word-break problem has optimal substructure. We have seen that the problem can be broken down into smaller subproblem, which can further be broken down into yet smaller subproblem, and so on. The word-break problem also exhibits overlapping subproblems, so we will end up solving the same subproblem over and over again. If we draw the recursion tree, we can see that the same subproblems are getting computed repeatedly.

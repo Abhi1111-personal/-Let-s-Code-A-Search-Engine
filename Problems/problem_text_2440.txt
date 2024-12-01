@@ -1,0 +1,6 @@
+Given a binary tree and two nodes, x and y, find the lowest common ancestor (LCA) of x and y in it. The solution should return null if either x or y is not the actual node in the tree.
+
+Approach-1: 
+
+A simple solution would be to store the path from root to x and the path from the root to y in two auxiliary arrays. Then traverse both arrays simultaneously till the values in the arrays match. The last matched value will be the LCA. If the end of one array is reached, then the last seen value is LCA. The time complexity of this solution is O(n), where n is the total number of nodes in the binary tree. But the auxiliary space used by it is O(n) required for storing two arrays.
+We can recursively find the lowest common ancestor of nodes x and y present in the binary tree. The trick is to find the node in a binary tree with one key present in its left subtree and the other key present in the right subtree. If any such node is present in the tree, then it is LCA; if y lies in the subtree rooted at node x, then x is the LCA; otherwise, if x lies in the subtree rooted at node y, then y is the LCA.

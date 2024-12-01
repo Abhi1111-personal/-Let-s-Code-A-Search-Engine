@@ -1,0 +1,9 @@
+Given a binary array of size two having at least one element as zero, write a single line function to set both its elements to zero. Use of ternary operator and direct assignment of elements are not allowed.
+
+Approach 2
+
+We can use the negation operator with an assignment operator to convert both elements of the given array to 1 in a single line:
+
+Approach 3
+
+We can directly use an assignment operator to set both elements of the given binary array to 0 in a single line:

@@ -1,0 +1,9 @@
+Write a space-optimized version of the LCS problem.
+
+Approach-1: 
+
+Approach 1: (Using two arrays)The space-optimized algorithm can be implemented as follows in C++, Java, and Python, using two arrays:
+
+Approach 2
+
+

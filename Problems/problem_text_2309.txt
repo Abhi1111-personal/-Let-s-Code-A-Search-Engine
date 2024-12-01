@@ -1,0 +1,13 @@
+In this post, we will see how to left-rotate an array by specified positions. For example, left-rotating array { 1, 2, 3, 4, 5 } twice results in array { 3, 4, 5, 1, 2 }.
+
+Approach-1: 
+
+1. Rotating r timesThe idea is to left-rotate all array elements by one position r times, where r is the given rotation count. This approach is demonstrated below in C, Java, and Python:
+
+Approach 2
+
+2. Using Auxiliary Array
+
+Approach 3
+
+3. By reversing array

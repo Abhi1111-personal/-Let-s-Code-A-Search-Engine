@@ -1,0 +1,25 @@
+The longest decreasing subsequence problem is to find a subsequence of a given sequence in which the subsequences elements are in sorted order, highest to lowest, and in which the subsequence is as long as possible. This subsequence is not necessarily contiguous or unique.
+
+Example: 
+
+
+nums[] = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]
+
+
+Approach-1: 
+
+We can use recursion to solve this problem. For each item, there are two possibilities:
+
+Include the current item in LDS if it is smaller than the previous element in LDS and recur for the remaining items.
+Exclude the current item from LDS and recur for the remaining items.
+
+
+
+Approach 2
+
+
+The problem has an optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. The above solution also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are repeatedly computed.
+
+Approach 3
+
+How to print LDS?

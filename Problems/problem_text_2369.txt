@@ -1,0 +1,6 @@
+In the kpartition problem, we need to partition an array of positive integers into k disjoint subsets that all have an equal sum, and they completely cover the set.
+
+Approach-1: 
+
+
+k-partition problem is a special case of Partition Problem, where the goal is to partition S into two subsets with equal sum. This post will extend the 3-partition solution to find and print kpartitions.We can start by calculating the sum of all elements in the set. If the sum is not divisible by k, we cant divide the array into k subsets with an equal sum. If the sum is divisible by k, check if k subsets with the sum of elements equal to sum/k exists or not. We can find this by considering each item in the given array one by one, and for each item, include it in the i'th subset & recur for the remaining items with the remaining sum. We backtrack if the solution is not found by including a current item in the i'th subset and try for the (i+i)'th subset.

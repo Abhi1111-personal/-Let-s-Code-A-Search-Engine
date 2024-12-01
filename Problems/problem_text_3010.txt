@@ -1,0 +1,30 @@
+Given a string, find the minimum number of deletions required to convert it into a palindrome.
+
+Example: 
+
+
+T[ij] = | T[i+1j-1](if X[i] = X[j])
+| 1 + min (T[i+1j], T[ij-1])(if X[i] != X[j])
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. The idea is to compare the last character of the string X[ij] with its first character. There are two possibilities:
+If the strings last character is the same as the first character, no deletion is needed, and we recur for the remaining substring X[i+1, j-1].
+If the last character of the string is different from the first character, return one plus the minimum of the two values we get by:
+
+Deleting the last character and recursing for the remaining substring X[i, j-1].
+Deleting the first character and recursing for the remaining substring X[i+1, j].
+
+
+
+
+Approach 2
+
+
+The problem has an optimal substructure. We have seen that the problem can be broken down into smaller subproblems, which can further be broken down into yet smaller subproblems, and so on. The problem also exhibits overlapping subproblems, so we will end up solving the same subproblem over and over again. Lets consider the recursion tree for a sequence of length 6 having all distinct characters, say ABCDEF.
+
+Approach 3
+
+
+This problem is also a classic variation of the Longest Common Subsequence (LCS) problem. The idea is to find the Longest Palindromic subsequence of the given string. The minimum number of deletions required will be the difference in length of the string and palindromic subsequence. We can easily find the longest palindromic subsequence by taking the longest common subsequence of the given string with its reverse, i.e., call LCS(X, reverse(X)).

@@ -1,0 +1,6 @@
+Given a binary array, find the index of 0 to be replaced with 1 to get a maximum length sequence of continuous ones.
+
+Approach-1: 
+
+The idea is simple  update each non-zero array element with a count of their adjacent consecutive 1s. For example, the array [0, 0, 1, 0, 1, 1, 1, 0, 1, 1] is converted into [0, 0, 1, 0, 3, 3, 3, 0, 2, 2]. Now, the problem reduces to finding the index of 0 whose sum of the left and the right element is maximum.
+Following is the C, Java, and Python implementation of the same. Note that this approach will modify the array and at least requires two traversals of the array. We can use an auxiliary array to avoid modifying the original array or restore the original array before returning.

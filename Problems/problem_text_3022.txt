@@ -1,0 +1,16 @@
+Given an M  N boggle board, find a list of all possible words that can be formed by a sequence of adjacent characters on the board.
+
+Example: 
+
+
+int row[] = { -1, -1, -1, 0, 0, 1, 1, 1 }
+int col[] = { -1, 0, 1, -1, 1, -1, 0, 1 }
+
+
+Approach-1: 
+
+
+We can use Depthfirst search (DFS) to solve this problem. The idea is to start from each character in the matrix and explore all eight paths possible and recursively check if they lead to a solution or not. To make sure that a word doesnt have multiple instances of the same cell, keep track of cells involved in the current path in the matrix, and before exploring any cell, ignore the cell if it is already covered in the current path.To find all possible movements from a cell, we can use an array to store the relative position of movement from any cell. For example, if the current cell is (x, y), we can move to (x + row[k], y + col[k]) for 0 <= k <=7 using the following array:
+
+Approach 2
+

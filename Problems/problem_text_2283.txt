@@ -1,0 +1,18 @@
+Given an unsorted integer array, find two non-overlapping pairs in it having the same sum.
+
+Example: 
+
+
+Input: { 3, 4, 7, 3, 4 }
+Output: (4, 3) and (3, 4)
+
+
+Input: { 3, 4, 7, 4 }
+Output: No non-overlapping pairs is present in the array
+
+The pairs (3, 4) and (3, 4) are overlapping as the index of 3 is the same in both pairs.
+
+
+Approach-1: 
+
+The idea is to consider every pair of elements in the array one by one and insert it into a map. For each pair, check if their sum exists on the map or not. If we have encountered the sum before, and elements involved in previous occurrence (m, n) dont overlap with the current pair (i, j), print both the pairs and return.Following is the C++, Java, and Python implementation of the program:

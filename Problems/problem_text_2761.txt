@@ -1,0 +1,21 @@
+Given an M  N matrix, which is row-wise and column-wise sorted, count the total number of negative elements present in it in linear time.
+
+Example: 
+
+
+Input:
+
+[-7-3-135]
+[-3-2246]
+[-11358]
+[34789]
+
+Output:
+
+The total number of negative elements present is 6.
+
+
+Approach-1: 
+
+We can do a binary search to find the last occurrence of a negative number or the first occurrence of a positive number for each row. The complexity of this solution will be O(M  log(N)), which is not linear as per problem time constraints.
+The idea is to take advantage of the fact that the matrix is row-wise and column-wise sorted. Start from the matrixs top-rightmost cell and do the following until the matrix boundary is reached:

@@ -1,0 +1,26 @@
+The Longest Common Subsequence (LCS) problem is finding the longest subsequence present in given two sequences in the same order, i.e., find the longest sequence which can be obtained from the first original sequence by deleting some items and from the second original sequence by deleting other items.
+
+Example: 
+
+
+X: ABCBDAB
+Y: BDCABA
+Z: BADACB
+
+The length of the LCS is 4, and the LCS is BDAB.
+
+
+Approach-1: 
+
+
+In the previous post, we have discussed the longest common subsequence of two sequences. In this post, we will extend the solution to three sequences. The proposed solution can be easily generalized to handle more than three sequences as well.For example, consider the three following sequences X, Y, and Z:
+
+Approach 2
+
+
+The LCS problem exhibits overlapping subproblems. A problem is said to have overlapping subproblems if the recursive algorithm for the problem solves the same subproblem repeatedly rather than generating new subproblems. We know that problems having optimal substructure and overlapping subproblems can be solved by dynamic programming, in which subproblem solutions are memoized rather than computed repeatedly. This method can be implemented as follows in C++, Java, and Python:
+
+Approach 3
+
+
+The above memoized version follows the top-down approach since we first break the problem into subproblems and then calculate and store values. We can also solve this problem in a bottom-up manner. In the bottom-up approach, calculate the smaller values of LCS(i, j, k) first, then build larger values from them.

@@ -1,0 +1,30 @@
+Given a list containing future predictions of share prices, find the maximum profit earned by buying and selling shares at most twice with a constraint that a new transaction can only start after the previous transaction complete, i.e., we can only hold at most one share at a time.
+
+Example: 
+
+
+Input: Stock prices are {2, 4, 7, 5, 4, 3, 5}
+Output: The maximum profit is 7
+
+Buy at a price 2 and sell at a price 7
+Buy at a price 3 and sell at a price 5
+
+
+Input: Stock prices are {10, 6, 8, 4, 2}
+Output: The maximum profit is 2
+
+Buy at a price 6 and sell at a price 8
+
+
+Input: Stock prices are {8, 7, 6, 4}
+Output: The maximum profit is 0
+
+Buying and selling stock will result in loss
+
+
+Approach-1: 
+
+There are several variations to the above problem:
+If we are allowed to stock only once, then we can find the maximum difference between two elements in the array, where the smaller element appears before the larger element.
+If we are allowed to stock shares at most k times, we can follow the approach discussed here.
+If we are allowed to stock shares any number of times, we can follow the approach discussed here.

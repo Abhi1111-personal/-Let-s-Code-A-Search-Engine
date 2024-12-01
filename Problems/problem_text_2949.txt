@@ -1,0 +1,29 @@
+Given a string, remove all occurrences of AB and C in a single traversal of it.
+
+Example: 
+
+
+The input string is 'CBAABCAB'
+
+The string after removal of 'AB' and 'C' is 'BA'
+
+'CBAABCAB' > 'C BA AB C AB' > 'BA'
+
+
+The input string is 'ABACB'
+
+The string after removal of 'AB' and 'C' is ''
+
+'ABACB' > 'AB A C B' > 'AB' > ''
+
+
+The input string is 'ABCACBCAABB'
+
+The string after removal of 'AB' and 'C' is ''
+
+'ABCACBCAABB' > 'AB C A C B C A AB B' > 'AB AB' > ''
+
+
+Approach-1: 
+
+The main challenge lies with doing the conversion in a single traversal of the string. The problem demands the removal of all adjacent, as well as non-adjacent occurrences of string AB, i.e., for a given string, say ADAABCB, after removing the first adjacent occurrence of AB (and C of-course), we get string ADAB which again needs to be processed for adjacent AB (No C this time, think!). Therefore, the final output string will be AD.Following is the C, Java, and Python implementation of the idea:

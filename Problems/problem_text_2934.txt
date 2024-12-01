@@ -1,0 +1,18 @@
+Check if a given string can be derived from another string by circularly rotating it. The rotation can be in a clockwise or anti-clockwise rotation.
+
+Example: 
+
+
+Input:
+
+X = ABCD
+Y = DABC
+
+Output: Yes
+
+Y can be derived from X by right-rotating it by 1 unit
+
+
+Approach-1: 
+
+For two given strings X and Y, a simple solution would be to check if the string Y is a substring of the string XX or not. If yes, they can be derived from each other. For example, consider string X = ABCD and Y = DABC.XX = ABCD + ABCD = ABCDABCD

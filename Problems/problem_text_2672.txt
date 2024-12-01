@@ -1,0 +1,20 @@
+Implement a heap data structure in C++.
+
+Example: 
+
+
+Output:
+
+Size is 3
+15 3
+Size is 4
+45 5 4 2
+true
+Vector::at() : index is out of range(Heap underflow)
+Vector::at() : index is out of range(Heap underflow)
+
+
+Approach-1: 
+
+
+We have introduced the heap data structure in the above post and discussed heapify-up, push, heapify-down, and pop operations. In this post, the implementation of the max-heap and min-heap data structure is provided. Their implementation is somewhat similar to std::priority_queue.Max Heap implementation in C++:

@@ -1,0 +1,27 @@
+Given two binary search trees, merge them into a doubly-linked list in sorted order.
+
+Example: 
+
+
+Input: Below BSTs
+
+20
+/\
+1030
+/\
+25100
+
+50
+/\
+570
+
+
+Output: Below DDL
+
+5 > 10 > 20 > 25 > 30 > 50 > 70 > 100 > null
+
+
+Approach-1: 
+
+The idea is to convert each binary search tree into a doubly-linked list first in sorted order and then merge both lists into a single doubly linked list in sorted order.
+To convert a binary search tree into a doubly-linked list in sorted order, perform reverse inorder traversal on the BST. In the reverse inorder traversal, the right child for a node is processed before its left child. We insert the node at the front of the doubly linked list for each encountered node in the reverse inorder traversal. The reverse inorder traversal is used to ensure the correct insertion order in the doubly linked list since the reverse inorder traversal visits the nodes of a BST in the decreasing order.

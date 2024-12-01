@@ -1,0 +1,6 @@
+This post will implement the KMP algorithm in C, C++, Java, and Python programming language.
+
+Approach-1: 
+
+Practice this algorithm
+The algorithm can be implemented as follows in C, C++, Java, and Python:

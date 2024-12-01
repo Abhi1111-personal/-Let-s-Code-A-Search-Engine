@@ -1,0 +1,13 @@
+Given an array where all its elements are sorted in increasing order except two swapped elements, sort it in linear time. Assume there are no duplicates in the array.
+
+Example: 
+
+
+Input: A[] = [3, 8, 6, 7, 5, 9] or [3, 5, 6, 9, 8, 7] or [3, 5, 7, 6, 8, 9]
+
+Output: A[] = [3, 5, 6, 7, 8, 9]
+
+
+Approach-1: 
+
+The idea is to start from the second array element and compare every element with its previous element. We take two pointers, x and y, to store the conflicts location. If the previous element is greater than the current element, update x to the previous element index and y to the current element index. If we find that the previous element is greater than the current element, update y to the current element index. Finally, after we are done processing each adjacent pair of elements, swap the elements at index x and y.Following is the implementation in C++, Java, and Python based on the above idea:

@@ -1,0 +1,30 @@
+Given a binary pattern containing ? wildcard character at a few positions, find all possible combinations of binary strings that can be formed by replacing the wildcard character by either 0 or 1.
+
+Example: 
+
+
+1011000010
+1011000011
+1011000110
+1011000111
+1011100010
+1011100011
+1011100110
+1011100111
+1111000010
+1111000011
+1111000110
+1111000111
+1111100010
+1111100011
+1111100110
+1111100111
+
+
+Approach-1: 
+
+Recursive SolutionWe can easily solve this problem by using recursion. The idea is to process each character of the pattern one at a time and recur for the remaining pattern. If the current digit is 0 or 1, ignore it. If the current character is a wildcard character ?, replace it with 0 and 1, and recur for the remaining pattern.
+
+Approach 2
+
+We can also solve this problem iteratively using stack, queue, set, vector, or any other container. The idea remains the same. Start by processing each character of the pattern one at a time, but instead of recursing for the remaining pattern, push it into a container. At each iteration, pop a string from the container, find the first occurrence of wildcard pattern ? in it, replace ? with 0 and 1, and finally push it back into the container. If no wildcard pattern is found, print the popped string. Repeat this process until the container is empty.

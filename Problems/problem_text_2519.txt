@@ -1,0 +1,28 @@
+Given a sorted array of n integers and a target value, determine if the target exists in the array in logarithmic time using the binary search algorithm. If target exists in the array, print the index of it.
+
+Example: 
+
+
+Input:
+
+nums[] = [2, 3, 5, 7, 9]
+target = 7
+
+Output: Element found at index 3
+
+
+Input:
+
+nums[] = [1, 4, 5, 8, 9]
+target = 2
+
+Output: Element not found
+
+
+Approach-1: 
+
+A simple solution would be to perform a linear search on the given array. It sequentially checks each array element for the target value until a match is found or all the elements have been searched. The worst-case time complexity of this approach is O(n) as it makes at most n comparisons, where n is the size of the input. This approach doesnt take advantage of the fact that the input is sorted.How to perform better?
+
+Approach 2
+
+We can easily convert the above iterative version of the binary search algorithm into a recursive one. The algorithm can be implemented recursively as follows in C, Java, and Python:

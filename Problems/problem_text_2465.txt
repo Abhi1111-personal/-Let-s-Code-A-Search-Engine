@@ -1,0 +1,13 @@
+Given a binary tree, write an efficient algorithm to find all nodes present at a given distance from any leaf node. We need to find only those nodes that are present in the root-to-leaf path for that leaf.
+
+Example: 
+
+
+The nodes present at a distance of 1 from any leaf node are 10, 16, 20
+The nodes present at a distance of 2 from any leaf node are 15, 20
+The nodes present at a distance of 3 from any leaf node is 15
+
+
+Approach-1: 
+
+The idea is to traverse the tree in a preorder fashion and use a list to store the current nodes ancestors in the preorder traversal. If we encounter a leaf node, print the ancestor present at a given distance from it. To avoid printing duplicates, insert the nodes into a set and print it later.Following is the implementation of the idea in C++, Java, and Python:

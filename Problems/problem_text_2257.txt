@@ -1,0 +1,32 @@
+Given an array, reverse every group of consecutive m elements in a given subarray of it.
+
+Example: 
+
+
+Consider the below array.
+
+A[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 },
+m = 3
+
+Then for subarray [i, j], where i and j is
+
+
+Input: i = 1, j = 7 or 8
+Output: [1, 4, 3, 2, 7, 6, 5, 8, 9, 10]
+
+
+Input: i = 1, j = 9
+Output: [1, 4, 3, 2, 7, 6, 5, 10, 9, 8]
+
+
+Input: i = 3, j = 5
+Output: [1, 2, 3, 6, 5, 4, 7, 8, 9, 10]
+
+
+Input: i = 3, j = 4
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+Approach-1: 
+
+The solution can be implemented as follows in C, Java, and Python:

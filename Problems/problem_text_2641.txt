@@ -1,0 +1,15 @@
+Given a directed graph, check if it is a DAG (Directed Acyclic Graph) or not. A DAG is a digraph (directed graph) that contains no cycles.
+
+Example: 
+
+
+Tree edge (u, v): departure[u] > departure[v]
+Back edge (u, v): departure[u] < departure[v]
+Forward edge (u, v): departure[u] > departure[v]
+Cross edge (u, v): departure[u] > departure[v]
+
+
+Approach-1: 
+
+
+Recommended Read:Types of edges involved in DFS and relation between them

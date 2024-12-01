@@ -1,0 +1,49 @@
+Given an N  N matrix of positive integers, find the shortest path from the first cell of the matrix to its last cell that satisfies given constraints.
+
+Example: 
+
+
+Input:
+
+[7135361175]
+[2361166612]
+[6172147662]
+[6671335134]
+[5561546174]
+[3552753436]
+[4143645326]
+[4417433142]
+[4451523535]
+[3635226421]
+
+Output:
+
+The shortest path length is 6
+The shortest path is (0, 0) (0, 7) (0, 6) (1, 6) (7, 6) (7, 9) (9, 9)
+
+
+Input:
+
+[4465511174]
+[3624657266]
+[1361117145]
+[7563133117]
+[3464726544]
+[3251251234]
+[4222523773]
+[7243522363]
+[5142646737]
+[1417536534]
+
+Output:
+
+The shortest path length is 6
+The shortest path is (0, 0) (0, 4) (5, 4) (5, 2) (5, 7) (5, 9) (9, 9)
+
+
+Approach-1: 
+
+We have already discussed a backtracking solution in the previous post. The time complexity of the backtracking solution would be higher since all paths need to be traveled until the destination is reached. However, since it is the shortest path problem, Breadthfirst search (BFS) would be an ideal choice. This post proposes the BFS solution.Following is the complete algorithm:
+
+Approach 2
+

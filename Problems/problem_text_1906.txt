@@ -1,0 +1,2 @@
+Another question which belongs to the category of questions which are intentionally stated vaguely. 
+Expectation is that you will ask for correct clarification or you will state your assumptions before you start coding.

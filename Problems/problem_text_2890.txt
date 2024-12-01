@@ -1,0 +1,6 @@
+Given a linked list, sort it using the merge sort algorithm.
+
+Approach-1: 
+
+Merge sort is an efficient, general-purpose sorting algorithm that produces a stable sort, which means that the implementation preserves the input order of equal elements in the sorted output. It is a comparison sort, i.e., it can sort items of any type for which a less-than relation is defined.
+Merge sort is a Divide and Conquer algorithm. Like all divide-and-conquer algorithms, the merge sort algorithm splits the list into two sublists. Then it recursively sorts each sublist and finally merges both sorted lists together to form the answer. The following solution uses the frontBackSplit() and sortedMerge() method to solve this problem efficiently. We have already covered them in detail in previous posts.

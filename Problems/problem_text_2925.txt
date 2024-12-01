@@ -1,0 +1,5 @@
+Write an iterative version of the recursive Quicksort algorithm.
+
+Approach-1: 
+
+The iterative Quicksort implementation can be seen below in C++, Java, and Python:

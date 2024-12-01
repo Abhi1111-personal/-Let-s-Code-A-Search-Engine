@@ -1,0 +1,27 @@
+Given an M  N matrix where each cell can have a value of 1, 0, or -1, where -1 denotes an unsafe cell, collect the maximum number of ones starting from the first cell and by visiting only safe cells (i.e., 0 or 1). We can only go left or down if the row is odd; otherwise, we can only go right or down from the current cell.
+
+Example: 
+
+
+if (M[i][j] != -1)
+path(i, j) = M[i][j] + | max(path(i, j  1), path(i + 1, j))(if i is odd)
+| max(path(i, j + 1), path(i + 1, j))(if i is even)
+else
+path(i, j) = 0
+
+
+Approach-1: 
+
+
+The idea is to use recursion. The problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. For matrix M, we can recursively define the problem as:
+if (M[i][j] != -1)
+path(i, j) = M[i][j] + | max(path(i, j  1), path(i + 1, j))(if i is odd)
+| max(path(i, j + 1), path(i + 1, j))(if i is even)
+else
+path(i, j) = 0
+
+
+Approach 2
+
+
+The problem clearly exhibits overlapping subproblems, so we will end up solving the same subproblem over and over again. The repeated subproblems can be seen by drawing a recursion tree for any M  N matrix. We know that problems having optimal substructure and overlapping subproblems can be solved by dynamic programming, in which subproblem solutions are saved rather than computed repeatedly.

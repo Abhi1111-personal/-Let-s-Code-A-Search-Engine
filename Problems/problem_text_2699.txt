@@ -1,0 +1,9 @@
+Given a linked list, split it into two sublists  one for the front half and one for the back half. If the total number of elements in the list is odd, the extra element should go in the front list.
+
+Approach-1: 
+
+1. Naive SolutionProbably the simplest strategy is to compute the length of the list, then use a for loop to hop over the right number of nodes to find the last node of the front half, and then cut the list at that point.
+
+Approach 2
+
+There is a tricky technique that uses two pointers to traverse the list. A slow pointer advances one node simultaneously, while the fast pointer goes two nodes at a time. When the fast pointer reaches the end, the slow pointer will be about halfway. For either strategy, care is required to split the list at the right point.

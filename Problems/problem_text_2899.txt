@@ -1,0 +1,5 @@
+A stack is a linear data structure that follows the LIFO (LastIn, FirstOut) principle. That means the objects can be inserted or removed only at one end of it, also called a top.
+
+Approach-1: 
+
+Stack Implementation using an arrayA stack can easily be implemented as an array. Following is the stack implementation in Java using an array:

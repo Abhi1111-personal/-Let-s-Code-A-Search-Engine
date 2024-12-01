@@ -1,0 +1,39 @@
+Given an M  N matrix consisting of only 0 or 1, change all elements of row i and column j to 0 if cell (i, j) has value 0. Do this without using any extra space for every (i, j) having value 0.
+
+Example: 
+
+
+Input:
+
+[11011]
+[11111]
+[11101]
+[11111]
+[01111]
+
+Output:
+
+[00000]
+[01001]
+[00000]
+[01001]
+[00000]
+
+Explanation:
+
+0s are present at (0, 2), (4, 0), and (2, 3) in the input matrix. So, we change all elements of the following cells to 0:
+
+row 0 and column 2
+row 4 and column 0
+row 2 and column 3
+
+
+
+Approach-1: 
+
+A simple solution is to traverse the matrix and if we encounter any cell (i, j) that has value 0, change each element in the row i and column j to some arbitrary value other than 0 or 1. Later traverse the matrix once again and replace all elements with assigned value to 0.The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+
+We can solve this problem in O(M  N) time as well. The idea is to traverse the matrix once and use the first row and the first column (or last row and last column) to mark if any cell in the corresponding row or column has a value 0 or not. Before doing that, initially mark if the chosen row/column has any 0's present in them in two different flags.

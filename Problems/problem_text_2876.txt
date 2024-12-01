@@ -1,0 +1,11 @@
+Given an integer array, sort it using the selection sort algorithm.
+
+Approach-1: 
+
+
+Following is an iterative implementation of the selection sort algorithm in C, Java, and Python:
+
+Approach 2
+
+
+The selection sort algorithm can be implemented recursively. Following is the recursive implementation of the selection sort algorithm in C, Java, and Python:

@@ -1,0 +1,25 @@
+The longest alternating subsequence is a problem of finding a subsequence of a given sequence in which the elements are in alternating order and in which the sequence is as long as possible. In order words, we need to find the length of the longest subsequence with alternate low and high elements.
+
+Example: 
+
+
+(8, 9, 6, 7, 2, 4)
+(8, 9, 4, 7, 3, 4)
+(8, 9, 4, 7, 2, 4)
+
+
+And many more
+
+
+Approach-1: 
+
+The problem differs from the problem of finding the Longest Alternating Subarray. Unlike subarrays, subsequences are not required to occupy consecutive positions within the original array.
+We can use recursion to solve this problem. The idea is to maintain a flag to indicate if the next element in the sequence should be smaller or greater than the previous element. Then for any element A[i] at index i, we have two choices:
+
+Approach 2
+
+
+The LAS problem has an optimal substructure and also exhibits overlapping subproblems. We know that problems with optimal substructure and overlapping subproblems can be solved by dynamic programming, in which subproblem solutions are saved rather than computed repeatedly. This method is demonstrated below in C++, Java, and Python, which follows a top-down approach using Memoization.
+
+Approach 3
+

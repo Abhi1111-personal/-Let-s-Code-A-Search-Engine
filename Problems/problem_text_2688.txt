@@ -1,0 +1,9 @@
+Given a binary tree, check if it is a min-heap or not. In order words, the binary tree must be a complete binary tree where each node has a higher value than its parents value.
+
+Approach-1: 
+
+1. Recursive SolutionThe idea is to traverse the tree in a preorder fashion. The value of each encountered node should be less than its left or right child. If that is not the case for every internal node, the binary tree is not a min-heap.
+
+Approach 2
+
+2. Iterative Solution

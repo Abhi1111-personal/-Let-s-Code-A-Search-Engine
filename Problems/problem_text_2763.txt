@@ -1,0 +1,33 @@
+Given an M  N integer matrix and two coordinates (p, q) and (r, s) representing top-left and bottom-right coordinates of a submatrix of it, calculate the sum of all elements present in the submatrix. Here, 0 <= p < r < M and 0 <= q < s < N.
+
+Example: 
+
+
+Input: matrix[][] is
+
+[02541]
+[48237]
+[63462]
+[73183]
+[15794]
+
+(p, q) = (1, 1)
+(r, s) = (3, 3)
+
+
+Output: Sum is 38
+
+Explanation:
+
+The submatrix formed by coordinates (p, q), (p, s), (r, q), and (r, s) is shown below, having the sum of elements equal to 38.
+
+[823]
+[346]
+[318]
+
+
+Approach-1: 
+
+
+The idea is to preprocess the matrix. Take an auxiliary matrix sum[][], where sum[i][j] will store the sum of elements in the matrix from (0, 0) to (i, j). We can easily calculate the value of sum[i][j] in constant time using the following relation:
+sum[i][j] = sum[i][j  1] + sum[i  1][j] + mat[i][j]  sum[i  1][j  1]

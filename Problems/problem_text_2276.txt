@@ -1,0 +1,18 @@
+Given an integer array, print all maximum size subarrays having all distinct elements in them.
+
+Example: 
+
+
+Input: A[] = { 5, 2, 3, 5, 4, 3 }
+
+Output: The largest subarrays with all distinct elements are:
+
+{ 5, 2, 3 }
+{ 2, 3, 5, 4 }
+{ 5, 4, 3 }
+
+
+Approach-1: 
+
+The problem differs from the problem of finding the maximum size subsequence with distinct elements. Unlike subsequences, subarrays are required to occupy consecutive positions within the original array.
+We can use a sliding window to solve this problem easily. The idea is to maintain a window with an invariant that all elements inside it must be distinct. The solution keeps on expanding the window to the right, and if any duplicate is encountered, it shrinks the window from the left until all elements are distinct again. To keep track of distinct elements inside a window, use a map.

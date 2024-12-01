@@ -1,0 +1,21 @@
+Given a binary tree, write an efficient algorithm to print all paths from the root node to every leaf node in it.
+
+Example: 
+
+
+The binary tree has four root-to-leaf paths:
+
+1 > 2 > 4
+1 > 2 > 5
+1 > 3 > 6 > 8
+1 > 3 > 7 > 9
+
+
+Approach-1: 
+
+The idea is to traverse the tree in a preorder fashion and store every encountered node in the current path from the root-to-leaf in a vector. If we encounter a leaf node, print all nodes present in the vector. Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+
+
+The problem seems a bit difficult to solve without recursion. There is one workaround where we store the path from the root-to-leaf in a string as we traverse the tree iteratively and print the path whenever we encounter any leaf node. This is demonstrated below in C++, Java, and Python:

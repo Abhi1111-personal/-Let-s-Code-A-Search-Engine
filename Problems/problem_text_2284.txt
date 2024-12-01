@@ -1,0 +1,27 @@
+Given two arrays of positive integers, add their elements into a new array. The solution should add both arrays, one by one starting from the 0th index, and split the sum into individual digits if it is a 2digit number.
+
+Example: 
+
+
+Input:
+
+a = { 23, 5, 2, 7, 87 }
+b = { 4, 67, 2, 8 }
+
+Output: { 2, 7, 7, 2, 4, 1, 5, 8, 7 }
+
+
+Input:
+
+a = {}
+b = { 4, 67, 2, 8 }
+
+Output: { 4, 6, 7, 2, 8 }
+
+
+Approach-1: 
+
+The idea is to run a loop that considers every pair of elements present at the same index in both arrays and adds them. If the sum is a 2digit number, add its digits to the result array; otherwise, add the single-digit sum to the result array. Finally, add the remaining elements of the larger array to the result array.Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+

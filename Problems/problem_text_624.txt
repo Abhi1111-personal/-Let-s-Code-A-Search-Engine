@@ -1,0 +1,20 @@
+b'1745. Palindrome Partitioning IVHard49614Add to ListShareGiven a string s, return true if it is possible to split the string s into three non-empty palindromic substrings. Otherwise, return false.\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b
+A string is said to be palindrome if it the same string when reversed.
+\xc2\xa0
+Example 1:
+Input: s = "abcbdd"
+Output: true
+Explanation: "abcbdd" = "a" + "bcb" + "dd", and all three substrings are palindromes.
+
+Example 2:
+Input: s = "bcbddxy"
+Output: false
+Explanation: s cannot be split into 3 palindromes.
+
+\xc2\xa0
+Constraints:
+
+3 <= s.length <= 2000
+s\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b\xe2\x80\x8b consists only of lowercase English letters.
+
+Accepted14.8KSubmissions30.2KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringDynamic ProgrammingSimilar QuestionsPalindrome PartitioningMediumPalindrome Partitioning IIHardPalindrome Partitioning IIIHardShow Hint 1Preprocess checking palindromes in O(1)Show Hint 2Note that one string is a prefix and another one is a suffix you can try brute forcing the rest'

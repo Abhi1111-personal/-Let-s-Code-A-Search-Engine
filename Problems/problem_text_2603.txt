@@ -1,0 +1,27 @@
+Given an M  N rectangular grid, efficiently count all paths starting from the first cell (0, 0) to the last cell (M-1, N-1). We can either move down or move towards right from a cell.
+
+Example: 
+
+
+Input: 3  3 matrix
+
+Output: Total number of paths are 6
+
+(0, 0) > (0, 1) > (0, 2) > (1, 2) > (2, 2)
+(0, 0) > (0, 1) > (1, 1) > (1, 2) > (2, 2)
+(0, 0) > (0, 1) > (1, 1) > (2, 1) > (2, 2)
+(0, 0) > (1, 0) > (2, 0) > (2, 1) > (2, 2)
+(0, 0) > (1, 0) > (1, 1) > (1, 2) > (2, 2)
+(0, 0) > (1, 0) > (1, 1) > (2, 1) > (2, 2)
+
+
+Approach-1: 
+
+The idea is to start from the top-left corner of the matrix and recur for the next cell, which can be either the immediate right cell or the immediate bottom cell. We can easily maintain the path count as we move along in the recursion, as demonstrated below in C, Java, and Python:
+
+Approach 2
+
+We can either store results of the function calls and return those results when the same input occurs again or construct an auxiliary matrix to store results of the smaller subproblems. The following code follows the later approach:
+
+Approach 3
+

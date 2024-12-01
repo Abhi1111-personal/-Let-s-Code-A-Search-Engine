@@ -1,0 +1,22 @@
+Given an M  N matrix, find all common elements present in every row.
+
+Example: 
+
+
+Input: M  N matrix
+
+[713536]
+[236116]
+[617214]
+[667133]
+[556154]
+[356271]
+[414364]
+[461743]
+
+Output: The common elements are 1 and 6
+
+
+Approach-1: 
+
+The idea is simple and efficient  create an empty map and insert all the first row elements into the map with their value set as 1. For each element of the remaining rows, check if it is present on the map or not. If the element is present on the map, check its count to see if it is present in all previous rows or not. If yes, increment its count by 1; otherwise, ignore the element.Following is the implementation in C++, Java, and Python based on the above idea. One particular case we need to handle that any duplicate entry in the same row should not get inserted into the map again.

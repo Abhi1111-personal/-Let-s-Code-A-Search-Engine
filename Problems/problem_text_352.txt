@@ -1,0 +1,25 @@
+b"143. Reorder ListMedium5855212Add to ListShareYou are given the head of a singly linked-list. The list can be represented as:
+L0 \xe2\x86\x92 L1 \xe2\x86\x92 \xe2\x80\xa6 \xe2\x86\x92 Ln - 1 \xe2\x86\x92 Ln
+
+Reorder the list to be on the following form:
+L0 \xe2\x86\x92 Ln \xe2\x86\x92 L1 \xe2\x86\x92 Ln - 1 \xe2\x86\x92 L2 \xe2\x86\x92 Ln - 2 \xe2\x86\x92 \xe2\x80\xa6
+
+You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+\xc2\xa0
+Example 1:
+
+Input: head = [1,2,3,4]
+Output: [1,4,2,3]
+
+Example 2:
+
+Input: head = [1,2,3,4,5]
+Output: [1,5,2,4,3]
+
+\xc2\xa0
+Constraints:
+
+The number of nodes in the list is in the range [1, 5 * 104].
+1 <= Node.val <= 1000
+
+Accepted481,455Submissions1,001,890Seen this question in a real interview before?YesNoCompaniesRelated TopicsLinked ListTwo PointersStackRecursionSimilar QuestionsDelete the Middle Node of a Linked ListMedium"

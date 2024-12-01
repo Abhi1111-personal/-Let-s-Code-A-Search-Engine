@@ -1,0 +1,13 @@
+Given a linked list and a positive integer k, find the k'th node from the end of the list.
+
+Approach-1: 
+
+Iterative SolutionA simple solution is to calculate the total number of nodes n in the linked list first. Then, the k'th node from the end will be (n-k+1)'th node from the beginning.
+
+Approach 2
+
+The algorithm can be implemented as follows in C, Java, and Python:
+
+Approach 3
+
+Recursive Solution

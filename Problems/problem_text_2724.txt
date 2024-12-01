@@ -1,0 +1,13 @@
+Given a linked list, rearrange it by separating odd nodes from even ones. All even nodes should come before all odd nodes in the output list, and the relative order of even and odd nodes should be maintained.
+
+Approach-1: 
+
+1. Using IterationThe problem can be solved either iteratively or recursively. Following is the simple iterative implementation in C, Java, and Python that does not use a dummy node:
+
+Approach 2
+
+We can simplify the above code by using two temporary dummy nodes as the odd and even list and maintaining two pointers that always point to the last node in individual lists, so appending new nodes is easy. The dummy node gives the tail something to point to initially when the result list is empty. This dummy node is efficient since it is only temporary, and it is allocated in the stack. The loop proceeds, removing nodes from the original list and adding it at the tail of the even or odd list. When we are done, rearrange the pointers so that all odd nodes follow all even nodes.
+
+Approach 3
+
+This is one of those excellent problems where the recursive solution code is much cleaner than the iterative code. The recursive implementation can be seen below in C, Java, and Python:

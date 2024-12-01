@@ -1,0 +1,12 @@
+Given a stack, sort it using recursion. The use of any other data structures (like containers in STL or Collections in Java) is not allowed.
+
+Example: 
+
+
+Stack before sorting: 5 | -2 | 9 | -7 | 3where 3 is the top element
+Stack after sorting: -7 | -2 | 3 | 5 | 9where 9 is the top element
+
+
+Approach-1: 
+
+The idea is simple  recursively remove values from the stack until the stack becomes empty and then insert those values (from the call stack) back into the stack in a sorted position.Following is the C++, Java, and Python implementation of the idea:

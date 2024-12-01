@@ -1,0 +1,19 @@
+Given an array, find the total number of inversions of it. If (i < j) and (A[i] > A[j]), then pair (i, j) is called an inversion of an array A. We need to count all such pairs in the array.
+
+Example: 
+
+
+Input: A[] = [1, 9, 6, 4, 5]
+
+Output: The inversion count is 5
+
+There are 5 inversions in the array: (9, 6), (9, 4), (9, 5), (6, 4), (6, 5)
+
+
+Approach-1: 
+
+1. Brute-Force SolutionA simple solution would be for each array element count all elements less than it to its right and add the count to output. The complexity of this solution is O(n2), where n is the size of the input.
+
+Approach 2
+
+This is a classic problem that can be solved by merge sort algorithm. Basically, for each array element, count all elements more than it to its left and add the count to the output. This whole magic happens inside the merge function of merge sort.

@@ -1,0 +1,13 @@
+Given an array of positive and negative integers, segregate them without changing the relative order of elements. The output should contain all positive numbers follow negative numbers while maintaining the same relative ordering.
+
+Example: 
+
+
+Input: [9, -3, 5, -2, -8, -6, 1, 3]
+Output: [-3, -2, -8, -6, 9, 5, 1, 3]
+
+
+Approach-1: 
+
+In the previous post, we discussed how to segregate positive and negative integers in linear time and constant space using Quicksorts partitioning logic. The problem with this approach is that it changes the relative order of elements. This post will segregate positive and negative integers while maintaining their relative order using the merge sort algorithm.
+The idea is simple. While merging the left and right subarray, merge in a way that negative elements of both left and right subarrays are copied first, followed by positive elements of left and right subarrays. Following is the C++, Java, and Python program that demonstrates it:

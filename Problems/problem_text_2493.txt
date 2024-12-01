@@ -1,0 +1,11 @@
+Given a BST, write an efficient function to delete a given key in it.
+
+Approach-1: 
+
+There are three possible cases to consider deleting a node from BST:
+Case 1: Deleting a node with no children: remove the node from the tree.
+
+Approach 2
+
+
+The above solution initially searches the key in the BST and also find its parent pointer. We can easily modify the code to recursively search the key in the deletion procedure itself and let recursion take care of updating the parent pointer.

@@ -1,0 +1,13 @@
+Given two strings, determine if the first string can be transformed into the second string. The only operation allowed is moving a character from the first string to the front. If the string can be transformed, find the minimum number of operations required for the transformation.
+
+Example: 
+
+
+ADCB > CADB (Move C to the front)
+CADB > BCAD (Move B to the front)
+BCAD > ABCD (Move A to the front)
+
+
+Approach-1: 
+
+1. To determine if a string can be transformed into another string, check whether both strings have the same set of characters. If both strings have a different set of characters, they cant be transformed.2. To find the minimum number of operations required to convert the first string to the second string, the idea is to simultaneously traverse both strings from the end. If the last characters of both strings match, move to the next pair of characters. If the last character of both strings doesnt match, find the index of the matching character in the first string. The difference between both indices represents the number of characters in the first string that has to be moved before the current character of the first string.

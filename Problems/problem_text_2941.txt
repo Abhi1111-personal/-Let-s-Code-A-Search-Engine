@@ -1,0 +1,14 @@
+Given a string, find all possible palindromic substrings in it.
+
+Example: 
+
+
+Input: str = google
+
+Output: e l g o oo goog
+
+
+Approach-1: 
+
+A simple solution would be to generate all substrings of the given string and print substrings that are palindromes. The time complexity of this solution would be O(n3), where n is the length of the input string.
+We can solve this problem in O(n2) time and O(1) space. The idea is inspired by the Longest Palindromic Substring problem. For each character in the given string, consider it as the midpoint of a palindrome and expand in both directions to find all palindromes that have it as midpoint. For an even length palindrome, consider every adjacent pair of characters as the midpoint. We use a set to store all unique palindromic substrings.

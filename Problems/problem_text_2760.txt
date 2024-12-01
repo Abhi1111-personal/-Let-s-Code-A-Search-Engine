@@ -1,0 +1,26 @@
+Given a square matrix, rotate the matrix by 90 degrees in a clockwise direction. The transformation should be done in-place and in quadratic time.
+
+Example: 
+
+
+Input:
+
+1234
+5678
+9101112
+13141516
+
+Output:
+
+13951
+141062
+151173
+161284
+
+
+Approach-1: 
+
+The idea is to in-place convert the matrix into its transpose first. If we swap the first column with the last column, the second column with the second last column, and so on we will get our desired matrix.Following is the implementation in C++, Java, and Python based on the above idea:
+
+Approach 2
+

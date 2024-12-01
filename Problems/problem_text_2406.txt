@@ -1,0 +1,19 @@
+Given two positive integers n and k, perform a circular shift on the binary representation of n by k positions.
+
+Example: 
+
+
+Input:
+
+N = 127(00000000000000000000000001111111)
+shift = 3
+
+Output:
+
+Left Shift00000000000000000000001111111000
+Right Shift11100000000000000000000000001111
+
+
+Approach-1: 
+
+The idea is to perform a normal bitwise left or right shift by first isolating the sequence of kbits from the right or left side, respectively. Finally, return the bitwise OR of the shifted number with isolated bits at their correct position.For example, consider n = 127 which is 00000000000000000000000001111111.

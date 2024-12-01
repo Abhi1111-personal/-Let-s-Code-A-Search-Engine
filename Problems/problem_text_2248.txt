@@ -1,0 +1,19 @@
+Given an integer array, find the smallest window sorting which will make the entire array sorted in increasing order.
+
+Example: 
+
+
+Input: { 1, 2, 3, 7, 5, 6, 4, 8 }
+Output: Sort the array from index 3 to 6
+
+
+Input: { 1, 3, 2, 7, 5, 6, 4, 8 }
+Output: Sort the array from index 1 to 6
+
+
+Approach-1: 
+
+We can easily solve this problem in linear time. Following is the complete algorithm:
+Traverse array from left to right keeping track of maximum so far and note the last encountered index j which is less than the maximum so far.
+Traverse array from right to left keeping track of minimum so far and note the last encountered index i, which is more than the minimum so far.
+Finally, sort the array from index i to j.

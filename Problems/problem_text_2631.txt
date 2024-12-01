@@ -1,0 +1,7 @@
+Given an undirected graph, determine whether it is bipartite using DFS. A bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint sets U and V such that every edge connects a vertex in U to one in V.
+
+Approach-1: 
+
+It is possible to test whether a graph is bipartite or not using a Depthfirst search (DFS) algorithm. There are two ways to check for bipartite graphs:
+A graph is bipartite if and only if it is 2colorable.
+A graph is bipartite if and only if it does not contain an odd cycle.

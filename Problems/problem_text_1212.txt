@@ -1,0 +1,20 @@
+41. First Missing PositiveHard95031334Add to ListShareGiven an unsorted integer array nums, return the smallest missing positive integer.
+You must implement an algorithm that runs in O(n) time and uses constant extra space.
+
+Example 1:
+Input: nums = [1,2,0]
+Output: 3
+Example 2:
+Input: nums = [3,4,-1,1]
+Output: 2
+Example 3:
+Input: nums = [7,8,9,11,12]
+Output: 1
+
+
+Constraints:
+
+1 <= nums.length <= 5 * 105
+-231 <= nums[i] <= 231 - 1
+
+Accepted676,282Submissions1,878,947Seen this question in a real interview before?YesNoCompaniesRelated TopicsArrayHash TableSimilar QuestionsMissing NumberEasyFind the Duplicate NumberMediumFind All Numbers Disappeared in an ArrayEasyCouples Holding HandsHardShow Hint 1Think about how you would solve the problem in non-constant space.  Can you apply that logic to the existing space?Show Hint 2We don't care about duplicates or non-positive integersShow Hint 3Remember that O(2n) = O(n)

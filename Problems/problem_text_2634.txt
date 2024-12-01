@@ -1,0 +1,21 @@
+Given a directed acyclic graph (DAG), print it in Topological order using Kahns topological sort algorithm. If the DAG has more than one topological ordering, print any of them. If the graph is not DAG, report that as well.
+
+Example: 
+
+
+75314206
+75123406
+57310264
+35701264
+57301462
+75134062
+57123064
+37051426
+
+ and many more
+
+
+Approach-1: 
+
+In the previous post, we have seen how to print the topological order of a graph using the Depthfirst search (DFS) algorithm. In this post, Kahns topological sort algorithm is introduced, which provides an efficient way to print the topological order.
+Kahns topological sort algorithm works by finding vertices with no incoming edges and removing all outgoing edges from these vertices. Following is a pseudocode for Kahns topological sort algorithm taken from Wikipedia:

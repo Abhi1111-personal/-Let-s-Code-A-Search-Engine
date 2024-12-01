@@ -1,0 +1,27 @@
+1278. Palindrome Partitioning IIIHard71812Add to ListShareYou are given a string s containing lowercase letters and an integer k. You need to :
+
+First, change some characters of s to other lowercase English letters.
+Then divide s into k non-empty disjoint substrings such that each substring is a palindrome.
+
+Return the minimal number of characters that you need to change to divide the string.
+
+Example 1:
+Input: s = "abc", k = 2
+Output: 1
+Explanation:You can split the string into "ab" and "c", and change 1 character in "ab" to make it palindrome.
+
+Example 2:
+Input: s = "aabbc", k = 3
+Output: 0
+Explanation:You can split the string into "aa", "bb" and "c", all of them are palindrome.
+Example 3:
+Input: s = "leetcode", k = 8
+Output: 0
+
+
+Constraints:
+
+1 <= k <= s.length <= 100.
+s only contains lowercase English letters.
+
+Accepted18.5KSubmissions30.4KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringDynamic ProgrammingSimilar QuestionsPalindrome Partitioning IVHardShow Hint 1For each substring calculate the minimum number of steps to make it palindrome and store it in a table.Show Hint 2Create a dp(pos, cnt) which means the minimum number of characters changed for the suffix of s starting on pos splitting the suffix on cnt chunks.

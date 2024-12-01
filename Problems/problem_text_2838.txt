@@ -1,0 +1,5 @@
+This article covers queue implementation in Java. A queue is a linear data structure that follows the FIFO (FirstIn, FirstOut) principle. That means the object inserted first will be the first one out, followed by the object inserted next.
+
+Approach-1: 
+
+Queue Implementation using an array:

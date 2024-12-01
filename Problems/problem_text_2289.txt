@@ -1,0 +1,33 @@
+Write code to print all combinations of positive integers in increasing order that sum to a given positive number.
+
+Example: 
+
+
+Input: N = 3
+
+1 1 1
+1 2
+3
+
+Input: N = 4
+
+1 1 1 1
+1 1 2
+1 3
+2 2
+4
+
+Input: N = 5
+
+1 1 1 1 1
+1 1 1 2
+1 1 3
+1 2 2
+1 4
+2 3
+5
+
+
+Approach-1: 
+
+We can easily solve the problem using recursion by taking the help of an auxiliary array to store combinations. This approach is demonstrated below in C, Java, and Python:

@@ -1,0 +1,26 @@
+Given a chessboard, find the shortest distance (minimum number of steps) taken by a knight to reach a given destination from a given source.
+
+Example: 
+
+
+Input:
+
+N = 8 (8  8 board)
+Source = (7, 0)
+Destination = (0, 7)
+
+Output: Minimum number of steps required is 6
+
+
+Approach-1: 
+
+
+The idea is to use Breadthfirst search (BFS) as it is the shortest path problem. Following is the complete algorithm:
+Create an empty queue and enqueue the source cell having a distance of 0 from the source (itself).
+Loop till queue is empty:
+
+Dequeue next unvisited node.
+If the popped node is the destination node, return its distance.
+Otherwise, we mark the current node as visited. For each of eight possible movements for a knight, enqueue each valid movement with +1 distance (minimum distance of a given node from the source is one more than the minimum distance of parent from source).
+
+

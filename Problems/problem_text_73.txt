@@ -1,0 +1,18 @@
+1081. Smallest Subsequence of Distinct CharactersMedium1653143Add to ListShareGiven a string s, return the lexicographically smallest subsequence of s that contains all the distinct characters of s exactly once.
+
+Example 1:
+Input: s = "bcabc"
+Output: "abc"
+
+Example 2:
+Input: s = "cbacdcbc"
+Output: "acdb"
+
+
+Constraints:
+
+1 <= s.length <= 1000
+s consists of lowercase English letters.
+
+
+Note: This question is the same as 316: https://leetcode.com/problems/remove-duplicate-letters/Accepted38.9KSubmissions68.4KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringStackGreedyMonotonic StackSimilar QuestionsFind the Most Competitive SubsequenceMediumShow Hint 1Greedily try to add one missing character. How to check if adding some character will not cause problems ? Use bit-masks to check whether you will be able to complete the sub-sequence if you add the character at some index i.

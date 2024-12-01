@@ -1,0 +1,9 @@
+Given the root of a special binary tree with each node containing an additional next pointer, link nodes at the same level using the next pointer in the form of a linked list like structure.
+
+Approach-1: 
+
+We can solve this problem in linear time by using hashing. The idea is to traverse the tree in a preorder fashion and store nodes present at each level in a map from left to right. After every node is processed, iterate through the map, and for each level, set the next node for every node present in it.Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 2
+
+How can we solve this using constant space?

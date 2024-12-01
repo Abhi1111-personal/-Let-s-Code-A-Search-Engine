@@ -1,0 +1,19 @@
+Given a binary matrix, find the size of the largest square submatrix, which is surrounded by all 1s.
+
+Example: 
+
+
+111111
+101101
+011001
+111111
+100101
+101100
+101011
+111011
+
+
+Approach-1: 
+
+The brute-force solution is to consider every square submatrix and check if it is surrounded by all 1's. We keep track of the dimensions of the largest square submatrix seen and finally return it. The time complexity of this solution is O(M2  N2), where M and N are dimensions of the matrix.
+We can reduce the time complexity of the problem to O(M2  N) by using O(M  N) extra space. The idea is to create two auxiliary matrices, say X and Y, where X[i][j] and Y[i][j] stores the total number of continuous horizontal and vertical 1's ending at cell (i, j), respectively in the given matrix.

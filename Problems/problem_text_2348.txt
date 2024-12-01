@@ -1,0 +1,26 @@
+Given a set of positive integers, check if it can be divided into two subsets with equal sum.
+
+Example: 
+
+
+Consider S = {3, 1, 1, 2, 2, 1}
+
+We can partition S into two partitions, each having a sum of 5.
+
+S1 = {1, 1, 1, 2}
+S2 = {2, 3}
+
+Note that this solution is not unique. Heres another solution.
+
+S1 = {3, 1, 1}
+S2 = {2, 2, 1}
+
+
+Approach-1: 
+
+The partition problem is a special case of the Subset Sum Problem, which itself is a special case of the Knapsack Problem. The idea is to calculate the sum of all elements in the set, say sum. If sum is odd, we cant divide the array into two sets. If sum is even, check if a subset with sum/2 exists or not. Following is the algorithm to find the subset sum:Consider each item in the given array one by one, and for each item, there are two possibilities:
+
+Approach 2
+
+
+The problem has an optimal substructure and also exhibits overlapping subproblems, i.e., the problem can be split into smaller subproblems, and the same subproblems will get computed again and again. We can easily prove this by drawing a recursion tree of the above code.

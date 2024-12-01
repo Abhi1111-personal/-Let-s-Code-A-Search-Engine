@@ -1,0 +1,9 @@
+Given a directed weighted graph, report a negative-weight cycle in the graph, if any. A negative-weight cycle is a cycle in a graph whose edges sum to a negative value.
+
+Approach-1: 
+
+Approach 1: Using BellmanFord algorithmBellmanFord algorithm is used to compute the shortest paths from a single source vertex to all the other vertices in a given weighted digraph. It can be modified to report any negative-weight cycle in the graph.
+
+Approach 2
+
+FloydWarshall algorithm is an algorithm for finding the shortest paths in a weighted graph with positive or negative edge weights. It can easily be modified to report any negative-weight cycle in the graph.

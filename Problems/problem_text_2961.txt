@@ -1,0 +1,6 @@
+The lexicographically minimal string rotation (or lexicographically least circular substring) is the problem of finding a strings rotation possessing the lowest lexicographical order among all possible rotations.
+
+Approach-1: 
+
+
+The idea is to iterate through successive rotations of the given string while keeping track of the most lexicographically minimal rotation encountered. Following is the C++, Java, and Python implementation of the idea:

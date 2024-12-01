@@ -1,0 +1,18 @@
+Given a string, find all combinations of non-overlapping substrings of it.
+
+Example: 
+
+
+Input: ABC
+
+Output: [A, B, C], [A, BC], [AB, C], [ABC]
+
+
+Input: ABCD
+
+Output: [A, B, C, D], [A, B, CD], [A, BC, D], [A, BCD], [AB, C, D], [AB, CD], [ABC, D], [ABCD]
+
+
+Approach-1: 
+
+The idea is to use recursion to solve this problem. For a given string str of length n, consider every prefix str[0, i] of it one by one. We append the prefix to the output string by enclosing it within the parenthesis and recur for the remaining substring str[i+1, n-1]. If every substring of the original string is processed, add the output string to result.Following is the C++, Java, and Python implementation of the idea:

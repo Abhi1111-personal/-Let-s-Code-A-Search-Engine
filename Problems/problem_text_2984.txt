@@ -1,0 +1,22 @@
+Write an iterative program to reverse a string in C++ and Java.
+
+Example: 
+
+
+Input: Hello, World
+
+Output: dlroW ,olleH
+
+
+Approach-1: 
+
+
+
+
+Approach 2
+
+Following is the C++ and Java implementation of the idea:
+
+Approach 3
+
+The above solution takes O(n) for stack data structure which is not recommended. We can easily solve this problem in linear time and constant space. Following is the iterative in-place solution in C++ and Java:

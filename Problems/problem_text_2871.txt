@@ -1,0 +1,9 @@
+Given a connected undirected graph, check if it contains any cycle or not.
+
+Approach-1: 
+
+Recommended Read:Types of edges involved in DFS and relation between them
+
+Approach 2
+
+The following graph contains a cycle 8911128:

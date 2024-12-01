@@ -1,0 +1,6 @@
+Write a function that takes two lists, each of which is sorted in increasing order, and merges the two into one list, which is in decreasing order, and returns it. In other words, merge two sorted linked lists from their end.
+
+Approach-1: 
+
+There are few cases to deal with  either a or b may be empty, during processing, either a or b may run out first, and finally, theres the problem of starting the result list empty, and building it up while going through a and b.
+We can easily solve this problem using the moveNode() function as a helper, which takes the node from the front of the source and moves it to the front of the destination. The rest of the code remains similar to the merge process of merge sort.

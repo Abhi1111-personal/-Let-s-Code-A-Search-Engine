@@ -1,0 +1,19 @@
+Given two linked lists, move front node of the second list in front of the first list.
+
+Example: 
+
+
+Input:
+
+First List: 1 > 2 > 3 > null
+Second List: 6 > 4 > 2 > null
+
+Output:
+
+First List: 6 > 1 > 2 > 3 > null
+Second List: 4 > 2 > null
+
+
+Approach-1: 
+
+This is a variant on push(). Instead of creating a new node and pushing it onto the given list, it takes two lists, removes the front node from the second list, and moves it to the front of the first. This turns out to be a handy utility function to have for several later problems.The algorithm can be implemented as follows in C, Java, and Python:

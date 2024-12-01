@@ -1,0 +1,10 @@
+Given a number N, find all factors of N.
+Example:
+N = 6 
+factors = {1, 2, 3, 6}
+
+
+Make sure the returned array is sorted.
+Problem Approach:
+VIDEO : https://www.youtube.com/watch?v=dolcMgiJ7I0
+Complete code in the hint.

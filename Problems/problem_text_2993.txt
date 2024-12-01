@@ -1,0 +1,30 @@
+Given a set of single-digit positive numbers, find all possible combinations of words formed by replacing the continuous digits with corresponding character in the English alphabet, i.e., subset {1} can be replaced by A, {2} can be replaced by B, {1, 0} can be replaced by J, {2, 1} can be replaced by U, etc.
+
+Example: 
+
+
+Input: digits[] = { 1, 2, 2 }
+Output: ABB, AV, LB
+
+{1, 2, 2} = ABB
+{1, 22} = AV
+{12, 2} = LB
+
+
+Input: digits[] = { 1, 2, 2, 1 }
+Output: ABBA, ABU, AVA, LBA, LU
+
+{1, 2, 2, 1} = ABBA
+{1, 2, 21} = ABU
+{1, 22, 1} = AVA
+{12, 2, 1} = LBA
+{12, 21} = LU
+
+
+Approach-1: 
+
+For every i'th element of the input, there are two possibilities  either this i'th element will be combined with (i+1)'th element if the number formed by them is less than equal to 26 or i'th element itself will form a new character.The idea is to recur with the remaining digits by considering both possibilities. The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+The only difference is that instead of using string to store the output, use binary tree nodes. Following is the implementation in C++, Java, and Python based on the idea. It constructs a binary tree where each leaf node contains one unique combination of words formed.

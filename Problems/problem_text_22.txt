@@ -1,0 +1,24 @@
+1017. Convert to Base -2Medium351228Add to ListShareGiven an integer n, return a binary string representing its representation in base -2.
+Note that the returned string should not have leading zeros unless the string is "0".
+
+Example 1:
+Input: n = 2
+Output: "110"
+Explantion: (-2)2 + (-2)1 = 2
+
+Example 2:
+Input: n = 3
+Output: "111"
+Explantion: (-2)2 + (-2)1 + (-2)0 = 3
+
+Example 3:
+Input: n = 4
+Output: "100"
+Explantion: (-2)2 = 4
+
+
+Constraints:
+
+0 <= n <= 109
+
+Accepted18.6KSubmissions30.7KSeen this question in a real interview before?YesNoCompaniesRelated TopicsMathSimilar QuestionsEncode NumberMediumShow Hint 1Figure out whether you need the ones digit placed or not, then shift by two.

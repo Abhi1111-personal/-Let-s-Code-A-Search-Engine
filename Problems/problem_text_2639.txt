@@ -1,0 +1,5 @@
+Given an undirected connected graph, check if the graph is 2edge connected and return the bridges (if any).
+
+Approach-1: 
+
+Prerequisite:Types of edges involved in DFS and relation between them

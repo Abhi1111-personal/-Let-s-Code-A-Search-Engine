@@ -1,0 +1,29 @@
+Given an N  N matrix where each cell has a distinct value in the 1 to N  N. Find the longest sequence formed by adjacent numbers in the matrix such that for each number, the number on the adjacent neighbor is +1 in its value.
+
+Example: 
+
+
+The longest path starting from cell (i, j) =
+
+M[i][j] + | longest path starting from cell (i-1, j)(if M[i][j] + 1 = M[i-1][j])
+| longest path starting from cell (i, j-1)(if M[i][j] + 1 = M[i][j-1])
+| longest path starting from cell (i, j+1)(if M[i][j] + 1 = M[i][j+1])
+| longest path starting from cell (i+1, j)(if M[i][j] + 1 = M[i+1][j])
+
+
+Approach-1: 
+
+
+The idea is to use recursion. The problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. We can recursively define the problem as:
+The longest path starting from cell (i, j) =
+
+M[i][j] + | longest path starting from cell (i-1, j)(if M[i][j] + 1 = M[i-1][j])
+| longest path starting from cell (i, j-1)(if M[i][j] + 1 = M[i][j-1])
+| longest path starting from cell (i, j+1)(if M[i][j] + 1 = M[i][j+1])
+| longest path starting from cell (i+1, j)(if M[i][j] + 1 = M[i+1][j])
+
+
+Approach 2
+
+
+The time complexity of the proposed solution is exponential as we are doing a lot of redundant work. As we are calculating the longest path starting from each cell (i, j) of the matrix. Therefore,

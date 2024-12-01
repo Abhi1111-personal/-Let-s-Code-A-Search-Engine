@@ -1,0 +1,52 @@
+Given two integers, find the minimum number between them without using any conditional statement (or ternary operator).
+
+Example: 
+
+
+Case 1: When a is greater
+
+(a > b)  b + (b > a)  a = 1  b + 0  a = b
+
+Case 2: When b is greater
+
+(a > b)  b + (b > a)  a = 0  b + 1  a = a
+
+
+Approach-1: 
+
+
+
+
+Approach 2
+
+We can apply the above principle to the following code. Initially, min is a. Now if min > b is true, i.e., b is less than a, the second subexpression min = b will be evaluated and min will set to b; otherwise, if min > b is false, the second subexpression will not be evaluated and min will remain equal to a.
+
+Approach 3
+
+This approach is demonstrated below in C. This solution wont work on negative numbers.
+
+Approach 4
+
+C
+C
+
+
+
+
+
+
+
+
+12345678
+
+int minimum (int a, int b){if (!a || !b) {return 0;}return 1 + minimum(--a, --b);}
+
+
+
+
+
+DownloadRun Code
+
+
+Approach 5
+

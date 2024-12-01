@@ -1,0 +1,23 @@
+Given an integer array, find the maximum sum of subsequence where the subsequence contains no element at adjacent positions.
+
+Example: 
+
+
+Input: { 1, 2, 9, 4, 5, 0, 4, 11, 6 }
+Output: The maximum sum is 26
+
+The maximum sum is formed by subsequence { 1, 9, 5, 11 }
+
+
+Approach-1: 
+
+The problem is similar to the 0/1 Knapsack problem, where for every item, we have two choices  to include that element in the solution or exclude that element from the solution. We can solve this problem by following the same logic. The only difference is that we include the current element only if its not adjacent to the previous element considered.The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+We can also solve this problem in a bottom-up fashion using dynamic programming (Tabulation). In the bottom-up approach, we solve smaller subproblems first, then solve larger subproblems from them. The idea is to create an auxiliary array lookup[] to store the solution of subproblems. For each index i, lookup[i] stores the maximum value that can be attained till index i. It uses the value of smaller values i already computed. It has the same asymptotic runtime as Memoization but no recursion overhead.
+
+Approach 3
+
+
+The above solution uses extra space. We can also solve this problem without using any extra space. If we analyze the solution, we can see that the maximum sum until any index i can be found by knowing the maximum sum of the previous index i-1 and index i-2. Instead of storing the complete array, we can maintain two variables that store the maximum sum until the previous index and before the previous index.

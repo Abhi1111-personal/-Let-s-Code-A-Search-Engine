@@ -1,0 +1,13 @@
+Given a binary tree, write an efficient algorithm to invert it.
+
+Approach-1: 
+
+Recursive SolutionThis is one of the most famous interview questions and can be easily solved recursively. The idea is to traverse the tree in a preorder fashion, and for every node encountered, swap its left and right child before recursively inverting its left and right subtree. We can also traverse the tree in a postorder fashion.
+
+Approach 2
+
+Iterative Solution
+
+Approach 3
+
+The code is almost similar to the iterative preorder traversal of a binary tree. This is demonstrated below in C++, Java, and Python:

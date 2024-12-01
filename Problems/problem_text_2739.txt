@@ -1,0 +1,1 @@
+Given a list that can grow in both horizontal and vertical directions (right and down), flatten it into a singly linked list. The conversion should be in such a way that the down node should be processed before the next node for any node.

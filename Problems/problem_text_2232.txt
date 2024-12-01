@@ -1,0 +1,17 @@
+Given an integer array, move all zeros present in it to the end. The solution should maintain the relative order of items in the array and should not use constant space.
+
+Example: 
+
+
+Input: { 6, 0, 8, 2, 3, 0, 4, 0, 1 }
+
+Output: { 6, 8, 2, 3, 4, 1, 0, 0, 0 }
+
+
+Approach-1: 
+
+The idea is simple  if the current element is non-zero, place the element at the next available position in the array. After all elements in the array are processed, fill all remaining indices by 0. This approach is demonstrated below in C, Java, and Python:
+
+Approach 2
+
+Using partitioning logic of Quicksort

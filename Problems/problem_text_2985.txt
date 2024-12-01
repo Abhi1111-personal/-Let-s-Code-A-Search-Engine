@@ -1,0 +1,13 @@
+Write a recursive program to efficiently reverse a given string in C, C++, and Java.
+
+Example: 
+
+
+Input: Techie Delight
+
+Output: thgileD eihceT
+
+
+Approach 2
+
+Following is the implementation in C, C++, and Java based on the above idea:

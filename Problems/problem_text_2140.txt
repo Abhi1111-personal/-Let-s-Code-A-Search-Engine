@@ -1,0 +1,93 @@
+There is a rectangular field with two types of resources viz, resource A and resource B. At each cell in the field, both of 
+the resources can be present. There are two types of factories which can collect resource A and B. If resource A is collected 
+in a factory then resource B is lost and vice versa. Now, these two factories are located perpendicular to each other i.e the 
+factory collecting resource A is at the top ( north) of the rectangular field and the factory collecting resource B is to the 
+left ( west) of the rectangular field. The resources have to be brought to the factory on a straight path without taking any 
+turns. This implies that if there is any south-north conveyor belt in the cell, but the cell north of it contains an east-west 
+conveyor belt, then all resources transported on the south-north conveyor belt will be lost.
+You have to design a conveyor belt system that maximizes the total amount of minerals mined, i.e the sum of the amount of 
+resource A transported to the top and the sum of the amount of resource B transported to the left. You are given a 2-D matrix 
+A and B of the same size denoting the amount of resource of the corresponding type in that 
+cell.
+Since the answer can be large, return it modulo 109 + 7.
+
+
+
+Constraints: 
+
+1 <= |A| = |B| <= 103
+1 <= |A[0]| = |B[0]| <=103
+0 <= A[i][j], B[i][j] <= 109
+
+
+
+Input Format: 
+
+The first line contains a matrix that specifies the availability of the resource A in each of the cells.
+The second line contains a matrix that specifies the availability of the resource B in each of the cells.
+
+
+
+Output Format: 
+
+Return a single integer which specifies the maximum amount of resources that can be processed by the factories.
+
+Example Input: 
+
+
+  Input 1:
+
+   A = [
+         [7, 8, 9]
+         [4, 5, 6]
+         [1, 2, 3]
+       ]
+
+B = [
+         [1, 2, 3]
+         [4, 5, 6]
+         [7, 8, 9]
+       ]
+
+Input 2:
+
+
+   A = [
+         [1, 0, 1]
+       ]
+
+B = [
+         [2, 1, 0]
+       ]
+
+
+
+
+Example Output: 
+
+
+  Output 1:
+
+  63
+
+Output 2:
+
+
+  4
+
+
+
+
+Example Explanation: 
+
+
+  Explanation 1:
+
+  The first row can be sent to the top to collect resource A. The rest two rows will be sent to the left to collect resource B. 
+
+Explanation 2:
+
+
+  The first two columns can be sent to the left. The third column will be sent to the top.Total resource collected - 2 + 1 + 1 = 4 
+
+

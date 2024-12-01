@@ -1,0 +1,17 @@
+Given a dictionary of ancient origin where the words are arranged alphabetically, find the correct order of alphabets in the ancient language.
+
+Example: 
+
+
+Input: Ancient dictionary { , , , , ,  }
+
+Output: The correct order of alphabets in the ancient language is {     }.
+
+Since the input is small, more than one ordering is possible. Another such ordering is {     }.
+
+
+Input: Ancient dictionary { , , , ,  }
+
+Output: The correct order of alphabets in the ancient language is {    }.
+
+The alphabets {, , } are not included in the order as they are not properly defined.

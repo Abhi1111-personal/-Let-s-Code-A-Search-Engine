@@ -1,0 +1,48 @@
+1583. Count Unhappy FriendsMedium154570Add to ListShareYou are given a list ofpreferencesfornfriends, where n is always even.
+For each person i,preferences[i]containsa list of friendssorted in the order of preference. In other words, a friend earlier in the list is more preferred than a friend later in the list.Friends ineach list aredenoted by integers from 0 to n-1.
+All the friends are divided into pairs.The pairings aregiven in a listpairs,where pairs[i] = [xi, yi] denotes xiis paired with yi and yi is paired with xi.
+However, this pairing may cause some of the friends to be unhappy.A friend xis unhappy if xis paired with yand there exists a friend uwhois paired with vbut:
+
+xprefers uover y,and
+uprefers xover v.
+
+Return the number of unhappy friends.
+
+Example 1:
+Input: n = 4, preferences = [[1, 2, 3], [3, 2, 0], [3, 1, 0], [1, 2, 0]], pairs = [[0, 1], [2, 3]]
+Output: 2
+Explanation:
+Friend 1 is unhappy because:
+- 1 is paired with 0 but prefers 3 over 0, and
+- 3 prefers 1 over 2.
+Friend 3 is unhappy because:
+- 3 is paired with 2 but prefers 1 over 2, and
+- 1 prefers 3 over 0.
+Friends 0 and 2 are happy.
+
+Example 2:
+Input: n = 2, preferences = [[1], [0]], pairs = [[1, 0]]
+Output: 0
+Explanation: Both friends 0 and 1 are happy.
+
+Example 3:
+Input: n = 4, preferences = [[1, 3, 2], [2, 3, 0], [1, 3, 0], [0, 2, 1]], pairs = [[1, 3], [0, 2]]
+Output: 4
+
+
+Constraints:
+
+2 <= n <= 500
+nis even.
+preferences.length== n
+preferences[i].length== n - 1
+0 <= preferences[i][j] <= n - 1
+preferences[i]does not contain i.
+All values inpreferences[i]are unique.
+pairs.length== n/2
+pairs[i].length== 2
+xi != yi
+0 <= xi, yi<= n - 1
+Each person is contained in exactly one pair.
+
+Accepted16.4KSubmissions28.3KSeen this question in a real interview before?YesNoCompaniesRelated TopicsArraySimulationShow Hint 1Create a matrix rank where rank[i][j] holds how highly friend i' views j. This allows for O(1) comparisons between people

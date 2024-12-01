@@ -1,0 +1,8 @@
+Given an integer array, sort it using the insertion sort algorithm.
+
+Approach-1: 
+
+Insertion Sort ImplementationFollowing is an iterative implementation of the insertion sort algorithm in C, Java, and Python:
+
+Approach 2
+

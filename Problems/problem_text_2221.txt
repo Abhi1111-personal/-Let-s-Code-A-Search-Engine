@@ -1,0 +1,14 @@
+Given a binary array containing 0s and 1s, find the largest subarray with equal numbers of 0s and 1s.
+
+Example: 
+
+
+Input: { 0, 0, 1, 0, 1, 0, 0 }
+
+Output: Largest subarray is { 0, 1, 0, 1 } or { 1, 0, 1, 0 }
+
+
+Approach-1: 
+
+The problem differs from the problem of finding the largest subsequence with equal numbers of 0s and 1s. Unlike subsequences, subarrays are required to occupy consecutive positions within the original array.
+A naive solution would be to consider all subarrays and, for each subarray, count the total number of 0s and 1s present. If the subarray contains an equal number of 0s and 1s, update the largest subarray if required. The time complexity of the naive solution is O(n3) as there are n2 subarrays in an array of size n, and it takes O(n) time to find count 0s and 1s. We can optimize the method to run in O(n2) time by calculating the count of 0s and 1s in constant time.

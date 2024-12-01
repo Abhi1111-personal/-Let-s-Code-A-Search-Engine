@@ -1,0 +1,14 @@
+Given an integer array where every element appears an even number of times, except one element which appears an odd number of times. If the identical elements appear in pairs in the array and there cannot be more than two consecutive occurrences of an element, find the odd occurring element in logarithmic time and constant space.
+
+Approach-1: 
+
+
+A naive solution is to sort the array and count each elements occurrence by traversing the sorted array. We return the element with the odd count. The time complexity of this solution is O(n.log(n)), where n is the size of the input.The above approach is demonstrated below in C++, Java, and Python:
+
+Approach 2
+
+
+
+Approach 3
+
+As per problem constraints, identical elements appear in pairs in the array, and there cannot be more than two consecutive occurrences of any element. So, there must be a single occurrence of the odd element somewhere in the array. We can find this odd occurrence using the binary search algorithm.

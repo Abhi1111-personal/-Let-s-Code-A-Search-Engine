@@ -1,0 +1,4 @@
+Write a function that takes a linked list, deallocates all of its memory, and sets its head pointer to NULL (the empty list).
+
+Approach 2
+

@@ -1,0 +1,26 @@
+Given a device having left, right, top, and bottom buttons and an OK button to enter a text from a virtual keypad having alphabets from AY arranged in a 5  5 grid, as shown below. Find the shortest route in the device to construct a given string if we start from the top-left position in the keypad.
+
+Example: 
+
+
+Keypad:
+
+ABCDE
+FGHIJ
+KLMNO
+PQRST
+UVWXY
+
+Device:
+
+T
+LMR
+B
+
+where,
+
+T  Move up
+B  Move down
+L  Move left
+R  Move right
+M  Press OK

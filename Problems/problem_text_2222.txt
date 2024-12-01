@@ -1,0 +1,16 @@
+Given an integer array, find the maximum product of two integers in it.
+
+Approach-1: 
+
+
+A naive solution is to consider every pair of elements and calculate their product. Update the maximum product found so far if the product of the current pair is greater. Finally, print the elements involved in the maximum product. This is demonstrated below in C, Java, and Python:
+
+Approach 2
+
+
+The time complexity can be improved by sorting the array. Then the result is the maximum of the following:
+
+Approach 3
+
+
+We can solve this problem in linear time as we need the only maximum, second maximum, minimum, and second minimum elements to solve this problem. We can compute all these in only a single traversal of the array, which accounts for O(n) time complexity. This approach is demonstrated below in C, Java, and Python:

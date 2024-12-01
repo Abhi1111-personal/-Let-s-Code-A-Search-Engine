@@ -1,0 +1,23 @@
+Explain the working of a disjointset data structure and efficiently implement it.
+
+Example: 
+
+
+function MakeSet(x)
+x.parent = x
+
+function Find(x)
+if x.parent == x
+return x
+else
+return Find(x.parent)
+
+function Union(x, y)
+xRoot = Find(x)
+yRoot = Find(y)
+xRoot.parent = yRoot
+
+
+Approach 2
+
+1. The first way, called union by rank, is to always attach the smaller tree to the root of the larger tree. Since it is the depth of the tree that affects the running time, the tree with a smaller depth gets added under the root of the deeper tree, which only increases the depth of the depths were equal. Single element trees are defined to have a rank of zero, and whenever two trees of the same rank r are united, the result has the rank of r+1. The worst-case running-time improves to O(log(n)) for the Union or Find operation.

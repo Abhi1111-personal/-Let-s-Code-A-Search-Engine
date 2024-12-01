@@ -1,0 +1,19 @@
+Given a binary tree, determine whether it is a BST.
+
+Example: 
+
+
+20
+/\
+1030
+/\
+540
+
+
+Approach-1: 
+
+This problem has a simple recursive solution. The BST property every node on the right subtree has to be larger than the current node and every node on the left subtree has to be smaller than the current node is the key to figuring out whether a tree is a BST or not.The greedy algorithm  traverse the tree, at every node check whether the node contains a value larger than the value at the left child and smaller than the value on the right child  does not work for all cases. Consider the following tree:
+
+Approach 2
+
+Another approach:

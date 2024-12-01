@@ -1,0 +1,5 @@
+Given a BST and a positive number k, find the k'th largest node in the BST.
+
+Approach-1: 
+
+We know that an inorder traversal of a binary search tree returns the nodes in ascending order. To find the k'th smallest node, we can perform inorder traversal and store the inorder sequence in an array. Then the k'th largest node would be the (n-k)'th smallest node, where n is the total number of nodes present in the BST. The problem with this approach is that it requires two traversals of the array. We can solve this problem in a single traversal of the array by using reverse inorder traversal (traverse the right subtree before the left subtree for every node). Then the reverse inorder traversal of a binary search tree will process the nodes in descending order.

@@ -1,0 +1,15 @@
+Given an integer array, sort its element by their frequency and index. i.e., if two elements have different frequencies, then the one which has more frequency should come first; otherwise, the one which has less index should come first.
+
+Example: 
+
+
+Input: [3, 3, 1, 1, 1, 8, 3, 6, 8, 7, 8]
+
+Output: [3, 3, 3, 1, 1, 1, 8, 8, 8, 6, 7]
+
+
+Approach-1: 
+
+The idea is to write a custom comparison method to solve this problem. Let the two elements to be compared are x and y. Then
+If x and y have different frequencies, then the one with more frequency should be treated as smaller than the other.
+If x and y have the same frequencies, then the one with less index should be treated as smaller than the other.

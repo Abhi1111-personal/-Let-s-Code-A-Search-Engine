@@ -1,0 +1,15 @@
+Given a list of strings where no string is a substring of another, find the shortest string that contains each string in the list as a substring.
+
+Example: 
+
+
+Input: [CATGC, CTAAGT, GCTA, TTCA, ATGCATC]
+Output: The shortest superstring is GCTAAGTTCATGCATC
+
+GCTAAGTTCATGCATC is the shortest possible string such that it contains every string in the input list as its substring.
+
+GCTAAGTTCATGCATC
+GCTAAGTTCATGCATC
+GCTAAGTTCATGCATC
+GCTAAGTTCATGCATC
+GCTAAGTTCATGCATC

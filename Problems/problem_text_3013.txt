@@ -1,0 +1,5 @@
+Trie is a tree-based data structure used for efficient retrieval of a key in a huge word set. In this post, we will implement the Trie data structure in Java.
+
+Approach-1: 
+
+Trie Data Structure  Python Implementation

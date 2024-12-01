@@ -1,0 +1,21 @@
+Given a sorted array of non-negative distinct integers, find the smallest missing non-negative element in it.
+
+Example: 
+
+
+Input: nums[] = [0, 1, 2, 6, 9, 11, 15]
+Output: The smallest missing element is 3
+
+
+Input: nums[] = [1, 2, 3, 4, 6, 9, 11, 15]
+Output: The smallest missing element is 0
+
+
+Input: nums[] = [0, 1, 2, 3, 4, 5, 6]
+Output: The smallest missing element is 7
+
+
+Approach-1: 
+
+A simple analysis of the problem shows us that the smallest missing number would be the elements index, which is not equal to its element. For instance, consider array [0, 1, 2, 6, 9, 11, 15]. Here, the smallest missing element is 3 since 6 is present at index 3 (instead of element 3). If all elements in the array are at their right position, then the smallest missing number is equal to the array size; For instance, 6 in the case of [0, 1, 2, 3, 4, 5].
+A naive solution would be to run a linear search on the array and return the first index, which doesnt match its value. If no mismatch happens, then return the array size. The problem with this approach is that its worst-case time complexity is O(n), where n is the size of the input. This solution also does not take advantage of the fact that the input is sorted.

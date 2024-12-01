@@ -1,0 +1,21 @@
+Given a list of jobs where each job has a start and finish time, and a profit associated with it, find a maximum profit subset of non-overlapping jobs.
+
+Example: 
+
+
+Job 1: (0, 6, 60)
+Job 2: (5, 9, 50)
+Job 3: (1, 4, 30)
+Job 4: (5, 7, 30)
+Job 5: (3, 5, 10)
+Job 6: (7, 8, 10)
+
+
+Approach-1: 
+
+This post will discuss a dynamic programming solution for Weighted Interval Scheduling Problem, which is nothing but a variation of the Longest Increasing Subsequence (LIS) algorithm.
+The idea is first to sort given jobs in increasing order of their start time. Let jobs[0n-1] be the sorted array of jobs. We can define an array maxProfit[] such that maxProfit[i] itself is an array that stores the non-conflicting jobs with maximum profit that ends with the i'th job.
+
+Approach 2
+
+How to print the jobs involved in maximum profit?

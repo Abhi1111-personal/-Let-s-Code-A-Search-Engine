@@ -1,0 +1,22 @@
+Given a string and a pattern, in-place replace all non-overlapping occurrences of the pattern in the string by a specified character.
+
+Example: 
+
+
+Input:
+
+String = ABCABCXABC;
+Pattern = ABC;
+Character = @;
+
+Output: @@X@
+
+
+Approach 2
+
+
+String = ABCABCXABC;
+Pattern = ABC;
+Character = @;
+
+Output: @X@

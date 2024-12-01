@@ -1,0 +1,15 @@
+Given a positive number n and a mobile keypad having digits from 0 to 9 associated with each key, count the total possible combinations of digits having length n. We can start with any digit and press only four adjacent keys of any digit. The keypad also contains * and # keys, which we are not allowed to press.
+
+Example: 
+
+
+Input: n = 2
+
+Output: 36
+
+Explanation: Total possible combinations are 36 [00, 08, 11, 12, 14, 21, 22, 23, 25, 32, 33, 36, 41, 44, 45, 47,  ,96, 98, 99]
+
+
+Approach-1: 
+
+We can use recursion to solve this problem since the problem has optimal substructure. The problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial.The idea is to consider each digit one by one and count all ndigit numbers starting from the current digit. For each digit i, recur for digit i, and all digits reachable from i. To easily find all digits reachable from any digit, use a multimap that stores the mapping of digits reachable from every digit. When the digit becomes ndigit, update the count.

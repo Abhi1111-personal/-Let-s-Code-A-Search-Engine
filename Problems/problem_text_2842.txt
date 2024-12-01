@@ -1,0 +1,32 @@
+Given a binary tree, efficiently print all nodes in it between two given levels. The nodes for any level should be printed from left and right.
+
+Example: 
+
+
+levelorder(root, start, end)
+q > empty queue
+q.enqueue(root)
+level > 0
+while (not q.isEmpty())
+size > q.size()
+level = level + 1
+while (size)
+node > q.dequeue()
+if (level between start and end)
+print(node)
+if (node.left <> null)
+q.enqueue(node.left)
+if (node.right <> null)
+q.enqueue(node.right)
+size = size  1
+
+
+Approach-1: 
+
+A simple solution would be to print all nodes of given levels one by one. We can print all nodes present in a level by modifying the preorder traversal of the tree. The time complexity of this solution is O(n2), where n is the total number of nodes in the binary tree.
+We can reduce the time complexity to O(n) by modifying the level order traversal. Following is a pseudocode for a modified level order traversal, which maintains the level of each node:
+
+Approach 2
+
+
+We can also solve this problem by using hashing. The idea is to traverse the tree in a preorder fashion and store every node and its level in a multimap using the level number as a key. Finally, print all nodes corresponding to every level between given levels. Following is the C++, Java, and Python implementation of it:

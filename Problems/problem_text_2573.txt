@@ -1,0 +1,49 @@
+Given a linear equation of k variables, count the total number of possible solutions to it.
+
+Example: 
+
+
+Input: coeff = {1, 3, 5, 7}, rhs = 8
+
+Output: The total number of solutions is 6
+
+Above input represents the equation a + 3b + 5c + 7d = 8.
+
+( a = 1, b = 0, c = 0, d = 1 )
+( a = 0, b = 1, c = 1, d = 0 )
+( a = 2, b = 2, c = 0, d = 0 )
+( a = 3, b = 0, c = 1, d = 0 )
+( a = 5, b = 1, c = 0, d = 0 )
+( a = 8, b = 0, c = 0, d = 0 )
+
+
+Input: coeff = {1, 2, 3}, rhs = 4
+
+Output: The total number of solutions is 4
+
+Above input represents the equation x + 2y + 3z = 4.
+
+( x = 1, y = 0, z = 1 )
+( x = 0, y = 2, z = 0 )
+( x = 2, y = 1, z = 0 )
+( x = 4, y = 0, z = 0 )
+
+
+Approach-1: 
+
+The problem is similar to finding the total number of ways to get the denomination of coins. Here, coefficients of an equation can be considered coins denominations, and the RHS of an equation can be considered the desired change. Lets begin by recursively defining the problem:
+count(coeff, k, rhs) = count(coeff, k, rhs-coeff[k]) + count(coeff, k-1, rhs);
+
+
+Approach 2
+
+
+The above solution has an optimal substructure as it can be broken down into smaller subproblems. It also clearly displays overlapping subproblems, and we might end up solving the same subproblem repeatedly. The repeated subproblems can be seen by drawing the recursion tree for higher values of the desired change.
+
+Approach 3
+
+
+We can even write a bottom-up version of the above memoized solution. The following code shows how to implement this in C, Java, and Python:
+
+Approach 4
+

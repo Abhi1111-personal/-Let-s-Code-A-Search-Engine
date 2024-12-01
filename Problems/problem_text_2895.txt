@@ -1,0 +1,14 @@
+Find the largest number possible from a set of given numbers where the numbers append to each other in any order to form the largest number.
+
+Example: 
+
+
+Input: { 10, 68, 75, 7, 21, 12 }
+
+Output: 77568211210
+
+
+Approach-1: 
+
+Simply sorting the array in descending order and considering the sorted order is not possible here as the sorted array {75, 68, 21, 12, 10, 7} will result in the number 75682112107, which is less than the largest number possible 77568211210.
+The idea is to write our custom comparator function for the sorting routine. For two numbers, X and Y, the custom comparator function will not compare X and Y with each other, but it compares XY with YX, and the greater number will come first in sorted order. Here, XY denotes a number formed by appending Y to X, and YX denotes a number formed by appending X to Y. For example, for X = 15 and Y = 4, XY = 154 and YX = 415.

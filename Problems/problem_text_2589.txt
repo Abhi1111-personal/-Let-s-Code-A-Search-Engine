@@ -1,0 +1,42 @@
+Given a staircase, find the total number of ways to reach the n'th stair from the bottom of the stair when a person can only climb either 1 or 2 or 3 stairs at a time.
+
+Example: 
+
+
+Total ways to reach the 3rd stair are 4
+
+1 step + 1 step + 1 step
+1 step + 2 steps
+2 steps + 1 step
+3 steps
+
+
+Total ways to reach the 4th stair are 7
+
+1 step + 1 step + 1 step + 1 steps
+1 step + 1 step + 2 steps
+1 step + 2 steps + 1 step
+1 step + 3 steps
+2 steps + 1 step + 1 step
+2 steps + 2 steps
+3 steps + 1 step
+
+
+Approach-1: 
+
+Let T(n) be the total number of ways to reach the n'th stair from the bottom. Since a person is only allowed to climb either 1 or 2 or 3 stairs at a time, we can reach the n'th stair from either (n-1)'th stair, (n-2)'th stair, or from (n-3)'th stair. Considering this, the recurrence relation T(n) can be written as:
+T(n) = T(n-1) + T(n-2) + T(n-3), where n >= 0 and
+T(0) = 1, T(1) = 1, and T(2) = 2
+
+
+Approach 2
+
+
+The problem has an optimal substructure since a solution to a problem can be derived using the solution to its subproblems. Since both Dynamic programming properties are satisfied, dynamic programming can be used to optimize the code to linear time. We can do this in two ways:
+
+Approach 3
+
+We can also use tabulation to solve this problem in a bottom-up fashion. The idea is to construct a temporary array that stores each subproblem results using the already computed results of the smaller subproblems. This can be implemented as follows in C, Java, and Python:
+
+Approach 4
+

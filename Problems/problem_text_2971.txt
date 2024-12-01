@@ -1,0 +1,18 @@
+Given a string, find the first non-repeating character in it by doing only a single traversal of it.
+
+Example: 
+
+
+Input:
+
+string is ABCDBAGHC
+
+Output:
+
+The first non-repeating character in the string is D
+
+
+Approach-1: 
+
+A simple solution would be to store each characters count in a map or an array by traversing it once. Then traverse the string once more to find the first character having its count as 1. The time complexity of this solution is O(n) and requires O(n) extra space, where n is the length of the input string. The problem with this solution is that the string is traversed twice, violating the program constraints.
+We can solve this problem in a single traversal of the string. The idea is to use a map to store each distinct character count and the index of its first or last occurrence in the string. Then, traverse the map and find a character with a minimum index of the string.

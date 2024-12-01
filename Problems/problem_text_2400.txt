@@ -1,0 +1,13 @@
+Write a program to perform a division of two numbers without using the division operator (/).
+
+Approach 2
+
+
+
+Approach 3
+
+
+
+Approach 4
+
+This approach is inspired by this answer in Stack Overflow.

@@ -1,0 +1,25 @@
+Given a balanced expression that can contain opening and closing parenthesis, check if it contains any duplicate parenthesis or not.
+
+Example: 
+
+
+Input: ((x+y))+z
+Output: true
+Explanation: Duplicate () found in subexpression ((x+y))
+
+
+Input: (x+y)
+Output: false
+Explanation: No duplicate () is found
+
+
+Input: ((x+y)+((z)))
+Output: true
+Explanation: Duplicate () found in subexpression ((z))
+
+
+Approach-1: 
+
+We can use a stack to solve this problem. The idea is to traverse the given expression and
+If the current character in the expression is not a closing parenthesis ')', push the character into the stack.
+If the current character in the expression is a closing parenthesis ')', check if the topmost element in the stack is an opening parenthesis or not. If it is an opening parenthesis, then the subexpression ending at the current character is of the form ((exp)); otherwise, continue popping characters from the stack till matching '(' is found for current ')'.

@@ -1,0 +1,17 @@
+767. Reorganize StringMedium4634175Add to ListShareGiven a string s, rearrange the characters of s so that any two adjacent characters are not the same.
+Return any possible rearrangement of s or return "" if not possible.
+
+Example 1:
+Input: s = "aab"
+Output: "aba"
+Example 2:
+Input: s = "aaab"
+Output: ""
+
+
+Constraints:
+
+1 <= s.length <= 500
+s consists of lowercase English letters.
+
+Accepted210.3KSubmissions403.8KSeen this question in a real interview before?YesNoCompaniesRelated TopicsHash TableStringGreedySortingHeap (Priority Queue)CountingSimilar QuestionsRearrange String k Distance ApartHardTask SchedulerMediumLongest Happy StringMediumShow Hint 1Alternate placing the most common letters.

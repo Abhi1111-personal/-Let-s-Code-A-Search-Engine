@@ -1,0 +1,19 @@
+Given an M  N matrix of integers where each cell has a cost associated with it, find the minimum cost to reach the last cell (M-1, N-1) of the matrix from its first cell (0, 0). We can only move one unit right or one unit down from any cell, i.e., from cell (i, j), we can move to (i, j+1) or (i+1, j).
+
+Example: 
+
+
+Cost to reach cell (m, n) = cost[m][n] + min (cost to reach cell (m, n-1),
+cost to reach cell (m, n-1))
+
+
+Approach-1: 
+
+
+The idea is to use recursion. The problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. We can recursively define the problem as:
+Cost to reach cell (m, n) = cost[m][n] + min (cost to reach cell (m, n-1),
+cost to reach cell (m, n-1))
+
+
+Approach 2
+

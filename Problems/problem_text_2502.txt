@@ -1,0 +1,5 @@
+Convert a given binary tree into a BST (Binary Search Tree) by keeping its original structure intact.
+
+Approach-1: 
+
+The idea is to traverse the binary tree and store its keys in a set. We know that an inorder traversal of a binary search tree returns the nodes in sorted order, so traverse the tree again in an inorder fashion and put the keys present in the set (in sorted order) back to their correct position in the BST.The advantage of using a set over an array is that the keys are always retrieved in sorted order from the set. If an array is used, sort the keys first before inserting them back.

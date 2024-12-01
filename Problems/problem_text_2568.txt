@@ -1,0 +1,20 @@
+Given a set of positive integers S, partition set S into two subsets, S1 and S2, such that the difference between the sum of elements in S1 and S2 is minimized. The solution should return the minimum absolute difference between the sum of elements of two partitions.
+
+Approach-1: 
+
+This problem is an optimization version of the partition problem. The idea is to consider each item in the given set S one by one, and for each item, there are two possibilities:
+
+Include the current item in subset S1 and recur for the remaining items.
+Include the current item from the subset S2 and recur for the remaining items.
+
+
+
+Approach 2
+
+
+The problem has optimal substructure. That means the problem can be broken down into smaller, simple subproblems, which can further be divided into yet simpler, smaller subproblems until the solution becomes trivial. The above solution also exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are getting computed repeatedly.
+
+Approach 3
+
+
+We can also implement the bottom-up version of the memoized solution. The following code shows how to implement it in C++, Java, and Python:

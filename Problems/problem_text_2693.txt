@@ -1,0 +1,12 @@
+We have discussed the linked list data structure, which is dynamic in nature (the memory is allocated during the run time). Now the question that might be on a few peoples minds is  can a linked link be implemented statically as well? This post tries to answer this question.
+
+Approach 2
+
+Following is the C, Java, and Python implementation of the idea:
+
+Approach 3
+
+Following is the C, Java, and Python program that demonstrates it:
+
+Approach 4
+

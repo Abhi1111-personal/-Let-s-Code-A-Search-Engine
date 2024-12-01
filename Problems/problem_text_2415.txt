@@ -1,0 +1,43 @@
+Write an efficient algorithm to check if two binary trees are identical or not. Two binary trees are identical if they have identical structure and their contents are also the same.
+
+Example: 
+
+
+Input:
+11
+/\/\
+2323
+/\/\/\/\
+45674567
+
+Output: True
+Explanation: Both binary trees have the same structure and contents.
+
+Input:
+11
+/\/\
+2323
+/\/\/\/
+4567456
+
+Output: False
+Explanation: Both binary trees have different structures.
+
+Input:
+11
+/\/\
+2323
+/\/\/\/\
+45674568
+
+Output: False
+Explanation: Both binary trees have the same structure but differ in nodes values.
+
+
+Approach-1: 
+
+Recursive SolutionThe idea is to traverse both trees and compare values at their root node. If the value matches, recursively check if the first trees left subtree is identical to the left subtree of the second tree and the right subtree of the first tree is identical to the right subtree of the second tree. If the value at their root node differs, the trees violate data property. If at any point in the recursion, the first tree is empty and the second tree is non-empty, or the second tree is empty and the first tree is non-empty, the trees violate structural property, and they cannot be identical.
+
+Approach 2
+
+In an iterative version, we use the stack data structure similar to the implicit recursive stack. The implementation can be seen below in C++, Java, and Python:

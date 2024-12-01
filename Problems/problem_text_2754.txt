@@ -1,0 +1,26 @@
+Given an M  N integer matrix, shift all its elements by 1 in spiral order.
+
+Example: 
+
+
+Input:
+
+[ 1 2 3 4 5 ]
+[ 16 17 18 19 6 ]
+[ 15 24 25 20 7 ]
+[ 14 23 22 21 8 ]
+[ 13 12 11 10 9 ]
+
+Output:
+
+[ 25 1 2 3 4 ]
+[ 15 16 17 18 5 ]
+[ 14 23 24 19 6 ]
+[ 13 22 21 20 7 ]
+[ 12 11 10 9 8 ]
+
+
+Approach-1: 
+
+
+Recommended Read:Print matrix in spiral order

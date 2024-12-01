@@ -1,0 +1,17 @@
+Given two linked lists, merge their nodes to make one list, taking nodes alternately between the two lists. If either list runs out, all the nodes should be taken from the other list.
+
+Approach-1: 
+
+The solution depends on being able to move nodes to the end of the list. Several techniques are available to solve this problem: dummy node, local reference, or recursion.1. Using Dummy Node
+
+Approach 2
+
+This method is logically the same as above, but it uses the moveNode() function as a helper. This approach is demonstrated below in C:
+
+Approach 3
+
+Following is the implementation in C based on the above idea:
+
+Approach 4
+
+The recursive solution is the most compact of all but is probably not appropriate for production code since it uses stack space proportionate to the lists lengths.

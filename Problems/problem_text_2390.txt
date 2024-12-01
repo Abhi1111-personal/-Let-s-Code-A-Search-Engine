@@ -1,0 +1,24 @@
+Given an integer, swap consecutive b bits starting from the given positions in a binary representation of an integer. The bits to be swapped should not overlap with each other.
+
+Example: 
+
+
+Input:
+
+n = 15 (15 in binary is 00001111)
+p = 2, q = 5 (3rd and 6th bit from the right)
+b = 2 (Total number of consecutive bits in each sequence)
+
+Output: 99
+
+(99 in binary is 01100011)
+
+
+Approach-1: 
+
+The idea is to store the result of XORing the pairs of bit values we want to swap in a variable x, and then the bits are set to the result of themselves XORed with x. The code goes as:
+// isolate the bits to be swapped and take their XOR
+x = ((n >> p) ^ (n >> q)) & ((1 << b)  1)
+
+// replace the bits to be swapped with the XOR bits and take its XOR with n
+result = n ^ ((x << p) | (x << q))

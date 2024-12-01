@@ -1,0 +1,9 @@
+In this post, we will see how to reverse a doubly linked list using iteration and recursion.
+
+Approach-1: 
+
+1. Iterative SolutionThe idea is simple  Traverse the list and swap next and prev pointers for each node. Finally, update head pointer to point to the last node.
+
+Approach 2
+
+We can also solve this problem recursively by passing current node information in the recursion itself. This is demonstrated below in C, Java, and Python:

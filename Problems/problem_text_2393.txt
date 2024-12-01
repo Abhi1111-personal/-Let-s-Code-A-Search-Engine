@@ -1,0 +1,9 @@
+Given an integer, reverse its bits using binary operators.
+
+Approach-1: 
+
+The idea is to initialize the result by 0 (all bits 0) and process the given number starting from its least significant bit. If the current bit is 1, set the corresponding most significant bit in the result and finally move on to the next bit in the input number. Repeat this till all its bits are processed.Following is the implementation in C++, Java, and Python based on the above idea:
+
+Approach 2
+
+Please refer to this post to find the position of the rightmost set bit and unset it. The algorithm can be implemented as follows in C++ and Java:

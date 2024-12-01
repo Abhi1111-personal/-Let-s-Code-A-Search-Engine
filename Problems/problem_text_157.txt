@@ -1,0 +1,30 @@
+1203. Sort Items by Groups Respecting DependenciesHard58885Add to ListShareThere arenitems eachbelonging to zero or one ofmgroups where group[i]is the group that the i-th item belongs to and it's equal to -1if the i-th item belongs to no group. The items and the groups are zero indexed. A group can have no item belonging to it.
+Return a sorted list of the items such that:
+
+The items that belong to the same group are next to each other in the sorted list.
+There are somerelationsbetween these items wherebeforeItems[i]is a list containing all the items that should come before thei-th item in the sorted array (to the left of thei-th item).
+
+Return any solution if there is more than one solution and return an empty listif there is no solution.
+
+Example 1:
+
+Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
+Output: [6,3,4,1,5,2,0,7]
+
+Example 2:
+Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3],[],[4],[]]
+Output: []
+Explanation:This is the same as example 1 except that 4 needs to be before 6 in the sorted list.
+
+
+Constraints:
+
+1 <= m <= n <= 3 * 104
+group.length == beforeItems.length == n
+-1 <= group[i] <= m - 1
+0 <= beforeItems[i].length <= n - 1
+0 <= beforeItems[i][j] <= n - 1
+i != beforeItems[i][j]
+beforeItems[i]does not containduplicates elements.
+
+Accepted12.1KSubmissions24.3KSeen this question in a real interview before?YesNoCompaniesRelated TopicsDepth-First SearchBreadth-First SearchGraphTopological SortShow Hint 1Think of it as a graph problem.Show Hint 2We need to find a topological order on the dependency graph.Show Hint 3Build two graphs, one for the groups and another for the items.

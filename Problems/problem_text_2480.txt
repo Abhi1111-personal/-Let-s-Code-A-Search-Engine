@@ -1,0 +1,5 @@
+Given a binary tree, calculate the difference between the sum of all nodes present at odd levels and the sum of all nodes present at even level.
+
+Approach-1: 
+
+The idea is to traverse the tree and pass the level of each node in recursion. We also pass a variable to store the required difference. If the nodes level is odd, increase the difference by the nodes value; otherwise, decrease the difference by the same amount. At the end of the recursion, the variable will contain the required difference.Following is the C++, Java, and Python program that demonstrates it:

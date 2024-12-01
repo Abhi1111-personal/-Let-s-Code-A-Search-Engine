@@ -1,0 +1,104 @@
+Find the optimal cost to construct a binary search tree where each key can repeat several times. We are given each keys frequency in the same order as corresponding keys in the inorder traversal of a binary search tree.
+
+Example: 
+
+
+For example, consider the following frequency array
+
+freq[] = { 25, 10, 20 }
+
+As frequency follows inorder order (ascending keys), lets consider the index of freq[] as corresponding keys, i.e.,
+
+
+Key 0 occurs 25 times
+Key 1 occurs 10 times
+Key 2 occurs 20 times
+
+
+Output: The optimal cost of constructing BST is 95.
+
+Following is the optimum BST:
+
+0(251)    level1
+\
+\
+\
+2(202)    level2
+/
+/
+/
+1(103)    level3
+
+25 lookups of the key 0 will cost 1 each.
+20 lookups of the key 2 will cost 2 each.
+10 lookups of the key 1 will cost 3 each.
+
+So, Optimal Cost is 251 + 202 + 103 = 95
+
+
+Other possible BSTs are:
+0(251)    level1
+\
+\
+\
+1(102)    level2
+\
+\
+\
+2(203)    level3
+Cost is 25 + 102 + 203 = 105
+which is more than the optimal cost 95
+
+
+
+2(201)    level1
+/
+/
+/
+1(102)    level2
+/
+/
+/
+0(253)    level3
+Cost is 20 + 102 + 253 = 115
+which is more than the optimal cost 95
+
+
+
+1(101)    level1
+/\
+/\
+/\
+0(252)2(202)    level2
+Cost is 10 + 252 + 202 = 100
+which is more than the optimal cost 95
+
+
+
+2(201)    level1
+/
+/
+/
+0(252)    level2
+\
+\
+\
+1(103)    level3
+
+Cost is 20 + 252 + 103 = 100
+which is more than the optimal cost 95
+
+
+Approach-1: 
+
+The idea is simple  consider each key as a root and find an optimal solution by recursively finding the optimal cost of left and right subtree and add left and right child cost to the current nodes price (frequency of that key  level of that node). If the current nodes cost is optimal, update the result.The algorithm can be implemented as follows in C++, Java, and Python:
+
+Approach 2
+
+
+The problem has optimal substructure. We have seen that the problem can be broken down into smaller subproblems, which can further be broken down into yet smaller subproblems, and so on. The problem also exhibits overlapping subproblems, so we will end up solving the same subproblem over and over again. We know that problems with optimal substructure and overlapping subproblems can be solved by dynamic programming, where subproblem solutions are memoized rather than computed and again.
+
+Approach 3
+
+
+We can also implement the bottom-up version of the above memoized solution. The following code shows how to implement it in C, Java, and Python (see algorithm used here).

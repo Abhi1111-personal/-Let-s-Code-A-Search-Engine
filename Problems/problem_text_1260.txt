@@ -1,0 +1,22 @@
+b'461. Hamming DistanceEasy3050197Add to ListShareThe Hamming distance between two integers is the number of positions at which the corresponding bits are different.
+Given two integers x and y, return the Hamming distance between them.
+\xc2\xa0
+Example 1:
+Input: x = 1, y = 4
+Output: 2
+Explanation:
+1   (0 0 0 1)
+4   (0 1 0 0)
+       \xe2\x86\x91   \xe2\x86\x91
+The above arrows point to positions where the corresponding bits are different.
+
+Example 2:
+Input: x = 3, y = 1
+Output: 1
+
+\xc2\xa0
+Constraints:
+
+0 <=\xc2\xa0x, y <= 231 - 1
+
+Accepted473.3KSubmissions635.2KSeen this question in a real interview before?YesNoCompaniesRelated TopicsBit ManipulationSimilar QuestionsNumber of 1 BitsEasyTotal Hamming DistanceMedium'

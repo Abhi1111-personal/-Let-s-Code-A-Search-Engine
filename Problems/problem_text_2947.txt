@@ -1,0 +1,34 @@
+Given two strings, determine whether the first string can be transformed into the second string with a single edit operation. An edit operation can insert, remove, or replace a character in the first string.
+
+Example: 
+
+
+Input: xyz > xz
+Output: True
+Explanation: The total number of edits required is 1 (remove y from the first string)
+
+
+Input: xyz > xyyz
+Output: True
+Explanation: The total number of edits required is 1 (add y in the first string)
+
+
+Input: xyz > xyx
+Output: True
+Explanation: The total number of edits required is 1 (replace z in the first string by x)
+
+
+Input: xyz > xxx
+Output: False
+Explanation: The total number of edits required are 2 (replace y and z in the first string by x)
+
+
+Input: xyz > xyz
+Output: False
+Explanation: The total number of edits required is 0 (both strings are the same)
+
+
+Approach-1: 
+
+The standard solution is to find the Levenshtein Distance (Edit Distance) between the given strings. If the edit distance is 1, transform the first string into the second string with a single edit operation. The time complexity of this solution is O(m.n) if dynamic programming is used. This also requires the auxiliary space of O(m.n), where m is the length of the first string and n is the length of the second string.
+We can reduce the time complexity to linear in terms of the length of both strings. The idea is to simultaneously traverse both strings and keep track of the number of edits required to transform the first string into the second string. The algorithm can be implemented as follows in C++, Java, and Python:

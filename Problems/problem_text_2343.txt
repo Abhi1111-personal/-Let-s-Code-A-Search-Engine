@@ -1,0 +1,24 @@
+Given a set S, generate all distinct subsets of it, i.e., find distinct power set of set S. A power set of any set S is the set of all subsets of S, including the empty set and S itself.
+
+Example: 
+
+
+
+{} (also known as the empty set or the null set).
+{x}
+{y}
+{x}
+{x, y}
+{x, x}
+{y, x}
+{x, y, x}
+
+
+
+Approach-1: 
+
+Approach 1: Using RecursionThe problem is very similar to the 0/1 knapsack problem, where for each element in set S, we have two options:
+
+Approach 2
+
+Approach 2

@@ -1,0 +1,7 @@
+Given a binary array, find the index of 0 to be replaced with 1 to get a maximum length sequence of continuous ones.
+
+Approach-1: 
+
+
+We have already discussed two approaches to solve this problem (here and here). In this post, another approach is discussed, which uses a sliding window technique.
+The idea is to maintain a window containing at most one zero at any point and add elements to the window from the right until it becomes unstable. The window becomes unstable if the total number of zeros in it becomes 2. If the window becomes unstable, remove elements from its left till it becomes stable again (by removing the leftmost zero). If the window is stable and the current window length is more than the maximum window found so far, update the index of 0 to be replaced.

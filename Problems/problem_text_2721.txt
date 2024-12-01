@@ -1,0 +1,14 @@
+Given a linked list containing 0's, 1's, and 2's, sort the linked list by doing a single traversal of it.
+
+Example: 
+
+
+Input: 0 > 1 > 2 > 2 > 1 > 0 > 0 > 2 > 0 > 1 > 1 > 0 > NULL
+
+Output: 0 > 0 > 0 > 0 > 0 > 1 > 1 > 1 > 1 > 2 > 2 > 2 > NULL
+
+
+Approach-1: 
+
+A simple solution would be to count the total number of 0's, 1's, and 2's present in the linked list, traverse the linked list, and put them back in the correct order. The problem with this approach is that we need to do two traversals of the list, which violates the problem constraints.
+We can solve this problem in a single traversal of the list. The idea is to maintain three-pointers zeros, ones, and twos. Then, traverse the list from head to end and move each node to the corresponding list depending on its value. Finally, combine all three lists at the end and fix the head pointer.

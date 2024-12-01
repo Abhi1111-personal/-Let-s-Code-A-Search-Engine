@@ -1,0 +1,6 @@
+Given a doubly linked list, sort it using the merge sort algorithm.
+
+Approach-1: 
+
+Merge sort is an efficient sorting algorithm that uses the Divide and Conquer technique to sort a sequence of items. It is stable in nature, which means that the original order of equal elements is preserved in the output.
+In the previous post, we have discussed the merge sort algorithm on a singly linked list. The merge sort algorithm on the doubly linked list works similarly by splitting the list into two halves, sorting each sublist recursively, and finally merge both the sorted lists together to get a single sorted list.

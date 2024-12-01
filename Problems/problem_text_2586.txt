@@ -1,0 +1,31 @@
+Given a list of jobs where each job has a start and finish time, and has profit associated with it, find a maximum profit subset of non-overlapping jobs.
+
+Example: 
+
+
+Job 1: (0, 6, 60)
+Job 2: (1, 4, 30)
+Job 3: (3, 5, 10)
+Job 4: (5, 7, 30)
+Job 5: (5, 9, 50)
+Job 6: (7, 8, 10)
+
+
+The maximum profit is 80, which is achieved by picking job 2 and Job 5.
+
+
+Approach-1: 
+
+This problem is a standard variation of the Activity Selection Problem. The greedy algorithm works fine for the activity selection problem since all jobs have equal weight. But the greedy approach wont work with weighted jobs since even a single job may have more profit than all jobs combined.1. Naive Recursive Solution
+
+Approach 2
+
+2. Dynamic Programming Solution
+
+Approach 3
+
+3. Optimized Dynamic Programming Solution
+
+Approach 4
+
+The idea is similar to the above bottom-up approach using dynamic programming, but we maintain an extra array to store the index of jobs involved in the maximum profit. This is demonstrated below in C++, Java, and Python:

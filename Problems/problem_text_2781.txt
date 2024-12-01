@@ -1,0 +1,31 @@
+Given an M  N rectangular grid, print all routes in the grid that start at the first cell (0, 0) and ends at the last cell (M-1, N-1). We can move down or right or diagonally (down-right), but not up or left.
+
+Example: 
+
+
+Input:
+
+{ 1, 2, 3 }
+{ 4, 5, 6 }
+{ 7, 8, 9 }
+
+Output:
+
+[ 1, 4, 7, 8, 9 ]
+[ 1, 4, 5, 8, 9 ]
+[ 1, 4, 5, 6, 9 ]
+[ 1, 4, 5, 9 ]
+[ 1, 4, 8, 9 ]
+[ 1, 2, 5, 8, 9 ]
+[ 1, 2, 5, 6, 9 ]
+[ 1, 2, 5, 9 ]
+[ 1, 2, 3, 6, 9 ]
+[ 1, 2, 6, 9 ]
+[ 1, 5, 8, 9 ]
+[ 1, 5, 6, 9 ]
+[ 1, 5, 9 ]
+
+
+Approach-1: 
+
+The idea is to use recursion to find all routes. Start from the source cell (top-left corner) of the grid and recur for the next nodes. The next node can be either of the immediate right cell, immediate bottom cell, or immediate down-right diagonal cell. Recursively repeat this for every visited cell until the destination is reached. Also, maintain a data structure to store nodes in the current route and print the path whenever the destination cell (bottom-right corner) is reached.Heres code to print all such paths in C++, Java, and Python:

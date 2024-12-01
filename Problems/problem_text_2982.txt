@@ -1,0 +1,30 @@
+Given a text, find all occurrences of a given pattern in it.
+
+Example: 
+
+
+1. For text T = ABCABAABCABAC and pattern P = ABAA,
+
+The pattern occurs only once in the text, starting from index 3 (ABCABAABCABAC).
+
+
+2. For text T = ABCABAABCABAC and pattern P = CAB,
+
+The pattern occurs twice in the text, starting from index 2 and 8 (ABCABAABCABAC and ABCABAABCABAC).
+
+
+Approach-1: 
+
+
+The naive algorithm finds all occurrences of a pattern by using a loop that checks the condition
+P[1m] = T[s+1s+m] for each of the n-m+1 possible values of s. Following is the pseudocode for the algorithm:
+Naive-Pattern-Matching(T, P)
+
+n = length[T]
+m = length[P]
+
+for s = 0 to n  m do
+if P[1  m] = T[s+1  s+m] do
+print Pattern is found at position s
+end-if
+end-for

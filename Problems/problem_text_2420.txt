@@ -1,0 +1,48 @@
+Given a binary tree, write an iterative and recursive solution to traverse the tree using postorder traversal in C++, Java, and Python.
+
+Example: 
+
+
+iterativePostorder(node)
+
+s > empty stack
+t > output stack
+while (not s.isEmpty())
+node > s.pop()
+t.push(node)
+
+if (node.left <> null)
+s.push(node.left)
+
+if (node.right <> null)
+s.push(node.right)
+
+while (not t.isEmpty())
+node > t.pop()
+visit(node)
+
+
+Approach-1: 
+
+Recursive ImplementationAs we can see, before processing any node, the left subtree is processed first, followed by the right subtree, and the node is processed at last. These operations can be defined recursively for each node. The recursive implementation is referred to as a Depthfirst search (DFS), as the search tree is deepened as much as possible on each child before going to the next sibling.
+
+Approach 2
+
+
+iterativePostorder(node)
+
+s > empty stack
+t > output stack
+while (not s.isEmpty())
+node > s.pop()
+t.push(node)
+
+if (node.left <> null)
+s.push(node.left)
+
+if (node.right <> null)
+s.push(node.right)
+
+while (not t.isEmpty())
+node > t.pop()
+visit(node)

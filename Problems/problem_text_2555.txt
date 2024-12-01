@@ -1,0 +1,20 @@
+The longest bitonic subsequence problem is to find a subsequence of a given sequence in which the subsequences elements are first sorted in increasing order, then in decreasing order, and the subsequence is as long as possible.
+
+Example: 
+
+
+[1, 2, 3, 4, 5] > [1, 2, 3, 4, 5]
+[5, 4, 3, 2, 1] > [5, 4, 3, 2, 1]
+
+
+Approach-1: 
+
+
+The idea is to maintain two arrays, I[] and D[]:
+I[i] store the length of the longest increasing subsequence, ending at nums[i].
+D[i] stores the length of the longest decreasing subsequence, starting from nums[i].
+
+
+Approach 2
+
+The idea remains the same, except instead of storing the length of the LIS and LDS, we store LIS and LDS itself. For example, consider the sequence [4, 2, 5, 9, 7, 6, 10, 3, 1]. The contents of the LIS and LDS list are:

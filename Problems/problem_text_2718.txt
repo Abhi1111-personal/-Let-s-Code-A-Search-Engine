@@ -1,0 +1,8 @@
+Given a linked list, move its last node to the front.
+
+Approach-1: 
+
+The idea is to make the linked list circular and then break the chain before the last node after making its head to point to the last node. Following is the C, Java, and Python program that demonstrates it:
+
+Approach 2
+

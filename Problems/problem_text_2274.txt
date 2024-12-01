@@ -1,0 +1,30 @@
+Given an array and an integer k, find the count of distinct elements in every subarray of size k.
+
+Example: 
+
+
+Input:
+
+arr[] = { 2, 1, 2, 3, 2, 1, 4, 5 };
+k = 5;
+
+Output:
+
+The count of distinct elements in subarray { 2, 1, 2, 3, 2 } is 3
+The count of distinct elements in subarray { 1, 2, 3, 2, 1 } is 3
+The count of distinct elements in subarray { 2, 3, 2, 1, 4 } is 4
+The count of distinct elements in subarray { 3, 2, 1, 4, 5 } is 5
+
+
+Approach-1: 
+
+Please note that the problem specifically targets subarrays that are contiguous (i.e., occupy consecutive positions) and inherently maintains the order of elements.
+A naive solution is to consider every subarray in the given array and count all distinct elements in it using two nested loops, as demonstrated below in C, Java, and Python. The time complexity of this approach is O(n.k2), where n is the size of the input and k is the size of the subarray.
+
+Approach 2
+
+The algorithm can be implemented as follows in C++, Java, and Python. We can even extend the solution to print the contents of the set, as shown here.
+
+Approach 3
+
+Following is the C++, Java, and Python program that demonstrates it:

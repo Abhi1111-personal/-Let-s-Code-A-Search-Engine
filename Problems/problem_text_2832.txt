@@ -1,0 +1,15 @@
+Write an algorithm to generate numbers from 1 to 7 with equal probability using a specified function that produces random numbers between 1 and 5.
+
+Example: 
+
+
+If R = 0, R + random() can be any of 1, 2, 3, 4, 5
+If R = 5, R + random() can be any of 6, 7, 8, 9, 10
+If R = 10, R + random() can be any of 11, 12, 13, 14, 15
+If R = 15, R + random() can be any of 15, 16, 17, 18, 19, 20
+If R = 20, R + random() can be any of 21, 22, 23, 24, 25
+
+
+Approach-1: 
+
+Suppose the specified function is random(), which generates random numbers from 1 to 5 with equal probability. The idea is to use the expression 5  (random() - 1) + random() which uniformly produces random numbers in the range [125]. So if we exclude the possibility of the random number being one among [825] by repeating the procedure, we are left with numbers between 1 and 7 having equivalent probability.How this works?

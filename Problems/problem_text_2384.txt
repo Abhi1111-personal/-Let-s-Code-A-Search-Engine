@@ -1,0 +1,27 @@
+Given a positive number n, find the next highest power of 2. If n itself is a power of 2, return n.
+
+Example: 
+
+
+Input: n = 20
+Output: 32
+
+Input: n = 16
+Output: 16
+
+
+Approach-1: 
+
+Approach 1The idea is to unset the rightmost bit of n until only one bit is left, which will be the last set bit of the given number. To handle the case when n is the power of 2, initially decrement n by 1. Note that this operation will not impact output as we are only concerned about the last set bit of n.
+
+Approach 2
+
+The idea is to decrement n by 1 (to handle the case when n itself is the power of 2) and run a loop by initializing the result by 2. We double the result value at each iteration of the loop and divide n in half and continue the loop till n becomes 0.
+
+Approach 3
+
+The idea is to calculate position p of the last set bit of n and return a number with its p+1 bit set. Following is the C++, Java, and Python program that demonstrates it:
+
+Approach 4
+
+The idea is to set all bits on the right-hand side of the most significant set bit to 1 and then increment the value by 1 to rollover to twos nearest power. For instance, consider number 20. We convert its binary representation 00010100 to 00011111 and add 1 to it, which results in the next power of 20. i.e., (00011111 + 1) = 00100000.

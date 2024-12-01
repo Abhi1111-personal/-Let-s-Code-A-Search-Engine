@@ -1,0 +1,5 @@
+This post describes the types of edges involved in Depthfirst search (DFS) of a tree and directed & undirected graphs and establish the relation between them.
+
+Approach-1: 
+
+Depthfirst search in a treeDepthfirst search is a simple preorder or postorder traversal for a tree, and it contains only tree edges. If x is a descendant of y, then the relation between the arrival and departure time for tree edges of DFS is:

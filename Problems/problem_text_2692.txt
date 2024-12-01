@@ -1,0 +1,6 @@
+This post provides an overview of several methods to implement a linked list in Python.
+
+Approach-1: 
+
+
+There are several ways to construct a singly linked list in Python:1. Standard Solution

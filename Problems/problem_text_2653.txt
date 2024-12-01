@@ -1,0 +1,5 @@
+Given a weighted undirected graph, find the maximum cost path from a given source to any other vertex in the graph which is greater than a given cost. The path should not contain any cycles.
+
+Approach-1: 
+
+The idea is to do a Breadthfirst search (BFS) traversal. BFS is generally used to find the shortest paths in graphs/matrices, but we can modify normal BFS to meet our requirements. By modifying BFS, we dont mean using a priority queue that picks up the maximum weighted edge at every step, as that approach will fail. A low-weight edge can also be involved in the maximum cost path as there might be higher weight edges connected through it.So, how can we use BFS?

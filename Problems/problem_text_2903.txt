@@ -1,0 +1,15 @@
+Write code to evaluate a given postfix expression efficiently.
+
+Example: 
+
+
+82/ will evaluate to 4 (8/2)
+
+138*+ will evaluate to 25 (1+8*3)
+
+545*+5/ will evaluate to 5 ((5+4*5)/5)
+
+
+Approach-1: 
+
+We can easily compute a postfix expression by using a stack. The idea is to traverse the given postfix expression from left to right. If the current character of the expression is an operand, push it into the stack; otherwise, if the current character is an operator, pop the top two elements from the stack, evaluate them using the current operator and push the result back into the stack. When all the expression characters are processed, we will be left with only one element in the stack containing the value of a postfix expression.Following is the implementation in C++, Java, and Python based on the above idea:

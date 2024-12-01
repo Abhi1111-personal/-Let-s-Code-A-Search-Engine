@@ -1,0 +1,5 @@
+Write a Java program to generate all permutations of a string.
+
+Approach-1: 
+
+1. Recursive ApproachSince the string is immutable in Java, the idea is to convert the string into a character array. Then we can in-place generate all permutations of the given string using backtracking by swapping each of the remaining characters in the string with its first character and then generating all the permutations of the remaining characters using a recursive call.

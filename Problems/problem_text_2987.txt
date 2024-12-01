@@ -1,0 +1,24 @@
+Given a string, remove all adjacent duplicates from it. The algorithm should continue removing adjacent duplicates from the string till no duplicate is present in the result.
+
+Example: 
+
+
+The input string is 'DBAABDAB'
+
+The string left after the removal of all adjacent duplicates is 'AB'
+
+'DBAABDAB' > 'D B AA B D A B' > 'D BB D A B' > 'DD A B' > 'AB'
+
+
+The input string is 'ABADB'
+
+The string left after the removal of all adjacent duplicates is 'ABADB'
+
+'ABADB' > 'ABADB'
+
+
+The input string is 'ABDAADBDAABB'
+
+The string left after the removal of all adjacent duplicates is 'AD'
+
+'ABDAADBDAABB' > 'A B D AA D B D AA BB' > 'A B DD B D' > 'A BB D' > 'AD'

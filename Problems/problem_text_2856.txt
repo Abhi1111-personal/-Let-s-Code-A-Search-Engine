@@ -1,0 +1,17 @@
+Given a binary tree, write an efficient algorithm to print its left view.
+
+Approach-1: 
+
+1. Iterative ImplementationIn the iterative version, perform a level order traversal on the tree. We can modify level order traversal to maintain nodes at the current level. Then if the current node is the first node of the current level, print it.
+
+Approach 2
+
+2. Recursive implementation using hashing
+
+Approach 3
+
+
+
+Approach 4
+
+3. Recursive implementation using Preorder traversal

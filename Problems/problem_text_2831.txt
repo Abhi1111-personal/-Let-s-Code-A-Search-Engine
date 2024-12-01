@@ -1,0 +1,5 @@
+Generate fair results from a biased coin that prefers one side of the coin over another and returns TAILS with p probability and HEADS with 1-p probability where p != (1-p).
+
+Approach-1: 
+
+We can use the given biased coin for fair results by making two calls from the biased coin instead of one call. If the results of both calls match (both are HEADS, or both are TAILS), discard the results and start over. If the results differ, consider the first result.How this works?

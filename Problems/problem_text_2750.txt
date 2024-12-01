@@ -1,0 +1,20 @@
+Given two sorted linked lists, merge them without using extra space without modifying the links of the first list. The solution should preserve the sorted order of elements in both lists.
+
+Example: 
+
+
+Input:
+
+First List: 2 > 6 > 9 > 10 > 15 > NULL
+Second List: 1 > 4 > 5 > 20 > NULL
+
+Output:
+
+First List: 1 > 2 > 4 > 5 > 6 > NULL
+Second List: 9 > 10 > 15 > 20 > NULL
+
+
+Approach-1: 
+
+A simple solution would be to use the merge procedure of the merge sort algorithm to merge both lists. After merging both lists, assign the first m smallest nodes to the first linked list and the remaining n nodes to the second linked list where m and n are the total number of elements in the first and second linked list, respectively. We can do this in O(m + n) time and constant space.
+The above solution violates the problem constraints by modifying links of the first list. However, there is no restriction on swapping data between the linked list nodes. The idea is to compare each node of the first list with the head node of the second list and swap their data if the first lists current node is greater than the head node of the second list. The first list remains sorted with this data exchange, but the second lists sorted order might be disturbed. To fix it, pop the front node from the second list and insert it at its correct place into the sorted second list using the sortedInsert() function.

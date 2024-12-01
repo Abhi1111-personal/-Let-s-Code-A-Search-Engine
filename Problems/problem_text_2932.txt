@@ -1,0 +1,6 @@
+Given a string, find the maximum length contiguous substring of it that is also a palindrome. For example, the longest palindromic substring of bananas is anana, and the longest palindromic substring of abdcbcdbdcbbc is bdcbcdb.
+
+Approach-1: 
+
+
+The dynamic programming solution for this problem takes O(n2) time and O(n2) space. This post will discuss another approach to solve this problem that doesnt require any extra space.The idea is simple and effective  for each character in the given string, consider it the midpoint of a palindrome and expand in both directions to find the maximum length palindrome. For an even length palindrome, consider every adjacent pair of characters as the midpoint.

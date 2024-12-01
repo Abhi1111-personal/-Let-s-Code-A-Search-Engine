@@ -1,0 +1,17 @@
+Given two strings, determine whether they are anagrams.
+
+Example: 
+
+
+silent = listen
+incest = insect
+
+
+Approach-1: 
+
+A simple solution would be to sort given strings. If the strings become equal after sorting, they are anagrams. The time complexity of this solution is O(n.log(n)), where n is the length of the input string.
+We can also solve this problem in O(n) time. The idea is to maintain the frequency of each character of the first string in a map or a count array. Then for each character of the second string, decrement its frequency and return false if the frequency becomes negative or the character is not present on the map.
+
+Approach 2
+
+Approach 3

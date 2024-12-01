@@ -1,0 +1,23 @@
+Find all ndigit strictly increasing numbers where n varies from 1 to 9. A number is strictly increasing if every digit is greater than its preceding digit.
+
+Example: 
+
+
+8digit strictly increasing numbers are:
+
+12345678 12345679 12345689 12345789 12346789 12356789 12456789 13456789 23456789
+
+
+7digit strictly increasing numbers are:
+
+1234567 1234568 1234569 1234578 1234579 1234589 1234678 1234679 1234689 1234789 1235678 1235679 1235689 1235789 1236789 1245678 1245679 1245689 1245789 1246789 1256789 1345678 1345679 1345689 1345789 1346789 1356789 1456789 2345678 2345679 2345689 2345789 2346789 2356789 2456789 3456789
+
+
+Approach-1: 
+
+A simple solution would be to generate all ndigit numbers and print only those numbers that satisfy the given constraints. The time complexity of this solution would be exponential.
+A better solution is to generate only those ndigit numbers that satisfy the given constraints. The idea is to use recursion. We fill the current index with digits greater than the previous digit and recur for the next index at each point in the recursion. There are two approaches to solve this problem:
+
+Approach 2
+
+In the top-down approach, we start from the last index and recursively fill the digits from right to left. The implementation can be seen below in C, C++, Java, and Python:

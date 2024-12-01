@@ -1,0 +1,9 @@
+Given a binary search tree, modify it such that every node is updated to contain the sum of all greater keys present in the BST.
+
+Approach-1: 
+
+1. Using Inorder TraversalWe can solve this problem by inorder traversal by calculating the sum of all nodes present in a binary tree in advance. Then for each node, the sum of all greater keys for any node can be updated in constant time using the total sum and sum of nodes visited so far.
+
+Approach 2
+
+The above solution traverses the tree two times. We can solve this problem in a single traversal by traversing the tree in reverse inorder. Now, keys will be visited in descending order, and the sum of all greater keys for any node can be updated in constant time by keeping track of the sum of nodes seen so far.

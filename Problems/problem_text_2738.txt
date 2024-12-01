@@ -1,0 +1,18 @@
+Given a linked list of strings, check whether the concatenation of all values in the list together forms a palindrome. It is not permissible to construct a string out of the linked list nodes and check that string for palindrome.
+
+Example: 
+
+
+Input: AA > XYZ > CD > C > ZYX > AA > null
+Output: true
+Explanation: String AAXYZCDCZYXAA is palindrome
+
+
+Input: A > B > C > DC > B > null
+Output: false
+Explanation: String ABCDCB is not a palindrome
+
+
+Approach-1: 
+
+The idea is to traverse till the end of the linked list using recursion and construct a string that contains a concatenation of all values in the linked list nodes (in encountered order). When the recursion unfolds, we build another string containing a concatenation of all strings in reverse order. This time, the encountered order of linked list nodes is the opposite, i.e., from the last node towards the head node.Now the problem reduces to just validating if both constructed strings are equal or not. If both strings are the same, we can say that the linked list is palindromic. The algorithm can be implemented as follows in C++, Java, and Python:

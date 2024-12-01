@@ -1,0 +1,5 @@
+Given a binary tree containing many zero nodes, sink nodes having zero value at the bottom of the subtree rooted at that node. In other words, the output binary tree should not contain any node having zero value that is the parent of the node having a non-zero value.
+
+Approach-1: 
+
+The idea is to process the tree nodes in a postorder manner, i.e., after fixing the left and right subtrees of a node, fix the node if it is zero. To fix a node, do something similar to the Heapify procedure of Heapsort algorithm. As the left and right subtree are already fixed, we can fix the binary tree rooted at the current node by moving the current node (containing zero) down the tree. We do so by comparing the node with its left and right child, swapping it with the non-zero child, and then recursively calling the procedure on the corresponding child. Repeat the process until a leaf node is reached or the subtree rooted at the current node contains all zeroes.The algorithm can be implemented as follows in C++, Java, and Python. As several binary trees can be constructed from one input, the solution would construct anyone.

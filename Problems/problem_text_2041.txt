@@ -1,0 +1,28 @@
+Our company wants to create a data entry verification system. 
+Given an amount in words and an amount indicated by data entry person in numbers, you have to detect whether the amounts are same or not.
+Note: There are a lot of corner cases to be considered. Interviewer expects you to take care of them.
+Input:
+String num: Amount written in digits as a string. This string will be an integer number without having any commas in between the digits.
+String words: Amount written in words according to Indian Numbering System.
+
+
+Output:
+An integer
+1: Values match
+0: Otherwise
+
+
+Please note :Every word needs to be separated using "-" rather than a space character
+ https://en.wikipedia.org/wiki/Indian_numbering_system
+Constraints 
+The number will fall in integer range(10^9)
+Example :
+Input :
+String  num = "1234"
+String words  = "one-thousand-two-hundred-and-thirty-four"
+
+Output:
+1
+
+
+Use Expected Output option to clear the further doubts.

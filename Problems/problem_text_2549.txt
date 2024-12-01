@@ -1,0 +1,16 @@
+Implement your diff utility, i.e., given two similar strings, efficiently list out all differences between them.
+
+Example: 
+
+
+Input:
+
+string X = XMJYAUZ
+string Y = XMJAATZ
+
+Output:
+
+X M J -Y A -U +A +T Z
+
+(- indicates that character is deleted from Y but it was present in X)
+(+ indicates that character is inserted in Y but it was not present in X)

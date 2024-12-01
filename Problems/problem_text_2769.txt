@@ -1,0 +1,16 @@
+Given an M  N matrix of characters, find all occurrences of a given string in the matrix. We are allowed to search the string in all eight possible directions, i.e., North, West, South, East, North-East, North-West, South-East, South-West. Note that there should not be any cycles in the output path.
+
+Example: 
+
+
+[DEMXB]
+[AOEPE]
+[DDCOD]
+[EBEDS]
+[CPYEN]
+
+
+Approach-1: 
+
+We can use Depthfirst search (DFS) to solve this problem. The idea is to start from each cell in the matrix and explore all eight paths possible and recursively check if they will lead to the solution or not. To make sure that the path is simple and doesnt contain any cycles, keep track of cells involved in the current path in a matrix, and before exploring any cell, ignore the cell if it is already covered in the current path.
+We can find all the possible locations we can move to from the given location by using the array that stores the relative position of movement from any location. For example, if the current location is (x, y), we can move to (x + row[k], y + col[k]) for 0 <= k <= 7 using the following array:

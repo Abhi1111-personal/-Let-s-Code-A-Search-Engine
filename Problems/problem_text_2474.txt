@@ -1,0 +1,18 @@
+Write an efficient algorithm to construct a binary tree from the given inorder and level order sequence.
+
+Example: 
+
+
+Input:
+
+Inorder Traversal: { 4, 2, 5, 1, 6, 3, 7 }
+level order traversal : { 1, 2, 3, 4, 5, 6, 7 }
+
+
+Output: Below binary tree
+
+
+Approach-1: 
+
+The idea is to start with the root node, which would be the node with the minimum index in the level order sequence, and partition the inorder sequence for the left and right subtree. To find the left and right subtree boundary, search for the root node index in the inorder sequence. All keys before the root node in the inorder sequence will become part of the left subtree, and all keys after the root node will become part of the right subtree. Repeat this recursively for all nodes in the tree and construct the tree in the process.
+To illustrate, consider the following in order and level order sequence:

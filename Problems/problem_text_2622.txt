@@ -1,0 +1,6 @@
+Given an undirected or a directed graph, implement a graph data structure in C++ using STL. Implement for both weighted and unweighted graphs using the adjacency list representation of the graph.
+
+Approach-1: 
+
+
+As we already know, the adjacency list associates each vertex in the graph with the collection of its neighboring vertices or edges, i.e., every vertex stores a list of adjacent vertices. There are many variations of adjacency list representation depending upon the implementation.

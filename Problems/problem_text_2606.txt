@@ -1,0 +1,16 @@
+Given a map containing employee to manager mappings, find all employees under each manager who directly or indirectly reports him.
+
+Example: 
+
+
+A > A
+B > A
+C > B
+D > B
+E > D
+F > E
+
+
+Approach-1: 
+
+The idea is to construct a reverse map containing manager to employee mappings and recursively find all reporting employees (direct and indirect) in every managers hierarchy. The algorithm can be implemented as follows in C++, Java, and Python:

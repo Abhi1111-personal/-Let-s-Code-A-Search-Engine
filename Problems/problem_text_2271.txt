@@ -1,0 +1,19 @@
+Given an array, find the maximum absolute difference between the sum of elements of two non-overlapping subarrays in linear time.
+
+Example: 
+
+
+Input: A[] = { -3, -2, 6, -3, 5, -9, 3, 4, -1, -8, 2 }
+
+Output: The maximum absolute difference is 19.
+
+The two subarrays are { 6, -3, 5 }, { -9, 3, 4, -1, -8 } whose sum of elements are 8 and -11, respectively. So, abs(8-(-11)) or abs(-11-8) = 19.
+
+
+Approach-1: 
+
+The idea is to calculate the maximum and minimum sum of subarrays ending and starting at any index i in the array. Then for each index i, consider the maximum absolute value of the following:
+
+Maximum subarray sum in subarray ending at index i  Minimum subarray sum in subarray starting at index i+1
+Minimum subarray sum in subarray ending at index i  Maximum subarray sum in subarray starting at index i+1
+

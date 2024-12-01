@@ -1,0 +1,27 @@
+Find the length of the longest contiguous substring of a given string, such that the length of the substring is 2n digits and the sum of the leftmost n digits is equal to the sum of the rightmost n digits. If there is no such substring, return 0.
+
+Example: 
+
+
+Input: 13267224
+
+The length of the longest palindromic sum substring is 6.
+
+326722 = (3 + 2 + 6) = (7 + 2 + 2) = 11
+
+
+Input: 546374
+
+The length of the longest palindromic sum substring is 4.
+
+4637 = (4 + 6) = (3 + 7) = 10
+
+
+Approach-1: 
+
+The idea is to consider every even length substring present in the string and calculate the sum of digits of their left and right half. Then, return the maximum length among the length of all substrings that have an equal sum in the left and right half.
+The algorithm can be implemented as follows in C++, Java, and Python. To calculate the sum of the left and right half in constant time, a sum array is maintained.
+
+Approach 2
+
+Can we do it with constant space?

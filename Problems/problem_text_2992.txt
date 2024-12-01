@@ -1,0 +1,16 @@
+Given a sequence of length <= 8 consisting of I and D, where I denotes the increasing sequence and D denotes the decreasing sequence, decode the sequence to construct a minimum number without repeated digits.
+
+Example: 
+
+
+sequenceoutput
+
+IIDDIDID> 125437698
+IDIDII> 1325467
+DDDD> 54321
+IIII> 12345
+
+
+Approach-1: 
+
+The idea is simple and effective. For each element of the given sequence, insert its position index+1 into a stack. If the current character is increasing 'I' or all characters of the input sequence are processed, pop all numbers from the stack and append them to the output string.Following is the implementation in C++, Java, and Python based on the above idea:

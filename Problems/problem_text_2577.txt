@@ -1,0 +1,16 @@
+Given a positive integer n, count all ndigit binary numbers without any consecutive 1's.
+
+Approach-1: 
+
+
+A simple solution would be to generate all ndigit integers and print only those integers that satisfy the given constraints. The complexity of this solution would be exponential.
+A better solution is to generate only those ndigit integers that satisfy the given constraints. The idea is to use recursion. We append 0 and 1 to the partially formed number and recur with one less digit at each point in the recursion. Here, the trick is to append 1 and recur only if the last digit of the partially formed number is 0. That way, we will never have any consecutive 1's in the output string.
+
+Approach 2
+
+
+The problem has an optimal substructure and exhibits overlapping subproblems. If we draw the solutions recursion tree, we can see that the same subproblems are getting computed repeatedly. We know that problems with optimal substructure and overlapping subproblems can be solved using dynamic programming, in which subproblem solutions are memoized rather than computed repeatedly.
+
+Approach 3
+
+How to print all binary numbers?

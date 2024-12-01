@@ -1,0 +1,15 @@
+Given a sequence of n numbers such that the difference between the consecutive terms is constant, find the missing term in logarithmic time. Assume that the first and last elements are always part of the input sequence and the missing number lies between index 1 to n-1.
+
+Example: 
+
+
+Input: [5, 7, 9, 11, 15]
+Output: The missing term is 13
+
+Input: [1, 4, 7, 13, 16]
+Output: The missing term is 10
+
+
+Approach-1: 
+
+A simple solution would be to run a linear search on the array and find the missing element by comparing the difference of adjacent array elements with the sequences common difference. We can find the common difference between successive elements of the sequence by using the formula:common difference = (last element in sequence  first element in sequence) / n

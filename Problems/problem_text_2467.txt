@@ -1,0 +1,6 @@
+Given a binary tree, find the maximum difference between a node and its descendants in it. Assume that the binary tree contains at-least two nodes.
+
+Approach-1: 
+
+A simple solution would be to traverse the tree, and for every node, find the minimum value node in its left and right subtree. If the difference between the node and its descendants is more than the maximum difference found so far, update it. The time complexity of this solution is O(n2), where n is the total number of nodes in the binary tree.
+We can solve this problem linearly by processing the tree nodes in a bottom-up manner by visiting the left and right subtree before processing a node. The function returns the minimum value among all nodes in the subtree rooted at it. So for any node, we can get minimum values in the left and right subtree in constant time. We find the maximum difference for every node, and if the difference is more than the maximum difference found so far, update it.

@@ -1,0 +1,19 @@
+560. Subarray Sum Equals KMedium13090424Add to ListShareGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+
+Example 1:
+Input: nums = [1,1,1], k = 2
+Output: 2
+Example 2:
+Input: nums = [1,2,3], k = 3
+Output: 2
+
+
+Constraints:
+
+1 <= nums.length <= 2 * 104
+-1000 <= nums[i] <= 1000
+-107 <= k <= 107
+
+Accepted774,265Submissions1,749,999Seen this question in a real interview before?YesNoCompaniesRelated TopicsArrayHash TablePrefix SumSimilar QuestionsTwo SumEasyContinuous Subarray SumMediumSubarray Product Less Than KMediumFind Pivot IndexEasySubarray Sums Divisible by KMediumMinimum Operations to Reduce X to ZeroMediumK Radius Subarray AveragesMediumMaximum Sum Score of ArrayMediumShow Hint 1Will Brute force work here? Try to optimize it.Show Hint 2Can we optimize it by using some extra space?Show Hint 3What about storing sum frequencies in a hash table? Will it be useful?Show Hint 4sum(i,j)=sum(0,j)-sum(0,i), where sum(i,j) represents the sum of all the elements from index i to j-1.
+
+Can we use this property to optimize it.

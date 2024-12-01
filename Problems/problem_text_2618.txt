@@ -1,0 +1,31 @@
+Given a set of vertices V in a weighted graph where its edge weights w(u, v) can be negative, find the shortest path weights d(s, v) from every source s for all vertices v present in the graph. If the graph contains a negative-weight cycle, report it.
+
+Example: 
+
+
+The adjacency matrix containing the shortest distance is:
+
+0-1-20
+4024
+5102
+3-110
+
+The shortest path from:
+
+ vertex 0 to vertex 1 is [0 > 2 > 3 > 1]
+ vertex 0 to vertex 2 is [0 > 2]
+ vertex 0 to vertex 3 is [0 > 2 > 3]
+ vertex 1 to vertex 0 is [1 > 0]
+ vertex 1 to vertex 2 is [1 > 0 > 2]
+ vertex 1 to vertex 3 is [1 > 0 > 2 > 3]
+ vertex 2 to vertex 0 is [2 > 3 > 1 > 0]
+ vertex 2 to vertex 1 is [2 > 3 > 1]
+ vertex 2 to vertex 3 is [2 > 3]
+ vertex 3 to vertex 0 is [3 > 1 > 0]
+ vertex 3 to vertex 1 is [3 > 1]
+ vertex 3 to vertex 2 is [3 > 1 > 0 > 2]
+
+
+Approach-1: 
+
+If the graph contains only positive edge weights, a simple solution would be to run Dijkstras algorithm V times. The time complexity of this solution would be O(V  (E + V  log(V))), i.e., O(V  E + V2.log(V)).If the graph contains negative edge weights, we can run BellmanFord once from each vertex to find all-pairs shortest paths. The time complexity of this approach will be O(V2  E). If the graph is dense, i.e., E = V2, then the time complexity becomes O(V4).

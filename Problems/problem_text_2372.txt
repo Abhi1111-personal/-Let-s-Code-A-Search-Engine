@@ -1,0 +1,21 @@
+Given a positive integer, find the minimum number possible by doing at-most k swap operations upon its digits.
+
+Example: 
+
+
+Input: S = 934651, k = 1
+Output: 134659
+
+Input: S = 934651, k = 2
+Output: 134569
+
+Input: S = 52341, k = 2
+Output: 12345 (Only 1 swap needed)
+
+Input: S = 12345, k = 2
+Output: 12345 (no change as all digits are already sorted in increasing order)
+
+
+Approach-1: 
+
+We can use backtracking to solve this problem. The idea is to consider every digit and swap it with digits following it, one at a time, and see if it leads to the minimum number. This process repeats k times.The implementation can be seen below in C++, Java, and Python:

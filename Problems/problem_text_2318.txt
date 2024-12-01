@@ -1,0 +1,10 @@
+Given an integer array, check if it represents min-heap or not.
+
+Approach-1: 
+
+
+Since the input is an array, the heaps structural property (all levels except the last level are full) cannot be violated. We only have to worry about the Min Heap Property (the priority of a node is at least as large as that of its parent) for a given problem.Since array indexing begins from 0, for a given index i of an array of size n, if 2i + 2 > n is true then A[i] represents a leaf node. Otherwise, when 2i + 2 <= n is true, A[i] represents internal heap node.
+
+Approach 2
+
+As recursion is costly, we can easily convert the above recursive function into an iterative one. The implementation can be seen below in C++, Java, and Python:

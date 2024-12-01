@@ -1,0 +1,13 @@
+Given a binary tree, write an efficient algorithm to print its right view.
+
+Approach-1: 
+
+1. Iterative Implementation using QueueIn an iterative version, perform a level order traversal on the tree. The idea is to modify level order traversal to maintain nodes at the current level. Then if the current node is the last node of the current level, print it.
+
+Approach 2
+
+2. Recursive Implementation using Hashing
+
+Approach 3
+
+3. Recursive Implementation (using Preorder Traversal)

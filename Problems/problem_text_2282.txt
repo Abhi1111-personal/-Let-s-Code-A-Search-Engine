@@ -1,0 +1,22 @@
+Given an integer array, check if only consecutive integers form the array.
+
+Example: 
+
+
+Input: { -1, 5, 4, 2, 0, 3, 1 }
+
+Output: The array contains consecutive integers from -1 to 5.
+
+
+Input: { 4, 2, 4, 3, 1 }
+
+Output: The array does not contain consecutive integers as element 4 is repeated.
+
+
+Approach-1: 
+
+Approach 1For an array to contain consecutive integers,
+
+Approach 2
+
+Approach 2

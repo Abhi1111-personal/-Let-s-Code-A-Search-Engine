@@ -1,0 +1,6 @@
+Given a binary tree, write an efficient algorithm to check if it is height-balanced or not. In a height-balanced tree, the absolute difference between the height of the left and right subtree for every node is 0 or 1.
+
+Approach-1: 
+
+A simple solution would be to calculate the height of the left and right subtree for each node in the tree. If for any node, the absolute difference between the height of its left and right subtree is more than 1, the tree is unbalanced. The time complexity of this solution is O(n2) as there are n nodes in the tree, and for every node, we are calculating the height of its left and right subtree that takes O(n) time.
+We can solve this problem in linear time by doing a postorder traversal on the tree. Instead of calculating the height of the left and right subtree for every tree node, we can get the height in constant time. The idea is to start from the bottom of the tree and return the height of the subtree rooted at the given node to its parent. The height of a subtree rooted at any node is one more than the maximum height of the left subtree or the right subtree.

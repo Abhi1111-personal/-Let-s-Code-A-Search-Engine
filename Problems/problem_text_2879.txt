@@ -1,0 +1,5 @@
+This post will sort an integer array using the iterative merge sort algorithm.
+
+Approach-1: 
+
+The following code proposes a non-recursive variant of the merge sort in C, Java, and Python, in which a sequence of passes sorts the array in a bottom-up manner:

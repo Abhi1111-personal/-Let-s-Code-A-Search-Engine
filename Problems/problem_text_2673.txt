@@ -1,0 +1,31 @@
+Implement a heap data structure in Java.
+
+Example: 
+
+
+Output:
+
+Priority queue size is 3
+Priority queue contains 2
+
+Emptying queue: 15 3 2
+The queue is empty
+
+Calling remove operation on an empty heap
+java.lang.Exception: Index out of range(Heap underflow)
+The element with the highest priority is null
+
+Calling peek operation on an empty heap
+java.lang.Exception: Index out of range (Heap underflow)
+The element with the highest priority is null
+
+Printing array: [45, 4, 5]
+
+The element with the highest priority is 45
+The element with the highest priority is 5
+
+
+Approach-1: 
+
+
+In the above post, we have introduced the heap data structure and covered heapify-up, push, heapify-down, and pop operations. In this post, Java implementation of Max Heap and Min Heap is discussed.1. Max Heap implementation in Java

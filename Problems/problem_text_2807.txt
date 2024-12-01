@@ -1,0 +1,43 @@
+Given an N  N matrix of non-negative integers, where each cell of the matrix (i, j) indicates the direct flight cost from the city i to city j. Find the minimum cost to reach the destination city N-1 from the source city 0.
+
+Example: 
+
+
+Input: The cost matrix for 4 cities:
+
+[02030100]
+[2001575]
+[3015050]
+[10075500]
+
+Output: The minimum cost is 80.
+
+The minimum cost path is:
+
+city 0 > city 2 (cost = 30)
+city 2 > city 3 (cost = 50)
+
+
+Input: The cost matrix for 5 cities:
+
+[0252010105]
+[200158080]
+[301507090]
+[1010500100]
+[40505100]
+
+
+Output: The minimum cost is 100.
+
+The minimum cost path is:
+
+city 0 > city 3 (cost = 10)
+city 3 > city 1 (cost = 10)
+city 1 > city 4 (cost = 80)
+
+
+Approach-1: 
+
+The idea is to recur for all cities reachable from the source city and consider their minimum cost. The recurrence relation T(0) can be written as:
+T(n) = minimum { T(i) + cost[i][n] }
+for all cities i between source city 0 and destination city n

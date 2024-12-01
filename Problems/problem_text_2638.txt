@@ -1,0 +1,6 @@
+Given an undirected graph, check if it is a tree or not. In other words, check if a given undirected graph is an Acyclic Connected Graph or not.
+
+Approach-1: 
+
+
+Recommended Read:Types of edges involved in DFS and relation between them

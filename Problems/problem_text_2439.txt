@@ -1,0 +1,12 @@
+Given a binary tree, write an efficient algorithm to determine if it can be converted into another binary tree by doing any number of swaps of its right and left branches.
+
+Approach-1: 
+
+We can easily solve this problem by using recursion. We return true if:
+Both trees are the same, or both trees are empty, or
+Both trees are non-empty, the value of the root of X and Y are the same, and either of the following conditions are satisfied:
+
+The left subtree of X can be converted into the left subtree of Y, and the right subtree of X can be converted into the right subtree of Y.
+The right subtree of X can be converted into the left subtree of Y, and the left subtree of X can be converted into the right subtree of Y.
+
+

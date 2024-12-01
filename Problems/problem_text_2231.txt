@@ -1,0 +1,24 @@
+Given an integer array containing duplicates, return the majority element if present. A majority element appears more than n/2 times, where n is the array size.
+
+Example: 
+
+
+Initialize an element m and a counter i = 0
+
+for each element x of the input sequence:
+if i = 0, then
+assign m = x and i = 1
+else
+if m = x, then assign i = i + 1
+else
+assign i = i  1
+return m
+
+
+Approach-1: 
+
+1. Brute-Force SolutionA naive solution is to count each elements frequency in the first half of the array to check if it is the majority element. Following is the naive implementation:
+
+Approach 2
+
+3. BoyerMoore majority vote algorithm

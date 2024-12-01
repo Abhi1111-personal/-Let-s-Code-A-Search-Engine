@@ -1,0 +1,9 @@
+This post will detect cycles in a linked list using hashing and Floyds cycle detection algorithm.
+
+Approach-1: 
+
+1. Using HashingA simple solution is to use hashing. The idea is to traverse the given list and insert each encountered node into a set. If the current node already presents in the set (i.e., it is seen before), that means a cycle is present in the list.
+
+Approach 2
+
+2. Floyds Cycle Detection Algorithm

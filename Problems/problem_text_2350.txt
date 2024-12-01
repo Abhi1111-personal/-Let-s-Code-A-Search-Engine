@@ -1,0 +1,5 @@
+Given an array of positive integers, which can be partitioned into three disjoint subsets having the same sum, print the partitions.
+
+Approach-1: 
+
+As discussed in the previous post, the 3partition problem is a special case of the Partition Problem. The goal is to partition S into 3 subsets with an equal sum, unlike the partition problem, where the goal is to partition S into two subsets with an equal sum.This post will extend the previous solution to print the partitions. The idea is to maintain a separate array A[] to keep track of subsets elements. The implementation can be seen below in C++, Java, and Python. Note that if the value of A[i] is k, it means that the i'th item of S is part of the k'th subset.

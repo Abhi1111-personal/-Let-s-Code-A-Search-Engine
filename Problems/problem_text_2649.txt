@@ -1,0 +1,16 @@
+Given a source vertex s from a set of vertices V in a weighted directed graph where its edge weights w(u, v) can be negative, find the shortest path weights d(s, v) from source s for all vertices v present in the graph. If the graph contains a negative-weight cycle, report it.
+
+Example: 
+
+
+Let source vertex = 0,
+
+The distance of vertex 1 from vertex 0 is -1. Its path is [0 > 1]
+The distance of vertex 2 from vertex 0 is 2. Its path is [0 > 1 > 2]
+The distance of vertex 3 from vertex 0 is -2. Its path is [0 > 1 > 4 > 3]
+The distance of vertex 4 from vertex 0 is 1. Its path is [0 > 1 > 4]
+
+
+Approach-1: 
+
+The idea is to use the BellmanFord algorithm to compute the shortest paths from a single source vertex to all the other vertices in a given weighted digraph. BellmanFord algorithm is slower than Dijkstras Algorithm, but it can handle negative weights edges in the graph, unlike Dijkstras.If a graph contains a negative cycle (i.e., a cycle whose edges sum to a negative value) that is reachable from the source, then there is no shortest path. Any path that has a point on the negative cycle can be made cheaper by one more walk around the negative cycle. BellmanFord algorithm can easily detect any negative cycles in the graph.

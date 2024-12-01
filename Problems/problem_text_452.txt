@@ -1,0 +1,33 @@
+1540. Can Convert String in K MovesMedium278228Add to ListShareGiven two stringssandt, your goal is to convertsintotinkmoves or less.
+During theith(1 <= i <= k)move you can:
+
+Choose any indexj(1-indexed) froms, such that1 <= j <= s.lengthand jhas not been chosen in any previous move,and shift the character at that indexitimes.
+Do nothing.
+
+Shifting a character means replacing it by the next letter in the alphabet(wrapping around so that'z'becomes'a'). Shifting a character byimeans applying the shift operationsitimes.
+Remember that any indexjcan be picked at most once.
+Returntrueif it's possible to convertsintotin no more thankmoves, otherwise returnfalse.
+
+Example 1:
+Input: s = "input", t = "ouput", k = 9
+Output: true
+Explanation: In the 6th move, we shift 'i' 6 times to get 'o'. And in the 7th move we shift 'n' to get 'u'.
+
+Example 2:
+Input: s = "abc", t = "bcd", k = 10
+Output: false
+Explanation: We need to shift each character in s one time to convert it into t. We can shift 'a' to 'b' during the 1st move. However, there is no way to shift the other characters in the remaining moves to obtain t from s.
+
+Example 3:
+Input: s = "aab", t = "bbb", k = 27
+Output: true
+Explanation: In the 1st move, we shift the first 'a' 1 time to get 'b'. In the 27th move, we shift the second 'a' 27 times to get 'b'.
+
+
+Constraints:
+
+1 <= s.length, t.length <= 10^5
+0 <= k <= 10^9
+s, t containonly lowercase English letters.
+
+Accepted13,510Submissions41,523Seen this question in a real interview before?YesNoCompaniesRelated TopicsHash TableStringShow Hint 1Observe that shifting a letter x times has the same effect of shifting the letter x + 26 times.Show Hint 2You need to check whether k is large enough to cover all shifts with the same remainder after modulo 26.

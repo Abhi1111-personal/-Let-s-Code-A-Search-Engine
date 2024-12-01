@@ -1,0 +1,27 @@
+1221. Split a String in Balanced StringsEasy1716751Add to ListShareBalanced strings are those that have an equal quantity of 'L' and 'R' characters.
+Given a balanced string s, split it in the maximum amount of balanced strings.
+Return the maximum amount of split balanced strings.
+
+Example 1:
+Input: s = "RLRRLLRLRL"
+Output: 4
+Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
+
+Example 2:
+Input: s = "RLLLLRRRLR"
+Output: 3
+Explanation: s can be split into "RL", "LLLRRR", "LR", each substring contains same number of 'L' and 'R'.
+
+Example 3:
+Input: s = "LLLLRRRR"
+Output: 1
+Explanation: s can be split into "LLLLRRRR".
+
+
+Constraints:
+
+1 <= s.length <= 1000
+s[i] is either 'L' or 'R'.
+s is a balanced string.
+
+Accepted198.3KSubmissions234.4KSeen this question in a real interview before?YesNoCompaniesRelated TopicsStringGreedyCountingShow Hint 1Loop from left to right maintaining a balance variable when it gets an L increase it by one otherwise decrease it by one.Show Hint 2Whenever the balance variable reaches zero then we increase the answer by one.

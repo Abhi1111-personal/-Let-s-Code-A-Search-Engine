@@ -1,0 +1,21 @@
+Given k sorted linked lists, merge them into a single list in increasing order.
+
+Example: 
+
+
+Input: k = 3
+
+List 1: 1 > 5 > 7 > NULL
+List 2: 2 > 3 > 6 > 9 > NULL
+List 3: 4 > 8 > 10 > NULL
+
+Output: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10 > NULL
+
+
+Approach-1: 
+
+1. Naive ApproachA simple solution would be to connect all linked lists into one list (order doesnt matter). Then use the merge sort algorithm for the linked list to sort the list in ascending order. The worst-case time complexity of this approach will be O(n.log(n)), where n is the total number of nodes present in all lists. Also, this approach does not take advantage of the fact that each list is already sorted.
+
+Approach 2
+
+3. Using Divide and Conquer

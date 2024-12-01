@@ -1,0 +1,5 @@
+Given an undirected graph, check if it is kcolorable or not and print all possible configurations of assignment of colors to its vertices.
+
+Approach-1: 
+
+We can use backtracking to solve this problem. The idea is to try all possible combinations of colors for the first vertex in the graph and recursively explore the remaining vertices to check if they will lead to the solution or not. If the current configuration doesnt result in a solution, backtrack. Note that we assign any color to a vertex only if its adjacent vertices share the different colors.The implementation can be seen below in C++, Java, and Python:

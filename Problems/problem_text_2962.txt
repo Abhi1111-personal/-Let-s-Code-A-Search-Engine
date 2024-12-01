@@ -1,0 +1,27 @@
+Given a positive number n, find all strings of length n containing balanced parentheses.
+
+Example: 
+
+
+Input: n = 4
+Output:
+(())
+()()
+
+Input: n = 6
+Output:
+((()))
+(()())
+(())()
+()(())
+()()()
+
+Input: n = 5
+Output: Invalid input
+
+
+Approach-1: 
+
+We can use recursion to solve this problem. The idea is to maintain a count of the open parenthesis in the output string. Then
+Recur with open parentheses with one less character and an increased count of open parentheses.
+Recur with closed parentheses only if the output string has at least one open parenthesis. And recur with one less character and a decreased count of open parentheses.

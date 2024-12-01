@@ -1,0 +1,5 @@
+Given an undirected graph, print all Hamiltonian paths present in it. The Hamiltonian path in an undirected or directed graph is a path that visits each vertex exactly once.
+
+Approach-1: 
+
+The idea is to use backtracking. We check if every edge starting from an unvisited vertex leads to a solution or not. As a Hamiltonian path visits each vertex exactly once, we take the help of the visited[] array in the proposed solution to process only unvisited vertices. Also, we use the path[] array to store vertices covered in the current path. If all the vertices are visited, then a Hamiltonian path exists in the graph, and we print the complete path stored in the path[] array.The algorithm can be implemented as follows in C++, Java, and Python:

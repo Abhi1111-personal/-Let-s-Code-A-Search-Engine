@@ -1,0 +1,28 @@
+Given an integer array, find the minimum product among all combinations of triplets in the array.
+
+Example: 
+
+
+Input: { 4, -1, 3, 5, 9 }
+Output: The minimum product is -45 (-1, 5, 9)
+
+
+Input: { 1, 4, 10, -2, 4 }
+Output: The minimum product is -80 (10, 4, -2)
+
+
+Input: { 3, 4, 1, 2, 5 }
+Output: The minimum product is 6 (3, 1, 2)
+
+
+Approach-1: 
+
+A naive solution would be to consider every combination of triplets present in the array and calculate their product. The idea is to maintain the maximum product found so far in a variable and update it if the product of the current triplet is greater. The implementation can be seen here and runs in O(n3) time, where n is the size of the input.1. Using Sorting
+
+Approach 2
+
+The following approach runs in O(n) time but takes O(n) extra space. The idea is to take the help of four auxiliary arrays, left_min[], left_max[], right_min[], and right_max[] of the same size as the input array, where:
+
+Approach 3
+
+We have seen that the sorting solution only uses the first three and last two array elements but sorts the whole array, which modifies the input array and is also costly for large inputs. This can be avoided by finding the smallest, the second smallest, and the third smallest element, along with the largest and the second largest array element in linear time. Then like the sorting solution, return the minimum among the product of the smallest, second smallest, third smallest elements in the array and product of the smallest, largest, second largest elements in the array.

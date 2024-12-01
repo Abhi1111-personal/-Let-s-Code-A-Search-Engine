@@ -1,0 +1,18 @@
+Given an array of distinct integers, replace each array element by its corresponding rank in the array.
+
+Example: 
+
+
+Input: { 10, 8, 15, 12, 6, 20, 1 }
+
+Output: { 4, 3, 6, 5, 2, 7, 1 }
+
+
+Approach-1: 
+
+The idea is to store each elements index in an ordered map (Since the array contains all distinct integers, we can use array elements and their index as key-value pairs in the map). Since elements are stored in sorted order in an ordered map, if we iterate through the map, we get elements in increasing order. Therefore, for each element in increasing order, we start assigning values starting from number 1 to n.Following is the C++, Java, and Python implementation of the idea:
+
+Approach 2
+
+
+We can also use a heap to solve this problem. The idea remains similar to the previous approach, but we store array elements and their index as key-value pairs in a max-heap. The primary benefit of using max-heap is that we get elements in decreasing order if we remove pairs from it. Therefore, for each element in decreasing order, we start assigning values starting from number n till 1. Note that min-heap can also be used.

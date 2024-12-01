@@ -1,0 +1,27 @@
+Given a string, break it into all possible combinations of non-overlapping substrings enclosed within curly brackets.
+
+Example: 
+
+
+Input: ABC
+
+Output:
+
+{ABC}
+{AB}{C}
+{A}{BC}
+{A}{B}{C}
+
+
+Input: ABCD
+
+Output:
+
+{ABCD}
+{ABC}{D}
+{AB}{CD}
+{AB}{C}{D}
+{A}{BCD}
+{A}{BC}{D}
+{A}{B}{CD}
+{A}{B}{C}{D}
