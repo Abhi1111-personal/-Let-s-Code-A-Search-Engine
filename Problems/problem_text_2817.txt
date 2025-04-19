@@ -1,1 +1,0 @@
-Given three integers, find the maximum and minimum number between them without using conditional statements or ternary operator.

@@ -1,1 +1,0 @@
-This post will implement treap data structure and perform basic operations like insert, search, and delete on it.
